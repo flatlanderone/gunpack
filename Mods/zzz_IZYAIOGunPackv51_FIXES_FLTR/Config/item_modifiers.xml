@@ -1,0 +1,25 @@
+<RamblingMan>
+
+<!-- *** IZY_MMVMV2 -->
+
+<conditional>
+<if cond="mod_loaded('IZY_MMVMV2') and mod_version('IZY_MMVMV2') = version(1,1,0,4)">
+
+<!-- Enabled localization for IZYmodPistolHoldstyle01Desc and IZYmodPistolHoldstyle02Desc. -->
+<set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle01']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle01Desc</set>
+
+<set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle02']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle02Desc</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- No changes. -->
+
+</if>
+</conditional>
+
+</RamblingMan>

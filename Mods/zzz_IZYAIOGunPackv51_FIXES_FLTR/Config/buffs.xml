@@ -1,0 +1,27 @@
+<RamblingMan>
+
+<!-- ***IZY_MMVMV2 -->
+
+<conditional>
+<if cond="mod_loaded('IZY_MMVMV2') and mod_version('IZY_MMVMV2') = version(1,1,0,4)">
+
+<!-- Added name_key attribute to IZYNightHunterKit and IZYNightHunterKit_Aiming to enable localization. -->
+
+<setattribute xpath="/buffs/buff[@name='IZYNightHunterKit']" name="name_key">IZYNightHunterKit</setattribute>
+<setattribute xpath="/buffs/buff[@name='IZYNightHunterKit_Aiming']" name="name_key">IZYNightHunterKit_Aiming</setattribute>
+
+</if>
+</conditional>
+
+<!-- *** IZY_FPV_GLOVES -->
+
+<conditional>
+<if cond="mod_loaded('IZY_FPV_GLOVES') and mod_version('IZY_FPV_GLOVES') = version(1,1,0,4)">
+
+<!-- Set IZYBeltAmmoCheck_02 buff to hidden. -->
+<set xpath="/buffs/buff[@name='IZYBeltAmmoCheck_02']/@hidden">true</set>
+		
+</if>
+</conditional>
+
+</RamblingMan>

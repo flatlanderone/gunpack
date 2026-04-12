@@ -1,0 +1,109 @@
+<RamblingMan>
+
+<!-- *** zzz_Ammo_Press_Add-On_Compatibility_Patch -->
+<conditional>
+<if cond="mod_loaded('zzz_Ammo_Press_Add-On_Compatibility_Patch') and mod_version('zzz_Ammo_Press_Add-On_Compatibility_Patch') = version(2,5,2)">
+
+<!-- Removed ammoShotgunShellDragoBreath and ammoShotgunShellDragoBreathBundle recipe. -->
+		
+<remove xpath="/recipes/recipe[@name='ammoShotgunShellDragoBreath' or @name='ammoShotgunShellDragoBreathBundle']" />		
+
+</if>
+</conditional>
+
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+
+<!-- Made the following grenade recipes learnable:
+ammo25mmGrenadeTraining
+ammo25mmGrenadeHE
+ammo25mmGrenadeFRAGS
+ammoRocketRPGTraning
+ammoRocketRPGHE
+ammoRocketRPGIncendiary
+-->
+
+<set xpath="/recipes/recipe[@name='ammo25mmGrenadeTraining' or @name='ammo25mmGrenadeHE'or @name='ammo25mmGrenadeFRAGS'or @name='ammoRocketRPGTraning'or @name='ammoRocketRPGHE'or @name='ammoRocketRPGIncendiary']/@tags">learnable,workbenchCrafting</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+
+<!-- Removed legendary part requirement from level 6 IZYgunT0SMGPIPEsubmachinegun recipe.  -->
+<remove xpath="/recipes/recipe[@name='IZYgunT0SMGPIPEsubmachinegun']/ingredient[@name='resourceLegendaryParts']" />
+<remove xpath="/recipes/recipe[@name='IZYgunT0SMGPIPEsubmachinegun']/effect_group/passive_effect[@tags='resourceLegendaryParts']" />
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- Removed IZYgunT4TACshotgunM1014 from recipes. -->
+<remove xpath="/recipes/recipe[@name='IZYgunT4TACshotgunM1014']" />
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<!-- Made HP and AP .45 ACP recipes learnable. -->
+<set xpath="/recipes/recipe[@name='ammo45ACPHighpower' or @name='ammo45ACPArmorpiecing']/@tags">learnable,workbenchCrafting</set>
+
+<!-- Removed legendary part requirement from level 6 IZYgunT0PistolLiberatorImprovisedPistol recipe.
+-->
+		
+<remove xpath="/recipes/recipe[@name='IZYgunT0PistolLiberatorImprovisedPistol']/ingredient[@name='resourceLegendaryParts']" />
+<remove xpath="/recipes/recipe[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group/passive_effect[@tags='resourceLegendaryParts']" />
+
+</if>
+</conditional>	
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- Made HP and AP 5.56mm (single round and bundle) recipes learnable. -->
+<set xpath="/recipes/recipe[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing' or @name='ammo556mmBulletBallBundle' or @name='ammo556mmHIpowerBundle' or @name='ammo556mmArmorPiercingBundle']/@tags">learnable,workbenchCrafting</set>
+
+<!-- Removed IZYgunT1LRLongRifleM16a1 from recipes. -->
+<remove xpath="/recipes/recipe[@name='IZYgunT1LRLongRifleM16a1']" />
+
+</if>
+</conditional>	
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">	
+
+<!-- Added ammo762mmExplosiveFragmentations recipe. Borrowed from zzz_Ammo_Press_Add-On_Compatibility_Patch -->
+<append xpath="/recipes">		
+	<recipe name="ammo762mmExplosiveFragmentations" count="1" craft_time="10" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceBulletTip" count="2"/>
+		<ingredient name="resourceGunPowder" count="10"/>
+		<ingredient name="resourceBulletCasing" count="1"/>
+	</recipe>
+
+	<recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="360" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceBulletTip" count="160"/>
+		<ingredient name="resourceGunPowder" count="800"/>
+		<ingredient name="resourceBulletCasing" count="80"/>
+	</recipe>
+</append>
+
+</if>
+</conditional>	
+
+</RamblingMan>

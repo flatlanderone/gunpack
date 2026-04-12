@@ -1,0 +1,32 @@
+<RamblingMan>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- Removed IZYgunT1LRLongRifleM16a1 from trader inventory. -->
+<remove xpath="//trader_item_group[@name='groupRangedAll']/item[@name='IZYgunT1LRLongRifleM16a1']" />
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<!-- No changes. -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- No changes. -->
+
+</if>
+</conditional>
+
+</RamblingMan>

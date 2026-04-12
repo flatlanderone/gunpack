@@ -1,0 +1,305 @@
+<RamblingMan>
+
+<!-- *** Global Edits -->
+
+<!-- Remove from the player view in Creative Mode items that are not ready and disabled. -->
+
+<append xpath="/items/item[@name='IZYMeleeT4BatonPunisher9000' or 
+@name='IZYMeleeT4DualKnivesKnife' or 
+@name='IZYgunT1ARCabineMASFARifle' or 
+@name='IZYgunT1LRLongRifleM16a1' or 
+@name='IZYgunT2ClassicSMGMP34' or 
+@name='IZYgunT3AREUCabineSG552' or 
+@name='IZYgunT3DualPistols45USP45' or 
+@name='IZYgunT3RifleMagnumLeveractionCarbine44' or 
+@name='IZYgunT3SMGMP5Ksubmachinegun' or 
+@name='IZYgunT4DualPistolC96M' or 
+@name='IZYgunT4MarksManRifle556SSMAR15' or 
+@name='IZYgunT4SMGColt9mmsubmachinegun' or 
+@name='IZYgunT4TACshotgunM1014' or 
+@name='IZYgunT5DualSMGsSuperVectors' or 
+@name='IZYgunT5HeavyWeaponAA12AutoShotgun' or 
+@name='IZYgunT5HeavyWeaponSuperEagle44SMG' or 
+@name='IZYgunTminus1MusketshotgunBlunderbuss' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='ammoShotgunShellDragoBreathBundle']">
+	<property name="CreativeMode" value="Dev"/>
+</append>
+
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+
+<!-- IZYMeleeT4SpearPoleAxe can be sold like the other T4 melee weapons. -->
+
+<set xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/property[@name='SellableToTrader']/@value">true</set> 
+
+
+<!-- IZYMeleeT4BladeKatana has now the same sneak damage bonus as meleeWpnBladeT3Machete. -->
+
+<append  xpath="/items/item[@name='IZYMeleeT4BladeKatana']">
+	<effect_group name="sneak damage bonus">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+			<passive_effect name="DamageBonus" operation="base_add" value="4"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
+			<display_value name="dEntityDamageSneak" value="4"/>
+	</effect_group>
+</append>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Miscpack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- IZYgunT4BowVanhelsingAutomaticCrossbowVH has its own description.  -->
+
+<set xpath="/items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/property[@name='DescriptionKey']/@value">IZYgunT4BowVanhelsingAutomaticCrossbowVHDesc</set>
+
+<!-- gunBowT3CompoundCrossbow has its own description.  -->
+
+<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@name='DescriptionKey']/@value">gunBowT3CompoundCrossbowDesc</set>
+
+<!-- 
+Add localization for the description of the following items:
+ammoCrossbowLightBoltStone
+ammoCrossbowLightBoltIron
+ammoCrossbowLightBoltSteelAP
+ -->
+ 
+<!-- Set not ready and disabled weapons and ammo as Dev only in the Creative menu. -->
+
+<append xpath="/items/item[@name='IZYgunTminus1MusketshotgunBlunderbuss' or 
+@name='IZYgunTminus1MusketFlintlockPistol' or 
+@name='IZYgunTminus1MusketM1777Rifle']">
+	<property name="CreativeMode" value="Dev"/>
+</append> 
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
+
+<!-- See Localization.txt for changes. -->
+
+</if>
+</conditional>
+
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+
+<!-- 25mm grenades (ammo25mmGrenadeTraining, ammo25mmGrenadeHE, ammo25mmGrenadeFRAGS) have now the correct unlock information (craftingExplosives).
+
+ -->
+
+<append xpath="/items/item[@name='ammo25mmGrenadeTraining' or @name='ammo25mmGrenadeHE' or @name='ammo25mmGrenadeFRAGS']">
+	<property name="UnlockedBy" value="craftingExplosives"/>
+</append>
+
+</if>
+</conditional>
+
+<!-- *** IZY_VRP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_VRP') and mod_version('IZY_VRP') = version(1,1,0,4)">
+
+<!-- gunRifleT1HuntingRifle now shows rounds per minute. -->
+
+<set xpath="items/item[@name='gunRifleT1HuntingRifle']/property[@name='DisplayType']/@value">rangedGun</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+
+<!-- IZYgunT1Pistol9Makarov and IZYgunT1Pistol9MakarovDesc have a full localization. -->
+
+<!-- IZYgunT0SMGPIPEsubmachinegun localization now cotrrectly shows Material as Scrap Iron, not Handgun Parts. -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- Remove IZYgunT4TACshotgunM1014 from the player view in Creative Mode 
+See Global Edits above.. -->
+
+<!-- Remove firingMode tag from IZYgunT2TradshotgunLeveractionShotgunModel1887 to prevent the installation of Trigger Group mods on a lever-action weapon. -->
+
+<csv xpath="/items/item[@name='IZYgunT2TradshotgunLeveractionShotgunModel1887']/property[@name='Tags']/@value" delim="," op="remove">firingMode</csv>
+
+<!-- 
+Add ammoShotgunShellPremium compatibility for the following shotguns:
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT1TACCompactshotgunSuperShortty
+
+ -->
+ 
+<csv xpath="/items/item[@name='IZYgunT3TradshotgunTrenchGunM1897' or @name='IZYgunT4TradshotgunBrowningAuto5' or @name='IZYgunT1TACCompactshotgunSuperShortty']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunShellPremium</csv>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- ammo556mmHIpower and ammo556mmArmorPiercing recipes unlock through craftingMachineGuns progression. -->
+
+<append xpath="/items/item[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing']">
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+</append>
+
+<!-- All 5.56mm bundles recipes unlock at Automatic Weapons Handbook - Completion. -->
+<append xpath="/items/item[@name='ammo556mmBulletBallBundle' or @name='ammo556mmHIpowerBundle' or @name='ammo556mmArmorPiercingBundle']">
+	<property name="UnlockedBy" value="perkAutoWeaponsComplete"/> <!-- BOOK_PERK -->
+</append>
+
+<!-- 5.56 ammo displays penetration values. -->
+<append xpath="/items/item[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing' or @name='ammo556mmBulletBall']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+</append>
+
+<!-- IZYgunT0SNIPERpipeAR15Broken15Junk now scraps to Scrap Iron instead of Rifle Parts. -->
+
+<set xpath="items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/property[@name='Material']/@value">Mmetal</set>
+
+<!-- Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons:
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunT3MarksManRifle556M16A2DMR
+IZYgunT4MarksManRifle556SSMAR15
+-->
+
+<set xpath="items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or @name='IZYgunT3MarksManRifle556M16A2DMR' or @name='IZYgunT4MarksManRifle556SSMAR15']/property[@name='DisplayType']/@value">rangedGun</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<!-- Changed display type of all -45 ACP types to ammoBulletAP to show penetration values. -->
+<append xpath="/items/item[@name='ammo45ACPBulletBall' or @name='ammo45ACPHighpower']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+</append>
+
+<!-- Added armor piercing code to ammo45ACPArmorpiecing. Copied values from AP 9mm. -->
+<!-- Change display type to ammoBulletAP to show penetration values. -->
+<append xpath="/items/item[@name='ammo45ACPArmorpiecing']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+	<effect_group name="ammo45ACPArmorpiecingFLTR" tiered="false">
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.5" />
+		<display_value name="dTargetArmor" value="-.5"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" />
+		<display_value name="dTargetPenetration" value="1"/>
+	</effect_group>
+</append>
+
+<!-- Added missing armor piercing code to ammo45ACPEnhanced. Copied values from AP 5.56mm. -->
+<append xpath="/items/item[@name='ammo45ACPEnhanced']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+	<effect_group name="ammo45ACPArmorpiecingFLTR" tiered="false">
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.8" />
+		<display_value name="dTargetArmor" value="-.8"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="3" />
+		<display_value name="dTargetPenetration" value="3"/>
+	</effect_group>
+</append>
+
+<!-- IZYgunT4Pistol45STIEAGLE6 is now compatible with ALL .45 ACP ammo types. -->
+<set xpath="items/item[@name='IZYgunT4Pistol45STIEAGLE6']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo45ACPBulletBall,ammo45ACPHighpower,ammo45ACPArmorpiecing,ammo45ACPEnhanced</set>
+
+<!-- IZYgunT0PistolLiberatorImprovisedPistol now scraps to Scrap Iron instead of Handgun  Parts. -->
+
+<set xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/property[@name='Material']/@value">Mmetal</set>
+
+
+<!-- Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons:
+   - IZYgunT3MarksmanRifleMMRM1Carbine45
+   - IZYgunT4MarksmanRifle45MMRKrissVectorCarbine. -->
+
+<set xpath="items/item[@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or @name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@name='DisplayType']/@value">rangedGun</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- Fixed the number of mod slots for level 6 RPD Machine Gun (T2) and Antique Machine Gun (T4). -->
+
+<set xpath="/items/item[@name='IZYgunT4LMGlightmachinegunMG34R' or @name='IZYgunT2LMGlightmachinegunRPD']/effect_group[@name='gunMGT3M60']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+<!-- ammoBundle762mmBulletHP now uses the correct custom item icon.
+
+This fixes a vanilla bug described at https://discord.com/channels/243577046616375297/1193195163716173926/1480311761826742382
+
+<item name="ammoBundle762mmBulletHP"> doesn't use the custom icon 7D1.0_Izayo_WeaponpackRemastered_762pack\UIAtlases\ItemIconAtlas\ammo762mmBulletHP.png
+
+This is due to a typo in vanilla:
+It is: 
+<property name="CustomIcon" value="ammo762mmBulletHp"/>
+It should be:
+    <property name="CustomIcon" value="ammo762mmBulletHP"/>
+	 -->
+<setattribute xpath="/items/item[@name='ammoBundle762mmBulletHP']/property[@name='CustomIcon']" name="value">ammo762mmBulletHP</setattribute>
+
+<!-- Added ammo762mmExplosiveFragmentationsBundle. Borrowed from zzz_Ammo_Press_Add-On_Compatibility_Patch. -->
+<append xpath="/items">
+	<item name="ammo762mmExplosiveFragmentationsBundle">
+		<property name="Extends" value="ammoBundleMaster"/>
+		<property name="CustomIcon" value="ammo762mmExplosiveFragmentations"/>
+		<property name="EconomicValue" value="3500"/>
+		<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle762mmBulletBall -->
+		<property name="UnlockedBy" value="craftingRifles"/>
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>	
+		<property class="Action0">
+			<property name="Create_item" value="ammo762mmExplosiveFragmentations"/>
+		</property>
+	</item>
+</append>
+
+<!-- 
+ammo762mmExplosiveFragmentations is now compatible with the following T4 7.62 sniper rifles:
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle
+ -->
+ 
+<csv xpath="/items/item[@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or @name='IZYgunT4MarksManRifle762SVUprototypeRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo762mmExplosiveFragmentations</csv>
+
+<!-- Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following wweapons:
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle 
+IZYgunT1SNIPERRIFLE762Mosinnagant
+IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+IZYgunT2MarksManRifle762M1garandNavyconverted
+IZYgunT3MarksManRifle762HKPSG1 -->
+<set xpath="items/item[@name='IZYgunT4MarksManRifleM110SASS' or @name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or @name='IZYgunT4MarksManRifle762SVUprototypeRifle' or @name='IZYgunT1SNIPERRIFLE762Mosinnagant' or @name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or @name='IZYgunT2MarksManRifle762M1garandNavyconverted' or @name='IZYgunT3MarksManRifle762HKPSG1']/property[@name='DisplayType']/@value">rangedGun</set>
+ 
+</if>
+</conditional>
+
+</RamblingMan>

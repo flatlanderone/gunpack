@@ -1,0 +1,102 @@
+<RamblingMan>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+
+<!-- Note: IZYgunT2LGLChinalakeGrenadeLauncher unlocks at 45.  -->
+
+<!-- Changed unlock levels from 45 to 50 for:
+IZYgunT3LGLXM25
+IZYgunT3RocketLauncherRPG7 -->
+<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='IZYgunT3LGLXM25']/@level">50,100</set>
+<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='IZYgunT3RocketLauncherRPG7']/@level">50,100</set>
+	
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- Removed IZYgunT4TACshotgunM1014 from progression display. -->
+<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[@item='gunShotgunT3AutoShotgun']/unlock_entry[@item='IZYgunT4TACshotgunM1014']" />
+	
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<!-- No changes. -->
+
+</if>
+</conditional>	
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- Removed IZYgunT1LRLongRifleM16a1 from progression display. -->
+<remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT1AK47']/unlock_entry[@item='IZYgunT1LRLongRifleM16a1']" />
+
+<!-- ammo556mmHIpower recipe unlocks at level 26. -->
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT2TacticalAR']">
+	<unlock_entry item="ammo556mmHIpower" unlock_tier="1" tags="ammo556mmHIpower"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="ammo556mmHIpower"/>
+</append>
+
+<!-- ammo556mmArmorPiercing recipe unlocks at level 46. -->
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT2TacticalAR']">
+	<unlock_entry item="ammo556mmArmorPiercing" unlock_tier="4" tags="ammo556mmArmorPiercing"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="46,100" value="1" tags="ammo556mmArmorPiercing"/>
+</append>
+
+<!-- Added name_key attribute to perkAutoWeaponsCompleteName. Missing in vanilla.  -->
+ <setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsComplete']" name="name_key">perkAutoWeaponsCompleteName</setattribute>
+
+<!-- All 5.56mm bundles recipes unlock at Automatic Weapons Handbook - Completion. -->
+ <append xpath="/progression/perks/book[@name='perkAutoWeaponsComplete']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo556mmBulletBallBundle,ammo556mmHIpowerBundle,ammo556mmArmorPiercingBundle"/>
+	</effect_group>
+</append> 
+
+</if>
+</conditional>	
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- ammo762mmExplosiveFragmentations and ammo762mmExplosiveFragmentationsBundle recipes unlock at the same time as IZYgunT4MarksManRifleM110SASS (level 61). -->
+
+<!-- display entry -->
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/display_entry[@item='gunRifleT3SniperRifle']">
+	<unlock_entry item="ammo762mmExplosiveFragmentations" unlock_tier="1" tags="ammo762mmExplosiveFragmentations"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/display_entry[@item='gunRifleT3SniperRifle']">
+	<unlock_entry item="ammo762mmExplosiveFragmentationsBundle" unlock_tier="1" tags="ammo762mmExplosiveFragmentationsBundle"/>
+</append>
+<!-- effect group -->
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="ammo762mmExplosiveFragmentations"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRifles']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="ammo762mmExplosiveFragmentationsBundle"/>
+</append>
+
+</if>
+</conditional>
+
+</RamblingMan>
