@@ -1,7 +1,7 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
 ,,,,,,,,,,,,,,,,,,
 IZYadvancegunrepairkit,items,gun,,Advanced Repair Kit,Advanced Repair Kit,,,,,,,,,,,,,
-IZYadvancegunrepairkitDesc,items,gun,,,A repair kit used to  repair Tier 4 weapons.,,,,,,,,,,,,,
+IZYadvancegunrepairkitDesc,items,gun,,,A repair kit used to repair Tier 4 weapons.,,,,,,,,,,,,,
 buffIZYNightHunterKitName,buffs,Buff,,Night Hunter,Night Hunter,,,,,,,,,,,,,
 IZYNightHunterKit,buffs,Buff,,Night Hunter,Night Hunter,,,,,,,,,,,,,
 IZYNightHunterKit_Aiming,buffs,Buff,,Night Hunter,Night Hunter - Aiming,,,,,,,,,,,,,
