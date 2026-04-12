@@ -132,7 +132,7 @@ gunRifleT0PipeRifleDesc,items,Gun,,,A home-made rifle firing 7.62mm ammo.\n[00FF
 gunRifleT1HuntingRifle,items,Gun,,,Hunting Rifle (T1),,,,,,,,,,,,,
 gunRifleT1HuntingRifleDesc,items,Gun,,,This common farmer's hunting rifle uses 7.62mm ammo.\n[00FF00]Weapon Type[-]: Bolt-action rifle. \n[00FF00]Attribute[-]: Perception. / [00FF00]Perk[-]: Dead Eye.\n[00FF00]Ammo/Cartridge[-]: 7.62mm.\n[00FF00]Repair Tool[-]: Repair Kit.\n[00FF00]Material[-]: Rifle Parts.,,,,,,,,,,,,,
 gunRifleT2LeverActionRifle,items,Gun,,,Lever-action Rifle (T2),,,,,,,,,,,,,
-gunRifleT2LeverActionRifleDesc,items,Gun,,,This Lever Action rifle uses 7.62mm ammo and is your first choice if you want to make that shot count.\n[00FF00]Weapon Type[-]: Classic rifle. \n[00FF00]Attribute[-]: Perception. / [00FF00]Perk[-]: Dead Eye.\n[00FF00]Ammo/Cartridge[-]: 7.62mm.\n[00FF00]Repair Tool[-]: Repair Kit.\n[00FF00]Material[-]: Rifle Parts.,,,,,,,,,,,,,
+gunRifleT2LeverActionRifleDesc,items,Gun,,,This lever-action rifle uses 7.62mm ammo and is your first choice if you want to make that shot count.\n[00FF00]Weapon Type[-]: Classic rifle. \n[00FF00]Attribute[-]: Perception. / [00FF00]Perk[-]: Dead Eye.\n[00FF00]Ammo/Cartridge[-]: 7.62mm.\n[00FF00]Repair Tool[-]: Repair Kit.\n[00FF00]Material[-]: Rifle Parts.,,,,,,,,,,,,,
 gunRifleT3SniperRifle,items,Gun,,,Sniper Rifle (T3),,,,,,,,,,,,,
 gunRifleT3SniperRifleDesc,items,Gun,,,"This high precision, long ranged rifle is perfect for sniping enemies at great distances.\n[00FF00]Weapon Type[-]: Marksman rifle. \n[00FF00]Attribute[-]: Perception. / [00FF00]Perk[-]: Dead Eye.\n[00FF00]Ammo/Cartridge[-]: 7.62mm.\n[00FF00]Repair Tool[-]: Repair Kit.\n[00FF00]Material[-]: Rifle Parts.",,,,,,,,,,,,,
 //IZY,,,,,,,,,,,,,,,,,,
