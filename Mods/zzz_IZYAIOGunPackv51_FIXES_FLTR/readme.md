@@ -1,12 +1,12 @@
-# Flatlander's Fixes for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.1
+# Flatlander's Fixes for IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 - version 2.6.1.1
 
 ## Overview
 
-This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v5.1.3 released on 2026-04-14, hereafter "IZY Gun Pack"). See Changelog below for a full list of fixes and other changes.
+This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14, hereafter "IZY Gun Pack"). See Changelog below for a full list of fixes and other changes.
 
 ## Requirements
 
- - [IZY-All in One Gun Pack v5.1.3 released on 2026-04-14](https://www.nexusmods.com/7daystodie/mods/5458),
+ - [IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14](https://www.nexusmods.com/7daystodie/mods/5458),
  - [z Izayo Weapon Fixes](https://www.nexusmods.com/7daystodie/mods/5458),
  - 7 Days to Die v2.5 and later.
 
@@ -19,8 +19,8 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## Important notes
 
- 1. The 2.6.1.1 version of the mod is designed to work with the **5.1.3 ** version of the IZY Gun pack released on 2026-04-14. Check the version of your IZY Gun pack. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the previous **5.1** version of the IZY Gun pack, DO NOT INSTALL THE 2.6.1.1 VERSION OF THIS MOD. Use the 2.6.1.0 verson instead.
+ 1. The 2.6.1.1 version of the mod is designed to work with the **2.6.5.1.3** version of the IZY Gun pack released on 2026-04-14. Check the version of your IZY Gun pack. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IZY Gun pack, DO NOT INSTALL THE 2.6.1.1 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -34,7 +34,7 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 ## About this mod
 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
- - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1](https://www.nexusmods.com/7daystodie/mods/9980)
+ - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1 and v2.6.5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
  - **Previous release**: 2.6.1.0 (2026-04-12)
  - **This release**: 2.6.1.1 (2026-04-15)
