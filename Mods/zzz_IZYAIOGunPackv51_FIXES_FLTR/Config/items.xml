@@ -183,6 +183,17 @@ IZYgunT1TACCompactshotgunSuperShortty
 <conditional>
 <if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
 
+<!-- Start 2.6.1.1 -->
+
+<!-- Replaced leather drop mesh for IZYgunT0SNIPERpipeAR15Broken15Junk with sack_dropped -->
+
+<set xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- Replaced missing drop mesh for IZYgunT4ARCabineHK416 with sack_dropped. -->
+<set xpath="/items/item[@name='IZYgunT4ARCabineHK416']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- End 2.6.1.1 -->
+
 <!-- ammo556mmHIpower and ammo556mmArmorPiercing recipes unlock through craftingMachineGuns progression. -->
 
 <append xpath="/items/item[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing']">
@@ -267,6 +278,12 @@ IZYgunT4MarksManRifle556SSMAR15
 <!-- *** IZY_RMP_762pack -->
 <conditional>
 <if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- 2.6.1.1 -->
+<!-- Replaced missing drop mesh for IZYgunT3BattleRifleHKG3 with sack_dropped. -->
+<set xpath="/items/item[@name='IZYgunT3BattleRifleHKG3']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- End of 2.6.1.1 -->
 
 <!-- Fixed the number of mod slots for level 6 RPD Machine Gun (T2) and Antique Machine Gun (T4). -->
 

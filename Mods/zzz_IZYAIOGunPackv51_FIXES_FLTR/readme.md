@@ -1,12 +1,12 @@
-# Flatlander's Fixes for IZY-All in One Gun Pack v5.1 - 1.1.0.4 version 2.6.1.1
+# Flatlander's Fixes for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.1
 
 ## Overview
 
-This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v5.1 (1.1.0.4), hereafter "IZY Gun Pack"). See Changelog below for a full list of fixes and other changes.
+This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v5.1.3 released on 2026-04-14, hereafter "IZY Gun Pack"). See Changelog below for a full list of fixes and other changes.
 
 ## Requirements
 
- - [IZY-All in One Gun Pack v5.1.3 v. 1.1.0.4 released on 2026-04-14](https://www.nexusmods.com/7daystodie/mods/5458),
+ - [IZY-All in One Gun Pack v5.1.3 released on 2026-04-14](https://www.nexusmods.com/7daystodie/mods/5458),
  - [z Izayo Weapon Fixes](https://www.nexusmods.com/7daystodie/mods/5458),
  - 7 Days to Die v2.5 and later.
 
@@ -19,15 +19,15 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## Important notes
 
- 1. The 2.6.1.1 version of the mod will work ONLY with the **5.1.3 - 1.1.0.4** version of the IZY Gun pack available on Nexus Mods and released on 2026-04-14. Check the version of your IZY Gun pack in the ModInfo.xml file. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the older **5.1 - 1.1.0.4** version of the IZY Gun pack, DO NOT INSTALL THE 2.6.1.1 version. Use the 2.6.1.0 verson instead.
+ 1. The 2.6.1.1 version of the mod is designed to work with the **5.1.3 ** version of the IZY Gun pack released on 2026-04-14. Check the version of your IZY Gun pack. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IZY Gun pack, DO NOT INSTALL THE 2.6.1.1 VERSION OF THIS MOD. Use the 2.6.1.0 verson instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
 
 ## Bug reports and feature suggestions
 
- - [GitHub](https://github.com/flatlanderone/flatlander-releases/issues) (preferred).
+ - [GitHub](https://github.com/flatlanderone/gunpack/issues) (preferred).
  - [My channel on Guppy's Modding Server](https://discord.gg/yPFh79rq8J),
  - This mod's page on Nexus Mods.
 
@@ -36,32 +36,49 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
  - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
- - **This release**: 2.6.1.0 (2026-04-12)
+ - **Previous release**: 2.6.1.0 (2026-04-12)
+ - **This release**: 2.6.1.1 (2026-04-15)
  
 # Changelog for 2.6.1.1 (2026-04-15)
 
 ## Note
 
-All bug fixes from 2.6.1.0, except those specified below as reverted, remain in place.
+All bug fixes from 2.5.1.0 and 2.6.1.0, except those specified below as reverted, remain in place.
 
 ## Known Issues
 
 None.
 
 ## Black Wolf's better loot spawns 
+
  - See Nexus Mods: https://www.nexusmods.com/7daystodie/mods/3872
  - loot.xml: 
-   - 2.6.1.0 Change reverted as ammoShotgunShellDragoBreath was removed from loot in BetterlootIzy.
+   - 2.6.1.0 Change reverted: ammoShotgunShellDragoBreath was removed from loot in BetterlootIzy.
 
+## IZY_RMP_762pack
+
+ - items.xml: 
+  - Replaced missing drop mesh for IZYgunT3BattleRifleHKG3 with sack_dropped. 
+
+## IZY_RMP_556pack
+
+ - items.xml: 
+  - Replaced leather drop mesh for IZYgunT0SNIPERpipeAR15Broken15Junk with sack_dropped.
+  - Replaced missing drop mesh for IZYgunT4ARCabineHK416 with sack_dropped. 
 
 ## IZY_RMP_SG
- - recipes.xml: reverted 2.6.1.0 removal of IZYgunT4TACshotgunM1014 recipe as this has been implemented in 5.1.3.
+
+ - recipes.xml: 
+  - Reverted 2.6.1.0 removal of IZYgunT4TACshotgunM1014 recipe as this has been implemented in 5.1.3.
 
 ## IZY_RMP_Miscpack
 
  - items.xml:
-   - IZYgunTminus1MusketM1777Rifle is visible again in the Creative menu for players.
+  - Reverted from 2.6.1.0. IZYgunTminus1MusketM1777Rifle is visible again in the Creative menu for players.
 
+ - traders.xml:
+   - Added traderstage_template ammoTier0 to fix trader inventory crash due to Exception: TraderStageTemplate ammoTier0 for item: Muzzleloader Ammo does not exist. Bug:https://github.com/flatlanderone/gunpack/issues/9 (ammoMuzzleloadershot) reported by Black Wolf.
+   
  - recipes.xml:
    - Enabled and updated the campfire recipe for ammoleadball.
    - Added a new forge recipe for ammoleadball.
