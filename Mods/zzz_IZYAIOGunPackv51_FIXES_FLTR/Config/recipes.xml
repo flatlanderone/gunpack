@@ -1,5 +1,47 @@
 <RamblingMan>
 
+<!-- IZY_RMP_Miscpack -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- Added 2.6.1.1 for 5.1.3 2026-04-15 -->
+
+<append xpath="/recipes">
+		
+<!-- Updated campfire recipe for ammoleadball.
+Check bonus from perkAdvancedEngineering -->
+
+<recipe name="ammoleadball" count="1" craft_area="campfire" tags="perkAdvancedEngineering">
+	<ingredient name="resourceScrapLead" count="5"/>
+		<effect_group>
+			<passive_effect name="CraftingIngredientCount" level="1,5" operation="base_add" value="-1" tags="resourceScrapLead"/>
+		</effect_group>			
+</recipe>
+
+<!-- New forge recipe for ammoleadball.
+Check bonus from perkAdvancedEngineering. -->
+<recipe name="ammoleadball" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+	<ingredient name="unit_lead" count="3"/>
+	<ingredient name="unit_clay" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_lead"/>
+	</effect_group>
+</recipe>
+
+<!-- Updated ammoMuzzleloadershot with packMuleCrafting. -->
+<recipe name="ammoMuzzleloadershot" count="1" tags="packMuleCrafting,workbenchCrafting">
+	<ingredient name="ammoleadball" count="1"/>
+	<ingredient name="resourceGunPowder" count="2"/>
+	<ingredient name="resourcePaper" count="1"/>
+</recipe>
+
+<!-- TODO/TBD: add ammopress recipe? -->
+
+</append>
+
+</if>
+</conditional>
+
 <!-- *** zzz_Ammo_Press_Add-On_Compatibility_Patch -->
 <conditional>
 <if cond="mod_loaded('zzz_Ammo_Press_Add-On_Compatibility_Patch') and mod_version('zzz_Ammo_Press_Add-On_Compatibility_Patch') = version(2,5,2)">
@@ -48,7 +90,11 @@ ammoRocketRPGIncendiary
 <if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
 
 <!-- Removed IZYgunT4TACshotgunM1014 from recipes. -->
-<remove xpath="/recipes/recipe[@name='IZYgunT4TACshotgunM1014']" />
+<!-- <remove xpath="/recipes/recipe[@name='IZYgunT4TACshotgunM1014']" /> -->
+
+<!-- 2.6.1.1 -->
+
+<!-- Reverted 2.6.1.0 removal of IZYgunT4TACshotgunM1014 recipe as this has been implemented in 5.1.3. -->
 
 </if>
 </conditional>
