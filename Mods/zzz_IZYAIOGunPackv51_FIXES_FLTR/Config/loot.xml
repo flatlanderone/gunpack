@@ -1,12 +1,14 @@
 <RamblingMan>
 
 <!-- *** Betterloot -->
+
 <conditional>
-<if cond="mod_loaded('Betterloot') and mod_version('Betterloot') = version(1,1)">
+<if cond="mod_loaded('BetterlootIzy') and mod_version('BetterlootIzy') = version(1,1)">
 
 <!-- Removed ammoShotgunShellDragoBreath from loot. -->
-<remove xpath="/lootcontainers/lootgroup/item[@name='ammoShotgunShellDragoBreath']" />
+<!-- <remove xpath="/lootcontainers/lootgroup/item[@name='ammoShotgunShellDragoBreath']" /> -->
 
+<!-- 2.6.1.1 - Change reverted as ammoShotgunShellDragoBreath was removed from loot in BetterlootIzy.  -->
 </if>
 </conditional>
 

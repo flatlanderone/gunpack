@@ -1,4 +1,4 @@
-# Flatlander's Fixes for IZY-All in One Gun Pack v5.1 - 1.1.0.4 version 2.6.1.0
+# Flatlander's Fixes for IZY-All in One Gun Pack v5.1 - 1.1.0.4 version 2.6.1.1
 
 ## Overview
 
@@ -6,7 +6,7 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## Requirements
 
- - [IZY-All in One Gun Pack v5.1 v. 1.1.0.4](https://www.nexusmods.com/7daystodie/mods/5458),
+ - [IZY-All in One Gun Pack v5.1.3 v. 1.1.0.4 released on 2026-04-14](https://www.nexusmods.com/7daystodie/mods/5458),
  - [z Izayo Weapon Fixes](https://www.nexusmods.com/7daystodie/mods/5458),
  - 7 Days to Die v2.5 and later.
 
@@ -19,10 +19,11 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## Important notes
 
- 1. The mod will work ONLY with the **1.1.0.4** version of the IZY Gun pack available on Nexus Mods. Check the version of your IZY Gun pack in the ModInfo.xml file. NO OTHER VERSION WILL BE SUPPORTED.
- 2. Do not bother Izayo with questions regarding this mod. 
- 3. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
- 4. Removing the mod is probably safe, but you should always make a backup of your game save.
+ 1. The 2.6.1.1 version of the mod will work ONLY with the **5.1.3 - 1.1.0.4** version of the IZY Gun pack available on Nexus Mods and released on 2026-04-14. Check the version of your IZY Gun pack in the ModInfo.xml file. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the older **5.1 - 1.1.0.4** version of the IZY Gun pack, DO NOT INSTALL THE 2.6.1.1 version. Use the 2.6.1.0 verson instead.
+ 3. Do not bother Izayo with questions regarding this mod. 
+ 4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
+ 5. Removing the mod is probably safe, but you should always make a backup of your game save.
 
 ## Bug reports and feature suggestions
 
@@ -37,6 +38,38 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - **Initial release**: 2.5.1.0 (2026-03-30)
  - **This release**: 2.6.1.0 (2026-04-12)
  
+# Changelog for 2.6.1.1 (2026-04-15)
+
+## Note
+
+All bug fixes from 2.6.1.0, except those specified below as reverted, remain in place.
+
+## Known Issues
+
+None.
+
+## Black Wolf's better loot spawns 
+ - See Nexus Mods: https://www.nexusmods.com/7daystodie/mods/3872
+ - loot.xml: 
+   - 2.6.1.0 Change reverted as ammoShotgunShellDragoBreath was removed from loot in BetterlootIzy.
+
+
+## IZY_RMP_SG
+ - recipes.xml: reverted 2.6.1.0 removal of IZYgunT4TACshotgunM1014 recipe as this has been implemented in 5.1.3.
+
+## IZY_RMP_Miscpack
+
+ - items.xml:
+   - IZYgunTminus1MusketM1777Rifle is visible again in the Creative menu for players.
+
+ - recipes.xml:
+   - Enabled and updated the campfire recipe for ammoleadball.
+   - Added a new forge recipe for ammoleadball.
+   - Enabled and updated the backpack recipe for ammoMuzzleloadershot.
+
+ - Localization.txt:
+   - Added localization for ammoleadball, ammoMuzzleloadershot and IZYgunTminus1MusketM1777Rifle.
+
 # Changelog for 2.5.1.0 and 2.6.1.0
  
 ## Global changes
@@ -129,10 +162,7 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
  - items.xml:
    - Removed firingMode tag from IZYgunT2TradshotgunLeveractionShotgunModel1887 to prevent the installation of Trigger Group mods on a lever-action weapon.
-   - Added ammoShotgunShellPremium compatibility for the following shotguns: 
-     - IZYgunT3TradshotgunTrenchGunM1897
-     - IZYgunT4TradshotgunBrowningAuto5
-     - IZYgunT1TACCompactshotgunSuperShortty
+   - Added ammoShotgunShellPremium compatibility for the following shotguns: IZYgunT3TradshotgunTrenchGunM1897, IZYgunT4TradshotgunBrowningAuto5, IZYgunT1TACCompactshotgunSuperShortty.
 
  - progression.xml:
    - Removed IZYgunT4TACshotgunM1014 from progression display.
@@ -205,14 +235,7 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
    - ammo762mmExplosiveFragmentations is now compatible with the following T4 7.62 sniper rifles:
      - IZYgunT4SNIPERRIFLE762L96AWMRifle
      - IZYgunT4MarksManRifle762SVUprototypeRifle
-   - Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following wweapons: 
-     - IZYgunT4MarksManRifleM110SASS
-     - IZYgunT4SNIPERRIFLE762L96AWMRifle
-     - IZYgunT4MarksManRifle762SVUprototypeRifle 
-     - IZYgunT1SNIPERRIFLE762Mosinnagant
-     - IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
-     - IZYgunT2MarksManRifle762M1garandNavyconverted
-     - IZYgunT3MarksManRifle762HKPSG1
+   - Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following wweapons: IZYgunT4MarksManRifleM110SASS, IZYgunT4SNIPERRIFLE762L96AWMRifle,, IZYgunT4MarksManRifle762SVUprototypeRifle, IZYgunT1SNIPERRIFLE762Mosinnagant, IZYgunT3SNIPERRIFLE762LeeEnfieldRifle, IZYgunT2MarksManRifle762M1garandNavyconverted, IZYgunT3MarksManRifle762HKPSG1.
 
  - progression.xml:
    - ammo762mmExplosiveFragmentations and ammo762mmExplosiveFragmentationsBundle recipes unlock at the same time as IZYgunT4MarksManRifleM110SASS (level 61).
@@ -233,4 +256,3 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - See Nexus Mods: https://www.nexusmods.com/7daystodie/mods/3872
  - loot.xml: 
    - Removed ammoShotgunShellDragoBreath from loot.
- 

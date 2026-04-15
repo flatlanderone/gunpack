@@ -1,12 +1,11 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
-,,,,,,,,,,,,,,,,,,
+
 IZYadvancegunrepairkit,items,gun,,Advanced Repair Kit,Advanced Repair Kit,,,,,,,,,,,,,
 IZYadvancegunrepairkitDesc,items,gun,,,A repair kit used to repair Tier 4 weapons.,,,,,,,,,,,,,
 buffIZYNightHunterKitName,buffs,Buff,,Night Hunter,Night Hunter,,,,,,,,,,,,,
 IZYNightHunterKit,buffs,Buff,,Night Hunter,Night Hunter,,,,,,,,,,,,,
 IZYNightHunterKit_Aiming,buffs,Buff,,Night Hunter,Night Hunter - Aiming,,,,,,,,,,,,,
 IZYNightHunterKitDesc,buffs,Buff,,,Toggle on the nightvision scope at night.\n+50% damage while aiming through the scope at night.,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
 //=================================,,,,,,,,,,,,,,,,,,
 //IZY_MMVMV2,,,,,,,,,,,,,,,,,,
 //========================,,,,,,,,,,,,,,,,,,
@@ -56,7 +55,6 @@ IZYgunT4BULLPUPFNF2000Desc,items,gun,,,[00FF00]Weapon Type[-]: Bullpup assault r
 //======================================,,,,,,,,,,,,,,,,,,
 // IZY_RMP_45ACP,,,,,,,,,,,,,,,,,,
 //===========================================,,,,,,,,,,,,,,,,,,
-
 perkPistolPete0Desc,progression,perk  book,,,Pistol Pete is the handgun enthusiast's one stop shop to learn about pistols and submachine guns.,,,,,,,,,,,,,,,,,,
 perkPistolPeteTakeAimDesc,progression,perk  book,,,9mm and .45 ACP weapons have 20% more range when sighted.,,,,,,,,,,,,,,,,,,
 perkPistolPeteTakeAimLongDesc,progression,perk  book,,,Take Aim: 9mm and .45 ACP weapons have 20% more range when using a scope or iron sights.,,,,,,,,,,,,,,,,,,
@@ -64,11 +62,6 @@ perkPistolPeteSteadyHandDesc,progression,perk  book,,,More accurate when rapid f
 perkPistolPeteSteadyHandLongDesc,progression,perk  book,,,Steady Hands: A steady hand means more targets hit and less ammo wasted. You are more accurate when rapid firing 9mm and .45 ACP weapons.,,,,,,,,,,,,,,,,,,
 perkPistolPeteDamageDesc,progression,perk  book,,,Inflict 10% more damage with 9mm and .45 ACP weapons.,,,,,,,,,,,,,,,,,,
 perkPistolPeteDamageLongDesc,progression,perk  book,,,Maximum Damage: Inflict 10% more damage with 9mm and .45 ACP weapons.,,,,,,,,,,,,,,,,,,
-
-
-
-
-
 perkPistolPeteCompleteDesc,progression,perk  book,,,Shots fired at point blank ignore armor and causes bleeding. Bulk craft 9mm and .45 ACP ammunition.,,,,,,,,,,,,,
 perkPistolPeteCompleteLongDesc,progression,perk  book,,,Powder Burns: Shots from 9mm and .45 ACP weapons fired at point blank range ignore 20% of armor and cause bleeding damage. Bulk Craft all types of 9mm and .45 ACP ammunition.,,,,,,,,,,,,,
 ammo45ACPBulletBall,items,gun,,,.45 ACP Ammo,,,,,,,,,,,,,
@@ -321,11 +314,17 @@ ammoCrossbowLightBoltSteelAP,items,gun,,,Light Steel Bolt (Ammo),,,,,,,,,,,,,
 ammoCrossbowLightBoltSteelAPDesc,items,gun,,,A steel-tipped bolt for the [ff8000]VH Automatic Crossbow[-]. \nCraft using standard Steel Arrows and Steel Bolts.,,,,,,,,,,,,,
 IZYgunT4BowVanhelsingAutomaticCrossbowVH,items,gun,,,VH Automatic Crossbow (T4),,,,,,,,,,,,,
 IZYgunT4BowVanhelsingAutomaticCrossbowVHDesc,items,Gun,,,[00FF00]Weapon Type[-]: Repeating crossbow. \n[00FF00]Attribute[-]: Agility. / [00FF00]Perk[-]: Archery.\n[00FF00]Ammo/Cartridge[-]: Light Bolts.\n[00FF00]Repair Tool[-]: Repair Kit.\n[00FF00]Material[-]: Bow / Crossbow Parts. \n[00FF00]Unique Ability[-]: Fires underwater.,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
+//Added 2026-04-15 2.6.1.1 for 5.1.3.
+ammoleadball,items,Ammo,,,Lead Ball,,,,Balle de plomb,,,,Kula ołowiana,,,,,
+ammoleadballDesc,items,Ammo,,,Lead balls are used to make ammo for muzzle-loading weapons. Can be crafted at a campfire with lead or in a forge with lead and clay.,,,,Balle de plomb utilisée pour créer une munition pour les armes à chargement par la bouche. Peut être fabriquée au feu de camp avec du plomb et à la forge avec de l'argile et du plomb.,,,,"Kula ołowiana do wytworzenia amunicji do broni odprzodowej, takiej jak muszkiety i pistolety skałkowe. Możesz ją produkować w ognisku z użyciem ołowiu i w kuźni z użyciem gliny i ołowiu.",,,,,
+ammoMuzzleloadershot,items,Ammo,,,Muzzleloader Ammo,,,,Munition pour armes à chargement par la bouche,,,,Amunicja do broni odprzodowej,,,,,
+ammoMuzzleloadershotDesc,items,Ammo,,,"Muzzleloader ammo can be crafted in your backpack using lead balls, gunpowder and paper.",,,,Munition pour armes à chargement par la bouche,,,,Amunicja do broni odprzodowej,,,,,
+//TS - tier special
+IZYgunTminus1MusketM1777Rifle,items,gun,,,Musket Model 1777 (TS),,,,,,,,,,,,,
+IZYgunTminus1MusketM1777RifleDesc,items,Gun,,,"[00FF00]Weapon Type[-]: Musket. \n[00FF00]Attribute[-]: Perception. / [00FF00]Perk[-]: Dead Eye.\n[00FF00]Ammo/Cartridge[-]: Muzzleloader Ammo.\n[00FF00]Repair Tool[-]: Repair Kit.\n[00FF00]Material[-]: Scrap Iron. \n[00FF00]Unique Ability[-]: Old school, baby!.",,,,,,,,,,,,,,,,,,
 //======================================,,,,,,,,,,,,,,,,,,
 //IZY_melee,,,,,,,,,,,,,,,,,,
 //======================================,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
 IZYBuff2Handsblocking,buffs,Buff,,,Blocking,,,,,,,,,,,,,
 IZYMeleeT4BladeKatana,items,Melee,,,Katana (T4),,,,,,,,,,,,,
 IZYMeleeT4BladeKatanaDesc,items,Melee,,,[00FF00]Weapon Type[-]: Two-handed sword.\n[00FF00]Attribute[-]: Agility. / [00FF00]Perk[-]: Deep Cuts.\n[00FF00]Usage[-]: Merges light and power attacks in one. Left-click to attack. Right-click to block.\n[00FF00]Repair Tool[-]: Advanced Repair Kit.\n[00FF00]Material[-]: Machete Parts.\n[ff8000]Note[-]: Attack speed must stay at 105.,,,,,,,,,,,,,
