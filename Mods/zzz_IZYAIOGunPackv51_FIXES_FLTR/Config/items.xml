@@ -26,6 +26,21 @@
 	<property name="CreativeMode" value="Dev"/>
 </append>
 
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)">
+
+<!-- 2.6.1.2 -->
+
+<!-- IZYgunT3TechnicalNailmachinegun now scraps to Robotics Parts instead of Machine Gun Parts. -->
+<set xpath="items/item[@name='IZYgunT3TechnicalNailmachinegun']/property[@name='Material']/@value">MJunkTurretParts</set>
+
+<!-- End of 2.6.1.2 -->
+
+</if>
+</conditional>
+
 <!-- *** IZY_melee -->
 
 <conditional>
@@ -146,6 +161,15 @@ ammoCrossbowLightBoltSteelAP
 <conditional>
 <if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
 
+<!-- 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT4SMGCZScorpionEVO3 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT4SMGCZScorpionEVO3']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
+
 <!-- IZYgunT1Pistol9Makarov and IZYgunT1Pistol9MakarovDesc have a full localization. -->
 
 <!-- IZYgunT0SMGPIPEsubmachinegun localization now cotrrectly shows Material as Scrap Iron, not Handgun Parts. -->
@@ -157,6 +181,14 @@ ammoCrossbowLightBoltSteelAP
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT3TradshotgunTrenchGunM1897 and IZYgunT4TradshotgunBrowningAuto5 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT3TradshotgunTrenchGunM1897' or @name='IZYgunT4TradshotgunBrowningAuto5']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
 
 <!-- Remove IZYgunT4TACshotgunM1014 from the player view in Creative Mode 
 See Global Edits above.. -->
@@ -182,6 +214,15 @@ IZYgunT1TACCompactshotgunSuperShortty
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT2ARCabineCAR15 and IZYgunT3MarksManRifle556M16A2DMR cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT2ARCabineCAR15' or @name='IZYgunT3MarksManRifle556M16A2DMR']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
 
 <!-- Start 2.6.1.1 -->
 
@@ -278,6 +319,17 @@ IZYgunT4MarksManRifle556SSMAR15
 <!-- *** IZY_RMP_762pack -->
 <conditional>
 <if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT1SNIPERRIFLE762Mosinnagant and IZYgunT2MarksManRifle762M1garandNavyconverted cannot install the Scope 2x Mod to avoid "White square in the place of the red dot" issue https://github.com/flatlanderone/gunpack/issues/15  -->
+
+<!-- Hotfix: IZYgunT3SNIPERRIFLE762LeeEnfieldRifle cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+
+<csv xpath="/items/item[@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or @name='IZYgunT2MarksManRifle762M1garandNavyconverted' or @name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
 
 <!-- 2.6.1.1 -->
 <!-- Replaced missing drop mesh for IZYgunT3BattleRifleHKG3 with sack_dropped. -->
