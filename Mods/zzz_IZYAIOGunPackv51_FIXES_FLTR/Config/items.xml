@@ -26,6 +26,23 @@
 	<property name="CreativeMode" value="Dev"/>
 </append>
 
+
+<!-- *** Vanilla -->
+
+<!-- Start of 2.6.1.3 -->
+<!-- 
+Added ammoShotgunShellPremium compatibility for the vanilla shotguns:
+gunShotgunT0PipeShotgun
+gunShotgunT1DoubleBarrel
+gunShotgunT2PumpShotgun
+gunShotgunT3AutoShotgun
+
+ -->
+ 
+<csv xpath="/items/item[@name='gunShotgunT0PipeShotgun' or @name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT2PumpShotgun' or @name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunShellPremium</csv>
+
+<!-- End of 2.6.1.3 -->
+
 <!-- *** IZY_RMP_Tech -->
 
 <conditional>
@@ -46,13 +63,51 @@
 <conditional>
 <if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
 
-<!-- IZYMeleeT4SpearPoleAxe can be sold like the other T4 melee weapons. -->
+<!-- Start of 2.6.1.3 -->
 
+<!-- Removed the ability to kick while crouching for the following weapons: 
+   - IZYMeleeT4SpearPoleAxe
+   - IZYMeleeT4BladeKatana
+   - IZYMeleeT4SledghammerSpikeMace -->
+
+<!-- IZYMeleeT4SpearPoleAxe  -->
+<append xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/effect_group[@name='meleeWpnSpearT3SteelSpear']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/effect_group[@name='meleeWpnSpearT3SteelSpear']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- IZYMeleeT4SledghammerSpikeMace  -->
+<append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']/effect_group[@name='Blocking']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']/effect_group[@name='Blocking']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- IZYMeleeT4BladeKatana  -->
+<append xpath="/items/item[@name='IZYMeleeT4BladeKatana']/effect_group[@name='meleeWpnBladeT3Machete']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4BladeKatana']/effect_group[@name='meleeWpnBladeT3Machete']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+
+
+
+<!-- End of 2.6.1.3 -->
+
+
+<!-- IZYMeleeT4SpearPoleAxe can be sold like the other T4 melee weapons. -->
 <set xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/property[@name='SellableToTrader']/@value">true</set> 
 
 
 <!-- IZYMeleeT4BladeKatana has now the same sneak damage bonus as meleeWpnBladeT3Machete. -->
-
 <append  xpath="/items/item[@name='IZYMeleeT4BladeKatana']">
 	<effect_group name="sneak damage bonus">
 		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
@@ -70,6 +125,24 @@
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.3 -->
+
+<!-- Removed the ability to kick while crouching for the IZYgunTminus1MusketM1777Rifle. -->
+<append xpath="/items/item[@name='IZYgunTminus1MusketM1777Rifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunTminus1MusketM1777Rifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- ammoMuzzleloadershot display changed from ammoBullet to ammoBulletAP. -->
+<append xpath="/items/item[@name='ammoMuzzleloadershot']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
 
 <!-- Added 2026-04-15 2.6.1.1 for 5.1.3. -->
 
@@ -149,6 +222,134 @@ ammoCrossbowLightBoltSteelAP
 <conditional>
 <if cond="mod_loaded('IZY_VRP') and mod_version('IZY_VRP') = version(1,1,0,4)">
 
+<!-- Start of 2.6.1.3 -->
+
+<!-- 
+Removed the ability to kick while crouching for the following weapons: 
+gunHandgunT1Pistol
+gunHandgunT3SMG5
+gunHandgunT2Magnum44
+gunHandgunT3DesertVulture
+gunShotgunT1DoubleBarrel
+gunShotgunT2PumpShotgun
+gunShotgunT3AutoShotgun
+gunRifleT2LeverActionRifle
+gunRifleT3SniperRifle
+gunMGT1AK47
+gunMGT2TacticalAR
+gunMGT3M60  -->
+
+<!-- gunHandgunT1Pistol  -->
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunHandgunT3SMG5 -->
+<append xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunHandgunT2Magnum44 -->
+<append xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunHandgunT3DesertVulture -->
+<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunShotgunT1DoubleBarrel -->
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunShotgunT2PumpShotgun -->
+<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunShotgunT3AutoShotgun -->
+<append xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunRifleT2LeverActionRifle -->
+<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunRifleT3SniperRifle -->
+<append xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunMGT1AK47 -->
+<append xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunMGT2TacticalAR -->
+<append xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunMGT3M60 -->
+<append xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+
+<!-- End of 2.6.1.3 -->
+
 <!-- gunRifleT1HuntingRifle now shows rounds per minute. -->
 
 <set xpath="items/item[@name='gunRifleT1HuntingRifle']/property[@name='DisplayType']/@value">rangedGun</set>
@@ -169,7 +370,6 @@ ammoCrossbowLightBoltSteelAP
 
 <!-- End of 2.6.1.2 -->
 
-
 <!-- IZYgunT1Pistol9Makarov and IZYgunT1Pistol9MakarovDesc have a full localization. -->
 
 <!-- IZYgunT0SMGPIPEsubmachinegun localization now cotrrectly shows Material as Scrap Iron, not Handgun Parts. -->
@@ -182,7 +382,20 @@ ammoCrossbowLightBoltSteelAP
 <conditional>
 <if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
 
-<!-- 2.6.1.2 -->
+<!-- Start of 2.6.1.3 -->
+
+<!-- Removed the ability to kick while crouching for the IZYgunT1TACCompactshotgunSuperShortty. -->
+<append xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
+
+<!-- Start of 2.6.1.2 -->
 
 <!-- Hotfix: IZYgunT3TradshotgunTrenchGunM1897 and IZYgunT4TradshotgunBrowningAuto5 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
 
@@ -215,7 +428,28 @@ IZYgunT1TACCompactshotgunSuperShortty
 <conditional>
 <if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
 
-<!-- 2.6.1.2 -->
+<!-- 2.6.1.3 -->
+
+<!-- Removed the ability to kick while crouching for IZYgunT0SNIPERpipeAR15Broken15Junk. -->
+<append xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group[@name='gunRifleT1HuntingRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group[@name='gunRifleT1HuntingRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- Removed the ability to kick while crouching for IZYgunT3MarksManRifle556M16A2DMR. -->
+<append xpath="/items/item[@name='IZYgunT3MarksManRifle556M16A2DMR']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunT3MarksManRifle556M16A2DMR']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
+<!-- Start of 2.6.1.2 -->
 
 <!-- Hotfix: IZYgunT2ARCabineCAR15 and IZYgunT3MarksManRifle556M16A2DMR cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
 
@@ -319,6 +553,18 @@ IZYgunT4MarksManRifle556SSMAR15
 <!-- *** IZY_RMP_762pack -->
 <conditional>
 <if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.3 -->
+
+<!-- ammo762mmExplosiveFragmentations display changed from ammoBullet to ammoBulletAP. -->
+<append xpath="/items/item[@name='ammo762mmExplosiveFragmentations']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+	<!-- <property name="DisplayType" value="ammoFragFTLR"/> -->
+</append>
+
+<!-- End of 2.6.1.3 -->
+
+
 
 <!-- 2.6.1.2 -->
 

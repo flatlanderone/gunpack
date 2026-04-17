@@ -1,0 +1,22 @@
+<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick2"/>
+<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick2">
+<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+
+</triggered_effect>
+
+<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick2">
+<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+
+</triggered_effect>
+<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick2"/>
+<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+</triggered_effect>
+<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+</triggered_effect>
+<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+</triggered_effect>

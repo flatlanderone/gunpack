@@ -2,7 +2,7 @@
 
 ## Overview
 
-This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14, hereafter "IGP". See Changelog below for a full list of fixes and other changes.
+This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14, hereafter "IZY Gun Pack"). See Changelog below for a full list of fixes and other changes.
 
 ## Requirements
 
@@ -14,12 +14,12 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  1. Download the mod file.
  2. Unzip it anywhere on your hard drive.
  3. Copy the zzz\_IZYAIOGunPackv51\_FIXES\_FLTR folder to the 7 Days to Die Mods folder. The default location is **%APPDATA%\7DaysToDie\Mods**.
- 4. The mod must load after all the IGP mods, patches and extensions.
+ 4. The mod must load after all the IZY Gun Pack mods, patches and extensions.
 
 ## Important notes
 
- 1. The 2.6.1.3 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.3 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
+ 1. The 2.6.1.3 version of the mod is designed to work with the **2.6.5.1.3** version of the IZY Gun pack released on 2026-04-14. Check the version of your IZY Gun pack. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IZY Gun pack, DO NOT INSTALL THE 2.6.1.3 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -36,91 +36,15 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1 and v2.6.5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
  - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17)
- - **This release**: 2.6.1.3 (2026-04-22)
+ - **This release**: 2.6.1.3 (2026-04-xx)
  
-# Changelog for 2.6.1.3 (2026-04-20)
+
+# Changelog for 2.6.1.3 (2026-04-xx)
 
 ## Notes
 
- - This is a hotfix release to remove the ability to kick while crouching and sneaking for several weapons across multiple weapon packs. Big thanks to Nexus user HatomugiBread for bringing my attention to this issue.
- - Additional localization changes were implemented to ensure a consistent presention for all weapon types.
- - The description panel of all special ammo types (Enhanced .45 ACP, Light Bolts, 7.62mm Explosive Ammo, 25mm Grenades, 40mm Grenades) contains information about compatible weapons. Thank you to Black Wolf for bringing this to my attention.
- - The weapon description template was further tweaked to enhance readability and prepare the ground for the planned automation of certain fields.
- - All bug fixes from previous versions of the patch remain in place.
- 
-## Known issues
+xxxxxxxxxxxxxxxxxxxxxxx
 
- -  When holding the majority of vanilla weapons from the IZY_VRP pack, the player is unable to switch off the weapon flashlight. Also the flashlight starts turned on. I am investigating the cause and the possible fixes.
- - Pressing F while crouching affects the stealth meter even when the weapon doesn't have a flashlight.
- - Several weapons do not have the kick feature, notably the following vanilla weapons: 
-   - gunBowT0PrimitiveBow
-   - gunBowT1WoodenBow
-   - gunBowT1IronCrossbow
-   - gunBowT3CompoundCrossbow 
-   - gunRifleT0PipeRifle
-   - gunHandgunT0PipePistol
-   - gunShotgunT0PipeShotgun
-   - gunRifleT1HuntingRifle
-   - gunExplosivesT3RocketLauncher
- - See https://github.com/flatlanderone/gunpack/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22Base%20IGP%20issue%22 for more information on issues that require an update of the base IGP files.
-   
-## 7 Days To Die 2.6
-
-### items.xml 
-- Added ammoShotgunShellPremium compatibility for the vanilla shotguns:
-   - gunShotgunT0PipeShotgun
-   - gunShotgunT1DoubleBarrel
-   - gunShotgunT2PumpShotgun
-   - gunShotgunT3AutoShotgun
-
-## IZY_melee
-
-### items.xml
- - Removed the ability to kick while crouching for the following weapons: 
-   - IZYMeleeT4SpearPoleAxe
-   - IZYMeleeT4BladeKatana
-   - IZYMeleeT4SledghammerSpikeMace
- 
-## IZY_VRP
- 
-### items.xml
- - Removed the ability to kick while crouching for the following weapons: 
-   - gunHandgunT1Pistol
-   - gunHandgunT3SMG5
-   - gunHandgunT2Magnum44
-   - gunHandgunT3DesertVulture
-   - gunShotgunT1DoubleBarrel
-   - gunShotgunT2PumpShotgun
-   - gunShotgunT3AutoShotgun
-   - gunRifleT2LeverActionRifle
-   - gunRifleT3SniperRifle
-   - gunMGT1AK47
-   - gunMGT2TacticalAR
-   - gunMGT3M60
- 
-## IZY_RMP_556pack
-
-### items.xml
- - Removed the ability to kick while crouching for the following weapons: 
-   - IZYgunT0SNIPERpipeAR15Broken15Junk
-   - IZYgunT3MarksManRifle556M16A2DMR
-
-## IZY_RMP_SG
-
-### items.xml
- - Removed the ability to kick while crouching for the IZYgunT1TACCompactshotgunSuperShortty.
-
-## IZY_RMP_Miscpack
-
-### items.xml
- - Removed the ability to kick while crouching for the IZYgunTminus1MusketM1777Rifle.
- - ammoMuzzleloadershot display changed from ammoBullet to ammoBulletAP.
- 
-## IZY_RMP_762pack
-
-### items.xml 
-  - ammo762mmExplosiveFragmentations display changed from ammoBullet to ammoBulletAP.
-  
 # Changelog for 2.6.1.2 (2026-04-17)
 
 ## Notes
@@ -225,9 +149,9 @@ None.
 
  - Removed all items that are disabled or not ready from the player view in Creative Mode.
  - Removed all items that are disabled or not ready from recipes, loot, and trader inventory.
- - All vanilla and IGP weapons have a new expanded description based on the original IGP format.
- - All vanilla and IGP weapon names display their weapon tier. For example, it is now possible to filter for all T3 weapons by typing "(T3)" in the search field.
- - Most vanilla and IGP weapon names display their weapon type. For example, it is now possible to display all shotguns by typing "shotgun" in the search field.
+ - All vanilla and IZY Gun Pack weapons have a new expanded description based on the original IZY format.
+ - All vanilla and IZY Gun Pack weapon names display their weapon tier. For example, it is now possible to filter for all T3 weapons by typing "(T3)" in the search field.
+ - Most vanilla and IZY Gun Pack weapon names display their weapon type. For example, it is now possible to display all shotguns by typing "shotgun" in the search field.
  - Localization has been reviewed and updated for clarity and consistency.
  
 ## IZY_FPV_GLOVES
