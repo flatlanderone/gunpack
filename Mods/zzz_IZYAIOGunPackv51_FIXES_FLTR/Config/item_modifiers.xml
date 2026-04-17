@@ -1,5 +1,22 @@
 <RamblingMan>
 
+<!-- *** VANILLA 2.6 -->
+
+<!-- 2.6.1.2 -->
+
+<!-- Added no2xScopesFLTR tag to block the installation of the 2x scope.
+Reason: White square in the place of the red dot https://github.com/flatlanderone/gunpack/issues/15
+ -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/@blocked_tags" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- Added tag to exclude 4x scope -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/@blocked_tags" delim="," op="add">no4xScopesFLTR</csv>
+
+<!-- Added tag to exclude 8x scope -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']/@blocked_tags" delim="," op="add">no8xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
 <!-- *** IZY_MMVMV2 -->
 
 <conditional>
@@ -9,15 +26,6 @@
 <set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle01']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle01Desc</set>
 
 <set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle02']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle02Desc</set>
-
-</if>
-</conditional>
-
-<!-- *** IZY_RMP_SG -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
-
-<!-- No changes. -->
 
 </if>
 </conditional>
