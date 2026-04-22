@@ -1,4 +1,4 @@
-# Flatlander's Fixes for IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 - version 2.6.1.3
+# Flatlander's Fixes for IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 - version 2.6.1.4
 
 ## Overview
 
@@ -18,8 +18,8 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## Important notes
 
- 1. The 2.6.1.3 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.3 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
+ 1. The 2.6.1.4 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.4 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -35,9 +35,48 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
  - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1 and v2.6.5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
- - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17)
- - **This release**: 2.6.1.3 (2026-04-22)
- 
+ - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22).
+ - **This release**: 2.6.1.4 (2026-04-xx)
+
+# Changelog for 2.6.1.4 (2026-04-xx)
+
+## Notes
+
+
+ - All bug fixes from previous versions of the patch remain in place.
+
+## Known issues
+
+## 7 Days To Die 2.6
+
+## Gears Options
+
+## IZY_FPV_GLOVES
+
+## IZY_melee
+
+## IZY_MMVMV2
+
+## IZY_RMP_45ACP
+
+## IZY_RMP_556pack
+
+## IZY_RMP_762pack
+
+## IZY_RMP_9mmVAL
+
+## IZY_RMP_Demopack
+
+## IZY_RMP_HVW
+
+## IZY_RMP_Miscpack
+
+## IZY_RMP_SG
+
+## IZY_RMP_Tech
+
+## IZY_VRP
+
 # Changelog for 2.6.1.3 (2026-04-22)
 
 ## Notes
