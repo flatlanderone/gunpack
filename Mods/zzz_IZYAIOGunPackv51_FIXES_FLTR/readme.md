@@ -38,7 +38,7 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17)
  - **This release**: 2.6.1.3 (2026-04-22)
  
-# Changelog for 2.6.1.3 (2026-04-20)
+# Changelog for 2.6.1.3 (2026-04-22)
 
 ## Notes
 
