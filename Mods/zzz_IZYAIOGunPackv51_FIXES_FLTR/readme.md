@@ -41,8 +41,8 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 # Changelog for 2.6.1.4 (2026-04-xx)
 
 ## Notes
-
-
+ - 
+ - 
  - All bug fixes from previous versions of the patch remain in place.
 
 ## Known issues
@@ -58,6 +58,9 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 ## IZY_MMVMV2
 
 ## IZY_RMP_45ACP
+
+### items.xml
+- Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick.
 
 ## IZY_RMP_556pack
 
@@ -77,6 +80,52 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## IZY_VRP
 
+### items.xml
+- Added kick to the following ranged and melee weapons as well as tools:
+   - gunBowT0PrimitiveBow
+   - gunBowT1WoodenBow
+   - gunBowT1IronCrossbow
+   - gunBowT3CompoundCrossbow 
+   - gunRifleT0PipeRifle
+   - gunHandgunT0PipePistol
+   - gunShotgunT0PipeShotgun
+   - gunRifleT1HuntingRifle
+   - gunExplosivesT3RocketLauncher
+   - meleeWpnBladeT0BoneKnife
+   - meleeWpnBladeT1HuntingKnife
+   - meleeWpnBladeT1CandyKnife
+   - meleeWpnBladeT3Machete
+   - meleeWpnClubT0WoodenClub
+   - meleeWpnClubT1BaseballBat
+   - meleeWpnClubT1CandyClub
+   - meleeWpnClubT3SteelClub
+   - meleeWpnBatonT0PipeBaton
+   - meleeWpnBatonT2StunBaton
+   - meleeWpnSpearT0StoneSpear
+   - meleeWpnSpearT1IronSpear
+   - meleeWpnSpearT3SteelSpear
+   - meleeWpnSledgeT0StoneSledgehammer
+   - meleeWpnSledgeT1IronSledgehammer
+   - meleeWpnSledgeT3SteelSledgehammer
+   - meleeWpnKnucklesT0LeatherKnuckles
+   - meleeWpnKnucklesT1IronKnuckles
+   - meleeWpnKnucklesT3SteelKnuckles
+   - meleeToolRepairT0StoneAxe
+   - meleeToolRepairT0TazasStoneAxe
+   - meleeToolRepairT1ClawHammer
+   - meleeToolRepairT3Nailgun
+   - meleeToolAxeT1IronFireaxe
+   - meleeToolPickT1IronPickaxe
+   - meleeToolShovelT0StoneShovel
+   - meleeToolShovelT1IronShovel
+   - meleeToolShovelT2SteelShovel
+   - meleeToolAxeT3Chainsaw
+   - meleeToolPickT3Auger
+   - meleeToolSalvageT1Wrench
+   - meleeToolSalvageT2Ratchet
+   - meleeToolSalvageT3ImpactDriver
+   - meleeToolTorch
+   
 # Changelog for 2.6.1.3 (2026-04-22)
 
 ## Notes

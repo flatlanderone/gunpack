@@ -10,10 +10,5 @@
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeATKBashing']"/>
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeATK']"/>
 
-
-
 </RamblingMan>
-
-<!-- commented out IZYRangeWPmeleeATKBashing -->
-<!-- commented out IZYRangeWPmeleeATKBashing -->
 

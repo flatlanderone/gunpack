@@ -26,8 +26,9 @@
 	<property name="CreativeMode" value="Dev"/>
 </append>
 
-
 <!-- *** Vanilla -->
+
+
 
 <!-- Start of 2.6.1.3 -->
 <!-- 
@@ -221,6 +222,139 @@ ammoCrossbowLightBoltSteelAP
 
 <conditional>
 <if cond="mod_loaded('IZY_VRP') and mod_version('IZY_VRP') = version(1,1,0,4)">
+
+<!-- 2.6.1.4 -->
+
+<!-- Added kick to vanilla weapons. -->
+<append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
+or @name='gunBowT1WoodenBow' 
+or @name='gunBowT1IronCrossbow' 
+or @name='gunBowT3CompoundCrossbow' 
+or @name='gunRifleT0PipeRifle' 
+or @name='gunHandgunT0PipePistol' 
+or @name='gunShotgunT0PipeShotgun' 
+or @name='gunRifleT1HuntingRifle' 
+or @name='gunExplosivesT3RocketLauncher']">
+	<effect_group name="IZYRangeWPmeleeKick_rangedweapons_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+<!-- Melee weapons -->
+<!-- Gears: Disabled by default.  -->
+
+<append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnBladeT1HuntingKnife' or 
+@name='meleeWpnBladeT1CandyKnife' or 
+@name='meleeWpnBladeT3Machete' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnClubT1BaseballBat' or 
+@name='meleeWpnClubT1CandyClub' or 
+@name='meleeWpnClubT3SteelClub' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBatonT2StunBaton' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='meleeWpnSpearT1IronSpear' or 
+@name='meleeWpnSpearT3SteelSpear' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSledgeT1IronSledgehammer' or 
+@name='meleeWpnSledgeT3SteelSledgehammer' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnKnucklesT1IronKnuckles' or 
+@name='meleeWpnKnucklesT3SteelKnuckles']">
+	<effect_group name="IZYRangeWPmeleeKick_meleeweapons_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+<!-- Added kick to Tools. -->
+<!-- Gears: Disabled by default.  -->
+
+<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolRepairT1ClawHammer' or 
+@name='meleeToolRepairT3Nailgun' or 
+@name='meleeToolAxeT1IronFireaxe' or 
+@name='meleeToolPickT1IronPickaxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeToolShovelT1IronShovel' or 
+@name='meleeToolShovelT2SteelShovel' or 
+@name='meleeToolAxeT3Chainsaw' or 
+@name='meleeToolPickT3Auger' or 
+@name='meleeToolSalvageT1Wrench' or 
+@name='meleeToolSalvageT2Ratchet' or 
+@name='meleeToolSalvageT3ImpactDriver' or 
+@name='meleeToolTorch']">
+	<effect_group name="IZYRangeWPmeleeKick_tools_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+<!-- End of 2.6.1.4 -->
+
 
 <!-- Start of 2.6.1.3 -->
 
@@ -504,6 +638,48 @@ IZYgunT4MarksManRifle556SSMAR15
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+
+<!-- Start of 2.6.1.4 -->
+<!-- Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick. -->
+
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@buff='IZYBashingCooldown']"/>
+
+<!-- Readded IZYRangeWPmeleeKick2_FLTR effect group with lower kick -->
+
+<append xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']">
+	<effect_group name="IZYRangeWPmeleeKick2_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick2"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick2">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick2">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick2"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+
+<!-- End of 2.6.1.4 -->
+
 
 <!-- Changed display type of all -45 ACP types to ammoBulletAP to show penetration values. -->
 <append xpath="/items/item[@name='ammo45ACPBulletBall' or @name='ammo45ACPHighpower']">

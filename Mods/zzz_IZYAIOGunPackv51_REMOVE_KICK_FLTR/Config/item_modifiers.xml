@@ -1,0 +1,6 @@
+<RamblingMan>
+<!-- *** Global Edits -->
+
+<remove xpath="item_modifiers/item_modifier[@name='modGunFlashlight']/effect_group/requirement[@buff='IZYRangeWPmeleeKick']"/>
+
+</RamblingMan>
