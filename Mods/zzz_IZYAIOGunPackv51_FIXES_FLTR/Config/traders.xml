@@ -1,12 +1,18 @@
 <RamblingMan>
 
-<!-- 2.6.1.1 -->
-
 <!-- *** IZY_RMP_Miscpack -->
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
 
+<!-- Start of 2.6.1.4 -->
+
+<!-- Removed ammoMuzzleloaderscattershot from trader inventory. -->
+<!-- <remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='ammoMuzzleloaderscattershot']"/> -->
+
+<!-- End of 2.6.1.4 -->
+
+<!-- 2.6.1.1 -->
 <!-- Added traderstage_template ammoTier0 to fix trader inventory crash due to Exception: TraderStageTemplate ammoTier0 for item: Muzzleloader Ammo does not exist. Bug:https://github.com/flatlanderone/gunpack/issues/9 (ammoMuzzleloadershot) reported by Black Wolf. -->
 
 <insertBefore xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier1']">
@@ -14,11 +20,11 @@
 		<entry min="1" max="999999" quality="0"/>
 	</traderstage_template>
 </insertBefore>
-
+<!-- End of 2.6.1.1 -->
 </if>
 </conditional>
 
-<!-- End of 2.6.1.1 -->
+
 
 <!-- 2.6.1.0 -->
 <!-- *** IZY_RMP_556pack -->
@@ -48,6 +54,14 @@
 <!-- No changes. -->
 
 </if>
+</conditional>
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/traders.xml"/>
+	</if>
 </conditional>
 
 </RamblingMan>

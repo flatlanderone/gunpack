@@ -99,4 +99,12 @@ IZYgunT3RocketLauncherRPG7 -->
 </if>
 </conditional>
 
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/progression.xml"/>
+	</if>
+</conditional>
+
 </RamblingMan>

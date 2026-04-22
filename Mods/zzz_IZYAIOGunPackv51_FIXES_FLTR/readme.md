@@ -1,12 +1,18 @@
-# Flatlander's Fixes for IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 - version 2.6.1.3
+# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.4
 
 ## Overview
 
-This mod provides various bug fixes and enhancements for the IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14, hereafter "IGP". See Changelog below for a full list of fixes and other changes.
+The **Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack** mod provides fixes, tweaks and enhancements for the IZY-All in One Gun Pack (hereafter the "IGP") v2.6.5.1.3 released on 2026-04-14 on Nexus Mods. 
+
+Several optional enhancements, including the "No Kick" option, are managed exclusively through the Gears mod interface. In order to access these optional enhancements, you must install the Gears mod and the Quartz mod.
+
+See Changelog below for a full list of changes and additions.
 
 ## Requirements
 
- - [IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14](https://www.nexusmods.com/7daystodie/mods/5458),
+ - [IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 on Nexus Mods](https://www.nexusmods.com/7daystodie/mods/5458),
+ - [Gears 6.0.0 or later](https://www.nexusmods.com/7daystodie/mods/4017),
+ - [Quartz 7.0.0 or later](https://www.nexusmods.com/7daystodie/mods/2409),
  - 7 Days to Die v2.6 and later.
 
 ## Manual installation
@@ -15,14 +21,16 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  2. Unzip it anywhere on your hard drive.
  3. Copy the zzz\_IZYAIOGunPackv51\_FIXES\_FLTR folder to the 7 Days to Die Mods folder. The default location is **%APPDATA%\7DaysToDie\Mods**.
  4. The mod must load after all the IGP mods, patches and extensions.
+ 5. Download and install the required Gears and Quartz mods.
 
 ## Important notes
 
- 1. The 2.6.1.3 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.3 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
+ 1. The 2.6.1.4 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.4 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
+ 6. If you change the settings through the Gears interface, you must restart the game for the changes to take effect. 
 
 ## Bug reports and feature suggestions
 
@@ -35,9 +43,154 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
  - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1 and v2.6.5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
- - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17)
- - **This release**: 2.6.1.3 (2026-04-22)
+ - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22).
+ - **This release**: 2.6.1.4 (2026-04-29)
+
+# Changelog for 2.6.1.4 (2026-04-29)
+
+## Notes
+ - The main feature of this update is the ability to disable kick attack. Read below for more details.
+ - This update introduces three new sets of options (Kick Attack, Weapon Packs, Tier 4 Weapons) that are managed exclusively through the Gears interface. Read below for more details. 
+ - Minor localization fixes have been implemented.
+ - All bug fixes from previous versions of the patch remain in place.
+
+## Known issues
+
+ - Issues (A) and (B) from 2.6.1.3 are still occurring.
+ - Issue (C) from 2.6.1.3 is resolved in 2.6.1.4.
+ - See https://github.com/flatlanderone/gunpack/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug for a full list of unresolved issues. 
+
+## Planned features
+
+See https://github.com/flatlanderone/gunpack/issues?q=is%3Aissue%20state%3Aopen%20label%3A2.6.1.5 for a list of planned fixes and enhancements.
+
+### How to use Gears
+
+ - To manage the new settings introduced in this update, click on 'Mods' in the 'Main Menu' of the game and select this mod's entry in the left-hand panel.
+ - Each set of options is managed in its own tab in the right-hand panel. 
+ - After changing the settings, click 'Apply'.
+ - Click 'Defaults', then 'Apply' to restore the settings to their default values. 
  
+## New Settings
+
+The new settings introduced in this update present as follows:
+
+### 1. Kick Attack
+
+The IGP added the kick attack only to some vanilla firearms and two harvesting tools.
+
+This update adds the option:
+- to enable the kick attack for the remaining vanilla firearms, the bows/crossbows and all the tools,
+- to disable the kick attack per item group.
+
+By default, the kick attack is already ENABLED for:
+ - All vanilla and IGP handguns, rifles, submachine guns, machine guns and grenade launchers,
+ - All vanilla and IGP bows and crossbows.
+
+The kick attack is by default DISABLED for all IGP and vanilla melee weapons and tools.
+
+Select 'Kick On' or 'Kick Off' for each group. By selecting 'Kick Off', you will disable the kick attack for the selected group.
+
+### 2. Weapon Packs
+
+This update adds the option to disable the various weapon packs that make up the IGP. Weapons and ammo from disabled weapon packs will not appear in loot. You will not be able to craft them nor buy them from the traders. However the weapons and ammo are not removed from the game and can be spawned using the 'Creative Menu'. 
+
+Click 'Off' to disable the chosen weapon pack. Click 'On' to enable it again.
+
+Note that the Vanilla Replacer Pack and other packs cannot currently be disabled.
+
+### 3. Tier 4 Weapons
+
+This update adds the option to modify your gameplay experience with Tier 4 Weapons. You can:
+ - disable the crafting of these weapons,
+ - prevent them from appearing in loot containers,
+ - prevent them from appearing in trader inventory,
+ - disable the possibility to repair them,
+ - accelerate the rate at which they degrade up to 500%.
+
+By default these options are not active.
+
+## 7 Days To Die 2.6 / IZY_VRP
+
+### Options/items.xml (managed by Gears, see above)
+ - Added kick to the following vanilla guns, launchers, bows, melee weapons amd tools:
+   - gunBowT0PrimitiveBow
+   - gunBowT1WoodenBow
+   - gunBowT1IronCrossbow
+   - gunBowT3CompoundCrossbow 
+   - gunRifleT0PipeRifle
+   - gunHandgunT0PipePistol
+   - gunShotgunT0PipeShotgun
+   - gunRifleT1HuntingRifle
+   - gunExplosivesT3RocketLauncher
+   - meleeWpnBladeT0BoneKnife
+   - meleeWpnBladeT1HuntingKnife
+   - meleeWpnBladeT1CandyKnife
+   - meleeWpnBladeT3Machete
+   - meleeWpnClubT0WoodenClub
+   - meleeWpnClubT1BaseballBat
+   - meleeWpnClubT1CandyClub
+   - meleeWpnClubT3SteelClub
+   - meleeWpnBatonT0PipeBaton
+   - meleeWpnBatonT2StunBaton
+   - meleeWpnSpearT0StoneSpear
+   - meleeWpnSpearT1IronSpear
+   - meleeWpnSpearT3SteelSpear
+   - meleeWpnSledgeT0StoneSledgehammer
+   - meleeWpnSledgeT1IronSledgehammer
+   - meleeWpnSledgeT3SteelSledgehammer
+   - meleeWpnKnucklesT0LeatherKnuckles
+   - meleeWpnKnucklesT1IronKnuckles
+   - meleeWpnKnucklesT3SteelKnuckles
+   - meleeToolRepairT0StoneAxe
+   - meleeToolRepairT0TazasStoneAxe
+   - meleeToolRepairT1ClawHammer
+   - meleeToolRepairT3Nailgun
+   - meleeToolAxeT1IronFireaxe
+   - meleeToolPickT1IronPickaxe
+   - meleeToolShovelT0StoneShovel
+   - meleeToolShovelT1IronShovel
+   - meleeToolShovelT2SteelShovel
+   - meleeToolAxeT3Chainsaw
+   - meleeToolPickT3Auger
+   - meleeToolSalvageT1Wrench
+   - meleeToolSalvageT2Ratchet
+   - meleeToolSalvageT3ImpactDriver
+   - meleeToolTorch
+
+## IZY_melee
+
+### loot.xml
+- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2.
+
+## IZY_RMP_44magnum
+
+### loot.xml:
+ - Added IZYgunT3PistolMagnumAutomag44 and IZYgunT4DualMagnumDesertEagles to loot.
+
+## IZY_RMP_45ACP
+
+### items.xml
+ - Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick.
+
+### loot.xml
+ - Added missing IZYgunT1Pistol45Type17C96 entry to groupQuestWeaponsRangedT1.
+
+## IZY_RMP_9mmVAL
+
+### loot.xml
+ - Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger, groupQuestWeaponsRangedT1 and groupWeaponsT1_Ranged.
+
+## IZY_RMP_Miscpack
+
+### traders.xml
+ - Removed ammoMuzzleloaderscattershot from trader inventory.
+
+## IZY_RMP_Tech
+
+### loot.xml
+ - Added IZYgunT3TechnicalNailmachinegun to loot groups.
+
 # Changelog for 2.6.1.3 (2026-04-22)
 
 ## Notes
@@ -50,9 +203,9 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
  
 ## Known issues
 
- -  When holding the majority of vanilla weapons from the IZY_VRP pack, the player is unable to switch off the weapon flashlight. Also the flashlight starts turned on. I am investigating the cause and the possible fixes.
- - Pressing F while crouching affects the stealth meter even when the weapon doesn't have a flashlight.
- - Several weapons do not have the kick feature, notably the following vanilla weapons: 
+ - (A) When holding the majority of vanilla weapons from the IZY_VRP pack, the player is unable to switch off the weapon flashlight. Also the flashlight starts turned on. I am investigating the cause and the possible fixes.
+ - (B) Pressing F while crouching affects the stealth meter even when the weapon doesn't have a flashlight.
+ - (C) Several weapons do not have the kick feature, notably the following vanilla weapons: 
    - gunBowT0PrimitiveBow
    - gunBowT1WoodenBow
    - gunBowT1IronCrossbow
