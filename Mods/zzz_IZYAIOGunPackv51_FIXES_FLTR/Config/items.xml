@@ -822,4 +822,15 @@ IZYgunT3MarksManRifle762HKPSG1 -->
 	</if>
 </conditional>
 
+<!-- Move non gears KICK edits to items_no_gears.xml -->
+<!-- <conditional>
+	<if cond="mod_loaded('Gears') == 'true'">
+		<include filename="Conditionals/nav_objects_gears.xml" />
+	</if>
+	<else>
+		<include filename="Conditionals/nav_objects_no_gears.xml" />
+	</else>
+</conditional> -->
+
+
 </RamblingMan>

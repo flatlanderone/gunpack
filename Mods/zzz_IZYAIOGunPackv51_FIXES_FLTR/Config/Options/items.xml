@@ -2,18 +2,90 @@
 
 <!-- Kick Options -->
 
-  <conditional>
-    <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'SCoreSettings1.Players.AntiNerdPole') == 'false'">
+<!-- AllItems -->
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
-<!-- <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATKBashing']"/> -->
 <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
-
-
-	</if>
+</if>
 </conditional>
+ -->
+
+<!-- KickAllFirearms -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick Off'">
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional>
+
+<!-- KickAllMeleeWeapons -->
+<!-- Move ON code here. -->
+<!-- Use IZYRangeWPmeleeKick_meleeweapons_FLTR -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick Off'">
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional>
+
+<!-- Move ON code here. -->
+<!-- IZYRangeWPmeleeKick_tools_FLTR -->
+
+<!-- KickAllRepairTools -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllRepairTools') == 'Kick Off'">
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolRepair')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional>
+
+<!--  KickAllSalvageTools -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllSalvageTools') == 'Kick Off'">
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[starts-with(@name, 'meleeToolSalvage')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional>
+
+<!-- 
+Harvesting
+
+meleeToolAxeT1IronFireaxe
+meleeToolAxeT2SteelAxe
+meleeToolPickT1IronPickaxe
+meleeToolPickT2SteelPickaxe
+meleeToolShovelT0StoneShovel
+meleeToolShovelT1IronShovel
+meleeToolShovelT2SteelShovel
+meleeToolAxeT3Chainsaw
+meleeToolPickT3Auger
+ -->
+ 
+ 
 </RamblingMan>

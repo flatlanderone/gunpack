@@ -1,11 +1,32 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
 // Gears,,,,,,,,,,,,,,,,,,
-## Kick ##,,,,,,,,,,,,,,,,,,
-uiPlayers,UI,Display,,,Kick,,,,,,,,,,,,,
-uiGeneral,UI,Display,,,[00b6ff]General[-],,,,,,,,,,,,,
-tipGeneral,UI,Tooltip,,,[DECEA3]set individual config options true or false[-],,,,,,,,,,,,,
-uiAntiNerdPole,UI,Display,,,Kick,,,,,,,,,,,,,
-tipAntiNerdPole,UI,Tooltip,,,"[DECEA3]disables the kick[-]",,,,,,,,,,,,,
+//## Weapon Packs ##,,,,,,,,,,,,,,,,,,
+uiWeaponPackSettings,UI,Display,,,Weapon Packs,,,,,,,,,,,,,
+uiT4Settings,UI,Display,,,Tier 4 Weapons,,,,,,,,,,,,,
+//## Kick ##,,,,,,,,,,,,,,,,,,
+uiKickSettings,UI,Display,,,Kick,,,,,,,,,,,,,
+//uiItemGroups,UI,Display,,,[00b6ff]Select Kick On or Kick Off for each item category[-],,,,,,,,,,,,,
+uiItemGroups,UI,Display,,,[DECEA3]Select 'Kick On' or 'Kick Off' for each category[-],,,,,,,,,,,,,
+//tipItemGroups,UI,Tooltip,,,[DECEA3]Set individual config options Kick On or Kick Off[-],,,,,,,,,,,,,
+//tipKickSettings,UI,Tooltip,,,[DECEA3]Set options for kick [-],,,,,,,,,,,,,
+//
+uiKickAllWeapons,UI,Display,,,Kick On or Off for all items,,,,,,,,,,,,,
+//tipAllWeapons,UI,Tooltip,,,"[DECEA3]disables the kick when set to Off.[-]",,,,,,,,,,,,,
+
+//tipAllFirearms,UI,Tooltip,,,"[DECEA3]disables the kick when set to Off.[-]",,,,,,,,,,,,,
+uiKickAllFirearms,UI,Display,,,"Firearms, bows and crossbows",,,,,,,,,,,,,
+//uiKickAllBows,UI,Display,,,Bows and Crossbows,,,,,,,,,,,,,
+uiKickAllMeleeWeapons,UI,Display,,,Melee Weapons,,,,,,,,,,,,,
+uiKickAllHarvestingTools,UI,Display,,,Harvesting Tools,,,,,,,,,,,,,
+uiKickAllSalvageTools,UI,Display,,,Salvage Tools,,,,,,,,,,,,,
+uiKickAllRepairTools,UI,Display,,,Repair Tools,,,,,,,,,,,,,
+uiKickAllFlashlight,UI,Display,,,Flashlight,,,,,,,,,,,,,
+
+uiNoteKick,UI,Display,,,"[DECEA3]Note: When kick is enabled, crouch to turn on and off your Helmet Light or your Weapon Flashlight.[-]",,,,,,,,,,,,,
+
+
+
+//
 uiOneBlockCrouch,UI,Display,,,One Block Crouch,,,,,,,,,,,,,
 tipOneBlockCrouch,UI,Tooltip,,,[DECEA3]Enabled/Disabled[-],,,,,,,,,,,,,
 uiSoftHands,UI,Display,,,Soft Hands,,,,,,,,,,,,,
