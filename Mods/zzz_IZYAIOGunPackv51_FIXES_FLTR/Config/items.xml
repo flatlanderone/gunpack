@@ -1,11 +1,5 @@
 <RamblingMan>
 
-<conditional>
-	<if>
-	
-	</if>
-</conditional>
-
 <!-- *** Global Edits -->
 
 <!-- Remove from the player view in Creative Mode items that are not ready and disabled. -->
@@ -817,6 +811,15 @@ IZYgunT3MarksManRifle762HKPSG1 -->
 <set xpath="items/item[@name='IZYgunT4MarksManRifleM110SASS' or @name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or @name='IZYgunT4MarksManRifle762SVUprototypeRifle' or @name='IZYgunT1SNIPERRIFLE762Mosinnagant' or @name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or @name='IZYgunT2MarksManRifle762M1garandNavyconverted' or @name='IZYgunT3MarksManRifle762HKPSG1']/property[@name='DisplayType']/@value">rangedGun</set>
  
 </if>
+</conditional>
+
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/items.xml"/>
+	</if>
 </conditional>
 
 </RamblingMan>

@@ -1,10 +1,19 @@
 <RamblingMan>
-<!-- Gears Options 
 
-1. Disable kick,
-2. Disable izy skins for vanila weapons.
+<!-- Kick Options -->
 
--->
-<!-- *** Global Edits -->
+  <conditional>
+    <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'SCoreSettings1.Players.AntiNerdPole') == 'false'">
+<remove xpath="items/item/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<!-- <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATKBashing']"/> -->
+<remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
 
+
+	</if>
+</conditional>
 </RamblingMan>

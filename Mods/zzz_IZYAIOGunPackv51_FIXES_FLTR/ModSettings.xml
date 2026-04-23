@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModSettings>
+  <Global>
+    <Tab name="SCoreSettings1" displayKey="uiPlayers" tooltipKey="tipPlayers">
+      <Category name="Players" displayKey="uiGeneral" tooltipKey="tipGeneral">
+        <Switch name="AntiNerdPole" displayKey="uiAntiNerdPole" tooltipKey="tipAntiNerdPole" defaultValue="true" leftValue="false" rightValue="true" />
+        <Switch name="OneBlockCrouch" displayKey="uiOneBlockCrouch" tooltipKey="tipOneBlockCrouch" defaultValue="True" leftValue="False" rightValue="True" />
+        <Switch name="SoftHands" displayKey="uiSoftHands" tooltipKey="tipSoftHands" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="VehicleNoTake" displayKey="uiVehicleNoTake" tooltipKey="tipVehicleNoTake" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="ExtendedSigns" displayKey="uiExtendedSigns" tooltipKey="tipExtendedSigns" defaultValue="True" leftValue="False" rightValue="True" />
+        <Switch name="AutoRedeemChallenges" displayKey="uiAutoRedeemChallenges" tooltipKey="tipAutoRedeemChallenges" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="SharedReading" displayKey="uiSharedReading" tooltipKey="tipSharedReading" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+      <Category name="EncVal" displayKey="uiEncumbrance" tooltipKey="tipEncumbrance">
+        <Switch name="Encumbrance" displayKey="uiEncumbranceToggle" tooltipKey="tipEncumbranceToggle" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="MinimumWeight" displayKey="uiMinimumDefaultWeight" tooltipKey="tipMinimumDefaultWeight" defaultValue="0.3">
+          <Property increment="0.1" minValue="0.1" maxValue="3.0" type="incrementalValuesFloat" />
+          <Property type="formatter" formatString="0.0" />
+        </Slider>
+        <Slider name="MaxEncumbrance" displayKey="uiMaxEncumbrance" tooltipKey="tipMaxEncumbrance" defaultValue="70">
+          <Property increment="10" minValue="0" maxValue="200" type="incrementalValuesInt" />
+        </Slider>
+        <Switch name="Toolbelt" displayKey="uiIncludesToolbeltItems" tooltipKey="tipIncludesToolbeltItems" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="Equipment" displayKey="uiIncludesEquipmentItems" tooltipKey="tipIncludesEquipmentItems" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="Logging" displayKey="uiLoggingEncumbrance" tooltipKey="tipLoggingEncumbrance" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings2" displayKey="Zombies" tooltipKey="tipZombies">
+      <Category name="Zombies" displayKey="uiZombieSettings" tooltipKey="tipZombieSettings">
+        <Switch name="HeadshotOnly" displayKey="uiHeadshotsOnly" tooltipKey="tipHeadshotsOnly" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="RandomSize" displayKey="uiRandomSize" tooltipKey="tipRandomSize" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="RandomWalk" displayKey="uiRandomWalk" tooltipKey="tipRandomWalk" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="SmarterEntities" displayKey="uiSmarterEntities" tooltipKey="tipSmarterEntities" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="EntityPooling" displayKey="uiEntityPooling" tooltipKey="tipEntityPooling" defaultValue="False" leftValue="False" rightValue="True" />
+        <Selector name="EnemyActiveMax" displayKey="uiMaxEnemyActive" tooltipKey="tipMaxEnemyActive" defaultValue="-1">
+          <Property type="arrayValues" allowedValues="-1,0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90" />
+        </Selector>
+        <Selector name="ScoutSpawnChance" displayKey="uiScoutSpawnChance" tooltipKey="tipScoutSpawnChance" defaultValue="-1">
+          <Property type="arrayValues" allowedValues="-1,0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1" />
+        </Selector>
+        <Switch name="Logging" displayKey="uiLoggingZombies" tooltipKey="tipLoggingZombies" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings3" displayKey="UI" tooltipKey="tipUI">
+      <Category name="UI" displayKey="uiUISettings" tooltipKey="tipUISettings">
+        <Switch name="ShowTargetHealthBar" displayKey="uiShowTargetHealthBar" tooltipKey="tipShowTargetHealthBar" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="DisableXPIconNotification" displayKey="uiDisableXPIconNotification" tooltipKey="tipDisableXPIconNotification" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings4" displayKey="uiFoodSpoilage" tooltipKey="tipFoodSpoilage">
+      <Category name="FoodSpoilage" displayKey="uiFoodSettings" tooltipKey="tipFoodSettings">
+        <Switch name="FoodSpoilage" displayKey="uiFoodSpoilageToggle" tooltipKey="tipFoodSpoilageToggle" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="UseAlternateItemValue" displayKey="uiUseAlternateItemValue" tooltipKey="tipUseAlternateItemValue" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="Toolbelt" displayKey="uiToolbeltSpoilage" tooltipKey="tipToolbeltSpoilage" defaultValue="6">
+          <Property increment="1" minValue="0" maxValue="10" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="Backpack" displayKey="uiBackpackSpoilage" tooltipKey="tipBackpackSpoilage" defaultValue="5">
+          <Property increment="1" minValue="0" maxValue="10" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="Container" displayKey="uiContainerSpoilage" tooltipKey="tipContainerSpoilage" defaultValue="4">
+          <Property increment="1" minValue="0" maxValue="10" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="MinimumSpoilage" displayKey="uiMinimumSpoilage" tooltipKey="tipMinimumSpoilage" defaultValue="1">
+          <Property increment="1" minValue="0" maxValue="5" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="TickPerLoss" displayKey="uiTickPerLoss" tooltipKey="tipTickPerLoss" defaultValue="10">
+          <Property increment="2" minValue="0" maxValue="14" type="incrementalValuesInt" />
+        </Slider>
+        <Selector name="SpoiledItem" displayKey="uiSpoiledItem" tooltipKey="tipSpoiledItem" defaultValue="foodRottingFlesh">
+          <Property type="arrayValues" allowedValues="foodRottingFlesh,foodRawMeat" />
+        </Selector>
+        <Switch name="FullStackSpoil" displayKey="uiFullStackSpoil" tooltipKey="tipFullStackSpoil" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="Logging" displayKey="uiLoggingFoodSpoilage" tooltipKey="tipLoggingFoodSpoilage" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings5" displayKey="uiLocks" tooltipKey="tipLocks">
+      <Category name="AdvancedLockpicking" displayKey="uiLockSettings" tooltipKey="tipLockSettings">
+        <Switch name="AdvancedLocks" displayKey="uiAdvancedLocks" tooltipKey="tipAdvancedLocks" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="QuestFullReset" displayKey="uiLockQuestFullReset" tooltipKey="tipLockQuestFullReset" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="MaxGiveAmount" displayKey="uiMaxGiveAmount" tooltipKey="tipMaxGiveAmount" defaultValue="8">
+          <Property increment="2" minValue="2" maxValue="12" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="BreakTime" displayKey="uiBreakTime" tooltipKey="tipBreakTime" defaultValue="1.0">
+          <Property increment="0.2" minValue="0.4" maxValue="1.4" type="incrementalValuesFloat" />
+        </Slider>
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings6" displayKey="uiExtras" tooltipKey="tipExtras">
+      <Category name="Extras" displayKey="uiExtraSettings" tooltipKey="tipExtraSettings">
+        <Switch name="NoExceptionHijack" displayKey="uiNoExceptionHijack" tooltipKey="tipNoExceptionHijack" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="EnablePoweredWorkstations" displayKey="uiEnablePoweredWorkstations" tooltipKey="tipEnablePoweredWorkstations" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="AdvancedItemRepair" displayKey="uiAdvancedItemRepair" tooltipKey="tipAdvancedItemRepair" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="DisableScrapFallback" displayKey="uiDisableScrapFallback" tooltipKey="tipDisableScrapFallback" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="DurabilityAffectsDamage" displayKey="uiDurabilityAffectsDamage" tooltipKey="tipDurabilityAffectsDamage" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="ZeroXP" displayKey="uiZeroXP" tooltipKey="tipZeroXP" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="Theme" displayKey="uiSpook" tooltipKey="tipSpook" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings7" displayKey="uiTakeAndReplace" tooltipKey="tipTakeAndReplace">
+      <Category name="TakeandReplace" displayKey="uiTakeAndReplaceSettings" tooltipKey="tipTakeAndReplaceSettings">
+        <Switch name="Legacy" displayKey="uiLegacy" tooltipKey="tipLegacy" defaultValue="True" leftValue="False" rightValue="True" />
+        <Selector name="TakeWithTool" displayKey="uiTakeWithTool" tooltipKey="tipTakeWithTool" defaultValue="meleeToolRepairT1ClawHammer">
+          <Property type="arrayValues" allowedValues="meleeToolRepairT0StoneAxe,meleeToolRepairT0TazasStoneAxe,meleeToolRepairT1ClawHammer,meleeToolRepairT3Nailgun" />
+        </Selector>
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings8" displayKey="uiTraders" tooltipKey="tipTraders">
+      <Category name="AdvancedPrefabFeatures" displayKey="uiTraderSettings" tooltipKey="tipTraderSettings">
+        <Switch name="DisableTraderProtection" displayKey="uiDisableTraderProtection" tooltipKey="tipDisableTraderProtection" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="AllowBuildingInTraderArea" displayKey="uiAllowBuildingInTraderArea" tooltipKey="tipAllowBuildingInTraderArea" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="DisableWallVolume" displayKey="uiDisableWallVolume" tooltipKey="tipDisableWallVolume" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="DisableFlickeringLights" displayKey="uiDisableFlickeringLights" tooltipKey="tipDisableFlickeringLights" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="Logging" displayKey="uiLoggingTraders" tooltipKey="tipLoggingTraders" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings9" displayKey="uiNPC" tooltipKey="tipNPC">
+      <Category name="AdvancedNPCFeatures" displayKey="uiNPCSettings" tooltipKey="tipNPCSettings">
+        <Switch name="EnhancedFeatures" displayKey="uiEnhancedFeatures" tooltipKey="tipEnhancedFeatures" defaultValue="True" leftValue="False" rightValue="True" />
+        <Switch name="MakeTraderVulnerable" displayKey="uiMakeTraderVulnerable" tooltipKey="tipMakeTraderVulnerable" defaultValue="False" leftValue="False" rightValue="True" />
+        <Selector name="HumanTags" displayKey="uiHumanTags" tooltipKey="tipHumanTags" defaultValue="human,bandit,survivor,npc,trader">
+          <Property type="arrayValues" allowedValues="human,bandit,survivor,npc,trader" />
+        </Selector>
+        <Selector name="UseFactionsTags" displayKey="uiUseFactionsTags" tooltipKey="tipUseFactionsTags" defaultValue="human,bandit,survivor,npc,trader">
+          <Property type="arrayValues" allowedValues="human,bandit,survivor,npc,trader" />
+        </Selector>
+        <Switch name="FactionRelationshipCVars" displayKey="uiFactionRelationshipCVars" tooltipKey="tipFactionRelationshipCVars" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="AllEntitiesUseFactionTargeting" displayKey="uiAllEntitiesUseFactionTargeting" tooltipKey="tipAllEntitiesUseFactionTargeting" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="AttackVolumeInstantAwake" displayKey="uiAttackVolumeInstantAwake" tooltipKey="tipAttackVolumeInstantAwake" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="DisplayCompanions" displayKey="uiDisplayCompanions" tooltipKey="tipDisplayCompanions" defaultValue="True" leftValue="False" rightValue="True" />
+        <Switch name="AdvancedEnemyNPCs" displayKey="uiAdvancedEnemyNPCs" tooltipKey="tipAdvancedEnemyNPCs" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="EnemyDistanceToTalk" displayKey="uiEnemyDistanceToTalk" tooltipKey="tipEnemyDistanceToTalk" defaultValue="10">
+          <Property increment="1" minValue="0" maxValue="20" type="incrementalValuesInt" />
+        </Slider>
+        <Switch name="Logging" displayKey="uiLoggingNPC" tooltipKey="tipLoggingNPC" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings10" displayKey="uiFire" tooltipKey="tipFire">
+      <Category name="FireManagement" displayKey="uiFireSettings" tooltipKey="tipFireSettings">
+        <Switch name="FireEnable" displayKey="uiFireEnable" tooltipKey="tipFireEnable" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="FireSpread" displayKey="uiFireCanSpread" tooltipKey="tipFireCanSpread" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="FirePersists" displayKey="uiFireSaveStatePersists" tooltipKey="tipFireSaveStatePersists" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="FireDamage" displayKey="uiFireDamageAmount" tooltipKey="tipFireDamageAmount" defaultValue="50">
+          <Property increment="5" minValue="5" maxValue="100" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="CheckInterval" displayKey="uiCheckInterval" tooltipKey="tipCheckInterval" defaultValue="45">
+          <Property increment="5" minValue="20" maxValue="60" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="SmokeTime" displayKey="uiSmokeTime" tooltipKey="tipSmokeTime" defaultValue="30">
+          <Property increment="5" minValue="15" maxValue="45" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="ChanceToExtinguish" displayKey="uiChanceToExtinguish" tooltipKey="tipChanceToExtinguish" defaultValue=".1">
+          <Property increment="0.1" minValue="0" maxValue="0.5" type="incrementalValuesFloat" />
+        </Slider>
+        <Switch name="Logging" displayKey="uiLoggingFire" tooltipKey="tipLoggingFire" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings11" displayKey="uiCropsAndFarming" tooltipKey="tipCropsAndFarming">
+      <Category name="CropManagement" displayKey="uiFarmingSettings" tooltipKey="tipFarmingSettings">
+        <Switch name="CropEnable" displayKey="uiCropEnable" tooltipKey="tipCropEnable" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="CheckInterval" displayKey="uiCheckIntervalCrops" tooltipKey="tipCheckIntervalCrops" defaultValue="600">
+          <Property increment="100" minValue="400" maxValue="800" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="MaxPipeLength" displayKey="uiMaxPipeLength" tooltipKey="tipMaxPipeLength" defaultValue="500">
+          <Property increment="50" minValue="300" maxValue="700" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="WaterDamage" displayKey="uiWaterDamage" tooltipKey="tipWaterDamage" defaultValue="1">
+          <Property increment="0.1" minValue="0.0" maxValue="1.5" type="incrementalValuesFloat" />
+          <Property type="formatter" formatString="0.0" />
+        </Slider>
+        <Switch name="RequirePipesForSprinklers" displayKey="uiRequirePipesForSprinklers" tooltipKey="tipRequirePipesForSprinklers" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="Logging" displayKey="uiLoggingCrops" tooltipKey="tipLoggingCrops" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings12" displayKey="uiRemoteCrafting" tooltipKey="tipRemoteCrafting">
+      <Category name="AdvancedRecipes" displayKey="uiRemoteCraftingSettings" tooltipKey="tipRemoteCraftingSettings">
+        <Switch name="ReadFromContainers" displayKey="uiReadFromContainers" tooltipKey="tipReadFromContainers" defaultValue="True" leftValue="False" rightValue="True" />
+        <Switch name="BlockOnNearbyEnemies" displayKey="uiBlockOnNearbyEnemies" tooltipKey="tipBlockOnNearbyEnemies" defaultValue="False" leftValue="False" rightValue="True" />
+        <Slider name="Distance" displayKey="uiDistanceRemoteCrafting" tooltipKey="tipDistanceRemoteCrafting" defaultValue="10">
+          <Property increment="2" minValue="4" maxValue="12" type="incrementalValuesInt" />
+        </Slider>
+        <Switch name="LandClaimContainersOnly" displayKey="uiLandClaimContainersOnly" tooltipKey="tipLandClaimContainersOnly" defaultValue="False" leftValue="False" rightValue="True" />
+        <Switch name="LandClaimPlayerOnly" displayKey="uiLandClaimPlayerOnly" tooltipKey="tipLandClaimPlayerOnly" defaultValue="False" leftValue="False" rightValue="True" />
+        <Selector name="disablereceiver" displayKey="uiDisableReceiver" tooltipKey="tipDisableReceiver" defaultValue="forge">
+          <Property type="arrayValues" allowedValues="forge,workstation,chemstation" />
+        </Selector>
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings13" displayKey="uiRemoteUpgradeRepair" tooltipKey="tipRemoteUpgradeRepair">
+      <Category name="BlockUpgradeRepair" displayKey="uiRemoteUpgradeRepairSettings" tooltipKey="tipRemoteUpgradeRepairSettings">
+        <Switch name="ReadFromContainers" displayKey="uiReadFromContainersUpgrade" tooltipKey="tipReadFromContainersUpgrade" defaultValue="True" leftValue="False" rightValue="True" />
+        <Slider name="Distance" displayKey="uiDistanceUpgradeRepair" tooltipKey="tipDistanceUpgradeRepair" defaultValue="10">
+          <Property increment="2" minValue="4" maxValue="12" type="incrementalValuesInt" />
+        </Slider>
+        <Switch name="BlockOnNearbyEnemies" displayKey="uiBlockOnNearbyEnemiesUpgrade" tooltipKey="tipBlockOnNearbyEnemiesUpgrade" defaultValue="True" leftValue="False" rightValue="True" />
+        <Slider name="DistanceEnemy" displayKey="uiEnemyDistanceAway" tooltipKey="tipEnemyDistanceAway" defaultValue="30">
+          <Property increment="5" minValue="10" maxValue="40" type="incrementalValuesInt" />
+        </Slider>
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings14" displayKey="uiQuests" tooltipKey="tipQuests">
+      <Category name="AdvancedQuests" displayKey="uiQuestSettings" tooltipKey="tipQuestSettings">
+        <Switch name="ReusePOILocations" displayKey="uiReusePOILocations" tooltipKey="tipReusePOILocations" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+    <Tab name="SCoreSettings15" displayKey="uiCaves" tooltipKey="tipCaves">
+      <Category name="CaveConfiguration" displayKey="uiCaveSettings" tooltipKey="tipCaveSettings">
+        <Switch name="CaveEnabled" displayKey="uiEnableCaves" tooltipKey="tipEnableCaves" defaultValue="False" leftValue="False" rightValue="True" />
+        <Selector name="GenerationType" displayKey="uiGenerationType" tooltipKey="tipGenerationType" defaultValue="Legacy">
+          <Property type="arrayValues" allowedValues="Legacy,Sebastian,FastNosieSIMD" />
+        </Selector>
+        <Selector name="CaveType" displayKey="uiCaveType" tooltipKey="tipCaveType" defaultValue="Random">
+          <Property type="arrayValues" allowedValues="Random,Mountains,DeepMountains,All" />
+        </Selector>
+        <Slider name="MaxCaveLevels" displayKey="uiMaxCaveLevels" tooltipKey="tipMaxCaveLevels" defaultValue="5">
+          <Property increment="1" minValue="1" maxValue="5" type="incrementalValuesInt" />
+        </Slider>
+        <Slider name="POIRandomRoll" displayKey="uiPOIRandomRoll" tooltipKey="tipPOIRandomRoll" defaultValue="8">
+          <Property increment="1" minValue="1" maxValue="10" type="incrementalValuesInt" />
+        </Slider>
+        <Switch name="Logging" displayKey="uiLoggingCaves" tooltipKey="tipLoggingCaves" defaultValue="False" leftValue="False" rightValue="True" />
+      </Category>
+    </Tab>
+  </Global>
+  <World />
+</ModSettings>

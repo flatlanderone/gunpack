@@ -30,4 +30,12 @@ Reason: White square in the place of the red dot https://github.com/flatlanderon
 </if>
 </conditional>
 
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/item_modifiers.xml"/>
+	</if>
+</conditional>
+
 </RamblingMan>
