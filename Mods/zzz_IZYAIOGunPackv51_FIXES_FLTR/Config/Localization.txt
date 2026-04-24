@@ -13,15 +13,33 @@ tipKickSettings,UI,Tooltip,,,[DECEA3]Select options for the Kick feature[-],,,,,
 uiKickAllWeapons,UI,Display,,,Kick On or Off for all items,,,,,,,,,,,,,
 //tipAllWeapons,UI,Tooltip,,,[DECEA3]disables the kick when set to Off.[-],,,,,,,,,,,,,
 //tipAllFirearms,UI,Tooltip,,,[DECEA3]disables the kick when set to Off.[-],,,,,,,,,,,,,
-uiKickAllFirearms,UI,Display,,,"Firearms, bows and crossbows",,,,,,,,,,,,,
+
+uiKickAllFirearms,UI,Display,,,"Firearms, Bows, Crossbows",,,,,,,,,,,,,
+tipKickAllFirearms,UI,Display,,,"All vanilla and IGP guns, bows, crossbows.",,,,,,,,,,,,,
+
+
+uiKickAllLaunchers,UI,Display,,,"Grenade Launchers",,,,,,,,,,,,,
+tipKickAllLaunchers,UI,Display,,,"All vanilla and IGP Rocket and grenade launchers.",,,,,,,,,,,,,
+
+
 //uiKickAllBows,UI,Display,,,Bows and Crossbows,,,,,,,,,,,,,
+
+
 uiKickAllMeleeWeapons,UI,Display,,,Melee Weapons,,,,,,,,,,,,,
 tipAllMeleeWeapons,UI,Display,,,All vanilla and IGP melee weapons as well as the Torch.,,,,,,,,,,,,,
+
+
+uiKickAllCommonTools,UI,Display,,,Tools,,,,,,,,,,,,,
+tipKickAllCommonTools,UI,Display,,,"All harvesting, salvaging and repair tools.",,,,,,,,,,,,,
+
+
 uiKickAllHarvestingTools,UI,Display,,,Harvesting Tools,,,,,,,,,,,,,
 uiKickAllSalvageTools,UI,Display,,,Salvage Tools,,,,,,,,,,,,,
 uiKickAllRepairTools,UI,Display,,,Repair Tools,,,,,,,,,,,,,
 uiKickAllFlashlight,UI,Display,,,Flashlight,,,,,,,,,,,,,
-uiNoteKick,UI,Display,,,"[DECEA3]Note: When kick is enabled, crouch to turn on and off your Helmet Light or your Weapon Flashlight.[-]",,,,,,,,,,,,,
+uiNoteKick,UI,Display,,,"With Kick On, crouch to turn on/off the Headlight/Flashlight.",,,,,,,,,,,,,
+uiNoteKick2,UI,Display,,,"Remember to click 'Apply'!",,,,,,,,,,,,,
+
 //========================,,,,,,,,,,,,,,,,,,
 //VRP / VANILLA,,,,,,,,,,,,,,,,,,
 //=============,,,,,,,,,,,,,,,,,,

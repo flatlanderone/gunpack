@@ -6,12 +6,16 @@
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
         <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
-        <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipMeleeWeapons" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+		<Switch name="KickAllLaunchers" displayKey="uiKickAllLaunchers" tooltipKey="tipKickAllLaunchers" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipAllMeleeWeapons" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllCommonTools" displayKey="uKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllHarvestingTools" displayKey="uiKickAllHarvestingTools" tooltipKey="tipAllHarvestingTools" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllSalvageTools" displayKey="uiKickAllSalvageTools" tooltipKey="tipAllSalvageTools" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllRepairTools" displayKey="uiKickAllRepairTools" tooltipKey="tipAllRepairTools" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipAllFlashlight" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
-      </Category>
+	</Category>
+	<Category name="NoteKick" displayKey="uiNoteKick" tooltipKey="tipNoteKick"></Category>  
+	<Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2"></Category>	  
     </Tab>
   </Global>
   <World />

@@ -226,7 +226,11 @@ ammoCrossbowLightBoltSteelAP
 <!-- 2.6.1.4 -->
 
 <!-- Added kick to vanilla ranged weapons. -->
-<append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
+
+<!-- Enabled by default. Code moved to Optional/items.xml -->
+<!-- Add code to Optional/items_no_gears.xml -->
+
+<!-- <append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
 or @name='gunBowT1WoodenBow' 
 or @name='gunBowT1IronCrossbow' 
 or @name='gunBowT3CompoundCrossbow' 
@@ -259,7 +263,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
 		</triggered_effect>
 	</effect_group>
-</append>
+</append> -->
 
 <!-- Melee weapons -->
 <!-- Enabled by default. Code moved to Optional/items.xml -->
@@ -318,8 +322,8 @@ or @name='gunExplosivesT3RocketLauncher']">
 <!-- Added kick to the Flashlight. -->
 
 <!-- Disabled by default.  -->
-
-<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
+<!-- Moved to Otopns/items.xml -->
+<!-- <append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
 @name='meleeToolRepairT0TazasStoneAxe' or 
 @name='meleeToolRepairT1ClawHammer' or 
 @name='meleeToolRepairT3Nailgun' or 
@@ -333,7 +337,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 @name='meleeToolSalvageT1Wrench' or 
 @name='meleeToolSalvageT2Ratchet' or 
 @name='meleeToolSalvageT3ImpactDriver']">
-	<effect_group name="IZYRangeWPmeleeKick_tools_FLTR">
+	<effect_group name="KickOn_commontools _FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
 		
@@ -359,7 +363,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 	</effect_group>
 </append>
 
-
+ -->
 
 <!-- End of 2.6.1.4 -->
 
