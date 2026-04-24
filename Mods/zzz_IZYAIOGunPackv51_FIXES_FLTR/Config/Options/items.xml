@@ -224,9 +224,9 @@ IZYMeleeT4SpearPoleAxe
 <!-- KickAllCommonTools -->
 
 <!-- On -->
-<!-- Vanilla tolls have no kick. -->
+<!-- Vanilla tools have no kick by default. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
 
 <append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
 @name='meleeToolRepairT0TazasStoneAxe' or 

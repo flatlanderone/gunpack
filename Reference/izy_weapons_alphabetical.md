@@ -11,9 +11,11 @@ IZYgunT1ARCabineMASFARifle
 IZYgunT1BattleRifleBARbrowningautomaticrifle
 IZYgunT1DualPistolCOLTnavyRevolver
 IZYgunT1LRLongRifleM16a1
+
 IZYgunT1Pistol45M1917
 IZYgunT1Pistol45Type17C96
 IZYgunT1Pistol9Makarov
+
 IZYgunT1SMGTec9submachinegun
 IZYgunT1SNIPERRIFLE762Mosinnagant
 IZYgunT1TACCompactshotgunSuperShortty

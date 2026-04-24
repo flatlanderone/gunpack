@@ -1,0 +1,15 @@
+<RamblingMan>
+<!-- Gears Options  -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
+<!-- <lootgroup name="groupToilet02">
+	<item name="gunHandgunT1Pistol" loot_prob_template="veryLow"/>
+	<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="veryLow"/>
+	<item name="plantedCorn1" count="1" loot_prob_template="veryLow"/>
+</lootgroup> -->
+
+</if>
+</conditional>
+
+</RamblingMan>

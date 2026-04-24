@@ -1,6 +1,7 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
 // Gears,,,,,,,,,,,,,,,,,,
 //## Weapon Packs ##,,,,,,,,,,,,,,,,,,
+uihr,UI,Display,,,----------------------------------,,,,,,,,,,,,,
 uiWeaponPackSettings,UI,Display,,,Weapon Packs,,,,,,,,,,,,,
 uiT4Settings,UI,Display,,,Tier 4 Weapons,,,,,,,,,,,,,
 //## Kick ##,,,,,,,,,,,,,,,,,,
