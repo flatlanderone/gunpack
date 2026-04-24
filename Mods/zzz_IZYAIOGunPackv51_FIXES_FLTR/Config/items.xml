@@ -225,7 +225,7 @@ ammoCrossbowLightBoltSteelAP
 
 <!-- 2.6.1.4 -->
 
-<!-- Added kick to vanilla weapons. -->
+<!-- Added kick to vanilla ranged weapons. -->
 <append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
 or @name='gunBowT1WoodenBow' 
 or @name='gunBowT1IronCrossbow' 
@@ -262,9 +262,10 @@ or @name='gunExplosivesT3RocketLauncher']">
 </append>
 
 <!-- Melee weapons -->
-<!-- Gears: Disabled by default.  -->
+<!-- Enabled by default. Code moved to Optional/items.xml -->
+<!-- Add code to Optional/items_no_gears.xml -->
 
-<append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
+<!-- <append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
 @name='meleeWpnBladeT1HuntingKnife' or 
 @name='meleeWpnBladeT1CandyKnife' or 
 @name='meleeWpnBladeT3Machete' or 
@@ -308,9 +309,15 @@ or @name='gunExplosivesT3RocketLauncher']">
 		</triggered_effect>
 	</effect_group>
 </append>
+ -->
+<!-- Added kick to Harvesting Tools (stone axe included). -->
+<!-- Added kick to Salvaging Tools. -->
+<!-- Added kick to Repair Tools. -->
+<!-- Added kick to Construction Tools. -->
+<!-- Added kick to the Torch. -->
+<!-- Added kick to the Flashlight. -->
 
-<!-- Added kick to Tools. -->
-<!-- Gears: Disabled by default.  -->
+<!-- Disabled by default.  -->
 
 <append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
 @name='meleeToolRepairT0TazasStoneAxe' or 
@@ -325,8 +332,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 @name='meleeToolPickT3Auger' or 
 @name='meleeToolSalvageT1Wrench' or 
 @name='meleeToolSalvageT2Ratchet' or 
-@name='meleeToolSalvageT3ImpactDriver' or 
-@name='meleeToolTorch']">
+@name='meleeToolSalvageT3ImpactDriver']">
 	<effect_group name="IZYRangeWPmeleeKick_tools_FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
@@ -352,6 +358,8 @@ or @name='gunExplosivesT3RocketLauncher']">
 		</triggered_effect>
 	</effect_group>
 </append>
+
+
 
 <!-- End of 2.6.1.4 -->
 

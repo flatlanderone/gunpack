@@ -16,6 +16,8 @@
 </conditional>
  -->
 
+<!-- *** Disable Kick for items that have it on by default. -->
+
 <!-- KickAllFirearms -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick Off'">
@@ -29,9 +31,71 @@
 </if>
 </conditional>
 
+
+<!-- *** Enable for items that have it off by default. -->
+
 <!-- KickAllMeleeWeapons -->
 <!-- Move ON code here. -->
 <!-- Use IZYRangeWPmeleeKick_meleeweapons_FLTR -->
+
+<!-- Enable kick for all vanilla melee weapons and the Torch.-->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick On'">
+
+<!-- IGP Melee weapons are already ON by default:
+IZYMeleeT4BladeKatana
+IZYMeleeT4SledghammerSpikeMace
+IZYMeleeT4SpearPoleAxe
+ -->
+
+<append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnBladeT1HuntingKnife' or 
+@name='meleeWpnBladeT1CandyKnife' or 
+@name='meleeWpnBladeT3Machete' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnClubT1BaseballBat' or 
+@name='meleeWpnClubT1CandyClub' or 
+@name='meleeWpnClubT3SteelClub' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBatonT2StunBaton' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='meleeWpnSpearT1IronSpear' or 
+@name='meleeWpnSpearT3SteelSpear' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSledgeT1IronSledgehammer' or 
+@name='meleeWpnSledgeT3SteelSledgehammer' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnKnucklesT1IronKnuckles' or 
+@name='meleeWpnKnucklesT3SteelKnuckles' or 
+@name='meleeToolTorch']">
+	<effect_group name="IZYRangeWPmeleeKick_meleeweapons_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+</if>
+</conditional>
+<!-- Disable all melee weapons. -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick Off'">
 <remove xpath="items/item[starts-with(@name, 'IZYMelee') or starts-with(@name, 'meleeWpn')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
