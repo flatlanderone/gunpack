@@ -7,11 +7,11 @@
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
         <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipKickAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllBows" displayKey="uiKickAllBows" tooltipKey="tipKickAllBows" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
-        <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipAllMeleeWeapons" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
-        <Switch name="KickAllCommonTools" displayKey="uiKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
-        <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipAllFlashlight" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipAllMeleeWeapons" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllCommonTools" displayKey="uiKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipAllFlashlight" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
       </Category>
-      <Category name="" displayKey="uihr" tooltipKey="" />
+      <Category name="" displayKey="" tooltipKey="" />
       <Category name="NoteKick" displayKey="uiNoteKick" tooltipKey="tipNoteKick" />
       <Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2" />
     </Tab>

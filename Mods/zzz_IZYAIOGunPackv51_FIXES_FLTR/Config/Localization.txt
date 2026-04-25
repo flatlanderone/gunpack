@@ -12,32 +12,20 @@ uiKickAllWeapons,UI,Display,,,Kick On or Off for all items,,,,,,,,,,,,,
 
 uiKickAllFirearms,UI,Display,,,"Guns",,,,,,,,,,,,,
 tipKickAllFirearms,UI,Display,,,"All vanilla and IGP handguns, rifles, submachine guns, machine guns and grenade launchers.",,,,,,,,,,,,,
-
-
 uiKickAllBows,UI,Display,,,"Bows and Crossbows",,,,,,,,,,,,,
 tipKickAllBows,UI,Display,,,"All vanilla and IGP bows and crossbows.",,,,,,,,,,,,,
-
-
 uiKickAllLaunchers,UI,Display,,,"Grenade Launchers",,,,,,,,,,,,,
 tipKickAllLaunchers,UI,Display,,,"All vanilla and IGP Rocket and grenade launchers.",,,,,,,,,,,,,
-
 uiKickAllMeleeWeapons,UI,Display,,,Melee Weapons,,,,,,,,,,,,,
 tipAllMeleeWeapons,UI,Display,,,All vanilla and IGP melee weapons as well as the Torch.,,,,,,,,,,,,,
-
 uiKickAllCommonTools,UI,Display,,,Tools,,,,,,,,,,,,,
-tipKickAllCommonTools,UI,Display,,,"All harvesting, salvaging and repair tools.",,,,,,,,,,,,,
-
-
+tipKickAllCommonTools,UI,Display,,,"All harvesting, salvaging, repair and other tools.",,,,,,,,,,,,,
 uiKickAllSpecialTools,UI,Display,,,Building Tools,,,,,,,,,,,,,
 tipKickAllSpecialTools,UI,Display,,,"Paint Tool, Wire Tool",,,,,,,,,,,,,
-
-
 uiKickAllFlashlight,UI,Display,,,Flashlight,,,,,,,,,,,,,
 tipKickAllFlashlight,UI,Display,,,Handheld Flashlight,,,,,,,,,,,,,
-
-
-uiNoteKick,UI,Display,,,"With Kick On, crouch to turn on/off the Headlight/Flashlight.",,,,,,,,,,,,,
-uiNoteKick2,UI,Display,,,"Remember to click 'Apply'!",,,,,,,,,,,,,
+uiNoteKick,UI,Display,,,"With Kick On, crouch to turn on/off your Headlight/Flashlight.",,,,,,,,,,,,,
+uiNoteKick2,UI,Display,,,"Remember to click [FFB400]Apply[-]!",,,,,,,,,,,,,
 
 
 uiKickAllHarvestingTools,UI,Display,,,Harvesting Tools,,,,,,,,,,,,,

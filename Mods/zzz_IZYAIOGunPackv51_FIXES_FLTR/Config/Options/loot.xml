@@ -8,9 +8,12 @@
 	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
 </append>
+
+<!-- testing -->
+<!-- <set xpath="/lootcontainers/lootgroup[@name='groupToilet']/item[@group='groupToilet02']/@loot_prob_template">guaranteed</set> -->
+
 </if>
 </conditional>
-
 
 <!-- Added chance to find IGP T1 Pistols in Military Footlockers. -->
 <conditional>
