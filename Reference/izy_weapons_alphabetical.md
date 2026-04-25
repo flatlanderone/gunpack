@@ -93,3 +93,23 @@ IZYMeleeT4BladeKatana
 IZYMeleeT4DualKnivesKnife
 IZYMeleeT4SledghammerSpikeMace
 IZYMeleeT4SpearPoleAxe
+
+## 9mm
+
+IZYgunT0SMGPIPEsubmachinegun
+IZYgunT1Pistol9Makarov
+IZYgunT1DualPistolCOLTnavyRevolver
+IZYgunT2DualPistolM9bs
+IZYgunT3DualPistolGlock18C
+IZYgunT4DualPistolMP9s
+IZYgunT4DualPistolC96M
+IZYgunT2ClassicSMGMP34
+IZYgunT1SMGTec9submachinegun
+IZYgunT2SMGUZIsubmachinegun
+IZYgunT3SMGMP9submachinegun
+IZYgunT3SMGMP5Ksubmachinegun
+IZYgunT4SMGCZScorpionEVO3
+IZYgunT4SMGColt9mmsubmachinegun
+
+
+
