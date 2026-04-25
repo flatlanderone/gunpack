@@ -18,21 +18,20 @@
 
 <!-- *** Disable Kick for items that have it on by default. -->
 
-<!-- KickAllFirearms -->
+<!-- All Firearms and Grenade Launchers. -->
 
 <!-- On -->
 
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
 
-<append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
-or @name='gunBowT1WoodenBow' 
-or @name='gunBowT1IronCrossbow' 
-or @name='gunBowT3CompoundCrossbow' 
-or @name='gunRifleT0PipeRifle' 
+<append xpath="/items/item[@name='gunRifleT0PipeRifle' 
 or @name='gunHandgunT0PipePistol' 
 or @name='gunShotgunT0PipeShotgun' 
 or @name='gunRifleT1HuntingRifle' 
+or @name='IZYgunT2LGLChinalakeGrenadeLauncher' 
+or @name='IZYgunT3LGLXM25' 
+or @name='IZYgunT3RocketLauncherRPG7' 
 or @name='gunExplosivesT3RocketLauncher']">
 	<effect_group name="IZYRangeWPmeleeKick_rangedweapons_FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
@@ -65,22 +64,87 @@ or @name='gunExplosivesT3RocketLauncher']">
 <!-- Off -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick Off'">
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') or starts-with(@name, 'gun')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+
+<!-- IGP firearms except the IZYgunT4BowVanhelsingAutomaticCrossbowVH -->
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+
+<!-- Vanilla firearms -->
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+
 </if>
 </conditional>
 
 <!-- ============================================================= -->
 
+<!-- Bows and Crossbows -->
+<!-- On -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick On'">
+
+<append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
+or @name='gunBowT1WoodenBow' 
+or @name='gunBowT1IronCrossbow' 
+or @name='gunBowT3CompoundCrossbow' 
+or @name='gunBowT3CompoundBow']">
+	<effect_group name="KickOn_bows_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+</if>
+</conditional>
+
+<!-- Off -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick Off'">
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
+<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional>
+<!-- ============================================================= -->
+
 <!-- Grenade launchers -->
 
 <!-- On -->
-<conditional>
+<!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
 
 <append xpath="/items/item[@name='IZYgunT2LGLChinalakeGrenadeLauncher' 
@@ -114,17 +178,16 @@ or @name='gunExplosivesT3RocketLauncher']">
 </append>
 </if>
 </conditional>
-
+ -->
 <!-- Off  -->
 
 <!-- Launchers are no kick by default. -->
 
 <!-- ============================================================= -->
 
-<!-- *** Enable for items that have it off by default. -->
 
 <!-- KickAllMeleeWeapons -->
-<!-- Move ON code here. -->
+
 <!-- Use IZYRangeWPmeleeKick_meleeweapons_FLTR -->
 
 <!-- Enable kick for all vanilla melee weapons and the Torch. 
@@ -138,6 +201,8 @@ IZYMeleeT4SpearPoleAxe
 <!-- On -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick On'">
+
+<!-- TODO: rewrite to starts with -->
 
 <append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
 @name='meleeWpnBladeT1HuntingKnife' or 
@@ -184,6 +249,36 @@ IZYMeleeT4SpearPoleAxe
 		</triggered_effect>
 	</effect_group>
 </append>
+
+
+<!-- <append xpath="/items/item[starts-with(@name, 'meleeWpn') or contains(@name, meleeToolTorch)]">
+	<effect_group name="KickOn_meleeweapons_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+ -->
+
 </if>
 </conditional>
 
@@ -210,7 +305,7 @@ IZYMeleeT4SpearPoleAxe
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
 
-<!-- Dsiable vanilla melee weapons. -->
+<!-- Disable vanilla melee weapons. -->
 <!-- Vanilla melee weapons have Kick Off by default. -->
 
 </if>
@@ -218,15 +313,12 @@ IZYMeleeT4SpearPoleAxe
 
 
 <!-- ================================================ -->
-<!-- Move ON code here. -->
-<!-- IZYRangeWPmeleeKick_tools_FLTR -->
-
 <!-- KickAllCommonTools -->
 
 <!-- On -->
 <!-- Vanilla tools have no kick by default. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
 
 <append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
 @name='meleeToolRepairT0TazasStoneAxe' or 
@@ -241,7 +333,9 @@ IZYMeleeT4SpearPoleAxe
 @name='meleeToolPickT3Auger' or 
 @name='meleeToolSalvageT1Wrench' or 
 @name='meleeToolSalvageT2Ratchet' or 
-@name='meleeToolSalvageT3ImpactDriver']">
+@name='meleeToolSalvageT3ImpactDriver' or
+@name='meleeToolWireTool' or
+@name='meleeToolPaintTool']">
 	<effect_group name="KickOn_commontools _FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
@@ -273,10 +367,9 @@ IZYMeleeT4SpearPoleAxe
 <!--  Disable kick for meleeToolAxeT2SteelAxe meleeToolPickT2SteelPickaxe. Other tools have np kick in IGP. -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick Off'">
-
-
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
@@ -321,5 +414,42 @@ meleeToolAxeT3Chainsaw
 meleeToolPickT3Auger
  -->
  
+ <!-- Flashlight -->
+ 
+ <!-- On -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFlashlight') == 'Kick On'"> 
+
+<append xpath="/items/item[@name='meleeToolFlashlight02']">
+	<effect_group name="KickOn_meleeToolFlashlight02s_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+</if>
+</conditional>
+ 
+ <!-- Off -->
+ <!-- Not required -->
  
 </RamblingMan>

@@ -6,7 +6,7 @@
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
         <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipKickAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
-        <Switch name="KickAllLaunchers" displayKey="uiKickAllLaunchers" tooltipKey="tipKickAllLaunchers" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllBows" displayKey="uiKickAllBows" tooltipKey="tipKickAllBows" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipAllMeleeWeapons" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllCommonTools" displayKey="uiKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipAllFlashlight" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
@@ -15,8 +15,12 @@
       <Category name="NoteKick" displayKey="uiNoteKick" tooltipKey="tipNoteKick" />
       <Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2" />
     </Tab>
-	<Tab name="LootSettings" displayKey="uiT4Settings" tooltipKey="tipT4Settings" />
-	<Category name="LootItemGroups" displayKey="uiLootItemGroups" tooltipKey="tipLootItemGroups">
+    <Tab name="LootSettings" displayKey="uiLootSettings" tooltipKey="tipLootSettings">
+      <Category name="LootToiletPistols" displayKey="uiLootToiletPistols" tooltipKey="tipLootToiletPistols">
+        <Switch name="T1IGPPistolsinToilets" displayKey="uiT1IGPPistolsinToilets" tooltipKey="tipT1IGPPistolsinToilets" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="T1IGPPistolsinFootlockers" displayKey="uiT1IGPPistolsinFootlockers" tooltipKey="tipT1IGPPistolsinFootlockers" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+      </Category>
+    </Tab>
   </Global>
   <World />
 </ModSettings>

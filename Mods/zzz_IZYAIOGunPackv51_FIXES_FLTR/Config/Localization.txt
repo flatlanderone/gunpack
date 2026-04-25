@@ -6,29 +6,23 @@ uiWeaponPackSettings,UI,Display,,,Weapon Packs,,,,,,,,,,,,,
 uiT4Settings,UI,Display,,,Tier 4 Weapons,,,,,,,,,,,,,
 //## Kick ##,,,,,,,,,,,,,,,,,,
 uiKickSettings,UI,Display,,,Kick,,,,,,,,,,,,,
-//uiItemGroups,UI,Display,,,[00b6ff]Select Kick On or Kick Off for each item category[-],,,,,,,,,,,,,
 uiItemGroups,UI,Display,,,[DECEA3]Select 'Kick On' or 'Kick Off' for each category[-],,,,,,,,,,,,,
-//tipItemGroups,UI,Tooltip,,,[DECEA3]Set individual config options Kick On or Kick Off[-],,,,,,,,,,,,,
-tipKickSettings,UI,Tooltip,,,[DECEA3]Select options for the Kick feature[-],,,,,,,,,,,,,
-//,,,,,,,,,,,,,,,,,,
+tipKickSettings,UI,Tooltip,,,[DECEA3]Choose whuch item groups will have the Kick feature[-],,,,,,,,,,,,,
 uiKickAllWeapons,UI,Display,,,Kick On or Off for all items,,,,,,,,,,,,,
-//tipAllWeapons,UI,Tooltip,,,[DECEA3]disables the kick when set to Off.[-],,,,,,,,,,,,,
-//tipAllFirearms,UI,Tooltip,,,[DECEA3]disables the kick when set to Off.[-],,,,,,,,,,,,,
 
-uiKickAllFirearms,UI,Display,,,"Firearms, Bows, Crossbows",,,,,,,,,,,,,
-tipKickAllFirearms,UI,Display,,,"All vanilla and IGP guns, bows, crossbows.",,,,,,,,,,,,,
+uiKickAllFirearms,UI,Display,,,"Guns",,,,,,,,,,,,,
+tipKickAllFirearms,UI,Display,,,"All vanilla and IGP handguns, rifles, submachine guns, machine guns and grenade launchers.",,,,,,,,,,,,,
+
+
+uiKickAllBows,UI,Display,,,"Bows and Crossbows",,,,,,,,,,,,,
+tipKickAllBows,UI,Display,,,"All vanilla and IGP bows and crossbows.",,,,,,,,,,,,,
 
 
 uiKickAllLaunchers,UI,Display,,,"Grenade Launchers",,,,,,,,,,,,,
 tipKickAllLaunchers,UI,Display,,,"All vanilla and IGP Rocket and grenade launchers.",,,,,,,,,,,,,
 
-
-//uiKickAllBows,UI,Display,,,Bows and Crossbows,,,,,,,,,,,,,
-
-
 uiKickAllMeleeWeapons,UI,Display,,,Melee Weapons,,,,,,,,,,,,,
 tipAllMeleeWeapons,UI,Display,,,All vanilla and IGP melee weapons as well as the Torch.,,,,,,,,,,,,,
-
 
 uiKickAllCommonTools,UI,Display,,,Tools,,,,,,,,,,,,,
 tipKickAllCommonTools,UI,Display,,,"All harvesting, salvaging and repair tools.",,,,,,,,,,,,,
@@ -49,6 +43,16 @@ uiNoteKick2,UI,Display,,,"Remember to click 'Apply'!",,,,,,,,,,,,,
 uiKickAllHarvestingTools,UI,Display,,,Harvesting Tools,,,,,,,,,,,,,
 uiKickAllSalvageTools,UI,Display,,,Salvage Tools,,,,,,,,,,,,,
 uiKickAllRepairTools,UI,Display,,,Repair Tools,,,,,,,,,,,,,
+
+uiLootSettings,UI,Display,,,Loot Options,,,,,,,,,,,,,
+uiLootToiletPistols,UI,Display,,,Find T1 Pistols in Various Places,,,,,,,,,,,,,
+uiT1IGPPistolsinToilets,UI,Display,,,Toilets,,,,,,,,,,,,,
+tipT1IGPPistolsinToilets,UI,Display,,,Click Yes to have a chance to find IGP T1 Pistols in Toilets,,,,,,,,,,,,,
+
+uiT1IGPPistolsinFootlockers,UI,Display,,,Military Footlockers,,,,,,,,,,,,,
+tipT1IGPPistolsinFootlockers,UI,Display,,,Click Yes to have a chance to find IGP T1 Pistols in Military FootLockers,,,,,,,,,,,,,
+
+
 
 //========================,,,,,,,,,,,,,,,,,,
 //VRP / VANILLA,,,,,,,,,,,,,,,,,,

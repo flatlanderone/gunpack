@@ -1,15 +1,28 @@
 <RamblingMan>
 <!-- Gears Options  -->
 
+<!-- Added chance to find IGP T1 Pistols in Toilets. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
-<!-- <lootgroup name="groupToilet02">
-	<item name="gunHandgunT1Pistol" loot_prob_template="veryLow"/>
-	<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="veryLow"/>
-	<item name="plantedCorn1" count="1" loot_prob_template="veryLow"/>
-</lootgroup> -->
-
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
+<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
+	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
+	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
+</append>
 </if>
 </conditional>
+
+
+<!-- Added chance to find IGP T1 Pistols in Military Footlockers. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
+<append xpath="/lootcontainers/lootgroup[@name='groupFootlockerWeapons02']">
+	<item name="IZYgunT1Pistol45M1917"/>
+	<item name="IZYgunT1Pistol45Type17C96"/>
+	<item name="IZYgunT1Pistol9Makarov"/>
+</append>
+</if>
+</conditional>
+
+
 
 </RamblingMan>
