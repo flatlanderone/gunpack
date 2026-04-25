@@ -1,7 +1,11 @@
 <RamblingMan>
 <!-- Gears Options  -->
 
-<!-- Added chance to find IGP T1 Pistols in Toilets. -->
+<!-- Added chance to find IGP T1 Pistols in Toilets.
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT1Pistol9Makarov
+ -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
 <append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
@@ -26,6 +30,19 @@
 </if>
 </conditional>
 
+<!-- TODO groupQuestWeaponsRangedT1 -->
+<!-- <lootgroup name="groupQuestWeaponsRangedT1" loot_quality_template="questT1QualTemplate">
+	<item name="gunRifleT1HuntingRifle"/>
+	<item name="gunShotgunT1DoubleBarrel"/>
+	<item name="gunMGT1AK47"/>
+	<item name="gunBowT1WoodenBow"/>
+	<item name="gunBowT1IronCrossbow"/>
+	<item name="gunHandgunT1Pistol"/>
+</lootgroup> -->
 
+
+<lootgroup name="groupWeaponsT1_Gunslinger" count="all" loot_quality_template="QLTemplateT1">
+	<item name="gunHandgunT1Pistol"/>
+</lootgroup>
 
 </RamblingMan>

@@ -1,7 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModSettings>
   <Global>
-    <Tab name="WeaponPackSettings" displayKey="uiWeaponPackSettings" tooltipKey="tipWeaponPackSettings" />
+    <Tab name="WeaponPackSettings" displayKey="uiWeaponPackSettings" tooltipKey="tipWeaponPackSettings">
+      <Category name="WeaponPacks" displayKey="uiWeaponPacks" tooltipKey="tipWeaponPacks">
+        <Switch name="Enable_IZY_melee" displayKey="ui_IZY_melee" tooltipKey="tip_IZY_melee" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_45ACP" displayKey="ui_IZY_RMP_45ACP" tooltipKey="tip_IZY_RMP_45ACP" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_556pack" displayKey="ui_IZY_RMP_556pack" tooltipKey="tip_IZY_RMP_556pack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_762pack" displayKey="ui_IZY_RMP_762pack" tooltipKey="tip_IZY_RMP_762pack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_9mmVAL" displayKey="ui_IZY_RMP_9mmVAL" tooltipKey="tip_IZY_RMP_9mmVAL" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_Demopack" displayKey="ui_IZY_RMP_Demopack" tooltipKey="tip_IZY_RMP_Demopack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_HVW" displayKey="ui_IZY_RMP_HVW" tooltipKey="tip_IZY_RMP_HVW" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_Miscpack" displayKey="ui_IZY_RMP_Miscpack" tooltipKey="tip_IZY_RMP_Miscpack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_SG" displayKey="ui_IZY_RMP_SG" tooltipKey="tip_IZY_RMP_SG" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_Tech" displayKey="ui_IZY_RMP_Tech" tooltipKey="tip_IZY_RMP_Tech" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_VRP" displayKey="ui_IZY_VRP" tooltipKey="tip_IZY_VRP" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+    </Tab>
     <Tab name="T4Settings" displayKey="uiT4Settings" tooltipKey="tipT4Settings" />
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
@@ -11,7 +25,6 @@
         <Switch name="KickAllCommonTools" displayKey="uiKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipAllFlashlight" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
       </Category>
-      <Category name="" displayKey="" tooltipKey="" />
       <Category name="NoteKick" displayKey="uiNoteKick" tooltipKey="tipNoteKick" />
       <Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2" />
     </Tab>

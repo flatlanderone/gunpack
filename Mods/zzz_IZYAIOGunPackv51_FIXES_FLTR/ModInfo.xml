@@ -1,11 +1,11 @@
 <xml>
     <Name value="IZYAIOGunPackv51_FIXES_FLTR" />
     <DisplayName value="Flatlander's Fixes and Tweaks for the IGP" />
-    <Description value="The mod provides fixes, tweaks and enhancements for the IZY-All in One Gun Pack (IGP) v2.6.5.1.3 released on 2026-04-14." />
+    <Description value="Flatlander's Fixes and Tweaks for the IGP provides fixes, tweaks and enhancements for the IZY-All in One Gun Pack (IGP) v2.6.5.1.3 released on 2026-04-14." />
     <Author value="Flatlander" />
     <Version value="2.6.1.4" />
 	<Website value="https://github.com/flatlanderone/gunpack" />
-	<Icon value="Textures/GEARS_ICON.png" />
-	<Banner value="Textures/GEARS_BANNER.png" />
+	<Icon value="Textures/RMM_ICON.png" />
+	<Banner value="Textures/RMM_BANNER.png" />
 </xml>
 

@@ -60,13 +60,21 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 ## IZY_RMP_45ACP
 
 ### items.xml
-- Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick.
+ - Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick.
+
+### loot.xml
+ - Added missing IZYgunT1Pistol45Type17C96 entry to groupQuestWeaponsRangedT1.
 
 ## IZY_RMP_556pack
 
 ## IZY_RMP_762pack
 
 ## IZY_RMP_9mmVAL
+
+### loot.xml
+ - Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger.
+ - Added missing IZYgunT1Pistol9Makarov entries to groupQuestWeaponsRangedT1. 
+ - Added missing groupWeaponsT1_IZYgunT1Pistol9Makarov to groupWeaponsT1_Ranged.
 
 ## IZY_RMP_Demopack
 
@@ -81,6 +89,10 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 ## IZY_VRP
 
 ### items.xml
+
+TODO: Update
+- Added kick to vanilla guns, launchers and bows that didn't have it:
+
 - Added kick to the following ranged and melee weapons as well as tools:
    - gunBowT0PrimitiveBow
    - gunBowT1WoodenBow

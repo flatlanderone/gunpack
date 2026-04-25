@@ -17,6 +17,28 @@
 <conditional>
 <if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
 
+<!-- Start of 2.6.1.4 -->
+
+<!-- Added missing IZYgunT1Pistol9Makarov entry to groupWeaponsT1_Gunslinger. -->
+	<insertAfter xpath="//lootgroup[@name='groupWeaponsT1_Gunslinger']">
+					<!-- tier 1  -->
+		<lootgroup name="groupWeaponsT1_IZYgunT1Pistol9Makarov" count="all" loot_quality_template="QLTemplateT1">
+			<item name="IZYgunT1Pistol9Makarov"/>
+		</lootgroup>
+	</insertAfter>
+
+<!-- Added missing IZYgunT1Pistol9Makarov entry to groupQuestWeaponsRangedT1. -->
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1Pistol9Makarov"/>
+	</append>
+
+<!-- Added missing groupWeaponsT1_IZYgunT1Pistol9Makarov to groupWeaponsT1_Ranged. -->
+	<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">	
+		<item group="groupWeaponsT1_IZYgunT1Pistol9Makarov"/>
+	</append>
+
+<!-- End of 2.6.1.4 -->
+
 <!-- Removed IZYgunT4DualPistolC96M from loot. -->
 <remove xpath="//lootgroup[@name='groupWeaponsT3_DW_C96M']/item[@name='IZYgunT4DualPistolC96M']" />
 <remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT4DualPistolC96M']" />
@@ -57,7 +79,17 @@
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
-<!-- no changes -->
+
+<!-- Start of 2.6.1.4 -->
+
+<!-- Added missing IZYgunT1Pistol45M1917 entry to groupQuestWeaponsRangedT1. -->
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1Pistol45Type17C96"/>
+	</append>
+
+<!-- End of 2.6.1.4 -->
+
+
 </if>
 </conditional>
 
