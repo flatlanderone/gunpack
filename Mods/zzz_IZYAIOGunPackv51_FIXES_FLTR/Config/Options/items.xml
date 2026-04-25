@@ -2,11 +2,12 @@
 
 <!-- Gears Options -->
 
-<!-- *** Start of Kick Options ### -->
+<!-- *** 0. Start of Kick Options ### -->
 
-<!-- *** Kick Options for Guns -->
+<!-- *** 1. Kick Options for Guns -->
 
 <!-- Kick On -->
+
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
 
@@ -71,9 +72,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 </if>
 </conditional>
 
-<!-- ============================================================= -->
-
-<!-- *** Kick Options for Bows and Crossbows -->
+<!-- *** 2. Kick Options for Bows and Crossbows -->
 
 <!-- Kick On -->
 
@@ -126,17 +125,15 @@ or @name='gunBowT3CompoundBow']">
 </if>
 </conditional>
 
-<!-- *** Kick Options for Melee Weapons -->
-
-
+<!-- *** 3. Kick Options for Melee Weapons -->
 
 <!-- IGP Melee weapons are already ON by default:
 IZYMeleeT4BladeKatana
 IZYMeleeT4SledghammerSpikeMace
 IZYMeleeT4SpearPoleAxe -->
 
-
 <!-- Kick On -->
+
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick On'">
 
@@ -206,9 +203,10 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-<!-- *** Kick Options for Tools -->
+<!-- *** 4. Kick Options for Tools -->
 
 <!-- Kick On -->
+
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
 
@@ -229,7 +227,7 @@ IZYMeleeT4SpearPoleAxe -->
 @name='meleeToolSalvageT3ImpactDriver' or
 @name='meleeToolWireTool' or
 @name='meleeToolPaintTool']">
-	<effect_group name="KickOn_commontools_FLTR">
+	<effect_group name="KickOn_tools_FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
 		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
@@ -274,13 +272,14 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-
-<!-- *** Kick Options for the Flashlight -->
+<!-- *** 5. Kick Options for the Flashlight -->
  
 <!-- Kick On -->
+
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFlashlight') == 'Kick On'"> 
 
+<!-- Added kick effect to the Flashlight. -->
 <append xpath="/items/item[@name='meleeToolFlashlight02']">
 	<effect_group name="KickOn_flashlight_FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
@@ -313,9 +312,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick Off -->
 <!-- Not required -->
  
-<!-- Kick Options -->
-
-<!-- *** TEST: Kick Options for all Items -->
+<!-- *** TEST: 6. Kick Options for all Items -->
 <!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllItems') == 'Off'">
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
