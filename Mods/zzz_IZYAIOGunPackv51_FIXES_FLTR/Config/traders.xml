@@ -50,4 +50,15 @@
 </if>
 </conditional>
 
+
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/traders.xml"/>
+	</if>
+</conditional>
+
+
 </RamblingMan>

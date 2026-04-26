@@ -53,21 +53,21 @@ or @name='gunExplosivesT3RocketLauncher']">
 
 <!-- Removed kick effect from all IGP firearms except for IZYgunT4BowVanhelsingAutomaticCrossbowVH. -->
 <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<!-- <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/> -->
 <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+<!-- <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/> -->
 
 <!-- Removed kick effect from all Vanilla firearms. -->
 <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
-<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<!-- <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/> -->
 <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
 <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
 <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
 <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
-<remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+<!-- <remove xpath="items/item[starts-with(@name, 'gunHandgun') or starts-with(@name, 'gunShotgun') or starts-with(@name, 'gunRifle') or starts-with(@name, 'gunMG')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/> -->
 
 </if>
 </conditional>
@@ -116,12 +116,12 @@ or @name='gunBowT3CompoundBow']">
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick Off'">
 <!-- Removed kick effect for IZYgunT4BowVanhelsingAutomaticCrossbowVH. -->
 <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
-<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
+<!-- <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/> -->
 <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
-<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<!-- <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/> -->
 <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
 <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
-<remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+<!-- <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/> -->
 </if>
 </conditional>
 
@@ -195,7 +195,7 @@ IZYMeleeT4SpearPoleAxe -->
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
-<remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<!-- <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/> -->
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
@@ -261,13 +261,13 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!--  Disabled kick effect for meleeToolAxeT2SteelAxe meleeToolPickT2SteelPickaxe. Other tools have np kick in IGP. -->
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
-<remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
-<remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<!-- <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/> -->
+<!-- <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/> -->
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
-<remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/>
+<!-- <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick2']"/> -->
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYweaponHosting']"/>
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYBashingCooldown']"/>
-<remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/>
+<!-- <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@buff='IZYRangeWPmeleeATK']"/> -->
 
 </if>
 </conditional>
@@ -327,4 +327,18 @@ IZYMeleeT4SpearPoleAxe -->
  -->
 
 <!-- *** End of Kick Options ### -->
+
+
+<!-- *** 0. Start of Weapon Pack Options ### -->
+
+<!-- Template -->
+
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
+
+
+</if>
+</conditional> -->
+
+
 </RamblingMan>

@@ -1,13 +1,15 @@
 ## IZY_FPV_GLOVES
 ## IZY_melee
 ## IZY_MMVMV2
+## IZY_RMP_9mmVAL
+## IZY_RMP_44magnum
 ## IZY_RMP_45ACP
 ## IZY_RMP_556pack
 ## IZY_RMP_762pack
-## IZY_RMP_9mmVAL
+## IZY_RMP_SG
 ## IZY_RMP_Demopack
 ## IZY_RMP_HVW
 ## IZY_RMP_Miscpack
-## IZY_RMP_SG
+
 ## IZY_RMP_Tech
 ## IZY_VRP

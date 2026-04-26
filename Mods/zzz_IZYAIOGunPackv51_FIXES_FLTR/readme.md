@@ -55,6 +55,9 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 
 ## IZY_melee
 
+### loot.xml
+- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2.
+
 ## IZY_MMVMV2
 
 ## IZY_RMP_45ACP
@@ -72,9 +75,7 @@ This mod provides various bug fixes and enhancements for the IZY-All in One Gun 
 ## IZY_RMP_9mmVAL
 
 ### loot.xml
- - Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger.
- - Added missing IZYgunT1Pistol9Makarov entries to groupQuestWeaponsRangedT1. 
- - Added missing groupWeaponsT1_IZYgunT1Pistol9Makarov to groupWeaponsT1_Ranged.
+ - Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger, groupQuestWeaponsRangedT1 and groupWeaponsT1_Ranged.
 
 ## IZY_RMP_Demopack
 

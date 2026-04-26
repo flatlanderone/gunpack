@@ -12,6 +12,22 @@
 </if>
 </conditional>
 
+<!-- *** IZY_melee -->
+<conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+
+<!-- 2.6.1.4 -->
+<!-- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2. -->
+<append xpath="//lootgroup[@name='groupWeaponsT2_Melee']">	
+	<item name="IZYMeleeT4BladeKatana"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsMeleeT2']">	
+	<item name="IZYMeleeT4BladeKatana"/>
+</append>
+
+</if>
+</conditional>
 <!-- *** IZY_RMP_9mmVAL -->
 
 <conditional>
@@ -88,8 +104,6 @@
 	</append>
 
 <!-- End of 2.6.1.4 -->
-
-
 </if>
 </conditional>
 
@@ -102,6 +116,15 @@
 
 </if>
 </conditional>
+
+<!-- *** IZY_RMP_44magnum -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+
+<!-- TODO: Add weapons to loot. -->
+</if>
+</conditional>
+
 
 <!-- *** Gears Options -->
 
