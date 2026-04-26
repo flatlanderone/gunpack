@@ -18,7 +18,25 @@
       </Category>
       <Category name="WeaponPacksCategoryInfo" displayKey="uiWeaponPacksCategoryInfo" tooltipKey="tipWeaponPacksCategoryInfo" />
     </Tab>
-    <Tab name="T4Settings" displayKey="uiT4Settings" tooltipKey="tipT4Settings" />
+    <Tab name="T4Settings" displayKey="uiT4Settings" tooltipKey="tipT4Settings">
+      <Category name="T4CraftingCategory" displayKey="uiT4CraftingCategory" tooltipKey="tipT4CraftingCategory">
+        <Switch name="Enable_T4_Crafting" displayKey="ui_Enable_T4_Crafting" tooltipKey="tip_Enable_T4_Crafting" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4LootingCategory" displayKey="uiT4LootingCategory" tooltipKey="tipT4LootingCategory">
+        <Switch name="Enable_T4_Looting" displayKey="ui_Enable_T4_Looting" tooltipKey="tip_Enable_T4_Looting" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4TradingCategory" displayKey="uiT4TradingCategory" tooltipKey="tipT4TradingCategory">
+        <Switch name="Enable_T4_Trading" displayKey="ui_Enable_T4_Trading" tooltipKey="tip_Enable_T4_Trading" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4RepairCategory" displayKey="uiT4RepairCategory" tooltipKey="tipT4RepairCategory">
+        <Switch name="Enable_T4_Repair" displayKey="ui_Enable_T4_Repair" tooltipKey="tip_Enable_T4_Repair" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4DegradationCategory" displayKey="uiT4DegradationCategory" tooltipKey="tipT4DegradationCategory">
+        <Selector name="Enable_T4_DegradationSelector" displayKey="ui_Enable_T4_DegradationSelector" tooltipKey="tip_Enable_T4_DegradationSelector" defaultValue="Default">
+          <Property type="arrayValues" allowedValues="Default,2x,3x,4x,5x" />
+        </Selector>
+      </Category>
+    </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
         <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipKickAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />

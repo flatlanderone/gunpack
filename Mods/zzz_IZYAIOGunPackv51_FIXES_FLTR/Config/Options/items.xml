@@ -326,19 +326,90 @@ IZYMeleeT4SpearPoleAxe -->
 </conditional>
  -->
 
+<!-- 
+</if>
+</conditional> --> -->
+
 <!-- *** End of Kick Options ### -->
 
 
-<!-- *** 0. Start of Weapon Pack Options ### -->
+<!-- *** 0. Start of T4 Weapon Options ### -->
 
-<!-- Template -->
+<!-- *** 1. Repair Options  -->
 
-<!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Repair') == 'Off'">
+</if>
+</conditional>
 
+
+<!-- *** 2. Degradation Rate Options  -->
+
+<!-- Default -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == 'Default'">
 
 </if>
-</conditional> -->
+</conditional>
 
+<!-- x2 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '2x'">
+
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
+
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
+
+</if>
+</conditional>
+
+<!-- x3 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '3x'">
+
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
+
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
+
+</if>
+</conditional>
+
+
+<!-- x4 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '4x'">
+
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
+
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
+
+</if>
+</conditional>
+
+
+<!-- x5 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '5x'">
+
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
+
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
+
+</if>
+</conditional>
+
+
+<!-- x100 -->
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '100x'">
+
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+
+</if>
+</conditional>
+
+ -->
 
 </RamblingMan>

@@ -393,4 +393,57 @@ IZYgunT3TechnicalNailmachinegun
 </if>
 </conditional>
 
+
+<!-- *** 2. Removing Tier 4 Weapons from loot.  -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Looting') == 'Off'">
+<!-- 
+Removed loot entries for 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SpearPoleAxe
+IZYMeleeT4SledghammerSpikeMace
+
+IZYgunT4BowVanhelsingAutomaticCrossbowVH
+IZYgunT4DualMagnumDesertEagles
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+IZYgunT4ARCabineHK416
+IZYgunT4BULLPUPFNF2000
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4BattleRifleSCARH
+IZYgunT4LMGlightmachinegunMG34R
+IZYgunT4SMGCZScorpionEVO3
+IZYgunT4DualPistolMP9s
+IZYgunT4TradshotgunBrowningAuto5
+
+ -->
+
+<remove xpath="/lootcontainers/lootgroup/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@name='IZYgunT4DualMagnumDesertEagles' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@name='IZYgunT4ARCabineHK416' or 
+@name='IZYgunT4BULLPUPFNF2000' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT4LMGlightmachinegunMG34R' or 
+@name='IZYgunT4SMGCZScorpionEVO3' or 
+@name='IZYgunT4DualPistolMP9s' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYMeleeT4BladeKatana' or 
+@name='IZYMeleeT4SpearPoleAxe' or 
+@name='IZYMeleeT4SledghammerSpikeMace']"/>
+
+</if>
+</conditional>
+
 </RamblingMan>

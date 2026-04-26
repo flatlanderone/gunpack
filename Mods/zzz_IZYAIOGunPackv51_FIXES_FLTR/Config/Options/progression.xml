@@ -436,5 +436,75 @@ IZYgunT3TechnicalNailmachinegun
 </if>
 </conditional>
 
+<!-- *** 2. Removing recipes for Tier 4 Weapons.  -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Crafting') == 'Off'">
+<!-- Melee weapons -->
+<!-- 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SpearPoleAxe
+IZYMeleeT4SledghammerSpikeMace
+ -->
+ 
+ <!-- Guns
+IZYgunT4BowVanhelsingAutomaticCrossbowVH
+IZYgunT4DualMagnumDesertEagles
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+IZYgunT4ARCabineHK416
+IZYgunT4BULLPUPFNF2000
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4BattleRifleSCARH
+IZYgunT4LMGlightmachinegunMG34R
+IZYgunT4SMGCZScorpionEVO3
+IZYgunT4DualPistolMP9s
+IZYgunT4TradshotgunBrowningAuto5 -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@tags='IZYgunT4DualMagnumDesertEagles' or 
+@tags='IZYgunT4Pistol45STIEAGLE6' or 
+@tags='IZYgunT445SMGM1928thompson' or 
+@tags='IZYgunT445TACSMGKrissSuperV' or 
+@tags='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@tags='IZYgunT4ARCabineHK416' or 
+@tags='IZYgunT4BULLPUPFNF2000' or 
+@tags='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@tags='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@tags='IZYgunT4MarksManRifleM110SASS' or 
+@tags='IZYgunT4BattleRifleSCARH' or 
+@tags='IZYgunT4LMGlightmachinegunMG34R' or 
+@tags='IZYgunT4SMGCZScorpionEVO3' or 
+@tags='IZYgunT4DualPistolMP9s' or 
+@tags='IZYgunT4TradshotgunBrowningAuto5' or 
+@tags='IZYMeleeT4BladeKatana' or 
+@tags='IZYMeleeT4SpearPoleAxe' or 
+@tags='IZYMeleeT4SledghammerSpikeMace']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@tags='IZYgunT4DualMagnumDesertEagles' or 
+@tags='IZYgunT4Pistol45STIEAGLE6' or 
+@tags='IZYgunT445SMGM1928thompson' or 
+@tags='IZYgunT445TACSMGKrissSuperV' or 
+@tags='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@tags='IZYgunT4ARCabineHK416' or 
+@tags='IZYgunT4BULLPUPFNF2000' or 
+@tags='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@tags='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@tags='IZYgunT4MarksManRifleM110SASS' or 
+@tags='IZYgunT4BattleRifleSCARH' or 
+@tags='IZYgunT4LMGlightmachinegunMG34R' or 
+@tags='IZYgunT4SMGCZScorpionEVO3' or 
+@tags='IZYgunT4DualPistolMP9s' or 
+@tags='IZYgunT4TradshotgunBrowningAuto5' or 
+@tags='IZYMeleeT4BladeKatana' or 
+@tags='IZYMeleeT4SpearPoleAxe' or 
+@tags='IZYMeleeT4SledghammerSpikeMace']"/>
+ 
+</if>
+</conditional>
+
 
 </RamblingMan>
