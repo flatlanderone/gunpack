@@ -337,11 +337,15 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- *** 1. Repair Options  -->
 
+<!-- Disable repair of T4 Weapons. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Repair') == 'Off'">
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4RepairCategory.Enable_T4_Repair') == 'Off'">
+
+<remove xpath="/items/item[starts-with(@name, 'IZYgunT4')]/property[@name='RepairTools']"/>
+<remove xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='RepairTools']"/>
+
 </if>
 </conditional>
-
 
 <!-- *** 2. Degradation Rate Options  -->
 

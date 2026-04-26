@@ -14,7 +14,6 @@
         <Switch name="Enable_IZY_RMP_HVW" displayKey="ui_IZY_RMP_HVW" tooltipKey="tip_IZY_RMP_HVW" defaultValue="On" leftValue="Off" rightValue="On" />
         <Switch name="Enable_IZY_RMP_Miscpack" displayKey="ui_IZY_RMP_Miscpack" tooltipKey="tip_IZY_RMP_Miscpack" defaultValue="On" leftValue="Off" rightValue="On" />
         <Switch name="Enable_IZY_RMP_Tech" displayKey="ui_IZY_RMP_Tech" tooltipKey="tip_IZY_RMP_Tech" defaultValue="On" leftValue="Off" rightValue="On" />
-        <Switch name="Enable_Vanilla_Weapons" displayKey="ui_Vanilla_Weapons" tooltipKey="tip_Vanilla_Weapons" defaultValue="On" leftValue="Off" rightValue="On" />
       </Category>
       <Category name="WeaponPacksCategoryInfo" displayKey="uiWeaponPacksCategoryInfo" tooltipKey="tipWeaponPacksCategoryInfo" />
     </Tab>
