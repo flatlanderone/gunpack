@@ -15,7 +15,6 @@
         <Switch name="Enable_IZY_RMP_Miscpack" displayKey="ui_IZY_RMP_Miscpack" tooltipKey="tip_IZY_RMP_Miscpack" defaultValue="On" leftValue="Off" rightValue="On" />
         <Switch name="Enable_IZY_RMP_Tech" displayKey="ui_IZY_RMP_Tech" tooltipKey="tip_IZY_RMP_Tech" defaultValue="On" leftValue="Off" rightValue="On" />
       </Category>
-      <Category name="WeaponPacksCategoryInfo" displayKey="uiWeaponPacksCategoryInfo" tooltipKey="tipWeaponPacksCategoryInfo" />
     </Tab>
     <Tab name="T4Settings" displayKey="uiT4Settings" tooltipKey="tipT4Settings">
       <Category name="T4CraftingCategory" displayKey="uiT4CraftingCategory" tooltipKey="tipT4CraftingCategory">
@@ -42,7 +41,7 @@
         <Switch name="KickAllBows" displayKey="uiKickAllBows" tooltipKey="tipKickAllBows" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipAllMeleeWeapons" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
         <Switch name="KickAllCommonTools" displayKey="uiKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
-        <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipAllFlashlight" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipKickAllFlashlight" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
       </Category>
       <Category name="NoteKick" displayKey="uiNoteKick" tooltipKey="tipNoteKick" />
       <Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2" />
