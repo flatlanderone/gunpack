@@ -1,4 +1,4 @@
-# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.4
+# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.5
 
 ## Overview
 
@@ -25,8 +25,8 @@ See Changelog below for a full list of changes and additions.
 
 ## Important notes
 
- 1. The 2.6.1.4 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.4 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
+ 1. The 2.6.1.5 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.5 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -43,12 +43,19 @@ See Changelog below for a full list of changes and additions.
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
  - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1 and v2.6.5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
- - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22).
- - **This release**: 2.6.1.4 (2026-04-29)
+ - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22), 2.6.1.4 (2026-04-29).
+ - **This release**: 2.6.1.5 (2026-05-xx)
+
+# Changelog for 2.6.1.5 (2026-0x-xx)
+## Notes
+## Known issues
+## Planned features
+
 
 # Changelog for 2.6.1.4 (2026-04-29)
 
 ## Notes
+
  - The main feature of this update is the ability to disable kick attack. Read below for more details.
  - This update introduces three new sets of options (Kick Attack, Weapon Packs, Tier 4 Weapons) that are managed exclusively through the Gears interface. Read below for more details. 
  - Minor localization fixes have been implemented.
