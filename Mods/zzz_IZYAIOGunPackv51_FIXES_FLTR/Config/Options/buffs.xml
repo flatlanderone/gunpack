@@ -15,7 +15,6 @@
 </if>
 </conditional> -->
 
-
 <!-- Remove kick guffs for firearms -->
 <!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Kick Off'">

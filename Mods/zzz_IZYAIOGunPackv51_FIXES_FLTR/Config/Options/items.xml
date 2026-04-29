@@ -2,9 +2,9 @@
 
 <!-- Gears Options -->
 
-<!-- *** 0. Start of Kick Options ### -->
+<!-- *** 1. Kick Options ### -->
 
-<!-- *** 1. Kick Options for Guns -->
+<!-- *** 1.1. Kick Options for Guns -->
 
 <!-- Kick On -->
 
@@ -14,6 +14,7 @@
 <!-- Added kick effect to vanilla and IGP guns who didn't have it. -->
 <append xpath="/items/item[@name='gunRifleT0PipeRifle' 
 or @name='gunHandgunT0PipePistol' 
+or @name='gunMGT0PipeMachineGun' 
 or @name='gunShotgunT0PipeShotgun' 
 or @name='gunRifleT1HuntingRifle' 
 or @name='IZYgunT2LGLChinalakeGrenadeLauncher' 
@@ -47,6 +48,53 @@ or @name='gunExplosivesT3RocketLauncher']">
 </if>
 </conditional>
 
+<!-- Kick On when VRP is off
+-->
+<!-- Added kick effect to vanilla weapons in case IZY_VRP is not loaded. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On' and modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
+
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture']">
+	<effect_group name="KickOn_guns_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+</if>
+</conditional>
 <!-- Kick Off -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick Off'">
@@ -72,7 +120,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 </if>
 </conditional>
 
-<!-- *** 2. Kick Options for Bows and Crossbows -->
+<!-- *** 1.2. Kick Options for Bows and Crossbows -->
 
 <!-- Kick On -->
 
@@ -125,7 +173,7 @@ or @name='gunBowT3CompoundBow']">
 </if>
 </conditional>
 
-<!-- *** 3. Kick Options for Melee Weapons -->
+<!-- *** 1.3. Kick Options for Melee Weapons -->
 
 <!-- IGP Melee weapons are already ON by default:
 IZYMeleeT4BladeKatana
@@ -137,7 +185,7 @@ IZYMeleeT4SpearPoleAxe -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick On'">
 
-<!-- Enable kick effect for all vanilla melee weapons and the Torch.  -->
+<!-- Enable kick effect for all vanilla melee weapons.  -->
 <append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
 @name='meleeWpnBladeT1HuntingKnife' or 
 @name='meleeWpnBladeT1CandyKnife' or 
@@ -156,8 +204,7 @@ IZYMeleeT4SpearPoleAxe -->
 @name='meleeWpnSledgeT3SteelSledgehammer' or 
 @name='meleeWpnKnucklesT0LeatherKnuckles' or 
 @name='meleeWpnKnucklesT1IronKnuckles' or 
-@name='meleeWpnKnucklesT3SteelKnuckles' or 
-@name='meleeToolTorch']">
+@name='meleeWpnKnucklesT3SteelKnuckles']">
 	<effect_group name="KickOn_meleeweapons_FLTR">
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
 		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
@@ -203,7 +250,7 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-<!-- *** 4. Kick Options for Tools -->
+<!-- *** 1.4. Kick Options for Tools -->
 
 <!-- Kick On -->
 
@@ -272,7 +319,7 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-<!-- *** 5. Kick Options for the Flashlight -->
+<!-- *** 1.5. Kick Options for the Flashlight -->
  
 <!-- Kick On -->
 
@@ -309,10 +356,47 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
  
+ <!-- *** 1.6. Kick Options for the Torch -->
+ 
+<!-- Kick On -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeaponsTorch') == 'Kick On'"> 
+
+<!-- Added kick effect to the Torch. -->
+<append xpath="/items/item[@name='meleeToolTorch']">
+	<effect_group name="KickOn_torch_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+</if>
+</conditional>
+ 
 <!-- Kick Off -->
 <!-- Not required -->
  
-<!-- *** TEST: 6. Kick Options for all Items -->
+<!-- *** TEST: 1.6. Kick Options for all Items -->
 <!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllItems') == 'Off'">
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
@@ -328,25 +412,130 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- 
 </if>
-</conditional> --> -->
+</conditional> --> 
 
-<!-- *** End of Kick Options ### -->
+<!-- ***  -->
+<!-- *** XXX Weapon Pack Options ### -->
+<!-- *** xxx Remove vanilla replacer effects. -->
 
-<!-- *** 0. Start of T4 Weapon Options ### -->
+<!-- *** Remove VRP -->
 
-<!-- *** 1. Repair Options  -->
+<!-- <remove xpath="/items/item[@name='gunShotgunT1DoubleBarrel' and ./property[@name='Tags' and contains(@value, 'IZY')]]"/> -->
 
-<!-- Disable repair of T4 Weapons. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4RepairCategory.Enable_T4_Repair') == 'Off'">
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
 
-<remove xpath="/items/item[starts-with(@name, 'IZYgunT4')]/property[@name='RepairTools']"/>
-<remove xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='RepairTools']"/>
+<remove xpath="/items/item[(@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]"/>
+
+<!-- Add noVRP tag to vanilla weapons to remove compatibility with modGunReflexSightA andmodGunReflexSightB -->
+
+<csv xpath="/items/item[@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture']/property[@name='Tags']/@value" delim="," op="add">noVRP</csv>
 
 </if>
 </conditional>
 
-<!-- *** 2. Degradation Rate Options  -->
+<!-- Sounds -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'IGP'">
+
+<!-- Readded VRP sounds to all T1-T3 vanilla weapons and T0 shotgun.. -->
+<set xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']/property[@name='Sound_start']/@value">VRpumpSG_fire</set>
+<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@name='Sound_start']/@value">VRpumpSG_fire</set>
+<set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@class='Action0']/property[@name='Sound_start']/@value">VRpumpSG_fire</set>
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Sound_start']/@value">VRpumpSG_fire</set>
+<set xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Sound_start']/@value">VRak47_fire</set>
+<set xpath="/items/item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Sound_start']/@value">VRtacAR_fire</set>
+<set xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property[@name='Sound_start']/@value">VRm60_fire</set>
+<set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='Sound_start']/@value">VRhuntingrifle_fire</set>
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Sound_start']/@value">VRleveraction_fire</set>
+<set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@name='Sound_start']/@value">VRsniper_fire</set>
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@class='Action0']/property[@name='Sound_start']/@value">M9pistol_fire</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Sound_start']/@value">VRsmg5_fire</set>
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@name='Sound_start']/@value">VRmagnum44_fire</set>
+<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property[@name='Sound_start']/@value">VRDEagle44_fire</set>
+
+<!-- Sound_loop -->
+
+<append xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']">
+	<property name="Sound_loop" value="VRpumpSG_fire"/>
+</append>
+<!-- <set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRpumpSG_fire</set> -->
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@class='Action0']">
+	<property name="Sound_loop" value="VRpumpSG_fire"/>
+</append>
+
+<!-- <set xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRpumpSG_fire</set> -->
+<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@class='Action0']">
+	<property name="Sound_loop" value="VRpumpSG_fire"/>
+</append>
+
+<set xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRpumpSG_fire</set>
+<set xpath="/items/item[@name='gunMGT1AK47']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRak47_fire</set>
+<set xpath="/items/item[@name='gunMGT2TacticalAR']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRtacAR_fire</set>
+<set xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRm60_fire</set>
+<!-- <set xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRhuntingrifle_fire</set> -->
+<append xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@class='Action0']">
+	<property name="Sound_loop" value="VRhuntingrifle_fire"/>
+</append>
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRleveraction_fire</set>
+<set xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRsniper_fire</set>
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@class='Action0']/property[@name='Sound_loop']/@value">M9pistol_fire</set>
+<set xpath="/items/item[@name='gunHandgunT3SMG5']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRsmg5_fire</set>
+<!-- <set xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRmagnum44_fire</set> -->
+<append xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']">
+	<property name="Sound_loop" value="VRmagnum44_fire"/>
+</append>
+<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property[@name='Sound_loop']/@value">VRDEagle44_fire</set>
+</if>
+</conditional>
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'Vanilla'">
+<!-- Removed silencer sounds in Options/item_modifiers.xml -->
+
+</if>
+</conditional>
+
+<!-- *** 2. T4 and T5 Weapon Options ### -->
+<!-- *** 2.1. T4 and T5 Repair Options  -->
+
+<!-- Disable the repair of T4 Weapons. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4RepairCategory.Enable_T4_Repair') == 'No'">
+
+<!-- Ranged  -->
+<remove xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/property[@name='RepairTools']"/>
+<!-- Melee -->
+<remove xpath="/items/item[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]/property[@name='RepairTools']"/>
+
+</if>
+</conditional>
+
+<!-- *** 2.2. T4 and T5 Degradation Rate Options -->
 
 <!-- Default -->
 <conditional>
@@ -359,9 +548,9 @@ IZYMeleeT4SpearPoleAxe -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '2x'">
 
-<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
 
-<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
 
 </if>
 </conditional>
@@ -370,9 +559,9 @@ IZYMeleeT4SpearPoleAxe -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '3x'">
 
-<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
 
-<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
 
 </if>
 </conditional>
@@ -381,9 +570,9 @@ IZYMeleeT4SpearPoleAxe -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '4x'">
 
-<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
 
-<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
 
 </if>
 </conditional>
@@ -392,24 +581,734 @@ IZYMeleeT4SpearPoleAxe -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '5x'">
 
-<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
 
-<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
 
 </if>
 </conditional>
 
-<!-- x100 -->
+<!-- TEST x100 -->
 <!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '100x'">
 
-<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
 
-<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+<set xpath="/items/item[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+
+</if>
+</conditional> -->
+
+<!-- *** 3. Challenge Runs ### -->
+
+<!-- *** 3.1. Challenge Runs: Pacifist Traders: traders won't buy weapons, ammo and ammo crafting resources. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+
+<!-- REF <set xpath="/items/item[]/property[@name='SellableToTrader']/@value">false</set> -->
+
+<!-- Weapons, turrets, traps -->
+<append xpath="/items/item[starts-with(@name, 'IZYMelee') or 
+starts-with(@name, 'IZYgun') or 
+starts-with(@name, 'gunBow') or 
+starts-with(@name, 'gunExplosives') or 
+starts-with(@name, 'gunHandgun') or 
+starts-with(@name, 'gunShotgun') or 
+starts-with(@name, 'gunRifle') or 
+starts-with(@name, 'gunMG') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'electricfencepost') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret') or 
+starts-with(@name, 'meleeWpn')]"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Exclude
+armorParts
+meleeToolAllSteelParts
+meleeToolAxeT3ChainsawParts -->
+<append xpath="/items/item[@name='armorParts' or 
+@name='meleeToolAllSteelParts' or 
+@name='meleeToolAxeT3ChainsawParts']"><property name="SellableToTrader" value="true" /></append>
+
+<!-- IZY ammo -->
+<append xpath="/items/item[@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture']">
+<property name="SellableToTrader" value="false" />
+</append>
+
+<!-- Vanilla ammo -->
+<append xpath="/items/item[@name='ammo9mmBulletBall' or 
+@name='ammo9mmBulletHP' or 
+@name='ammo9mmBulletAP' or 
+@name='ammo44MagnumBulletBall' or 
+@name='ammo44MagnumBulletHP' or 
+@name='ammo44MagnumBulletAP' or 
+@name='ammo762mmBulletBall' or 
+@name='ammo762mmBulletHP' or 
+@name='ammo762mmBulletAP' or 
+@name='ammoShotgunShell' or 
+@name='ammoShotgunSlug' or 
+@name='ammoShotgunBreachingSlug' or 
+@name='ammoJunkTurretRegular' or 
+@name='ammoJunkTurretShell' or 
+@name='ammoJunkTurretAP' or 
+@name='ammoRocketHE' or 
+@name='ammoRocketFrag' or 
+@name='ammoArrowStone' or 
+@name='ammoArrowIron' or 
+@name='ammoArrowSteelAP' or 
+@name='ammoArrowFlaming' or 
+@name='ammoArrowExploding' or 
+@name='ammoCrossbowBoltStone' or 
+@name='ammoCrossbowBoltIron' or 
+@name='ammoCrossbowBoltSteelAP' or 
+@name='ammoCrossbowBoltFlaming' or 
+@name='ammoCrossbowBoltExploding' or 
+@name='ammoBundle9mmBulletBall' or 
+@name='ammoBundle9mmBulletHP' or 
+@name='ammoBundle9mmBulletAP' or 
+@name='ammoBundle44MagnumBulletBall' or 
+@name='ammoBundle44MagnumBulletHP' or 
+@name='ammoBundle44MagnumBulletAP' or 
+@name='ammoBundle762mmBulletBall' or 
+@name='ammoBundle762mmBulletHP' or 
+@name='ammoBundle762mmBulletAP' or 
+@name='ammoBundleShotgunShell' or 
+@name='ammoBundleShotgunSlug' or 
+@name='ammoBundleShotgunBreachingSlug' or 
+@name='ammoBundleJunkTurretRegular' or 
+@name='ammoBundleJunkTurretShell' or 
+@name='ammoBundleJunkTurretAP' or 
+@name='ammoBundleArrowStone' or 
+@name='ammoBundleArrowIron' or 
+@name='ammoBundleArrowSteelAP' or 
+@name='ammoBundleArrowFlaming' or 
+@name='ammoBundleArrowExploding' or 
+@name='ammoBundleCrossbowBoltStone' or 
+@name='ammoBundleCrossbowBoltIron' or 
+@name='ammoBundleCrossbowBoltSteelAP' or 
+@name='ammoBundleCrossbowBoltFlaming' or 
+@name='ammoBundleCrossbowBoltExploding' or 
+@name='ammoDartIron']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Vanilla ammo crafting resources -->
+<append xpath="/items/item[@name='resourceGunPowderBundle' or 
+@name='resourceArrowHeadIron' or 
+@name='resourceArrowHeadSteelAP' or 
+@name='resourceGunPowder' or 
+@name='resourceBuckshot' or 
+@name='resourceBulletCasing' or 
+@name='resourceBulletTip' or 
+@name='resourceRocketTip' or 
+@name='resourceRocketCasing']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Vanilla thrown explosives -->
+<append xpath="/items/item[@name='thrownAmmoPipeBomb' or 
+@name='thrownGrenadeContact' or 
+@name='thrownGrenade' or 
+@name='thrownTimedCharge' or 
+@name='thrownDynamite' or 
+@name='thrownAmmoMolotovCocktail']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Vanilla mines and traps -->
+<!-- See Options/blocks.xml -->
+
+<!-- Weapon mods -->
+<!-- See Options/item_modifiers.xml -->
 
 </if>
 </conditional>
 
- -->
+<!-- Hide quality -->
+<!-- <set xpath="/items/item[contains(@name, 'T0Pipe')]/property[@name='ShowQuality']/@value">false</set> -->
+
+<!-- *** 3.2. Challenge Runs: 'No Repair' Challenge for T0 to T3 weapons -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair') == 'No'">
+
+<!-- Vanilla and IZY TO weapons -->
+<remove xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/property[@name='RepairTools']"/>
+
+<!-- Vanilla and IZY T1-T3 weapons -->
+<remove xpath="/items/item[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3')]/property[@name='RepairTools']"/>
+
+</if>
+</conditional>
+
+<!-- *** 3.3. Challenge Runs: T0-T3 degradation Rate Options -->
+
+<!-- Default -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == 'Default'">
+
+</if>
+</conditional>
+
+<!-- x2 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '2x'">
+
+<!-- T0 weapons -->
+<set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
+
+<!-- Vanilla and IZY T1-T3 weapons -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
+
+</if>
+</conditional>
+
+<!-- x3 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '3x'">
+
+<!-- T0 weapons -->
+<set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
+
+<!-- Vanilla and IZY T1-T3 weapons -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
+
+</if>
+</conditional>
+
+<!-- x4 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '4x'">
+
+<!-- T0 weapons -->
+<set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
+
+<!-- Vanilla and IZY T1-T3 weapons -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
+
+</if>
+</conditional>
+
+<!-- x5 -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '5x'">
+
+<!-- T0 weapons -->
+<set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
+
+<!-- Vanilla and IZY T1-T3 weapons -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
+
+</if>
+</conditional>
+
+<!-- TEST x100 -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '100x'">
+
+<!-- T0 weapons -->
+<set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+
+<!-- Vanilla and IZY T1-T3 weapons -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
+
+</if>
+</conditional>
+
+<!-- *** 6.Misc Options -->
+<!-- *** 6.xx  Single-shot weapons reload automatically. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryWeaponOptions.MiscSettings_Autoreload') == 'All'">
+
+<set xpath="/items/item[starts-with(@name, 'gun')]/property/property[@name='AutoReload']/@value">true</set>
+
+<set xpath="/items/item[starts-with(@name, 'IZYgun')]/property/property[@name='AutoReload']/@value">true</set>
+
+</if>
+</conditional>
+<!-- *** 6.2 All 5.56mm machine guns take the drummagazine. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_DrumMagazine556') == 'All'">
+
+<!-- Added optional drumMagazine support for the following weapons:
+IZYgunT1ARCabineM608SurvivalRifle
+IZYgunT2ARCabineCAR15
+IZYgunT3ARCabineM4Carbine
+IZYgunT4ARCabineHK416
+
+-->
+
+<csv xpath="/items/item[@name='IZYgunT1ARCabineM608SurvivalRifle' or @name='IZYgunT2ARCabineCAR15' or @name='IZYgunT3ARCabineM4Carbine' or @name='IZYgunT4ARCabineHK416']/property[@name='Tags']/@value" delim="," op="add">drumMagazine</csv>
+
+</if>
+</conditional>
+
+<!-- 6.xx Ammo Reboxing in the Workbench --> -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeWorkbench') == 'Yes'">
+
+<set xpath="/items/item[@name='ammoBundleMaster']/property[@name='DescriptionKey']/@value">ammoBundleGroupReboxDesc</set>
+</if>
+</conditional>
+
+<!-- 6.xx Ammo Reboxing in Oakraven's Ammo Press -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeAmmoPress') == 'Yes'">
+
+<set xpath="/items/item[@name='ammoBundleMaster']/property[@name='DescriptionKey']/@value">ammoBundleGroupReboxDesc</set>
+</if>
+</conditional>
+
+<!-- 6. Super Shorty Options -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryShorty.MiscSettings_Shorty') == 'Yes'">
+
+<!-- IZYgunT1TACCompactshotgunSuperShortty: Reduced magazine size from 4 to 3 and removed compatibility with the modGunShotgunTubeExtenderMagazine to bring the gun more in line with other T1 shotguns. -->
+
+<!-- In the IGP, the IZYgunT1TACCompactshotgunSuperShortty has a 100% larger magazine capacity (150% with the Shotgun Tube Extender Mod) than the gunShotgunT1DoubleBarrel or the IZYgunT1TradshotgunDoubleBarrelOverUnder. To bring the IZYgunT1TACCompactshotgunSuperShortty more in line with the rest of T1 shotguns, I reduced its magazine from 4 to 3 rounds (like the real life Serbu Super-Shorty) and removed compatibility with the modGunShotgunTubeExtenderMagazine mod.
+-->
+
+<!-- <csv xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/property[@name='Tags']/@value" delim="," op="add">IZYgunT1TACCompactshotgunSuperShortty</csv> -->
+
+<set xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/effect_group[@name='gunShotgunT2PumpShotgun']/passive_effect[@name='MagazineSize']/@value">3</set>
+
+<csv xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/property[@name='Tags']/@value" delim="," op="Remove" >modGunShotgunTubeExtenderMagazine</csv>
+
+</if>
+</conditional>
+
+<!-- 6. Lever-action rifle Options -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryLeverAction.MiscSettings_LAR44magnum') == '.44 Magnum'">
+
+<!-- gunRifleT2LeverActionRifle ammo type -->
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP</set>
+
+<!-- Added 44enforcer tag to gunRifleT2LeverActionRifle -->
+<csv xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@name='Tags']/@value" delim="," op="add">44enforcer</csv>
+
+<!-- Added perkDeadEye tags to .44 ammo -->
+<csv xpath="/items/item[@name='ammo44MagnumBulletBall' or @name='ammo44MagnumBulletHP' or @name='ammo44MagnumBulletAP']/effect_group[@name='ammo44MagnumBulletBall' or @name='ammo44MagnumBulletHP' or @name='ammo44MagnumBulletAP']/passive_effect[contains(@tags, 'perkGunslinger')]/@tags" delim="," op="add">perkDeadEye</csv>
+
+<!-- Added ALT desc localization for .44 Magnum variant -->
+<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']">
+	<property name="DescriptionKey" value="gunRifleT2LeverActionRifleALTDesc"/>
+	<!-- <property name="NameKey" value="gunRifleT2LeverActionRifleALTName"/> -->
+</append>
+
+<!-- <setattribute xpath="/items/item[@name='gunRifleT2LeverActionRifle']" name="name_key">bookWasteTreasuresHoney</setattribute> -->
+
+</if>
+</conditional>
+
+<!-- *** 6.xx  Perk Books unlock special IGP ammo. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_45ACP556APHPBookUnlock') == 'Yes'"> 
+
+<!-- Set alt localization for bookAutoWeaponsMachineGuns -->
+<set xpath="/items/item[@name='bookAutoWeaponsMachineGuns']/property[@name='DescriptionKey']/@value">perkAutoWeaponsMachineGunsLongDescAlt</set>
+
+<!-- Set alt localization for bookAutoWeaponsDamage -->
+<set xpath="/items/item[@name='bookAutoWeaponsDamage']/property[@name='DescriptionKey']/@value">perkAutoWeaponsDamageLongDescAlt</set>
+
+<!-- Set alt localization for bookPistolPeteHPAmmo -->
+<set xpath="/items/item[@name='bookPistolPeteHPAmmo']/property[@name='DescriptionKey']/@value">perkPistolPeteHPAmmoLongDescAlt</set>
+
+<!-- Set alt localization for bookPistolPeteAPAmmo -->
+<set xpath="/items/item[@name='bookPistolPeteAPAmmo']/property[@name='DescriptionKey']/@value">perkPistolPeteAPAmmoLongDescAlt</set>
+
+<!-- Set alt localization for bookShotgunMessiahDamage -->
+<set xpath="/items/item[@name='bookShotgunMessiahDamage']/property[@name='DescriptionKey']/@value">perkShotgunMessiahDamageLongDescAlt</set>
+
+<!-- Add unlock information for ammo556mmHIpower -->
+<csv xpath="/items/item[@name='ammo556mmHIpower']/property[@name='UnlockedBy']/@value" delim="," op="add">perkAutoWeaponsMachineGuns</csv>
+
+<!-- Add unlock information for ammo556mmArmorPiercing -->
+<csv xpath="/items/item[@name='ammo556mmArmorPiercing']/property[@name='UnlockedBy']/@value" delim="," op="add">perkAutoWeaponsDamage</csv>
+
+<!-- Add unlock information for ammo45ACPHighpower -->
+<csv xpath="/items/item[@name='ammo45ACPHighpower']/property[@name='UnlockedBy']/@value" delim="," op="add">perkPistolPeteHPAmmo</csv>
+
+<!-- Add unlock information for ammo45ACPArmorpiecing -->
+<csv xpath="/items/item[@name='ammo45ACPArmorpiecing']/property[@name='UnlockedBy']/@value" delim="," op="add">perkPistolPeteAPAmmo</csv>
+
+<!-- Add unlock information for ammo45ACPEnhanced -->
+<csv xpath="/items/item[@name='ammo45ACPEnhanced']/property[@name='UnlockedBy']/@value" delim="," op="add">perkPistolPeteComplete</csv>
+
+<!-- Add unlock information for ammoShotgunShellPremium -->
+<csv xpath="/items/item[@name='ammoShotgunShellPremium']/property[@name='UnlockedBy']/@value" delim="," op="add">perkShotgunMessiahDamage</csv>
+
+<!-- Add unlock information for ammo762mmExplosiveFragmentations -->
+<csv xpath="/items/item[@name='ammo762mmExplosiveFragmentations']/property[@name='UnlockedBy']/@value" delim="," op="add">perkSniperComplete</csv>
+
+</if>
+</conditional>
 
 </RamblingMan>

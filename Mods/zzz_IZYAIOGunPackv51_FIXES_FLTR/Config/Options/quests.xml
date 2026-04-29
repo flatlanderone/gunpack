@@ -1,0 +1,27 @@
+<RamblingMan>
+<!-- Gears Options -->
+
+<!-- *** 1. Restricted Runs: Pacifist Traders: traders won't give weapons, ammo, traps and ammo crafting resources as quest rewards. Challenges not affected.
+-->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderQuestRewards') == 'No'">
+<remove xpath="/quests/quest[contains(@id, 'complete')]/reward[@id='groupQuestAmmo' or 
+@id='groupQuestShotgunTurret' or 
+@id='groupQuestAutoTurret' or 
+@id='groupQuestDartTrap' or 
+@id='groupQuestBladeTrap' or 
+@id='groupQuestTimedCharges' or 
+@id='groupQuestAmmoCraftingBundle' or 
+@id='groupQuestLegendaryMeleeCrafting' or 
+@id='groupQuestLegendaryRangedCrafting' or 
+@id='groupQuestMeleeCrafting' or 
+@id='groupQuestRangedCrafting' or 
+@id='groupQuestT2Traps' or 
+@id='groupQuestT1Traps']" />
+
+<csv xpath="/quests/quest[starts-with(@id, 'tier') and (not(contains(@id, 'test')))]/reward[@type='LootItem']/@id" delim="," op="remove">groupQuestAmmo</csv>
+
+</if>
+</conditional>
+
+</RamblingMan>

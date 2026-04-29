@@ -288,6 +288,7 @@ IZYgunT4LMGlightmachinegunMG34R
 Removed progression info for 
 ammoShotgunShellPremium
 ammoBundleShotgunShellPremium
+ammoShotgunShellPremiumBundle
 IZYgunT1TradshotgunDoubleBarrelOverUnder
 IZYgunT2TradshotgunLeveractionShotgunModel1887
 IZYgunT3TradshotgunTrenchGunM1897
@@ -297,6 +298,7 @@ IZYgunT3TACshotgunSPAS12G
 IZYgunT4TACshotgunM1014 -->
 <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammoShotgunShellPremium' or 
 @tags='ammoBundleShotgunShellPremium' or 
+@tags='ammoShotgunShellPremiumBundle' or 
 @tags='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
 @tags='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
 @tags='IZYgunT3TradshotgunTrenchGunM1897' or 
@@ -306,6 +308,7 @@ IZYgunT4TACshotgunM1014 -->
 @tags='IZYgunT4TACshotgunM1014']"/>
 <remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammoShotgunShellPremium' or 
 @tags='ammoBundleShotgunShellPremium' or 
+@tags='ammoShotgunShellPremiumBundle' or 
 @tags='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
 @tags='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
 @tags='IZYgunT3TradshotgunTrenchGunM1897' or 
@@ -332,6 +335,7 @@ ammoRocketRPGTraning
 IZYgunT2LGLChinalakeGrenadeLauncher
 IZYgunT3LGLXM25
 IZYgunT3RocketLauncherRPG7 -->
+
 <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammo25mmGrenadeTraining' or 
 @tags='ammo25mmGrenadeHE' or 
 @tags='ammo25mmGrenadeFRAGS' or 
@@ -350,7 +354,11 @@ IZYgunT3RocketLauncherRPG7 -->
 @tags='IZYgunT2LGLChinalakeGrenadeLauncher' or 
 @tags='IZYgunT3LGLXM25' or 
 @tags='IZYgunT3RocketLauncherRPG7']"/>
- 
+
+<!-- Remove IZYgunT2LGLChinalakeGrenadeLauncher icon frpm progression grid. -->
+
+<setattribute xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/display_entry[@name_key='explosivesT4']" name="icon">ammoRocketFrag</setattribute>
+
 </if>
 </conditional>
 
@@ -364,7 +372,6 @@ IZYgunT3RocketLauncherRPG7 -->
 
 </if>
 </conditional>
-
 
 <!-- *** IZY_RMP_Miscpack -->
 
@@ -491,4 +498,207 @@ IZYgunT4TradshotgunBrowningAuto5 -->
 </if>
 </conditional>
 
+<!-- *** 3. Challenge Runs: Disabling weapon and ammo crafting -->
+
+<!-- *** 3.1. NOT IMPLEMENTED Hide T1-T3 IZY weapon unlocks  -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
+
+<!-- <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[starts-with(@item, 'IZYgunT1')]"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[starts-with(@item, 'IZYgunT2')]"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[starts-with(@item, 'IZYgunT3')]"/>
+
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[starts-with(@tags, 'IZYgunT1')]"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[starts-with(@tags, 'IZYgunT2')]"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[starts-with(@tags, 'IZYgunT3')]"/>
+ -->
+</if>
+</conditional>
+<!-- 
+REF
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/display_entry[@item='gunHandgunT3DesertVulture']">
+	<unlock_entry item="IZYgunT3PistolMagnumAutomag44" unlock_tier="1" tags="IZYgunT3PistolMagnumAutomag44"/>
+</append>
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingHandguns']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="71,100" value="1" tags="IZYgunT3PistolMagnumAutomag44"/>
+	<passive_effect name="CraftingTier" operation="base_add" level="76,82,88,94,100" value="1,2,3,4,5" tags="IZYgunT3PistolMagnumAutomag44"/>
+</append>
+ -->
+
+<!-- *** 3.2.  Hide T0 weapon unlocks  -->
+<!-- TODO check this option -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+
+<!-- <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='gunBowT0PrimitiveBow' or 
+@tags='gunHandgunT0PipePistol' or 
+@tags='gunMGT0PipeMachineGun' or 
+@tags='gunRifleT0PipeRifle' or 
+@tags='gunShotgunT0PipeShotgun' or 
+@tags='meleeWpnBatonT0PipeBaton ' or 
+@tags='meleeWpnBladeT0BoneKnife' or 
+@tags='meleeWpnClubT0WoodenClub' or 
+@tags='meleeWpnKnucklesT0LeatherKnuckles' or 
+@tags='meleeWpnSledgeT0StoneSledgehammer' or 
+@tags='meleeWpnSpearT0StoneSpear']"/>
+
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='gunBowT0PrimitiveBow' or 
+@tags='gunHandgunT0PipePistol' or 
+@tags='gunMGT0PipeMachineGun' or 
+@tags='gunRifleT0PipeRifle' or 
+@tags='gunShotgunT0PipeShotgun' or 
+@tags='meleeWpnBatonT0PipeBaton ' or 
+@tags='meleeWpnBladeT0BoneKnife' or 
+@tags='meleeWpnClubT0WoodenClub' or 
+@tags='meleeWpnKnucklesT0LeatherKnuckles' or 
+@tags='meleeWpnSledgeT0StoneSledgehammer' or 
+@tags='meleeWpnSpearT0StoneSpear']"/> -->
+<!-- 
+gunBowT0PrimitiveBow
+gunHandgunT0PipePistol
+gunMGT0PipeMachineGun
+gunRifleT0PipeRifle
+gunShotgunT0PipeShotgun
+meleeWpnBatonT0PipeBaton 
+meleeWpnBladeT0BoneKnife
+meleeWpnClubT0WoodenClub
+meleeWpnKnucklesT0LeatherKnuckles
+meleeWpnSledgeT0StoneSledgehammer
+meleeWpnSpearT0StoneSpear
+-->
+
+<!-- Vanilla T0 weapons can't be crafted beyond Q1. -->
+
+<!-- <set xpath="/progression/crafting_skills/crafting_skill/display_entry[@item='gunBowT0PrimitiveBow' or 
+@item='gunHandgunT0PipePistol' or 
+@item='gunMGT0PipeMachineGun' or 
+@item='gunRifleT0PipeRifle' or 
+@item='gunShotgunT0PipeShotgun' or 
+@item='meleeWpnBatonT0PipeBaton ' or 
+@item='meleeWpnBladeT0BoneKnife' or 
+@item='meleeWpnClubT0WoodenClub' or 
+@item='meleeWpnKnucklesT0LeatherKnuckles' or 
+@item='meleeWpnSledgeT0StoneSledgehammer' or 
+@item='meleeWpnSpearT0StoneSpear']/@unlock_level">1</set>
+ -->
+
+<!-- IZY T0 weapons can't be crafted beyond Q1. -->
+
+<!-- <set xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/@unlock_level">1</set>
+
+ -->
+
+<!-- REF <display_entry item="gunHandgunT0PipePistol" unlock_level="1,2,4,6,8,10">
+<unlock_entry item="IZYgunT0PistolLiberatorImprovisedPistol" unlock_tier="1" tags="IZYgunT0PistolLiberatorImprovisedPistol">
+</unlock_entry> -->
+<!-- <remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@tags='IZYgunT0SMGPIPEsubmachinegun' or 
+@tags='IZYgunT0SNIPERpipeAR15Broken15Junk']"/> -->
+
+</if>
+</conditional>
+
+<!-- *** 6.xx Misc Options: Books unlock special IGP ammo types. Useful with EFTX. -->
+
+<!-- 
+ammo556mmHIpower
+ammo556mmArmorPiercing
+ammo45ACPHighpower
+ammo45ACPArmorpiecing
+ammo45ACPEnhanced
+ammoShotgunShellPremium
+ammo762mmExplosiveFragmentations
+ -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_45ACP556APHPBookUnlock') == 'Yes'"> 
+
+<!-- Set alt localization for perkAutoWeaponsMachineGuns -->
+<!-- <setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsMachineGuns']" name="name_key">bookAutoWeaponsMachineGunsAlt</setattribute>  -->
+<setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsMachineGuns']" name="desc_key">perkAutoWeaponsMachineGunsDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsMachineGuns']" name="long_desc_key">perkAutoWeaponsMachineGunsLongDescAlt</setattribute> 
+
+<!-- Set alt localization for perkAutoWeaponsDamage -->
+<setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsDamage']" name="name_key">bookAutoWeaponsDamage</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsDamage']" name="desc_key">perkAutoWeaponsDamageDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsDamage']" name="long_desc_key">perkAutoWeaponsDamageLongDescAlt</setattribute> 
+
+<!-- Set alt localization for perkPistolPeteHPAmmo -->
+<!-- <setattribute xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']" name="name_key">bookPistolPeteHPAmmoAlt</setattribute>  -->
+<setattribute xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']" name="desc_key">perkPistolPeteHPAmmoDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']" name="long_desc_key">perkPistolPeteHPAmmoLongDescAlt</setattribute> 
+
+<!-- Set alt localization for perkPistolPeteAPAmmo -->
+<!-- <setattribute xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']" name="name_key">bookPistolPeteAPAmmoAlt</setattribute>  -->
+<setattribute xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']" name="desc_key">perkPistolPeteAPAmmoDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']" name="long_desc_key">perkPistolPeteAPAmmoLongDescAlt</setattribute> 
+
+<!-- Set alt localization for perkPistolPeteComplete (ammo45ACPEnhanced) -->
+<!-- <setattribute xpath="/progression/perks/book[@name='perkPistolPeteComplete']" name="name_key">bookPistolPeteAPAmmoAlt</setattribute>  -->
+<setattribute xpath="/progression/perks/book[@name='perkPistolPeteComplete']" name="desc_key">perkPistolPeteCompleteDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkPistolPeteComplete']" name="long_desc_key">perkPistolPeteCompleteLongDescAlt</setattribute> 
+
+<!-- Set alt localization for perkShotgunMessiahDamage (ammoShotgunShellPremium) -->
+<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']" name="name_key">bookShotgunMessiahDamage</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']" name="desc_key">perkShotgunMessiahDamageDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']" name="long_desc_key">perkShotgunMessiahDamageLongDescAlt</setattribute> 
+
+<!-- Set alt localization for perkSniperComplete (ammo762mmExplosiveFragmentations) -->
+<!-- <setattribute xpath="/progression/perks/book[@name='perkSniperComplete']" name="name_key"></setattribute>  -->
+<setattribute xpath="/progression/perks/book[@name='perkSniperComplete']" name="desc_key">perkSniperCompleteDescAlt</setattribute> 
+<setattribute xpath="/progression/perks/book[@name='perkSniperComplete']" name="long_desc_key">perkSniperCompleteLongDescAlt</setattribute> 
+
+<!-- ammo556mmHIpower recipe unlock with perkAutoWeaponsMachineGuns (Hipfire). -->
+<append xpath="/progression/perks/book[@name='perkAutoWeaponsMachineGuns']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo556mmHIpower"/>
+	</effect_group>
+</append> 
+
+<!-- ammo556mmArmorPiercing recipe unlocks with perkAutoWeaponsDamage -->
+ <append xpath="/progression/perks/book[@name='perkAutoWeaponsDamage']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo556mmArmorPiercing"/>
+	</effect_group>
+</append> 
+
+<!-- ammo45ACPHighpower recipe unlocks with perkPistolPeteHPAmmo. -->
+<append xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo45ACPHighpower"/>
+	</effect_group>
+</append> 
+
+<!-- ammo45ACPArmorpiecing recipe unlocks with perkPistolPeteAPAmmo. -->
+<append xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo45ACPArmorpiecing"/>
+	</effect_group>
+</append> 
+
+<!-- ammo45ACPEnhanced recipe unlocks with perkPistolPeteComplete. -->
+<append xpath="/progression/perks/book[@name='perkPistolPeteComplete']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo45ACPEnhanced"/>
+	</effect_group>
+</append> 
+
+<!-- ammoShotgunShellPremium recipe unlocks with perkShotgunMessiahDamage. -->
+<append xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunShellPremium"/>
+	</effect_group>
+</append> 
+
+<!-- ammo762mmExplosiveFragmentations recipe unlocks with perkSniperComplete. -->
+<append xpath="/progression/perks/book[@name='perkSniperComplete']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammo762mmExplosiveFragmentations"/>
+	</effect_group>
+</append> 
+
+</if>
+</conditional>
 </RamblingMan>

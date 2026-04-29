@@ -1,0 +1,3 @@
+﻿Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+//gearsUIModsButton,UI,Menu,x,,[FFB400]Mod Settings - Gears[-],,,,,,,,,,,,模组,模組,
+//gearsUIModsWindowHeader,UI,Menu,x,,Mod Settings - Gears,,,,,,,,,,,,模组,模組,

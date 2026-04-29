@@ -1,7 +1,20 @@
 <RamblingMan>
 
-<!-- ***IZY_MMVMV2 -->
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
 
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/buffs.xml"/>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- ***IZY_MMVMV2 -->
 <conditional>
 <if cond="mod_loaded('IZY_MMVMV2') and mod_version('IZY_MMVMV2') = version(1,1,0,4)">
 
@@ -30,6 +43,12 @@
 	<if cond="mod_version('Gears') >= version(6,0,0)">
 		<include filename="Options/buffs.xml"/>
 	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
 </conditional>
 
 </RamblingMan>

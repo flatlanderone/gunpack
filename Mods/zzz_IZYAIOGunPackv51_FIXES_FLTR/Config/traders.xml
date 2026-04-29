@@ -1,9 +1,34 @@
 <RamblingMan>
 
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/traders.xml"/>
+
+<!-- Add meleeToolAxeT3ChainsawParts to trader inventory -->
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
+	<item name="meleeToolAxeT3ChainsawParts" count="1,3"/>
+</append>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
 <!-- *** IZY_RMP_Miscpack -->
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+<!-- Add IZYgunTminus1MusketM1777Rifle to trader inventory -->
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']"><item name="IZYgunTminus1MusketM1777Rifle" quality="2,5"/></append>
 
 <!-- Start of 2.6.1.4 -->
 
@@ -23,8 +48,6 @@
 <!-- End of 2.6.1.1 -->
 </if>
 </conditional>
-
-
 
 <!-- 2.6.1.0 -->
 <!-- *** IZY_RMP_556pack -->
@@ -62,6 +85,12 @@
 	<if cond="mod_version('Gears') >= version(6,0,0)">
 		<include filename="Options/traders.xml"/>
 	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
 </conditional>
 
 </RamblingMan>

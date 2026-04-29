@@ -1,0 +1,176 @@
+<RamblingMan>
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** Ammo item updates for the V2_OakravenAmmoPress: added tag for the Ammo Press display category.
+
+Credits: 
+ - (V2) Oakraven Ammo Press https://www.nexusmods.com/7daystodie/mods/5105
+ - Ammo Press Add-On Patch for EFT and Izy v2 - https://www.nexusmods.com/7daystodie/mods/6993 
+
+-->
+
+<!-- *** IZY_RMP_556pack -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">	
+
+<append xpath="/items/item[@name='ammo556mmBulletBall']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammo556mmBulletBallBundle']">        
+	<property name="Group" value="Ammo/Weapons,Ammo,RegularAmmo"/>
+</append>    
+
+<append xpath="/items/item[@name='ammo556mmHIpower']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammo556mmHIpowerBundle']">        
+	<property name="Group" value="Ammo/Weapons,Ammo,HPAmmo"/>
+</append>    
+
+<append xpath="/items/item[@name='ammo556mmArmorPiercing']">        
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammo556mmArmorPiercingBundle']">        
+	<property name="Group" value="Ammo/Weapons,Ammo,APAmmo"/>
+</append>
+
+</if>
+</conditional>		
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<append xpath="/items/item[@name='ammo45ACPBulletBall']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammoBundle45ACPBulletBall']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammo45ACPHighpower']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammoBundle45ACPHighpower']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,HPAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammo45ACPArmorpiecing']">        
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammoBundle45ACPArmorpiecing']">        
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,APAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammo45ACPEnhanced']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammoBundle45ACPEnhanced']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+</if>
+</conditional>
+	
+<!-- *** IZY_RMP_SG -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+ 
+<append xpath="/items/item[@name='ammoShotgunShellPremium']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items/item[@name='ammoShotgunShellDragoBreath']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items">
+<!-- Already in base items.xml -->
+<!-- <item name="ammoShotgunShellPremiumBundle">
+	<property name="Extends" value="ammoBundleMaster"/>
+	<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+    <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>	
+	<property class="Action0">
+		<property name="Create_item" value="ammoShotgunShellPremium"/>
+	</property>
+</item> -->
+
+<!-- <item name="ammoShotgunShellDragoBreathBundle">
+	<property name="Extends" value="ammoBundleMaster"/>
+	<property name="CustomIcon" value="ammoShotgunShellDragoBreath"/>
+	<property name="EconomicValue" value="2400"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+    <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>		
+	<property class="Action0">
+		<property name="Create_item" value="ammoShotgunShellDragoBreath"/>
+	</property>
+</item> -->
+</append>
+
+</if>
+</conditional>
+	
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+	
+<append xpath="/items/item[@name='ammo762mmExplosiveFragmentations']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+
+<append xpath="/items">
+<!-- Already in base items.xml -->
+<!-- <item name="ammo762mmExplosiveFragmentationsBundle">
+	<property name="Extends" value="ammoBundleMaster"/>
+	<property name="CustomIcon" value="ammo762mmExplosiveFragmentations"/>
+	<property name="EconomicValue" value="3500"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+    <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>	
+	<property class="Action0">
+		<property name="Create_item" value="ammo762mmExplosiveFragmentations"/>
+	</property>
+</item> -->
+</append>
+
+</if>
+</conditional>
+
+<!-- Vanilla -->
+
+<!-- Add tags for AP for ammoRocketFrag and ammoRocketHE -->
+
+<append xpath="/items/item[@name='ammoRocketFrag' or 
+@name='ammoRocketHE']">    
+        <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,Rockets"/>
+</append>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+<append xpath="/items/item[@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE']">    
+        <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,Rockets"/>
+</append>
+
+</if>
+</conditional>
+
+</RamblingMan>
