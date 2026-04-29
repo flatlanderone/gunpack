@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModSettings>
+  <Global>
+    <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
+      <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
+        <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipKickAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllBows" displayKey="uiKickAllBows" tooltipKey="tipKickAllBows" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllMeleeWeapons" displayKey="uiKickAllMeleeWeapons" tooltipKey="tipAllMeleeWeapons" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllCommonTools" displayKey="uiKickAllCommonTools" tooltipKey="tipKickAllCommonTools" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
+        <Switch name="KickAllFlashlight" displayKey="uiKickAllFlashlight" tooltipKey="tipKickAllFlashlight" defaultValue="Kick Off" leftValue="Kick Off" rightValue="Kick On" />
+      </Category>
+      <Category name="NoteKick" displayKey="uiNoteKick" tooltipKey="tipNoteKick" />
+      <Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2" />
+    </Tab>
+    <Tab name="WeaponPackSettings" displayKey="uiWeaponPackTab" tooltipKey="tipuiWeaponPackTab">
+      <Category name="WeaponPacksCategory" displayKey="uiWeaponPacksCategory" tooltipKey="tipWeaponPacksCategory">
+        <Switch name="Enable_IZY_melee" displayKey="ui_IZY_melee" tooltipKey="tip_IZY_melee" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_9mmVAL" displayKey="ui_IZY_RMP_9mmVAL" tooltipKey="tip_IZY_RMP_9mmVAL" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_44magnum" displayKey="ui_IZY_RMP_44magnum" tooltipKey="tip_IZY_RMP_44magnum" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_45ACP" displayKey="ui_IZY_RMP_45ACP" tooltipKey="tip_IZY_RMP_45ACP" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_556pack" displayKey="ui_IZY_RMP_556pack" tooltipKey="tip_IZY_RMP_556pack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_762pack" displayKey="ui_IZY_RMP_762pack" tooltipKey="tip_IZY_RMP_762pack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_SG" displayKey="ui_IZY_RMP_SG" tooltipKey="tip_IZY_RMP_SG" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_Demopack" displayKey="ui_IZY_RMP_Demopack" tooltipKey="tip_IZY_RMP_Demopack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_HVW" displayKey="ui_IZY_RMP_HVW" tooltipKey="tip_IZY_RMP_HVW" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_Miscpack" displayKey="ui_IZY_RMP_Miscpack" tooltipKey="tip_IZY_RMP_Miscpack" defaultValue="On" leftValue="Off" rightValue="On" />
+        <Switch name="Enable_IZY_RMP_Tech" displayKey="ui_IZY_RMP_Tech" tooltipKey="tip_IZY_RMP_Tech" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+    </Tab>
+    <Tab name="T4Settings" displayKey="uiT4Settings" tooltipKey="tipT4Settings">
+      <Category name="T4CraftingCategory" displayKey="uiT4CraftingCategory" tooltipKey="tipT4CraftingCategory">
+        <Switch name="Enable_T4_Crafting" displayKey="ui_Enable_T4_Crafting" tooltipKey="tip_Enable_T4_Crafting" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4LootingCategory" displayKey="uiT4LootingCategory" tooltipKey="tipT4LootingCategory">
+        <Switch name="Enable_T4_Looting" displayKey="ui_Enable_T4_Looting" tooltipKey="tip_Enable_T4_Looting" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4TradingCategory" displayKey="uiT4TradingCategory" tooltipKey="tipT4TradingCategory">
+        <Switch name="Enable_T4_Trading" displayKey="ui_Enable_T4_Trading" tooltipKey="tip_Enable_T4_Trading" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4RepairCategory" displayKey="uiT4RepairCategory" tooltipKey="tipT4RepairCategory">
+        <Switch name="Enable_T4_Repair" displayKey="ui_Enable_T4_Repair" tooltipKey="tip_Enable_T4_Repair" defaultValue="On" leftValue="Off" rightValue="On" />
+      </Category>
+      <Category name="T4DegradationCategory" displayKey="uiT4DegradationCategory" tooltipKey="tipT4DegradationCategory">
+        <Selector name="Enable_T4_DegradationSelector" displayKey="ui_Enable_T4_DegradationSelector" tooltipKey="tip_Enable_T4_DegradationSelector" defaultValue="Default">
+          <Property type="arrayValues" allowedValues="Default,2x,3x,4x,5x" />
+        </Selector>
+      </Category>
+    </Tab>
+  </Global>
+  <World />
+</ModSettings>

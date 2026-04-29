@@ -2,4 +2,31 @@
 <!-- Gears Options -->
 <!-- *** Global Edits -->
 
+<!-- Remove kick buffs -->
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick2']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeDAMAGE']"/>
+<remove xpath="/buffs/buff[@name='IZYweaponHosting']"/>
+<remove xpath="/buffs/buff[@name='IZYBashingCooldown']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeATKBashing']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional> -->
+
+
+<!-- Remove kick guffs for firearms -->
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Kick Off'">
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick2']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeDAMAGE']"/>
+<remove xpath="/buffs/buff[@name='IZYweaponHosting']"/>
+<remove xpath="/buffs/buff[@name='IZYBashingCooldown']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeATKBashing']"/>
+<remove xpath="/buffs/buff[@name='IZYRangeWPmeleeATK']"/>
+</if>
+</conditional> -->
+
 </RamblingMan>

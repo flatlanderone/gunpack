@@ -1,10 +1,381 @@
 <RamblingMan>
-<!-- Gears Options 
-1. Disable T4 crafting
-2. Disable T4 crafting for ranged.
-3. Disable T4 crafting for melee.
+<!-- Gears Options -->
+
+<!-- *** 0. Start of Weapon Pack Options ### -->
+
+<!-- *** 1. Removing recipes per weapon pack.
+ -->
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
+<!-- 
+Removed recipes for 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SledghammerSpikeMace
+IZYMeleeT4SpearPoleAxe
+ -->
+<remove xpath="/recipes/recipe[starts-with(@name, 'IZYMelee')]"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_9mmVAL guns.
+
+IZYgunT0SMGPIPEsubmachinegun
+IZYgunT1DualPistolCOLTnavyRevolver
+IZYgunT1Pistol9Makarov
+IZYgunT1SMGTec9submachinegun
+IZYgunT2DualPistolM9bs
+IZYgunT2SMGUZIsubmachinegun
+IZYgunT3DualPistolGlock18C
+IZYgunT3SMGMP9submachinegun
+IZYgunT4DualPistolMP9s
+IZYgunT4SMGCZScorpionEVO3  -->
+<remove xpath="/recipes/recipe[@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT1DualPistolCOLTnavyRevolver' or 
+@name='IZYgunT1Pistol9Makarov' or 
+@name='IZYgunT1SMGTec9submachinegun' or 
+@name='IZYgunT2DualPistolM9bs' or 
+@name='IZYgunT2SMGUZIsubmachinegun' or 
+@name='IZYgunT3DualPistolGlock18C' or 
+@name='IZYgunT3SMGMP9submachinegun' or 
+@name='IZYgunT4DualPistolMP9s' or 
+@name='IZYgunT4SMGCZScorpionEVO3']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_44magnum -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_44magnum guns.
+
+IZYgunT3PistolMagnumAutomag44
+IZYgunT4DualMagnumDesertEagles
+
+ -->
+<remove xpath="/recipes/recipe[@name='IZYgunT3PistolMagnumAutomag44' or 
+@name='IZYgunT4DualMagnumDesertEagles']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_45ACP guns.
+ammo45ACPBulletBall
+ammo45ACPHighpower
+ammo45ACPArmorpiecing
+ammo45ACPEnhanced
+ammoBundle45ACPBulletBall
+ammoBundle45ACPHighpower
+ammoBundle45ACPArmorpiecing
+ammoBundle45ACPEnhanced
+IZYgunT0PistolLiberatorImprovisedPistol
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT2Pistol45M1911A1
+IZYgunT2DualPistols45M1911A1
+IZYgunT3Pistol45USP45
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT145TACSMGMAC10
+IZYgunT245SMGM3Greasegun
+IZYgunT345SMGM1thompson
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT3MarksmanRifleMMRM1Carbine45
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+ -->
+<remove xpath="/recipes/recipe[@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT1Pistol45M1917' or 
+@name='IZYgunT1Pistol45Type17C96' or 
+@name='IZYgunT2Pistol45M1911A1' or 
+@name='IZYgunT2DualPistols45M1911A1' or 
+@name='IZYgunT3Pistol45USP45' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT245SMGM3Greasegun' or 
+@name='IZYgunT345SMGM1thompson' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_556pack guns and ammo:
+ammo556mmBulletBall
+ammo556mmHIpower
+ammo556mmArmorPiercing
+ammo556mmBulletBallBundle
+ammo556mmHIpowerBundle
+ammo556mmArmorPiercingBundle
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunT1ARCabineM608SurvivalRifle
+IZYgunT2ARCabineCAR15
+IZYgunT3ARCabineM4Carbine
+IZYgunT4ARCabineHK416
+IZYgunT1LRLongRifleM16a1
+IZYgunT3BULLPUPHellionVHS2
+IZYgunT4BULLPUPFNF2000
+IZYgunT2LMGLMG36
+IZYgunT3LMGM249FNminimi
+IZYgunT3MarksManRifle556M16A2DMR'
+
+ -->
+<remove xpath="/recipes/recipe[@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@name='IZYgunT1ARCabineM608SurvivalRifle' or 
+@name='IZYgunT2ARCabineCAR15' or 
+@name='IZYgunT3ARCabineM4Carbine' or 
+@name='IZYgunT4ARCabineHK416' or 
+@name='IZYgunT1LRLongRifleM16a1' or 
+@name='IZYgunT3BULLPUPHellionVHS2' or 
+@name='IZYgunT4BULLPUPFNF2000' or 
+@name='IZYgunT2LMGLMG36' or 
+@name='IZYgunT3LMGM249FNminimi' or 
+@name='IZYgunT3MarksManRifle556M16A2DMR']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_762pack guns and ammo:
+ammo762mmExplosiveFragmentations
+ammo762mmExplosiveFragmentationsBundle
+IZYgunT1SNIPERRIFLE762Mosinnagant
+IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT2MarksManRifle762M1garandNavyconverted
+IZYgunT3MarksManRifle762HKPSG1
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT2ARSTG44N
+IZYgunT3ARAKM
+IZYgunT1BattleRifleBARbrowningautomaticrifle
+IZYgunT2BattleRifleFNFALRifle
+IZYgunT3BattleRifleHKG3
+IZYgunT4BattleRifleSCARH
+IZYgunT2LMGlightmachinegunRPD
+IZYgunT4LMGlightmachinegunMG34R -->
+<remove xpath="/recipes/recipe[@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@name='IZYgunT3MarksManRifle762HKPSG1' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT2ARSTG44N' or 
+@name='IZYgunT3ARAKM' or 
+@name='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@name='IZYgunT2BattleRifleFNFALRifle' or 
+@name='IZYgunT3BattleRifleHKG3' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT2LMGlightmachinegunRPD' or 
+@name='IZYgunT4LMGlightmachinegunMG34R']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_SG guns and ammo:
+ammoShotgunShellPremium
+ammoBundleShotgunShellPremium
+IZYgunT1TradshotgunDoubleBarrelOverUnder
+IZYgunT2TradshotgunLeveractionShotgunModel1887
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT1TACCompactshotgunSuperShortty
+IZYgunT3TACshotgunSPAS12G
+IZYgunT4TACshotgunM1014  -->
+<remove xpath="/recipes/recipe[@name='ammoShotgunShellPremium' or 
+@name='ammoBundleShotgunShellPremium' or 
+@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@name='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@name='IZYgunT3TradshotgunTrenchGunM1897' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYgunT1TACCompactshotgunSuperShortty' or 
+@name='IZYgunT3TACshotgunSPAS12G' or 
+@name='IZYgunT4TACshotgunM1014']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_Demopack guns and ammo:
+ammo25mmGrenadeFRAGS
+ammo25mmGrenadeHE
+ammo25mmGrenadeTraining
+ammoRocketRPGHE
+ammoRocketRPGIncendiary
+ammoRocketRPGTraning
+IZYgunT2LGLChinalakeGrenadeLauncher
+IZYgunT3LGLXM25
+IZYgunT3RocketLauncherRPG7
+
+ -->
+<remove xpath="/recipes/recipe[@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='IZYgunT2LGLChinalakeGrenadeLauncher' or 
+@name='IZYgunT3LGLXM25' or 
+@name='IZYgunT3RocketLauncherRPG7']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_HVW ammo:
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture
+ -->
+<remove xpath="/recipes/recipe[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Miscpack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_Miscpack guns and ammo:
+ammoCrossbowLightBoltIron
+ammoCrossbowLightBoltSteelAP
+ammoCrossbowLightBoltStone
+ammoleadball
+ammoMuzzleloaderscattershot
+ammoMuzzleloadershot
+IZYgunT4BowVanhelsingAutomaticCrossbowVH'
+IZYgunTminus1MusketFlintlockPistol
+IZYgunTminus1MusketM1777Rifle
+IZYgunTminus1MusketshotgunBlunderbuss
+
+ -->
+<remove xpath="/recipes/recipe[@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoleadball' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoMuzzleloadershot' or 
+@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@name='IZYgunTminus1MusketFlintlockPistol' or 
+@name='IZYgunTminus1MusketM1777Rifle' or 
+@name='IZYgunTminus1MusketshotgunBlunderbuss']"/>
+</if>
+</conditional>
+
+
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_Tech guns:
+IZYgunT3TechnicalNailmachinegun
+
+ -->
+<remove xpath="/recipes/recipe[@name='IZYgunT3TechnicalNailmachinegun']"/>
+</if>
+</conditional>
+
+<!-- *** 2. Removing recipes for Tier 4 Weapons.  -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Crafting') == 'Off'">
+
+<!-- Removed recipes for T4 ranged and melee weapons: 
+ -->
+ 
+<!-- Guns 
+IZYgunT4BowVanhelsingAutomaticCrossbowVH
+IZYgunT4DualMagnumDesertEagles
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+IZYgunT4ARCabineHK416
+IZYgunT4BULLPUPFNF2000
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4BattleRifleSCARH
+IZYgunT4LMGlightmachinegunMG34R
+IZYgunT4SMGCZScorpionEVO3
+IZYgunT4DualPistolMP9s
+IZYgunT4TradshotgunBrowningAuto5
+
 -->
 
-<!-- *** Global Edits -->
+<remove xpath="/recipes/recipe[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@name='IZYgunT4DualMagnumDesertEagles' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@name='IZYgunT4ARCabineHK416' or 
+@name='IZYgunT4BULLPUPFNF2000' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT4LMGlightmachinegunMG34R' or 
+@name='IZYgunT4SMGCZScorpionEVO3' or 
+@name='IZYgunT4DualPistolMP9s' or 
+@name='IZYgunT4TradshotgunBrowningAuto5']"/>
+
+<!-- Melee weapons -->
+<!-- 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SpearPoleAxe
+IZYMeleeT4SledghammerSpikeMace
+ -->
+<remove xpath="/recipes/recipe[@name='IZYMeleeT4BladeKatana' or 
+@name='IZYMeleeT4SpearPoleAxe' or 
+@name='IZYMeleeT4SledghammerSpikeMace']"/>
+
+</if>
+</conditional>
 
 </RamblingMan>

@@ -1,0 +1,494 @@
+<RamblingMan>
+<!-- Gears Options -->
+
+<!-- *** 1. Weapon Pack Options ### -->
+
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
+<!-- 
+Removed progression info for 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SledghammerSpikeMace
+IZYMeleeT4SpearPoleAxe
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[starts-with(@tags, 'IZYMelee')]"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[starts-with(@tags, 'IZYMelee')]"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
+<!-- 
+Removed progression info for 
+IZYgunT0SMGPIPEsubmachinegun
+IZYgunT1DualPistolCOLTnavyRevolver
+IZYgunT1Pistol9Makarov
+IZYgunT1SMGTec9submachinegun
+IZYgunT2DualPistolM9bs
+IZYgunT2SMGUZIsubmachinegun
+IZYgunT3DualPistolGlock18C
+IZYgunT3SMGMP9submachinegun
+IZYgunT4DualPistolMP9s
+IZYgunT4SMGCZScorpionEVO3
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='IZYgunT0SMGPIPEsubmachinegun' or 
+@tags='IZYgunT1DualPistolCOLTnavyRevolver' or 
+@tags='IZYgunT1Pistol9Makarov' or 
+@tags='IZYgunT1SMGTec9submachinegun' or 
+@tags='IZYgunT2DualPistolM9bs' or 
+@tags='IZYgunT2SMGUZIsubmachinegun' or 
+@tags='IZYgunT3DualPistolGlock18C' or 
+@tags='IZYgunT3SMGMP9submachinegun' or 
+@tags='IZYgunT4DualPistolMP9s' or 
+@tags='IZYgunT4SMGCZScorpionEVO3']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='IZYgunT0SMGPIPEsubmachinegun' or 
+@tags='IZYgunT1DualPistolCOLTnavyRevolver' or 
+@tags='IZYgunT1Pistol9Makarov' or 
+@tags='IZYgunT1SMGTec9submachinegun' or 
+@tags='IZYgunT2DualPistolM9bs' or 
+@tags='IZYgunT2SMGUZIsubmachinegun' or 
+@tags='IZYgunT3DualPistolGlock18C' or 
+@tags='IZYgunT3SMGMP9submachinegun' or 
+@tags='IZYgunT4DualPistolMP9s' or 
+@tags='IZYgunT4SMGCZScorpionEVO3']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_44magnum -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
+<!-- 
+Removed progression info for 
+IZYgunT3PistolMagnumAutomag44
+IZYgunT4DualMagnumDesertEagles
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='IZYgunT3PistolMagnumAutomag44' or 
+@tags='IZYgunT4DualMagnumDesertEagles']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='IZYgunT3PistolMagnumAutomag44' or 
+@tags='IZYgunT4DualMagnumDesertEagles']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
+<!-- 
+Removed progression info for 
+ammo45ACPBulletBall
+ammo45ACPHighpower
+ammo45ACPArmorpiecing
+ammo45ACPEnhanced
+ammoBundle45ACPBulletBall
+ammoBundle45ACPHighpower
+ammoBundle45ACPArmorpiecing
+ammoBundle45ACPEnhanced
+IZYgunT0PistolLiberatorImprovisedPistol
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT2Pistol45M1911A1
+IZYgunT2DualPistols45M1911A1
+IZYgunT3Pistol45USP45
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT145TACSMGMAC10
+IZYgunT245SMGM3Greasegun
+IZYgunT345SMGM1thompson
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT3MarksmanRifleMMRM1Carbine45
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammo45ACPBulletBall' or 
+@tags='ammo45ACPHighpower' or 
+@tags='ammo45ACPArmorpiecing' or 
+@tags='ammo45ACPEnhanced' or 
+@tags='ammoBundle45ACPBulletBall' or 
+@tags='ammoBundle45ACPHighpower' or 
+@tags='ammoBundle45ACPArmorpiecing' or 
+@tags='ammoBundle45ACPEnhanced' or 
+@tags='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@tags='IZYgunT1Pistol45M1917' or 
+@tags='IZYgunT1Pistol45Type17C96' or 
+@tags='IZYgunT2Pistol45M1911A1' or 
+@tags='IZYgunT2DualPistols45M1911A1' or 
+@tags='IZYgunT3Pistol45USP45' or 
+@tags='IZYgunT4Pistol45STIEAGLE6' or 
+@tags='IZYgunT145TACSMGMAC10' or 
+@tags='IZYgunT245SMGM3Greasegun' or 
+@tags='IZYgunT345SMGM1thompson' or 
+@tags='IZYgunT445SMGM1928thompson' or 
+@tags='IZYgunT445TACSMGKrissSuperV' or 
+@tags='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@tags='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammo45ACPBulletBall' or 
+@tags='ammo45ACPHighpower' or 
+@tags='ammo45ACPArmorpiecing' or 
+@tags='ammo45ACPEnhanced' or 
+@tags='ammoBundle45ACPBulletBall' or 
+@tags='ammoBundle45ACPHighpower' or 
+@tags='ammoBundle45ACPArmorpiecing' or 
+@tags='ammoBundle45ACPEnhanced' or 
+@tags='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@tags='IZYgunT1Pistol45M1917' or 
+@tags='IZYgunT1Pistol45Type17C96' or 
+@tags='IZYgunT2Pistol45M1911A1' or 
+@tags='IZYgunT2DualPistols45M1911A1' or 
+@tags='IZYgunT3Pistol45USP45' or 
+@tags='IZYgunT4Pistol45STIEAGLE6' or 
+@tags='IZYgunT145TACSMGMAC10' or 
+@tags='IZYgunT245SMGM3Greasegun' or 
+@tags='IZYgunT345SMGM1thompson' or 
+@tags='IZYgunT445SMGM1928thompson' or 
+@tags='IZYgunT445TACSMGKrissSuperV' or 
+@tags='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@tags='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
+<!-- 
+Removed progression info for 
+ammo556mmBulletBall
+ammo556mmHIpower
+ammo556mmArmorPiercing
+ammo556mmBulletBallBundle
+ammo556mmHIpowerBundle
+ammo556mmArmorPiercingBundle
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunT1ARCabineM608SurvivalRifle
+IZYgunT2ARCabineCAR15
+IZYgunT3ARCabineM4Carbine
+IZYgunT4ARCabineHK416
+IZYgunT1LRLongRifleM16a1
+IZYgunT3BULLPUPHellionVHS2
+IZYgunT4BULLPUPFNF2000
+IZYgunT2LMGLMG36
+IZYgunT3LMGM249FNminimi
+IZYgunT3MarksManRifle556M16A2DMR
+
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammo556mmBulletBall' or 
+@tags='ammo556mmHIpower' or 
+@tags='ammo556mmArmorPiercing' or 
+@tags='ammo556mmBulletBallBundle' or 
+@tags='ammo556mmHIpowerBundle' or 
+@tags='ammo556mmArmorPiercingBundle' or 
+@tags='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@tags='IZYgunT1ARCabineM608SurvivalRifle' or 
+@tags='IZYgunT2ARCabineCAR15' or 
+@tags='IZYgunT3ARCabineM4Carbine' or 
+@tags='IZYgunT4ARCabineHK416' or 
+@tags='IZYgunT1LRLongRifleM16a1' or 
+@tags='IZYgunT3BULLPUPHellionVHS2' or 
+@tags='IZYgunT4BULLPUPFNF2000' or 
+@tags='IZYgunT2LMGLMG36' or 
+@tags='IZYgunT3LMGM249FNminimi' or 
+@tags='IZYgunT3MarksManRifle556M16A2DMR']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammo556mmBulletBall' or 
+@tags='ammo556mmHIpower' or 
+@tags='ammo556mmArmorPiercing' or 
+@tags='ammo556mmBulletBallBundle' or 
+@tags='ammo556mmHIpowerBundle' or 
+@tags='ammo556mmArmorPiercingBundle' or 
+@tags='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@tags='IZYgunT1ARCabineM608SurvivalRifle' or 
+@tags='IZYgunT2ARCabineCAR15' or 
+@tags='IZYgunT3ARCabineM4Carbine' or 
+@tags='IZYgunT4ARCabineHK416' or 
+@tags='IZYgunT1LRLongRifleM16a1' or 
+@tags='IZYgunT3BULLPUPHellionVHS2' or 
+@tags='IZYgunT4BULLPUPFNF2000' or 
+@tags='IZYgunT2LMGLMG36' or 
+@tags='IZYgunT3LMGM249FNminimi' or 
+@tags='IZYgunT3MarksManRifle556M16A2DMR']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
+<!-- 
+Removed progression info for 
+ammo762mmExplosiveFragmentations
+ammo762mmExplosiveFragmentationsBundle
+IZYgunT1SNIPERRIFLE762Mosinnagant
+IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT2MarksManRifle762M1garandNavyconverted
+IZYgunT3MarksManRifle762HKPSG1
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT2ARSTG44N
+IZYgunT3ARAKM
+IZYgunT1BattleRifleBARbrowningautomaticrifle
+IZYgunT2BattleRifleFNFALRifle
+IZYgunT3BattleRifleHKG3
+IZYgunT4BattleRifleSCARH
+IZYgunT2LMGlightmachinegunRPD
+IZYgunT4LMGlightmachinegunMG34R
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammo762mmExplosiveFragmentations' or 
+@tags='ammo762mmExplosiveFragmentationsBundle' or 
+@tags='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@tags='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@tags='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@tags='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@tags='IZYgunT3MarksManRifle762HKPSG1' or 
+@tags='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@tags='IZYgunT4MarksManRifleM110SASS' or 
+@tags='IZYgunT2ARSTG44N' or 
+@tags='IZYgunT3ARAKM' or 
+@tags='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@tags='IZYgunT2BattleRifleFNFALRifle' or 
+@tags='IZYgunT3BattleRifleHKG3' or 
+@tags='IZYgunT4BattleRifleSCARH' or 
+@tags='IZYgunT2LMGlightmachinegunRPD' or 
+@tags='IZYgunT4LMGlightmachinegunMG34R']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammo762mmExplosiveFragmentations' or 
+@tags='ammo762mmExplosiveFragmentationsBundle' or 
+@tags='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@tags='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@tags='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@tags='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@tags='IZYgunT3MarksManRifle762HKPSG1' or 
+@tags='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@tags='IZYgunT4MarksManRifleM110SASS' or 
+@tags='IZYgunT2ARSTG44N' or 
+@tags='IZYgunT3ARAKM' or 
+@tags='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@tags='IZYgunT2BattleRifleFNFALRifle' or 
+@tags='IZYgunT3BattleRifleHKG3' or 
+@tags='IZYgunT4BattleRifleSCARH' or 
+@tags='IZYgunT2LMGlightmachinegunRPD' or 
+@tags='IZYgunT4LMGlightmachinegunMG34R']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
+<!-- 
+Removed progression info for 
+ammoShotgunShellPremium
+ammoBundleShotgunShellPremium
+IZYgunT1TradshotgunDoubleBarrelOverUnder
+IZYgunT2TradshotgunLeveractionShotgunModel1887
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT1TACCompactshotgunSuperShortty
+IZYgunT3TACshotgunSPAS12G
+IZYgunT4TACshotgunM1014 -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammoShotgunShellPremium' or 
+@tags='ammoBundleShotgunShellPremium' or 
+@tags='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@tags='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@tags='IZYgunT3TradshotgunTrenchGunM1897' or 
+@tags='IZYgunT4TradshotgunBrowningAuto5' or 
+@tags='IZYgunT1TACCompactshotgunSuperShortty' or 
+@tags='IZYgunT3TACshotgunSPAS12G' or 
+@tags='IZYgunT4TACshotgunM1014']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammoShotgunShellPremium' or 
+@tags='ammoBundleShotgunShellPremium' or 
+@tags='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@tags='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@tags='IZYgunT3TradshotgunTrenchGunM1897' or 
+@tags='IZYgunT4TradshotgunBrowningAuto5' or 
+@tags='IZYgunT1TACCompactshotgunSuperShortty' or 
+@tags='IZYgunT3TACshotgunSPAS12G' or 
+@tags='IZYgunT4TACshotgunM1014']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
+<!-- 
+Removed progression info for 
+ammo25mmGrenadeFRAGS
+ammo25mmGrenadeHE
+ammo25mmGrenadeTraining
+ammoRocketRPGHE
+ammoRocketRPGIncendiary
+ammoRocketRPGTraning
+IZYgunT2LGLChinalakeGrenadeLauncher
+IZYgunT3LGLXM25
+IZYgunT3RocketLauncherRPG7 -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammo25mmGrenadeTraining' or 
+@tags='ammo25mmGrenadeHE' or 
+@tags='ammo25mmGrenadeFRAGS' or 
+@tags='ammoRocketRPGTraning' or 
+@tags='ammoRocketRPGHE' or 
+@tags='ammoRocketRPGIncendiary' or 
+@tags='IZYgunT2LGLChinalakeGrenadeLauncher' or 
+@tags='IZYgunT3LGLXM25' or 
+@tags='IZYgunT3RocketLauncherRPG7']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammo25mmGrenadeTraining' or 
+@tags='ammo25mmGrenadeHE' or 
+@tags='ammo25mmGrenadeFRAGS' or 
+@tags='ammoRocketRPGTraning' or 
+@tags='ammoRocketRPGHE' or 
+@tags='ammoRocketRPGIncendiary' or 
+@tags='IZYgunT2LGLChinalakeGrenadeLauncher' or 
+@tags='IZYgunT3LGLXM25' or 
+@tags='IZYgunT3RocketLauncherRPG7']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<!-- No recipes. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
+
+<!-- n/a -->
+
+</if>
+</conditional>
+
+
+<!-- *** IZY_RMP_Miscpack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
+<!-- 
+Removed progression info for 
+ammoCrossbowLightBoltIron
+ammoCrossbowLightBoltSteelAP
+ammoCrossbowLightBoltStone
+ammoleadball
+ammoMuzzleloaderscattershot
+ammoMuzzleloadershot
+IZYgunT4BowVanhelsingAutomaticCrossbowVH'
+IZYgunTminus1MusketFlintlockPistol
+IZYgunTminus1MusketM1777Rifle
+IZYgunTminus1MusketshotgunBlunderbuss  -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='ammoCrossbowLightBoltIron' or 
+@tags='ammoCrossbowLightBoltSteelAP' or 
+@tags='ammoCrossbowLightBoltStone' or 
+@tags='ammoleadball' or 
+@tags='ammoMuzzleloaderscattershot' or 
+@tags='ammoMuzzleloadershot' or 
+@tags='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@tags='IZYgunTminus1MusketFlintlockPistol' or 
+@tags='IZYgunTminus1MusketM1777Rifle' or 
+@tags='IZYgunTminus1MusketshotgunBlunderbuss']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='ammoCrossbowLightBoltIron' or 
+@tags='ammoCrossbowLightBoltSteelAP' or 
+@tags='ammoCrossbowLightBoltStone' or 
+@tags='ammoleadball' or 
+@tags='ammoMuzzleloaderscattershot' or 
+@tags='ammoMuzzleloadershot' or 
+@tags='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@tags='IZYgunTminus1MusketFlintlockPistol' or 
+@tags='IZYgunTminus1MusketM1777Rifle' or 
+@tags='IZYgunTminus1MusketshotgunBlunderbuss']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
+<!-- 
+Removed progression info for 
+IZYgunT3TechnicalNailmachinegun
+
+ -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='IZYgunT3TechnicalNailmachinegun']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='IZYgunT3TechnicalNailmachinegun']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** 2. Removing progression unlocks for Tier 4 Weapons.  -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Crafting') == 'Off'">
+<!-- Melee weapons -->
+<!-- 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SpearPoleAxe
+IZYMeleeT4SledghammerSpikeMace
+ -->
+ 
+ <!-- Guns
+IZYgunT4BowVanhelsingAutomaticCrossbowVH
+IZYgunT4DualMagnumDesertEagles
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+IZYgunT4ARCabineHK416
+IZYgunT4BULLPUPFNF2000
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4BattleRifleSCARH
+IZYgunT4LMGlightmachinegunMG34R
+IZYgunT4SMGCZScorpionEVO3
+IZYgunT4DualPistolMP9s
+IZYgunT4TradshotgunBrowningAuto5 -->
+<remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@tags='IZYgunT4DualMagnumDesertEagles' or 
+@tags='IZYgunT4Pistol45STIEAGLE6' or 
+@tags='IZYgunT445SMGM1928thompson' or 
+@tags='IZYgunT445TACSMGKrissSuperV' or 
+@tags='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@tags='IZYgunT4ARCabineHK416' or 
+@tags='IZYgunT4BULLPUPFNF2000' or 
+@tags='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@tags='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@tags='IZYgunT4MarksManRifleM110SASS' or 
+@tags='IZYgunT4BattleRifleSCARH' or 
+@tags='IZYgunT4LMGlightmachinegunMG34R' or 
+@tags='IZYgunT4SMGCZScorpionEVO3' or 
+@tags='IZYgunT4DualPistolMP9s' or 
+@tags='IZYgunT4TradshotgunBrowningAuto5' or 
+@tags='IZYMeleeT4BladeKatana' or 
+@tags='IZYMeleeT4SpearPoleAxe' or 
+@tags='IZYMeleeT4SledghammerSpikeMace']"/>
+<remove xpath="/progression/crafting_skills/crafting_skill/effect_group/passive_effect[@tags='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@tags='IZYgunT4DualMagnumDesertEagles' or 
+@tags='IZYgunT4Pistol45STIEAGLE6' or 
+@tags='IZYgunT445SMGM1928thompson' or 
+@tags='IZYgunT445TACSMGKrissSuperV' or 
+@tags='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@tags='IZYgunT4ARCabineHK416' or 
+@tags='IZYgunT4BULLPUPFNF2000' or 
+@tags='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@tags='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@tags='IZYgunT4MarksManRifleM110SASS' or 
+@tags='IZYgunT4BattleRifleSCARH' or 
+@tags='IZYgunT4LMGlightmachinegunMG34R' or 
+@tags='IZYgunT4SMGCZScorpionEVO3' or 
+@tags='IZYgunT4DualPistolMP9s' or 
+@tags='IZYgunT4TradshotgunBrowningAuto5' or 
+@tags='IZYMeleeT4BladeKatana' or 
+@tags='IZYMeleeT4SpearPoleAxe' or 
+@tags='IZYMeleeT4SledghammerSpikeMace']"/>
+ 
+</if>
+</conditional>
+
+</RamblingMan>

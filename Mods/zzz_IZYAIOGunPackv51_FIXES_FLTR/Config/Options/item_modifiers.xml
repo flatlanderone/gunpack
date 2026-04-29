@@ -1,0 +1,20 @@
+<RamblingMan>
+<!-- Gears Options -->
+
+<!-- Remove kick for all weapons -->
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
+<remove xpath="item_modifiers/item_modifier[@name='modGunFlashlight']/effect_group/requirement[@buff='IZYRangeWPmeleeKick']"/>
+</if>
+</conditional> -->
+
+
+<!-- Remove kick for all firearms -->
+<!-- <conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Off'">
+<remove xpath="item_modifiers/item_modifier[@name='modGunFlashlight']/effect_group/requirement[@buff='IZYRangeWPmeleeKick']"/>
+</if>
+</conditional> -->
+
+
+</RamblingMan>

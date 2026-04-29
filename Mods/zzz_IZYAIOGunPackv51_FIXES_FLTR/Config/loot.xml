@@ -12,10 +12,89 @@
 </if>
 </conditional>
 
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+<!-- Added IZYgunT3TechnicalNailmachinegun to loot groups. -->
+
+<append xpath="//lootgroup[@name='groupWeaponsT3_TurretsSyndrome' or 
+@name='groupQuestWeaponsRangedT2' or 
+@name='groupQuestWeaponsRangedT3' or 
+@name='groupQuestWeaponsRangedT3' or 
+@name='groupInfestedT5MeleeRanged']">	
+	<item name="IZYgunT3TechnicalNailmachinegun"/>
+</append>
+
+<!-- End of 2.6.1.4 -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+<!-- TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture to loot. -->
+
+<!-- <insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Boomstick']">
+	<item name="IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture" loot_prob_template="med"/>
+	<item name="IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture" loot_prob_template="med"/>
+</insertAfter> -->
+
+<!-- End of 2.6.1.5 -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+
+<!-- 2.6.1.4 -->
+<!-- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2. -->
+<append xpath="//lootgroup[@name='groupWeaponsT2_Melee']">	
+	<item name="IZYMeleeT4BladeKatana"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsMeleeT2']">	
+	<item name="IZYMeleeT4BladeKatana"/>
+</append>
+
+</if>
+</conditional>
+
 <!-- *** IZY_RMP_9mmVAL -->
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+
+<!-- Added missing IZYgunT1Pistol9Makarov entry to groupWeaponsT1_Gunslinger. -->
+	<insertAfter xpath="//lootgroup[@name='groupWeaponsT1_Gunslinger']">
+					<!-- tier 1  -->
+		<lootgroup name="groupWeaponsT1_IZYgunT1Pistol9Makarov" count="all" loot_quality_template="QLTemplateT1">
+			<item name="IZYgunT1Pistol9Makarov"/>
+		</lootgroup>
+	</insertAfter>
+
+<!-- Added missing IZYgunT1Pistol9Makarov entry to groupQuestWeaponsRangedT1. -->
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1Pistol9Makarov"/>
+	</append>
+
+<!-- Added missing groupWeaponsT1_IZYgunT1Pistol9Makarov to groupWeaponsT1_Ranged. -->
+	<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">	
+		<item group="groupWeaponsT1_IZYgunT1Pistol9Makarov"/>
+	</append>
+
+<!-- End of 2.6.1.4 -->
 
 <!-- Removed IZYgunT4DualPistolC96M from loot. -->
 <remove xpath="//lootgroup[@name='groupWeaponsT3_DW_C96M']/item[@name='IZYgunT4DualPistolC96M']" />
@@ -57,7 +136,15 @@
 
 <conditional>
 <if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
-<!-- no changes -->
+
+<!-- Start of 2.6.1.4 -->
+
+<!-- Added missing IZYgunT1Pistol45M1917 entry to groupQuestWeaponsRangedT1. -->
+	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1Pistol45Type17C96"/>
+	</append>
+
+<!-- End of 2.6.1.4 -->
 </if>
 </conditional>
 
@@ -69,6 +156,41 @@
 <!-- No changes. -->
 
 </if>
+</conditional>
+
+<!-- *** IZY_RMP_44magnum -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+<!-- Added IZYgunT3PistolMagnumAutomag44 and IZYgunT4DualMagnumDesertEagles to loot. -->
+<insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Gunslinger']">
+	<lootgroup name="groupWeaponsT3_IZYgunT3PistolMagnumAutomag44" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3PistolMagnumAutomag44"/>
+	</lootgroup>
+	<lootgroup name="groupWeaponsT4_IZYgunT4DualMagnumDesertEagles" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4DualMagnumDesertEagles"/>
+	</lootgroup>
+</insertAfter>
+<append xpath="//lootgroup[@name='groupWeaponsT3_Ranged']">	
+	<item group="groupWeaponsT3_IZYgunT3PistolMagnumAutomag44"/>
+	<item group="groupWeaponsT4_IZYgunT4DualMagnumDesertEagles"/>
+</append>
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">	
+	<item name="IZYgunT3PistolMagnumAutomag44"/>
+	<item name="IZYgunT4DualMagnumDesertEagles"/>
+</append>
+<!-- End of 2.6.1.4 -->
+</if>
+</conditional>
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/loot.xml"/>
+	</if>
 </conditional>
 
 </RamblingMan>
