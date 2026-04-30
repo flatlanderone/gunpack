@@ -87,9 +87,19 @@ uiKickAllSalvageTools,UI,Display,,,Salvage Tools,,,,,,,,,,,,,
 uiKickAllRepairTools,UI,Display,,,Repair Tools,,,,,,,,,,,,,
 //loot tab,,,,,,,,,,,,,
 uiLootSettings,UI,Display,,,Loot Options,,,,,,,,,,,,,
-uiLootToiletPistols,UI,Display,,,Find T1 Pistols in Various Places,,,,,,,,,,,,,
-uiT1IGPPistolsinToilets,UI,Display,,,Toilets,,,,,,,,,,,,,
-tipT1IGPPistolsinToilets,UI,Display,,,Click Yes to have a chance to find IGP T1 Pistols in Toilets,,,,,,,,,,,,,
+uiLootToiletPistols,UI,Display,,,[DECEA3]Find Pistols in Various Containers[-],,,,,,,,,,,,,
+
+uiT1IGPPistolsinToilets,UI,Display,,,T1 Pistols,,,,,,,,,,,,,
+tipT1IGPPistolsinToilets,UI,Display,,,"Click 'Yes' to have a chance to find IGP T1 Pistols in Toilets, Military Footlockers, Purses and Desks.\nThis works exactly like toilet pistols in vanilla.",,,,,,,,,,,,,
+
+uiT1IGPPistolsinToiletsFNS,UI,Display,,,"T2, T3 and T4 Pistols",,,,,,,,,,,,,
+tipT1IGPPistolsinToiletsFNS,UI,Display,,,"Click 'Yes' to have a chance to find IGP T1, T2, T3 and T4 Pistols in xxx",,,,,,,,,,,,,
+
+uiLootCommonWeaponsILE,UI,Display,,,"[DECEA3]Find Common Weapons on Day One (ILE )[-]",,,,,,,,,,,,,
+
+uiCommonIGPWeaponsILE,UI,Display,,,"Common Weapons (ILE)",,,,,,,,,,,,,
+tipCommonIGPWeaponsILE,UI,Display,,,"Click 'Yes' to have a chance to find common weapons (ILE)",,,,,,,,,,,,,
+
 uiT1IGPPistolsinFootlockers,UI,Display,,,Military Footlockers,,,,,,,,,,,,,
 tipT1IGPPistolsinFootlockers,UI,Display,,,Click Yes to have a chance to find IGP T1 Pistols in Military FootLockers,,,,,,,,,,,,,
 //========================,,,,,,,,,,,,,,,,,,

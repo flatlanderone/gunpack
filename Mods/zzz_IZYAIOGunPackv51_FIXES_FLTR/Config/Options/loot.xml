@@ -1,53 +1,6 @@
 <RamblingMan>
 <!-- Gears Options  -->
 
-<!-- *** Pistols in toilets and other containers. -->
-
-<!-- Added chance to find IGP T1 Pistols in Toilets.
-IZYgunT1Pistol45M1917
-IZYgunT1Pistol45Type17C96
-IZYgunT1Pistol9Makarov
- -->
-<!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
-<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
-	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
-	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
-</append> -->
-
-<!-- testing -->
-<!-- <set xpath="/lootcontainers/lootgroup[@name='groupToilet']/item[@group='groupToilet02']/@loot_prob_template">guaranteed</set> -->
-
-<!-- </if>
-</conditional> -->
-
-<!-- Added chance to find IGP T1 Pistols in Military Footlockers. -->
-<!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
-<append xpath="/lootcontainers/lootgroup[@name='groupFootlockerWeapons02']">
-	<item name="IZYgunT1Pistol45M1917"/>
-	<item name="IZYgunT1Pistol45Type17C96"/>
-	<item name="IZYgunT1Pistol9Makarov"/>
-</append>
-</if>
-</conditional> -->
-
-<!-- TODO groupQuestWeaponsRangedT1 -->
-<!-- <lootgroup name="groupQuestWeaponsRangedT1" loot_quality_template="questT1QualTemplate">
-	<item name="gunRifleT1HuntingRifle"/>
-	<item name="gunShotgunT1DoubleBarrel"/>
-	<item name="gunMGT1AK47"/>
-	<item name="gunBowT1WoodenBow"/>
-	<item name="gunBowT1IronCrossbow"/>
-	<item name="gunHandgunT1Pistol"/>
-</lootgroup> -->
-
-
-<!-- <lootgroup name="groupWeaponsT1_Gunslinger" count="all" loot_quality_template="QLTemplateT1">
-	<item name="gunHandgunT1Pistol"/>
-</lootgroup> -->
-
-
 <!-- *** 1. Weapon Pack Options ### -->
 
 <!-- *** IZY_melee -->
@@ -384,7 +337,7 @@ IZYgunT3TechnicalNailmachinegun  -->
 </if>
 </conditional>
 
-<!-- *** 2. Removing Tier 4 Weapons from loot.  -->
+<!-- *** 2. Removing Tier 4 Weapons from loot. ### -->
 
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Looting') == 'Off'">
@@ -435,5 +388,112 @@ IZYgunT4TradshotgunBrowningAuto5
 
 </if>
 </conditional>
+
+<!-- *** 3. Loot Options ###
+
+*** 3.1. Pistols in toilets and other containers. -->
+<!-- Same rate as gunHandgunT1Pistol -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
+
+<!-- Added chance to find IGP T1 Pistols in Toilets.
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT1Pistol9Makarov
+ -->
+<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
+	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
+	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
+	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
+</append>
+
+<!-- testing -->
+<!-- <set xpath="/lootcontainers/lootgroup[@name='groupToilet']/item[@group='groupToilet02']/@loot_prob_template">guaranteed</set> -->
+
+<!-- Added chance to find IGP T1 Pistols in Military Footlockers. -->
+<append xpath="/lootcontainers/lootgroup[@name='groupFootlockerWeapons02']">
+	<item name="IZYgunT1Pistol45M1917"/>
+	<item name="IZYgunT1Pistol45Type17C96"/>
+	<item name="IZYgunT1Pistol9Makarov"/>
+</append>
+
+<!-- Added chance to find IGP T1 Pistols in Purses. -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Gunslinger']">
+	<item name="IZYgunT1Pistol45M1917"/>
+	<item name="IZYgunT1Pistol45Type17C96"/>
+	<item name="IZYgunT1Pistol9Makarov"/>
+</append>
+
+<!-- 
+REF:
+<lootgroup name="groupWeaponsT1_Gunslinger" count="all" loot_quality_template="QLTemplateT1">
+	<item name="gunHandgunT1Pistol"/>
+</lootgroup> 
+...
+<lootgroup name="groupPurse03">
+	<item group="groupWeaponsT1_Gunslinger" loot_prob_template="veryLow"/>
+</lootgroup> -->
+
+<!-- Added chance to find IGP T1 Pistols in Desks. -->
+<append xpath="/lootcontainers/lootgroup[@name='groupDesks02']">
+	<item name="IZYgunT1Pistol45M1917"/>
+	<item name="IZYgunT1Pistol45Type17C96"/>
+	<item name="IZYgunT1Pistol9Makarov"/>
+</append>
+
+<!-- REF:
+<lootgroup name="groupDesks02">
+	<item group="groupMedicalCommon" loot_prob_template="high"/>
+	<item name="meleeToolFlashlight02" loot_prob_template="veryLow"/>
+	<item name="modArmorCigar" loot_prob_template="veryLow"/>
+	<item name="gunHandgunT1Pistol" loot_prob_template="veryLow"/>
+</lootgroup>  -->
+
+
+<!-- Pistols in groupCars03 is handled by groupWeaponsT1_Ranged -->
+
+<!-- REF: <lootgroup name="groupCars03">
+	<item group="skillMagazines" loot_prob_template="med"/>
+	<item group="groupAmmoSmall" loot_prob_template="low"/>
+	<item group="groupAmmoMedium" loot_prob_template="veryLow"/>
+	<item group="groupWeaponsT0_Ranged" loot_prob_template="ProbT0"/>
+	<item group="groupWeaponsT1_Ranged" loot_prob_template="ProbT1"/>
+</lootgroup> -->
+ 
+</if>
+</conditional>
+
+<!-- *** 3.2 T2, T3 and T4 Pistols 
+
+Remove T1 from FNS
+Add footlockers 
+-->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToiletsFNS') == 'Yes'">
+
+</if>
+</conditional>
+
+<!-- *** 3.3 Pistols in safes
+Check IzP and other mods.
+
+ -->
+
+<!-- *** 4. Quest Reward Options 
+groupQuestWeaponsRangedT1 -->
+
+<!-- REF groupQuestWeaponsRangedT1 -->
+<!-- <lootgroup name="groupQuestWeaponsRangedT1" loot_quality_template="questT1QualTemplate">
+	<item name="gunRifleT1HuntingRifle"/>
+	<item name="gunShotgunT1DoubleBarrel"/>
+	<item name="gunMGT1AK47"/>
+	<item name="gunBowT1WoodenBow"/>
+	<item name="gunBowT1IronCrossbow"/>
+	<item name="gunHandgunT1Pistol"/>
+</lootgroup> -->
+
+
 
 </RamblingMan>

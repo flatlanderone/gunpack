@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ModSettings>
   <Global>
+    <Tab name="LootSettings" displayKey="uiLootSettings" tooltipKey="tipLootSettings">
+      <Category name="LootToiletPistols" displayKey="uiLootToiletPistols" tooltipKey="tipLootToiletPistols">
+        <Switch name="T1IGPPistolsinToilets" displayKey="uiT1IGPPistolsinToilets" tooltipKey="tipT1IGPPistolsinToilets" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="T1IGPPistolsinToiletsFNS" displayKey="uiT1IGPPistolsinToiletsFNS" tooltipKey="tipT1IGPPistolsinToiletsFNS" defaultValue="No" leftValue="No" rightValue="Yes" />
+
+      </Category>
+	  <Category name="LootCommonWeaponsILE" displayKey="uiLootCommonWeaponsILE" tooltipKey="tipLootCommonWeaponsILE">
+	          <Switch name="CommonIGPWeaponsILE" displayKey="uiCommonIGPWeaponsILE" tooltipKey="tipCommonIGPWeaponsILE" defaultValue="No" leftValue="No" rightValue="Yes" />
+	  </Category>
+    </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
         <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipKickAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />

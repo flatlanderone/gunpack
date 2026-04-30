@@ -47,9 +47,13 @@ See Changelog below for a full list of changes and additions.
  - **This release**: 2.6.1.5 (2026-05-xx)
 
 # Changelog for 2.6.1.5 (2026-0x-xx)
+
 ## Notes
+
 ## Known issues
+
 ## Planned features
+
 
 
 # Changelog for 2.6.1.4 (2026-04-29)
