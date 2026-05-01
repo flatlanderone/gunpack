@@ -3,12 +3,13 @@
   <Global>
     <Tab name="LootSettings" displayKey="uiLootSettings" tooltipKey="tipLootSettings">
       <Category name="LootToiletPistols" displayKey="uiLootToiletPistols" tooltipKey="tipLootToiletPistols">
-        <Switch name="T1IGPPistolsinToilets" displayKey="uiT1IGPPistolsinToilets" tooltipKey="tipT1IGPPistolsinToilets" defaultValue="Yes" leftValue="No" rightValue="Yes" />
-        <Switch name="T1IGPPistolsinToiletsFNS" displayKey="uiT1IGPPistolsinToiletsFNS" tooltipKey="tipT1IGPPistolsinToiletsFNS" defaultValue="No" leftValue="No" rightValue="Yes" />
+        <Switch name="LootToiletPistolsT1" displayKey="uiLootToiletPistolsT1" tooltipKey="tipLootToiletPistolsT1" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="LootToiletPistolsFNS" displayKey="uiLootToiletPistolsFNS" tooltipKey="tipLootToiletPistolsFNS" defaultValue="No" leftValue="No" rightValue="Yes" />
 
       </Category>
-	  <Category name="LootCommonWeaponsILE" displayKey="uiLootCommonWeaponsILE" tooltipKey="tipLootCommonWeaponsILE">
-	          <Switch name="CommonIGPWeaponsILE" displayKey="uiCommonIGPWeaponsILE" tooltipKey="tipCommonIGPWeaponsILE" defaultValue="No" leftValue="No" rightValue="Yes" />
+	  <Category name="LootLODO" displayKey="uiLootLODO" tooltipKey="tipLootLODO">
+	          <Switch name="LootLODOSafes" displayKey="uiLootLODOSafes" tooltipKey="tipLootLODOSafes" defaultValue="No" leftValue="No" rightValue="Yes" />
+	          <Switch name="LootLODOPoliceCars" displayKey="uiLootLODOPoliceCars" tooltipKey="tipLootLODOPoliceCars" defaultValue="No" leftValue="No" rightValue="Yes" />
 	  </Category>
     </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">

@@ -39,7 +39,9 @@
 <if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
 
 <!-- Start of 2.6.1.5 -->
-<!-- TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture to loot. -->
+<!-- 
+MASSIVE BUG
+TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture to loot. -->
 
 <!-- <insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Boomstick']">
 	<item name="IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture" loot_prob_template="med"/>

@@ -395,7 +395,7 @@ IZYgunT4TradshotgunBrowningAuto5
 <!-- Same rate as gunHandgunT1Pistol -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToilets') == 'Yes'">
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsT1') == 'Yes'">
 
 <!-- Added chance to find IGP T1 Pistols in Toilets.
 IZYgunT1Pistol45M1917
@@ -464,23 +464,140 @@ REF:
 </if>
 </conditional>
 
-<!-- *** 3.2 T2, T3 and T4 Pistols 
+<!-- *** 3.2 T2, T3 and T4 Pistols in Toilets
 
-Remove T1 from FNS
-Add footlockers 
+Based on yyy_Find_Izy_Pistols_in_Cars_Toilets_and_Purses
+Removed T1 pstols (moved to T1 toilet pistol options)
+Added IZYgunT3PistolMagnumAutomag44.
+Added vanilla pistols (gunHandgunT2Magnum44, gunHandgunT3DesertVulture)
+Added pistols to desks and military footlockers.
 -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.T1IGPPistolsinToiletsFNS') == 'Yes'">
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsFNS') == 'Yes'">
+
+<!-- Probability templates -->
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="minisculeLowFLTRIGP">
+	<loot level="0,10" prob="0"/>
+	<loot level="11,999999" prob=".16"/>  
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="tinyLowFLTRIGP">
+	<loot level="0,20" prob="0"/>
+	<loot level="21,999999" prob=".12"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="laughablyLowFLTRIGP">
+	<loot level="0,50" prob="0"/>
+	<loot level="51,999999" prob=".08"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="stupidLowFLTRIGP">
+	<loot level="0,70" prob="0"/>
+	<loot level="71,999999" prob=".04"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<!-- Toilet Pistols -->
+<insertBefore xpath="//lootgroup[@name='groupToilet01']">
+	<lootgroup name="groupIzyToiletPistols" count="1">
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT3Pistol45USP45" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT3PistolMagnumAutomag44" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="gunHandgunT3DesertVulture" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT4Pistol45STIEAGLE6" loot_prob_template="stupidLowFLTRIGP"/>
+	</lootgroup>
+</insertBefore>
+
+<append xpath="//lootgroup[@name='groupToilet']">
+	<item group="groupIzyToiletPistols" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- Car pistols -->
+<insertBefore xpath="//lootgroup[@name='groupCars01']">
+	<lootgroup name="groupIzyCarPistols" count="1">
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT3Pistol45USP45" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT3PistolMagnumAutomag44" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="gunHandgunT3DesertVulture" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT4Pistol45STIEAGLE6" loot_prob_template="stupidLowFLTRIGP"/>
+	</lootgroup>
+</insertBefore>
+
+<append xpath="//lootgroup[@name='groupCars']">
+	<item group="groupIzyCarPistols" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- Purse pistols -->
+<insertBefore xpath="//lootgroup[@name='groupPurse01']">
+	<lootgroup name="groupIzyPursePistols" count="1">
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT3Pistol45USP45" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT3PistolMagnumAutomag44" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="gunHandgunT3DesertVulture" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT4Pistol45STIEAGLE6" loot_prob_template="stupidLowFLTRIGP"/>    
+	</lootgroup>
+</insertBefore>
+	<append xpath="//lootgroup[@name='groupPurse']">
+		<item group="groupIzyPursePistols" loot_prob_template="veryLow" force_prob="true"/>
+	</append>
+
+<!-- Desk pistols -->
+<insertBefore xpath="//lootgroup[@name='groupDesks01']">
+	<lootgroup name="groupIzyDeskPistols" count="1">
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT3Pistol45USP45" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT3PistolMagnumAutomag44" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="gunHandgunT3DesertVulture" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT4Pistol45STIEAGLE6" loot_prob_template="stupidLowFLTRIGP"/>
+	</lootgroup>
+</insertBefore>
+
+<append xpath="//lootgroup[@name='groupDesks']">
+	<item group="groupIzyDeskPistols" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- Military footlockers -->
+<insertBefore xpath="//lootgroup[@name='groupFootlockerWeapons01']">
+	<lootgroup name="groupIzyFootlockerPistols" count="1">
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT3Pistol45USP45" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT3PistolMagnumAutomag44" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="gunHandgunT3DesertVulture" loot_prob_template="laughablyLowFLTRIGP"/>
+		<item name="IZYgunT4Pistol45STIEAGLE6" loot_prob_template="stupidLowFLTRIGP"/>
+	</lootgroup>
+</insertBefore>
+
+<append xpath="//lootgroup[@name='groupMilitaryFootlocker']">
+	<item group="groupIzyFootlockerPistols" loot_prob_template="veryLow" force_prob="true"/>
+</append>
 
 </if>
 </conditional>
 
-<!-- *** 3.3 Pistols in safes
+<!-- *** 3.3 Loot Guns On Day One
 Check IzP and other mods.
 
  -->
+ 
+ <!-- Safes -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootLODO.LootLODOSafes') == 'Yes'">
 
+</if>
+</conditional>
 <!-- *** 4. Quest Reward Options 
 groupQuestWeaponsRangedT1 -->
 
