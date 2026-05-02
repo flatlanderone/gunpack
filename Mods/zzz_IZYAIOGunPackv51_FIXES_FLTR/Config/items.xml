@@ -28,6 +28,16 @@
 
 <!-- *** Vanilla -->
 
+<!-- Start of 2.6.1.5 -->
+
+<!-- Changed display type from rangedShotgunNoMag to rangedShotgun to show rounds per minute for the following weapons:
+gunShotgunT1DoubleBarrel
+gunShotgunT0PipeShotgun
+-->
+
+<set xpath="items/item[@name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT0PipeShotgun']/property[@name='DisplayType']/@value">rangedShotgun</set>
+
+
 <!-- Start of 2.6.1.3 -->
 <!-- 
 Added ammoShotgunShellPremium compatibility for the vanilla shotguns:

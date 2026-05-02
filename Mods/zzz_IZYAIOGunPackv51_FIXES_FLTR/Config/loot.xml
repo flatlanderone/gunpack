@@ -187,6 +187,39 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 </if>
 </conditional>
 
+<!-- Start of 2.6.1.5 -->
+
+<!-- Added new probability templates by FNS.-->
+<!-- Probability templates -->
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="minisculeLowFLTRIGP">
+	<loot level="0,10" prob="0"/>
+	<loot level="11,999999" prob=".16"/>  
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="tinyLowFLTRIGP">
+	<loot level="0,20" prob="0"/>
+	<loot level="21,999999" prob=".12"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="laughablyLowFLTRIGP">
+	<loot level="0,50" prob="0"/>
+	<loot level="51,999999" prob=".08"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="stupidLowFLTRIGP">
+	<loot level="0,70" prob="0"/>
+	<loot level="71,999999" prob=".04"/> 
+	</lootprobtemplate>
+</insertBefore>	
+<!-- End of 2.6.1.5 -->
+
 <!-- *** Gears Options -->
 
 <conditional>

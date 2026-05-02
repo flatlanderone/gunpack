@@ -54,7 +54,10 @@ See Changelog below for a full list of changes and additions.
 
 ## Planned features
 
+## Vanilla
 
+### items.xml
+- Changed display type from rangedShotgunNoMag to rangedShotgun to show rounds per minute for the following weapons: gunShotgunT1DoubleBarrel, gunShotgunT0PipeShotgun.
 
 # Changelog for 2.6.1.4 (2026-04-29)
 

@@ -5,12 +5,10 @@
       <Category name="LootToiletPistols" displayKey="uiLootToiletPistols" tooltipKey="tipLootToiletPistols">
         <Switch name="LootToiletPistolsT1" displayKey="uiLootToiletPistolsT1" tooltipKey="tipLootToiletPistolsT1" defaultValue="Yes" leftValue="No" rightValue="Yes" />
         <Switch name="LootToiletPistolsFNS" displayKey="uiLootToiletPistolsFNS" tooltipKey="tipLootToiletPistolsFNS" defaultValue="No" leftValue="No" rightValue="Yes" />
-
       </Category>
-	  <Category name="LootLODO" displayKey="uiLootLODO" tooltipKey="tipLootLODO">
-	          <Switch name="LootLODOSafes" displayKey="uiLootLODOSafes" tooltipKey="tipLootLODOSafes" defaultValue="No" leftValue="No" rightValue="Yes" />
-	          <Switch name="LootLODOPoliceCars" displayKey="uiLootLODOPoliceCars" tooltipKey="tipLootLODOPoliceCars" defaultValue="No" leftValue="No" rightValue="Yes" />
-	  </Category>
+      <Category name="LootCommonGuns" displayKey="uiLootCommonGuns" tooltipKey="tipLootCommonGuns">
+        <Switch name="LootCommonGunsGeneral" displayKey="uiLootCommonGunsGeneral" tooltipKey="tipLootCommonGunsGeneral" defaultValue="No" leftValue="No" rightValue="Yes" />
+      </Category>
     </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
