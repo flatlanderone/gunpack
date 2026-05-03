@@ -37,6 +37,7 @@ gunShotgunT0PipeShotgun
 
 <set xpath="items/item[@name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT0PipeShotgun']/property[@name='DisplayType']/@value">rangedShotgun</set>
 
+<!-- End  of 2.6.1.5 -->
 
 <!-- Start of 2.6.1.3 -->
 <!-- 

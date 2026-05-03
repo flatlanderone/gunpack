@@ -98,9 +98,16 @@ tipLootToiletPistolsFNS,UI,Display,,,"Click 'Yes' to have a chance of finding hi
 
 uiLootCommonGuns,UI,Display,,,"[DECEA3]Common Guns In Logical Places[-]",,,,,,,,,,,,,
 tipLootCommonGuns,UI,Display,,,"Use the options below to select where you want to have an additional chance to find quality 1 (Q1) common guns (pistols, shotguns, machine guns).\nThis works exactly like 'toilet pistols' in vanilla.",,,,,,,,,,,,,
-
 uiLootCommonGunsGeneral,UI,Display,,,"General",,,,,,,,,,,,,
 tipLootCommonGunsGeneral,UI,Display,,,"Click 'Yes' to to have a chance of finding common guns. Disabled by default.",,,,,,,,,,,,,
+uiLootCommonGunsBagsRacksCrates,UI,Display,,,"Bags, Racks, Crates",,,,,,,,,,,,,
+tipLootCommonGunsBagsRacksCrates,UI,Display,,,"Click 'Yes' to have an additional chance of finding common guns in Weapon Bags, Gun Racks and Shotgun Messsiah Crates. Disabled by default.",,,,,,,,,,,,,
+uiLootCommonGunsSafes,UI,Display,,,"Safes",,,,,,,,,,,,,
+tipLootCommonGunsSafes,UI,Display,,,"Click 'Yes' to have an additional chance of finding common guns in Wall Safes, Desk Safes and Gun Safes. Disabled by default.",,,,,,,,,,,,,
+uiLootCommonGunsArmyTrucksPoliceCars,UI,Display,,,"ArmyTrucks and PoliceCars",,,,,,,,,,,,,
+tipLootCommonGunsArmyTrucksPoliceCars,UI,Display,,,"Click 'Yes' to have an additional chance of finding common guns in Army Trucks and Police Cars.",,,,,,,,,,,,,
+uiLootCommonGunsFootlockers,UI,Display,,,"Footlockers",,,,,,,,,,,,,
+tipLootCommonGunsFootlockers,UI,Display,,,"Click 'Yes' to have an additional chance of finding common guns in Army Trucks and Police Cars.",,,,,,,,,,,,,
 
 
 

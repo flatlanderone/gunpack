@@ -518,19 +518,160 @@ No T3!
 @name='groupSmallWeaponBag'
 @name='groupFootlocker'
 
-Weapon Bags, Racks, Crates
-Gun Safes and Wall Safes
-Army Trucks and Police Cars
-Footlockers
+
    -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsGeneral') == 'Yes'">
 
-<!-- Create lootgroups
+
+<!-- Single group for big containers -->
+
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item group="groupCommonSmallWeaponsFLTR"/>	
+		<item group="groupCommonMediumWeaponsFLTR"/>
+	</lootgroup>
+</prepend>
+
+<!-- Added groupCommonSmallWeaponsFLTR for small form-factorweapons that fit in smaller containers. -->
+
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonSmallWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="gunHandgunT1Pistol" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol45M1917" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol9Makarov" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+	</lootgroup>
+</prepend>
+
+<!-- TEST
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonSmallWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="guaranteed"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="guaranteed"/>
+		<item name="gunHandgunT1Pistol" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol45M1917" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol9Makarov" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="guaranteed"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="guaranteed"/>
+	</lootgroup>
+</prepend> -->
+
+
+
+<!-- Added groupCommonMediumWeaponsFLTR for medium form-factor weapons that fit in smaller containers. -->
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonMediumWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="gunShotgunT1DoubleBarrel" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="IZYgunT1TradshotgunDoubleBarrelOverUnder" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1TACCompactshotgunSuperShortty" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="gunMGT1AK47" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="IZYgunT1ARCabineM608SurvivalRifle" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="gunRifleT1HuntingRifle" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1SNIPERRIFLE762Mosinnagant" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="gunShotgunT2PumpShotgun" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunMGT2TacticalAR"  loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunRifleT2LeverActionRifle" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2BattleRifleFNFALRifle" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2ARCabineCAR15" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2MarksManRifle762M1garandNavyconverted" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2TradshotgunLeveractionShotgunModel1887" loot_prob_template="tinyLowFLTRIGP"/>
+	</lootgroup>
+</prepend>
+
+
+<!-- <insertAfter xpath="/lootcontainers">
+	<lootgroup name="groupCommonWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item group="groupCommonSmallWeaponsFLTR"/>	
+		<item group="groupCommonMediumWeaponsFLTR"/>
+	</lootgroup>
+</insertAfter> -->
+
+<!-- ### Weapon Bags, Racks, Crates -->
+
+<!-- Add to groupSmallWeaponBag -->
+<append xpath="/lootcontainers/lootgroup[@name='groupSmallWeaponBag']">
+    <item group="groupCommonSmallWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true" />
+</append>
+
+<!-- Add to groupLargeWeaponBag -->
+<append xpath="/lootcontainers/lootgroup[@name='groupShotgunMessiahCrate']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- Add to groupShotgunMessiahCrate -->
+<append xpath="/lootcontainers/lootgroup[@name='groupShotgunMessiahCrate']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- Added to groupGunRack, groupAmmoRackDisplay -->
+<append xpath="/lootcontainers/lootgroup[@name='groupGunRack' or @name='groupAmmoRackDisplay']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- ###  Gun Safes and Wall Safes -->
+
+<!-- Added to groupGunSafeSecure -->
+<append xpath="/lootcontainers/lootgroup[@name='groupGunSafeSecure']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- Add to groupSmallSafeLoot -->
+<append xpath="/lootcontainers/lootgroup[@name='groupSmallSafeLoot']">
+    <item group="groupCommonSmallWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- ###  Army Trucks and Police Cars -->
+<!-- Added to groupArmyTruck and groupPoliceCarBonus -->
+<append xpath="/lootcontainers/lootgroup[@name='groupArmyTruck' or @name='groupPoliceCarBonus']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+<!-- test -->
+<!-- <append xpath="/lootcontainers/lootgroup[@name='groupArmyTruck' or @name='groupPoliceCarBonus']">
+    <item group="groupCommonSmallWeaponsFLTR" count="1" loot_prob_template="guaranteed" force_prob="true"/>
+    <item group="groupCommonMediumWeaponsFLTR" count="1" loot_prob_template="guaranteed" force_prob="true"/>
+</append> -->
+
+<!-- ###  Footlockers and Military Footlockers -->
+<!-- Added to groupFootlocker and groupMilitaryFootlocker -->
+<append xpath="/lootcontainers/lootgroup[@name='groupMilitaryFootlocker' or @name='groupFootlocker']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="veryLow" force_prob="true"/>
+</append>
+
+
+<!-- TEST -->
+<!-- <append xpath="/lootcontainers/lootgroup[@name='groupMilitaryFootlocker' or @name='groupFootlocker']">
+    <item group="groupCommonWeaponsFLTR" count="1" loot_prob_template="guaranteed" force_prob="true"/>
+</append> -->
+
+<!-- 
+Weapon Bags, Racks, Crates
+Gun Safes and Wall Safes
+Army Trucks and Police Cars
+Footlockers and Military Footlockers
 
 1. Melee
 2. Civilian
 3. Mil/Pol
+
+Short items in small containers
+melee, handguns
+
+wall safes, small bags 
+
+
+Short Items in large containers 
+Long Items in large containers 
+rifles, sg, mg
+
 	
 	T1 minisculeLowFLTRIGP
 	melee
@@ -560,9 +701,20 @@ Footlockers
 	T2 tinyLowFLTRIGP
 	<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
 	<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
-	<item name="gunShotgunT2PumpShotgun"/>
-	<item name="gunMGT2TacticalAR" mods="scope" mod_chance="1"/>
-	lever action
+	<item name="gunShotgunT2PumpShotgun" loot_prob_template="tinyLowFLTRIGP"/>
+	<item name="gunMGT2TacticalAR"  loot_prob_template="tinyLowFLTRIGP"/>
+	<item name="gunRifleT2LeverActionRifle" loot_prob_template="tinyLowFLTRIGP"/>
+	<item name="IZYgunT2BattleRifleFNFALRifle" loot_prob_template="tinyLowFLTRIGP"/>
+	<item name="IZYgunT2ARCabineCAR15" loot_prob_template="tinyLowFLTRIGP"/>
+	<item name="IZYgunT2MarksManRifle762M1garandNavyconverted" loot_prob_template="tinyLowFLTRIGP"/>
+	<item name="IZYgunT2TradshotgunLeveractionShotgunModel1887" loot_prob_template="tinyLowFLTRIGP"/>
+	
+	
+	IZYgunT2Pistol45M1911A1
+	IZYgunT2ARCabineCAR15
+	IZYgunT2MarksManRifle762M1garandNavyconverted
+	IZYgunT2TradshotgunLeveractionShotgunModel1887
+	
 	
 	T3
 	<item name="IZYgunT3Pistol45USP45" loot_prob_template="laughablyLowFLTRIGP"/>
@@ -570,7 +722,8 @@ Footlockers
 	<item name="gunHandgunT3DesertVulture" loot_prob_template="laughablyLowFLTRIGP"/>
 	T4
 	<item name="IZYgunT4Pistol45STIEAGLE6" loot_prob_template="stupidLowFLTRIGP"/>
-  -->
+
+ -->
 </if>
 </conditional>
 
