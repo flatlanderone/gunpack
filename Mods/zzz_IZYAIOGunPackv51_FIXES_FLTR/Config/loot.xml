@@ -218,6 +218,79 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 	<loot level="71,999999" prob=".04"/> 
 	</lootprobtemplate>
 </insertBefore>	
+
+<!-- Added common lootgroups for Options/loot.xml -->
+<!-- Added common loot groups for common weapons.
+TODO: Check if append in parent works.
+  -->
+<!-- Single group for big containers -->
+
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item group="groupCommonSmallWeaponsFLTR"/>	
+		<item group="groupCommonMediumWeaponsFLTR"/>
+	</lootgroup>
+</prepend>
+
+<!-- Added groupCommonSmallWeaponsFLTR for small form-factorweapons that fit in smaller containers. -->
+
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonSmallWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="gunHandgunT1Pistol" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol45M1917" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol9Makarov" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+	</lootgroup>
+</prepend>
+
+<!-- TEST
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonSmallWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="guaranteed"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="guaranteed"/>
+		<item name="gunHandgunT1Pistol" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol45M1917" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol9Makarov" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="guaranteed"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="guaranteed"/>
+	</lootgroup>
+</prepend> -->
+
+<!-- Added groupCommonMediumWeaponsFLTR for medium form-factor weapons that fit in smaller containers. -->
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonMediumWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="gunShotgunT1DoubleBarrel" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="IZYgunT1TradshotgunDoubleBarrelOverUnder" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1TACCompactshotgunSuperShortty" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="gunMGT1AK47" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="IZYgunT1ARCabineM608SurvivalRifle" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="gunRifleT1HuntingRifle" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1SNIPERRIFLE762Mosinnagant" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="gunShotgunT2PumpShotgun" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunMGT2TacticalAR"  loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunRifleT2LeverActionRifle" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2BattleRifleFNFALRifle" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2ARCabineCAR15" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2MarksManRifle762M1garandNavyconverted" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2TradshotgunLeveractionShotgunModel1887" loot_prob_template="tinyLowFLTRIGP"/>
+	</lootgroup>
+</prepend>
+
+<!-- <insertAfter xpath="/lootcontainers">
+	<lootgroup name="groupCommonWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item group="groupCommonSmallWeaponsFLTR"/>	
+		<item group="groupCommonMediumWeaponsFLTR"/>
+	</lootgroup>
+</insertAfter> -->   
+
+
 <!-- End of 2.6.1.5 -->
 
 <!-- *** Gears Options -->

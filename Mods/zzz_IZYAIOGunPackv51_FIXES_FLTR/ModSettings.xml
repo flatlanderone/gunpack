@@ -12,12 +12,6 @@
         <Switch name="LootCommonGunsSafes" displayKey="uiLootCommonGunsSafes" tooltipKey="tipLootCommonGunsSafes" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="LootCommonGunsArmyTrucksPoliceCars" displayKey="uiLootCommonGunsArmyTrucksPoliceCars" tooltipKey="tipLootCommonGunsArmyTrucksPoliceCars" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="LootCommonGunsFootlockers" displayKey="uiLootCommonGunsFootlockers" tooltipKey="tipLootCommonGunsFootlockers" defaultValue="No" leftValue="No" rightValue="Yes" />
-		
-		
-		
-		
-		
-		
       </Category>
     </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
