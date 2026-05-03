@@ -7,11 +7,15 @@
         <Switch name="LootToiletPistolsFNS" displayKey="uiLootToiletPistolsFNS" tooltipKey="tipLootToiletPistolsFNS" defaultValue="No" leftValue="No" rightValue="Yes" />
       </Category>
       <Category name="LootCommonGuns" displayKey="uiLootCommonGuns" tooltipKey="tipLootCommonGuns">
-        <Switch name="LootCommonGunsGeneral" displayKey="uiLootCommonGunsGeneral" tooltipKey="tipLootCommonGunsGeneral" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="LootCommonGunsBagsRacksCrates" displayKey="uiLootCommonGunsBagsRacksCrates" tooltipKey="tipLootCommonGunsBagsRacksCrates" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="LootCommonGunsSafes" displayKey="uiLootCommonGunsSafes" tooltipKey="tipLootCommonGunsSafes" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="LootCommonGunsArmyTrucksPoliceCars" displayKey="uiLootCommonGunsArmyTrucksPoliceCars" tooltipKey="tipLootCommonGunsArmyTrucksPoliceCars" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="LootCommonGunsFootlockers" displayKey="uiLootCommonGunsFootlockers" tooltipKey="tipLootCommonGunsFootlockers" defaultValue="No" leftValue="No" rightValue="Yes" />
+      </Category>
+      <Category name="LootTierZeroWeapons" displayKey="uiLootTierZeroWeapons" tooltipKey="tipLootTierZeroWeapons">
+        <Switch name="LootTierZeroWeaponsRanged" displayKey="uiLootTierZeroWeaponsRanged" tooltipKey="tipLootTierZeroWeaponsRanged" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="LootTierZeroWeaponsBows" displayKey="uiLootTierZeroWeaponsBows" tooltipKey="tipLootTierZeroWeaponsBows" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="LootTierZeroWeaponsMelee" displayKey="uiLootTierZeroWeaponsMelee" tooltipKey="tipLootTierZeroWeaponsMelee" defaultValue="Yes" leftValue="No" rightValue="Yes" />
       </Category>
     </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
