@@ -1,9 +1,11 @@
 # Weapon, Ammo and Tool Naming Conventions in 7 Days To Die
 
 ## Overview
+
 7 Days To Die follows a set of specific naming conventions for weapons, ammo and tools. 
 
 ## Benefits
+
 There are many benefits to following the vanilla weapon and ammo namimg convention for modded weapons:
 
 1. It is easier to organize and track weapons during the design, testing and update cycles.
@@ -14,7 +16,7 @@ There are many benefits to following the vanilla weapon and ammo namimg conventi
 	```
 	<remove xpath="/recipes/recipe[starts-with(@name, 'gunShotgun') /> 
 	```
-	
+
 4. It is easier to search for weapons across folders and files in large weapon pack projects.
  
 ## Syntax for weapons
@@ -28,6 +30,7 @@ gunHandgunT3DesertVulture
 gunMGT3M60
 gunShotgunT2PumpShotgun
 ```
+
 ### Recommendations for modded weapons
 
 [weapon usage][weapon type][tier][weapon name][namespace]
@@ -47,10 +50,12 @@ gunMGT1FNKAK47
 ```
 
 ### [weapon usage]
+
 - gun: all ranged weapons.
 - meleeWpn: all melee weapons.
 
 ### [weapon type]
+
 - Bot: robotic weapons, turrets.
 - Bow: bows, crossbows.
 - Explosives: grenade launchers, rocket launchers.
@@ -66,12 +71,15 @@ gunMGT1FNKAK47
 - Spear: spears, halberds, poleAxes.
 
 ### [tier]
+
 - T0 to T5
 
 ### [weapon name]
-- Distinctive weapon name
+
+- Distinctive weapon name, including variants, calibers etc.
 
 ### [namespace] 
+
 - A string to distinguish the weapon from vanilla weapons and weapons from other weapon packs.
 
 ## Syntax for ammo
