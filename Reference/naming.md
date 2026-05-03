@@ -39,6 +39,11 @@ Example:
 gunHandgunT4ForestOwlFLTR
 gunRifleT1ArisakaType99FNK
 gunExplosivesT2LGLChinalakeGrenadeLauncherIZY
+
+gunMGT1IzyAK47
+gunMGT1LRSAK47
+gunMGT1FNKAK47
+
 ```
 
 ### [weapon usage]
