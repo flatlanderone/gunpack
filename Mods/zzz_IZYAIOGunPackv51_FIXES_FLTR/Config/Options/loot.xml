@@ -804,8 +804,70 @@ Added loot_quality_template="qualQ1Template" to ensure that only Q1 weapons drop
 </if>
 </conditional>
 
-<!-- *** 3.4 Loot Guns On Day One
-Check IzP and other mods. -->
+<!-- *** 3.4 Remove T0 weapons from loot -->
+
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsRanged') == 'No'">
+
+<!-- Remove vanilla and IGP pipe guns from loot.
+
+gunHandgunT0PipePistol
+gunMGT0PipeMachineGun
+gunRifleT0PipeRifle
+gunShotgunT0PipeShotgun
+IZYgunT0PistolLiberatorImprovisedPistol
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunT0SMGPIPEsubmachinegun
+
+-->
+
+<remove xpath="/lootcontainers/lootgroup/item[@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@name='IZYgunT0SMGPIPEsubmachinegun']"/>
+
+</if>
+</conditional>
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsBows') == 'No'">
+
+<!-- Remove vanilla Primitive Bows from loot.
+
+gunBowT0PrimitiveBow -->
+
+<remove xpath="/lootcontainers/lootgroup/item[@name='gunBowT0PrimitiveBow']"/>
+
+</if>
+</conditional>
+
+<!-- T0 melee weapons -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsMelee') == 'No'">
+
+<!-- Remove vanilla primitive weapons from loot.
+
+meleeWpnBatonT0PipeBaton
+meleeWpnBladeT0BoneKnife
+meleeWpnClubT0WoodenClub
+meleeWpnKnucklesT0LeatherKnuckles
+meleeWpnSledgeT0StoneSledgehammer
+meleeWpnSpearT0StoneSpear -->
+
+<remove xpath="/lootcontainers/lootgroup/item[@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear']"/>
+
+</if>
+</conditional>
 
 <!-- *** 4. Quest Reward Options 
 groupQuestWeaponsRangedT1 -->
