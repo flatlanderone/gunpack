@@ -16,5 +16,16 @@
 </if>
 </conditional> -->
 
+<!-- *** 3. Restricted Runs: Pacifist Traders: traders won't buy weapons, ammo and crafting resources..  
+-->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+
+<!-- Weapon mods -->
+<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modGun') or starts-with(@name, 'modShotgun') or starts-with(@name, 'modMeleeClub') or starts-with(@name, 'modMeleeStun') or starts-with(@name, 'modMeleeSerrated')]"><property name="SellableToTrader" value="false" /></append>
+
+</if>
+</conditional>
 
 </RamblingMan>

@@ -2,9 +2,9 @@
 
 <!-- Gears Options -->
 
-<!-- *** 0. Start of Kick Options ### -->
+<!-- *** 1. Start of Kick Options ### -->
 
-<!-- *** 1. Kick Options for Guns -->
+<!-- *** 1.1 Kick Options for Guns -->
 
 <!-- Kick On -->
 
@@ -72,7 +72,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 </if>
 </conditional>
 
-<!-- *** 2. Kick Options for Bows and Crossbows -->
+<!-- *** 1.2. Kick Options for Bows and Crossbows -->
 
 <!-- Kick On -->
 
@@ -125,7 +125,7 @@ or @name='gunBowT3CompoundBow']">
 </if>
 </conditional>
 
-<!-- *** 3. Kick Options for Melee Weapons -->
+<!-- *** 1.3. Kick Options for Melee Weapons -->
 
 <!-- IGP Melee weapons are already ON by default:
 IZYMeleeT4BladeKatana
@@ -203,7 +203,7 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-<!-- *** 4. Kick Options for Tools -->
+<!-- *** 1.4. Kick Options for Tools -->
 
 <!-- Kick On -->
 
@@ -272,7 +272,7 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-<!-- *** 5. Kick Options for the Flashlight -->
+<!-- *** 1.5. Kick Options for the Flashlight -->
  
 <!-- Kick On -->
 
@@ -312,7 +312,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick Off -->
 <!-- Not required -->
  
-<!-- *** TEST: 6. Kick Options for all Items -->
+<!-- *** TEST: 1.6. Kick Options for all Items -->
 <!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllItems') == 'Off'">
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
@@ -332,9 +332,9 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- *** End of Kick Options ### -->
 
-<!-- *** 0. Start of T4 Weapon Options ### -->
+<!-- *** 2. Start of T4 Weapon Options ### -->
 
-<!-- *** 1. Repair Options  -->
+<!-- *** 2.1. Repair Options  -->
 
 <!-- Disable repair of T4 Weapons. -->
 <conditional>
@@ -346,7 +346,7 @@ IZYMeleeT4SpearPoleAxe -->
 </if>
 </conditional>
 
-<!-- *** 2. Degradation Rate Options  -->
+<!-- *** 2.2. Degradation Rate Options  -->
 
 <!-- Default -->
 <conditional>
@@ -411,5 +411,166 @@ IZYMeleeT4SpearPoleAxe -->
 </conditional>
 
  -->
+
+
+<!-- *** 3. Restricted Runs: Pacifist Traders: traders won't buy weapons, ammo and crafting resources..  
+-->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+
+
+<!-- <set xpath="/items/item[]/property[@name='SellableToTrader']/@value">false</set> -->
+
+<!-- Weapons, turrets, traps -->
+<!-- <setattribute xpath="/items/item[starts-with(@name, 'IZYMelee') or 
+starts-with(@name, 'IZYgun') or 
+starts-with(@name, 'gunBow') or 
+starts-with(@name, 'gunExplosives') or 
+starts-with(@name, 'gunHandgun') or 
+starts-with(@name, 'gunShotgun') or 
+starts-with(@name, 'gunRifle') or 
+starts-with(@name, 'gunMG') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret') or 
+starts-with(@name, 'meleeWpn')]/property[@name='SellableToTrader']/@value">false</setattribute> -->
+<append xpath="/items/item[starts-with(@name, 'IZYMelee') or 
+starts-with(@name, 'IZYgun') or 
+starts-with(@name, 'gunBow') or 
+starts-with(@name, 'gunExplosives') or 
+starts-with(@name, 'gunHandgun') or 
+starts-with(@name, 'gunShotgun') or 
+starts-with(@name, 'gunRifle') or 
+starts-with(@name, 'gunMG') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'electricfencepost') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret') or 
+starts-with(@name, 'meleeWpn')]"><property name="SellableToTrader" value="false" /></append>
+
+<!-- IZY ammo -->
+<append xpath="/items/item[@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture']">
+<property name="SellableToTrader" value="false" />
+</append>
+
+<!-- Vanilla ammo -->
+<append xpath="/items/item[@name='ammo9mmBulletBall' or 
+@name='ammo9mmBulletHP' or 
+@name='ammo9mmBulletAP' or 
+@name='ammo44MagnumBulletBall' or 
+@name='ammo44MagnumBulletHP' or 
+@name='ammo44MagnumBulletAP' or 
+@name='ammo762mmBulletBall' or 
+@name='ammo762mmBulletHP' or 
+@name='ammo762mmBulletAP' or 
+@name='ammoShotgunShell' or 
+@name='ammoShotgunSlug' or 
+@name='ammoShotgunBreachingSlug' or 
+@name='ammoJunkTurretRegular' or 
+@name='ammoJunkTurretShell' or 
+@name='ammoJunkTurretAP' or 
+@name='ammoRocketHE' or 
+@name='ammoRocketFrag' or 
+@name='ammoArrowStone' or 
+@name='ammoArrowIron' or 
+@name='ammoArrowSteelAP' or 
+@name='ammoArrowFlaming' or 
+@name='ammoArrowExploding' or 
+@name='ammoCrossbowBoltStone' or 
+@name='ammoCrossbowBoltIron' or 
+@name='ammoCrossbowBoltSteelAP' or 
+@name='ammoCrossbowBoltFlaming' or 
+@name='ammoCrossbowBoltExploding' or 
+@name='ammoBundle9mmBulletBall' or 
+@name='ammoBundle9mmBulletHP' or 
+@name='ammoBundle9mmBulletAP' or 
+@name='ammoBundle44MagnumBulletBall' or 
+@name='ammoBundle44MagnumBulletHP' or 
+@name='ammoBundle44MagnumBulletAP' or 
+@name='ammoBundle762mmBulletBall' or 
+@name='ammoBundle762mmBulletHP' or 
+@name='ammoBundle762mmBulletAP' or 
+@name='ammoBundleShotgunShell' or 
+@name='ammoBundleShotgunSlug' or 
+@name='ammoBundleShotgunBreachingSlug' or 
+@name='ammoBundleJunkTurretRegular' or 
+@name='ammoBundleJunkTurretShell' or 
+@name='ammoBundleJunkTurretAP' or 
+@name='ammoBundleArrowStone' or 
+@name='ammoBundleArrowIron' or 
+@name='ammoBundleArrowSteelAP' or 
+@name='ammoBundleArrowFlaming' or 
+@name='ammoBundleArrowExploding' or 
+@name='ammoBundleCrossbowBoltStone' or 
+@name='ammoBundleCrossbowBoltIron' or 
+@name='ammoBundleCrossbowBoltSteelAP' or 
+@name='ammoBundleCrossbowBoltFlaming' or 
+@name='ammoBundleCrossbowBoltExploding' or 
+@name='ammoDartIron']"><property name="SellableToTrader" value="false" /></append>
+
+
+<!-- Vanilla resources -->
+<append xpath="/items/item[@name='resourceGunPowderBundle' or 
+@name='resourceArrowHeadIron' or 
+@name='resourceArrowHeadSteelAP' or 
+@name='resourceGunPowder' or 
+@name='resourceBuckshot' or 
+@name='resourceBulletCasing' or 
+@name='resourceBulletTip' or 
+@name='resourceRocketTip' or 
+@name='resourceRocketCasing']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Vanilla thrown -->
+<append xpath="/items/item[@name='thrownAmmoPipeBomb' or 
+@name='thrownGrenadeContact' or 
+@name='thrownGrenade' or 
+@name='thrownTimedCharge' or 
+@name='thrownDynamite' or 
+@name='thrownAmmoMolotovCocktail']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Weapon mods -->
+<!-- See Options/item_modifiers.xml -->
+
+</if>
+</conditional>
+
 
 </RamblingMan>

@@ -18,6 +18,16 @@
         <Switch name="LootTierZeroWeaponsMelee" displayKey="uiLootTierZeroWeaponsMelee" tooltipKey="tipLootTierZeroWeaponsMelee" defaultValue="Yes" leftValue="No" rightValue="Yes" />
       </Category>
     </Tab>
+    <Tab name="RestrictedRunSettings" displayKey="uiRestrictedRunSettings" tooltipKey="tipRestrictedRunSettings">
+      <Category name="RestrictedRunPacifistTrader" displayKey="uiRestrictedRunPacifistTraders" tooltipKey="tipRestrictedRunPacifistTrader">
+        <Switch name="RestrictedRunPacifistTraderNoSell" displayKey="uiRestrictedRunPacifistTraderNoSell" tooltipKey="tipRestrictedRunPacifistTraderNoSell" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="RestrictedRunPacifistTraderNoBuy" displayKey="uiRestrictedRunPacifistTraderNoBuy" tooltipKey="tipRestrictedRunPacifistTraderNoBuy" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+      </Category>
+      <Category name="RestrictedRunNoCrafting" displayKey="uiRestrictedRunNoCrafting" tooltipKey="tipRestrictedRunNoCrafting">
+        <Switch name="RestrictedRunNoCraftingWeapons" displayKey="uiRestrictedRunNoCraftingWeapons" tooltipKey="tipRestrictedRunNoCraftingWeapons" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="RestrictedRunNoCraftingAmmo" displayKey="uiRestrictedRunNoCraftingAmmo" tooltipKey="tipRestrictedRunNoCraftingAmmo" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+      </Category>
+    </Tab>
     <Tab name="KickSettings" displayKey="uiKickSettings" tooltipKey="tipKickSettings">
       <Category name="ItemGroups" displayKey="uiItemGroups" tooltipKey="tipItemGroups">
         <Switch name="KickAllFirearms" displayKey="uiKickAllFirearms" tooltipKey="tipKickAllFirearms" defaultValue="Kick On" leftValue="Kick Off" rightValue="Kick On" />

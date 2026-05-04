@@ -378,4 +378,143 @@ IZYgunT4TradshotgunBrowningAuto5
 </if>
 </conditional>
 
+<!-- *** 3. Restricted Runs: Pacifist Traders: Remove all weapons, ammo and crafting resources from trader inventory.  
+-->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoSell') == 'No'">
+
+<!-- Weapons, turrets, traps -->
+
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'IZYMelee') or 
+starts-with(@name, 'IZYgun') or 
+starts-with(@name, 'gunBow') or 
+starts-with(@name, 'gunExplosives') or 
+starts-with(@name, 'gunHandgun') or 
+starts-with(@name, 'gunShotgun') or 
+starts-with(@name, 'gunRifle') or 
+starts-with(@name, 'gunMG') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret') or 
+starts-with(@name, 'meleeWpn')]"/>
+
+<!-- IZY ammo -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture']"/>
+
+<!-- Vanilla ammo -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='ammo9mmBulletBall' or 
+@name='ammo9mmBulletHP' or 
+@name='ammo9mmBulletAP' or 
+@name='ammo44MagnumBulletBall' or 
+@name='ammo44MagnumBulletHP' or 
+@name='ammo44MagnumBulletAP' or 
+@name='ammo762mmBulletBall' or 
+@name='ammo762mmBulletHP' or 
+@name='ammo762mmBulletAP' or 
+@name='ammoShotgunShell' or 
+@name='ammoShotgunSlug' or 
+@name='ammoShotgunBreachingSlug' or 
+@name='ammoJunkTurretRegular' or 
+@name='ammoJunkTurretShell' or 
+@name='ammoJunkTurretAP' or 
+@name='ammoRocketHE' or 
+@name='ammoRocketFrag' or 
+@name='ammoArrowStone' or 
+@name='ammoArrowIron' or 
+@name='ammoArrowSteelAP' or 
+@name='ammoArrowFlaming' or 
+@name='ammoArrowExploding' or 
+@name='ammoCrossbowBoltStone' or 
+@name='ammoCrossbowBoltIron' or 
+@name='ammoCrossbowBoltSteelAP' or 
+@name='ammoCrossbowBoltFlaming' or 
+@name='ammoCrossbowBoltExploding' or 
+@name='ammoBundle9mmBulletBall' or 
+@name='ammoBundle9mmBulletHP' or 
+@name='ammoBundle9mmBulletAP' or 
+@name='ammoBundle44MagnumBulletBall' or 
+@name='ammoBundle44MagnumBulletHP' or 
+@name='ammoBundle44MagnumBulletAP' or 
+@name='ammoBundle762mmBulletBall' or 
+@name='ammoBundle762mmBulletHP' or 
+@name='ammoBundle762mmBulletAP' or 
+@name='ammoBundleShotgunShell' or 
+@name='ammoBundleShotgunSlug' or 
+@name='ammoBundleShotgunBreachingSlug' or 
+@name='ammoBundleJunkTurretRegular' or 
+@name='ammoBundleJunkTurretShell' or 
+@name='ammoBundleJunkTurretAP' or 
+@name='ammoBundleArrowStone' or 
+@name='ammoBundleArrowIron' or 
+@name='ammoBundleArrowSteelAP' or 
+@name='ammoBundleArrowFlaming' or 
+@name='ammoBundleArrowExploding' or 
+@name='ammoBundleCrossbowBoltStone' or 
+@name='ammoBundleCrossbowBoltIron' or 
+@name='ammoBundleCrossbowBoltSteelAP' or 
+@name='ammoBundleCrossbowBoltFlaming' or 
+@name='ammoBundleCrossbowBoltExploding' or 
+@name='ammoDartIron']"/>
+
+<!-- Vanilla resources -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='resourceGunPowderBundle' or 
+@name='resourceArrowHeadIron' or 
+@name='resourceArrowHeadSteelAP' or 
+@name='resourceGunPowder' or 
+@name='resourceBuckshot' or 
+@name='resourceBulletCasing' or 
+@name='resourceBulletTip' or 
+@name='resourceRocketTip' or 
+@name='resourceRocketCasing']"/>
+
+<!-- Vanilla thrown -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='thrownAmmoPipeBomb' or 
+@name='thrownGrenadeContact' or 
+@name='thrownGrenade' or 
+@name='thrownTimedCharge' or 
+@name='thrownDynamite' or 
+@name='thrownAmmoMolotovCocktail']"/>
+
+<!-- Weapon mods -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'modGun') or starts-with(@name, 'modShotgun') or starts-with(@name, 'modMeleeClub') or starts-with(@name, 'modMeleeStun') or starts-with(@name, 'modMeleeSerrated')]"/>
+
+<!-- TODO: questreward with weapons -->
+
+</if>
+</conditional>
 </RamblingMan>

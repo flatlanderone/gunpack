@@ -1,9 +1,9 @@
 <RamblingMan>
 <!-- Gears Options -->
 
-<!-- *** 0. Start of Weapon Pack Options ### -->
+<!-- *** 1. Start of Weapon Pack Options ### -->
 
-<!-- *** 1. Removing recipes per weapon pack.
+<!-- *** Removing recipes per weapon pack.
  -->
 <!-- *** IZY_melee -->
 
@@ -377,5 +377,8 @@ IZYMeleeT4SledghammerSpikeMace
 
 </if>
 </conditional>
+
+<!-- *** 3. Restricted Runs: Disabling weapon and ammo crafting -->
+
 
 </RamblingMan>
