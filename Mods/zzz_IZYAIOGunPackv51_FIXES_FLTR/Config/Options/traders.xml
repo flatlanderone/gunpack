@@ -1,8 +1,8 @@
 <RamblingMan>
 <!-- Gears Options -->
 
-<!-- *** 0. Start of Weapon Pack Options ### -->
-<!-- *** 1. Remove IGP items from trader inventory. -->
+<!-- *** 1. Weapon Pack Options ### -->
+<!-- *** 1.2 Remove IGP items from trader inventory. -->
 
 <!-- *** IZY_melee -->
 <conditional>
@@ -16,7 +16,6 @@ IZYMeleeT4SpearPoleAxe
 <remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'IZYMelee')]"/>
 </if>
 </conditional>
-
 
 <!-- *** IZY_RMP_9mmVAL -->
 <conditional>
@@ -35,7 +34,6 @@ IZYgunT3SMGMP9submachinegun
 IZYgunT4DualPistolMP9s
 IZYgunT4SMGCZScorpionEVO3
 
-
  -->
 <remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='IZYgunT0SMGPIPEsubmachinegun' or 
 @name='IZYgunT1DualPistolCOLTnavyRevolver' or 
@@ -49,7 +47,6 @@ IZYgunT4SMGCZScorpionEVO3
 @name='IZYgunT4SMGCZScorpionEVO3']"/>
 </if>
 </conditional>
-
 
 <!-- *** IZY_RMP_44magnum -->
 <conditional>
@@ -65,7 +62,6 @@ IZYgunT4DualMagnumDesertEagles
 @name='IZYgunT4DualMagnumDesertEagles']"/>
 </if>
 </conditional>
-
 
 <!-- *** IZY_RMP_45ACP -->
 <conditional>
@@ -120,7 +116,6 @@ IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
 </if>
 </conditional>
 
-
 <!-- *** IZY_RMP_556pack -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
@@ -165,7 +160,6 @@ IZYgunT3MarksManRifle556M16A2DMR'
 </if>
 </conditional>
 
-
 <!-- *** IZY_RMP_762pack -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
@@ -208,7 +202,6 @@ IZYgunT4LMGlightmachinegunMG34R -->
 </if>
 </conditional>
 
-
 <!-- *** IZY_RMP_SG -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
@@ -236,7 +229,6 @@ IZYgunT4TACshotgunM1014
 @name='IZYgunT4TACshotgunM1014']"/>
 </if>
 </conditional>
-
 
 <!-- *** IZY_RMP_Demopack -->
 <conditional>
@@ -314,7 +306,6 @@ IZYgunTminus1MusketshotgunBlunderbuss
 </if>
 </conditional>
 
-
 <!-- *** IZY_RMP_Tech -->
 <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
@@ -327,55 +318,214 @@ IZYgunT3TechnicalNailmachinegun
 </if>
 </conditional>
 
-<!-- *** 2. Removing Tier 4 Weapons from trader inventory.  -->
+<!-- ***   2.1 Traders don't sell T4/T5 weapons.
+DISABLED, as it's implemented in Pacifis Traders  -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Trading') == 'Off'">
-<!-- 
-Removed trader entries for 
-IZYMeleeT4BladeKatana
-IZYMeleeT4SpearPoleAxe
-IZYMeleeT4SledghammerSpikeMace
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4LootingCategory.Enable_T4_Trading') == 'No'">
 
-IZYgunT4BowVanhelsingAutomaticCrossbowVH
-IZYgunT4DualMagnumDesertEagles
-IZYgunT4Pistol45STIEAGLE6
-IZYgunT445SMGM1928thompson
-IZYgunT445TACSMGKrissSuperV
-IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
-IZYgunT4ARCabineHK416
-IZYgunT4BULLPUPFNF2000
-IZYgunT4SNIPERRIFLE762L96AWMRifle
-IZYgunT4MarksManRifle762SVUprototypeRifle
-IZYgunT4MarksManRifleM110SASS
-IZYgunT4BattleRifleSCARH
-IZYgunT4LMGlightmachinegunMG34R
-IZYgunT4SMGCZScorpionEVO3
-IZYgunT4DualPistolMP9s
-IZYgunT4TradshotgunBrowningAuto5
-
- -->
-<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
-@name='IZYgunT4DualMagnumDesertEagles' or 
-@name='IZYgunT4Pistol45STIEAGLE6' or 
-@name='IZYgunT445SMGM1928thompson' or 
-@name='IZYgunT445TACSMGKrissSuperV' or 
-@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
-@name='IZYgunT4ARCabineHK416' or 
-@name='IZYgunT4BULLPUPFNF2000' or 
-@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
-@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
-@name='IZYgunT4MarksManRifleM110SASS' or 
-@name='IZYgunT4BattleRifleSCARH' or 
-@name='IZYgunT4LMGlightmachinegunMG34R' or 
-@name='IZYgunT4SMGCZScorpionEVO3' or 
-@name='IZYgunT4DualPistolMP9s' or 
-@name='IZYgunT4TradshotgunBrowningAuto5' or 
-@name='IZYMeleeT4BladeKatana' or 
-@name='IZYMeleeT4SpearPoleAxe' or 
-@name='IZYMeleeT4SledghammerSpikeMace']"/>
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYgunT5')]"/>
 
 </if>
 </conditional>
 
+<!-- *** 3. Challenge Runs: Pacifist Traders: Remove all weapons, ammo and crafting resources from trader inventory.  
+-->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoSell') == 'No'">
+
+<!-- Weapons, turrets, traps -->
+
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'IZYMelee') or 
+starts-with(@name, 'IZYgun') or 
+starts-with(@name, 'gunBow') or 
+starts-with(@name, 'gunExplosives') or 
+starts-with(@name, 'gunHandgun') or 
+starts-with(@name, 'gunShotgun') or 
+starts-with(@name, 'gunRifle') or 
+starts-with(@name, 'gunMG') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'electricfencepost') or 
+starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret') or 
+starts-with(@name, 'meleeWpn')]"/>
+
+<!-- Vanilla Mines -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='mineCandyTin' or 
+@name='mineHubcap' or 
+@name='mineAirFilter']"/>
+
+<!-- IZY ammo -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture']"/>
+
+<!-- Vanilla ammo -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='ammo9mmBulletBall' or 
+@name='ammo9mmBulletHP' or 
+@name='ammo9mmBulletAP' or 
+@name='ammo44MagnumBulletBall' or 
+@name='ammo44MagnumBulletHP' or 
+@name='ammo44MagnumBulletAP' or 
+@name='ammo762mmBulletBall' or 
+@name='ammo762mmBulletHP' or 
+@name='ammo762mmBulletAP' or 
+@name='ammoShotgunShell' or 
+@name='ammoShotgunSlug' or 
+@name='ammoShotgunBreachingSlug' or 
+@name='ammoJunkTurretRegular' or 
+@name='ammoJunkTurretShell' or 
+@name='ammoJunkTurretAP' or 
+@name='ammoRocketHE' or 
+@name='ammoRocketFrag' or 
+@name='ammoArrowStone' or 
+@name='ammoArrowIron' or 
+@name='ammoArrowSteelAP' or 
+@name='ammoArrowFlaming' or 
+@name='ammoArrowExploding' or 
+@name='ammoCrossbowBoltStone' or 
+@name='ammoCrossbowBoltIron' or 
+@name='ammoCrossbowBoltSteelAP' or 
+@name='ammoCrossbowBoltFlaming' or 
+@name='ammoCrossbowBoltExploding' or 
+@name='ammoBundle9mmBulletBall' or 
+@name='ammoBundle9mmBulletHP' or 
+@name='ammoBundle9mmBulletAP' or 
+@name='ammoBundle44MagnumBulletBall' or 
+@name='ammoBundle44MagnumBulletHP' or 
+@name='ammoBundle44MagnumBulletAP' or 
+@name='ammoBundle762mmBulletBall' or 
+@name='ammoBundle762mmBulletHP' or 
+@name='ammoBundle762mmBulletAP' or 
+@name='ammoBundleShotgunShell' or 
+@name='ammoBundleShotgunSlug' or 
+@name='ammoBundleShotgunBreachingSlug' or 
+@name='ammoBundleJunkTurretRegular' or 
+@name='ammoBundleJunkTurretShell' or 
+@name='ammoBundleJunkTurretAP' or 
+@name='ammoBundleArrowStone' or 
+@name='ammoBundleArrowIron' or 
+@name='ammoBundleArrowSteelAP' or 
+@name='ammoBundleArrowFlaming' or 
+@name='ammoBundleArrowExploding' or 
+@name='ammoBundleCrossbowBoltStone' or 
+@name='ammoBundleCrossbowBoltIron' or 
+@name='ammoBundleCrossbowBoltSteelAP' or 
+@name='ammoBundleCrossbowBoltFlaming' or 
+@name='ammoBundleCrossbowBoltExploding' or 
+@name='ammoDartIron']"/>
+
+<!-- Vanilla resources -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='resourceGunPowderBundle' or 
+@name='resourceArrowHeadIron' or 
+@name='resourceArrowHeadSteelAP' or 
+@name='resourceGunPowder' or 
+@name='resourceBuckshot' or 
+@name='resourceBulletCasing' or 
+@name='resourceBulletTip' or 
+@name='resourceRocketTip' or 
+@name='resourceRocketCasing']"/>
+
+<!-- Vanilla thrown -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='thrownAmmoPipeBomb' or 
+@name='thrownGrenadeContact' or 
+@name='thrownGrenade' or 
+@name='thrownTimedCharge' or 
+@name='thrownDynamite' or 
+@name='thrownAmmoMolotovCocktail']"/>
+
+<!-- Weapon mods -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'modGun') or starts-with(@name, 'modShotgun') or starts-with(@name, 'modMeleeClub') or starts-with(@name, 'modMeleeStun') or starts-with(@name, 'modMeleeSerrated') or starts-with(@name, 'modMeleeWeighted')]"/>
+
+<!-- Reduce the number of gunBotT3JunkDrone in trader inventory. All traders will have max. 1, Bob will have 2. -->
+<set xpath="/traders/trader_info/trader_items/item[@group='groupRangedAll']/@count">1</set>
+
+<setattribute xpath="/traders/trader_item_groups/trader_item_group/item[@name='gunBotT3JunkDrone']" name="count">1</setattribute>
+
+<setattribute xpath="/traders/trader_item_groups/trader_item_group/item[@name='gunBotT3JunkDrone']" name="unique_only">true</setattribute>
+
+<set xpath="/traders/trader_info[@id='6']/trader_items/item[@group='traderRobotics']/@count">1</set>
+
+<!-- TODO: check if weapons appear in quest rewards or bundles.. -->
+
+</if>
+</conditional>
+
+<!-- *** 3. Challenge Runs: No Crafting Challenge: Add Q6 items to trader inventory -->
+
+<!-- T0 and Tminus1 weapons -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+
+<!-- bowsTier0 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier0']"><entry min="15" max="25" quality="6"/></append>
+
+<!-- baseTier0 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier0']"><entry min="15" max="20" quality="6"/></append>
+
+<!-- Add Q6 -->
+<set xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll' or @name='groupMeleeAll']/item[contains(@name, 'T0' ) or contains (@name, 'Tminus1')]/@quality">1,6</set>
+
+</if>
+</conditional>
+
+<!-- Remaining weapon tiers -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
+
+<!-- bowsTier1 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier1']"><entry min="35" max="50" quality="6"/></append>
+
+<!-- bowsTier2 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier2']"><entry min="70" max="999999" quality="6"/></append>
+
+<!-- bowsTier3 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier3']"><entry min="90" max="999999" quality="6"/></append>
+
+<!-- baseTier1 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier1']"><entry min="60" max="70" quality="6"/></append>
+
+<!-- baseTier2 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier2']"><entry min="50" max="999999" quality="6"/></append>
+
+<!-- baseTier3 -->
+<append xpath="/traders/traderstage_templates/traderstage_template[@name='baseTier3']"><entry min="100" max="999999" quality="6"/></append>
+
+<!-- Add Q6 -->
+<set xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll' or @name='groupMeleeAll']/item[contains(@name, 'T1' ) or contains (@name, 'T2') or contains (@name, 'T3') or contains (@name, 'T4') or contains (@name, 'T5')]/@quality">1,6</set>
+</if>
+</conditional>
 </RamblingMan>

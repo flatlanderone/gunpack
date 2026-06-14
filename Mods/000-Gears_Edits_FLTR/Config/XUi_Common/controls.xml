@@ -1,0 +1,8 @@
+﻿<RamblingMan>
+	<!-- Toggle Button -->
+
+<set xpath="/controls/gears_togglebutton/@selected_font_color">[green]</set>	
+
+<!-- <setattribute xpath="/controls/gears_togglebutton" name="selected_font_color">[green]</setattribute>	 -->
+
+</RamblingMan>

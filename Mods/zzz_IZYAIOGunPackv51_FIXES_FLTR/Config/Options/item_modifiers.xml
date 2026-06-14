@@ -1,13 +1,127 @@
 <RamblingMan>
 <!-- Gears Options -->
 
+<!-- ***Weapon Packs -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
+
+<!-- Add a blocked tag for modGunReflexSightA and modGunReflexSightB -->
+<!-- Moved to core item_modifiers.xml. -->
+
+<!-- <csv xpath="/item_modifiers/item_modifier[@name='modGunReflexSightA' or @name='modGunReflexSightB']/@blocked_tags" delim="," op="add">noVRP</csv> -->
+
+<!-- *** Removed IGP item_property_overrides for vanilla weapons when the VRP is disabled. -->
+
+<!-- <remove xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/item_property_overrides[@name='gunHandgunT2Magnum44']/property[@name='Meshfile' and @value='#@modfolder:Resources/IZY_VanilaReplacer_Pack_MainResource.unity3d?IZY_PISTOL_MAGNUM44val_flashlight.Prefab']"/> -->
+
+<!-- modGunFlashlight -->
+
+<remove xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/item_property_overrides[@name='gunHandgunT2Magnum44']/property[@name='Meshfile']"/>
+
+<!-- modGunReflexSight -->
+
+<!-- <remove xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides[@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture']/property[@name='CrosshairOnAim' or @name='CrosshairUpAfterShot']"/> -->
+
+<!-- Removed ScopeCameraOffset for modGunReflexSight -->
+<remove xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides[@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture']/property[@name='ScopeCameraOffset' and (@value='-.0016,-.0205,.012' or 
+@value='-.0004,-.033,-.03' or 
+@value='-.0016,-.0415,.04' or 
+@value='.0102,-.0522,-.01' or 
+@value='0,-.031,.02' or 
+@value='.0115,-.0348,.09' or 
+@value='-.0001,.018,.2' or 
+@value='.0003,-.0045,0' or 
+@value='-.0039,-.033,.09' or 
+@value='-.0077,-.0503,.08' or 
+@value='-.0016,-.0118,.04' or 
+@value='.001,-.039,.08')]"/>
+
+<!-- Removed ScopeCameraOffset for modGunScopeSmall -->
+<remove xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/item_property_overrides[@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture']/property[@name='ScopeCameraOffset' and (@value='-.0017,-.0335,-.05' or 
+@value='-.0012,-.04,.04' or 
+@value='.0102,-.04,-.01' or 
+@value='0,-.01,.02' or 
+@value='0,.01,.14' or 
+@value='.0003,-.025,0' or 
+@value='-.0038,-.03,.09')]"/>
+
+<!-- Removed custom mesh for IZYmodPistolHoldstyle01 and IZYmodPistolHoldstyle02 -->
+
+<remove xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle01' or @name='IZYmodPistolHoldstyle01']/item_property_overrides[@name='gunHandgunT1Pistol']/property[@name='Meshfile']"/>
+
+</if>
+</conditional>
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'Vanilla'">
+<!-- Removed VRP silencer sounds. -->
+<remove xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer' ]/item_property_overrides[@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture']/property[(@name='Sound_start' or @name='Sound_loop') and (@value='VRtacAR_silen_fire' or 
+@value='VRtacAR_silen_fire' or 
+@value='VRm60_silen_fire' or 
+@value='VRpumpSG_silen_fire' or 
+@value='VRpumpSG_silen_fire' or 
+@value='VRleveraction_silen_fire' or 
+@value='VRleveraction_silen_fire' or 
+@value='VRleveraction_silen_fire')]"/>
+
+</if>
+</conditional>
+
 <!-- Remove kick for all weapons -->
 <!-- <conditional>
 <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
 <remove xpath="item_modifiers/item_modifier[@name='modGunFlashlight']/effect_group/requirement[@buff='IZYRangeWPmeleeKick']"/>
 </if>
 </conditional> -->
-
 
 <!-- Remove kick for all firearms -->
 <!-- <conditional>
@@ -16,5 +130,52 @@
 </if>
 </conditional> -->
 
+<!-- 2.6.1.5 -->
+
+<!-- *** 3. Challenge Runs: Pacifist Traders: traders won't buy weapons, ammo and crafting resources..  
+-->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+
+<!-- Weapon mods -->
+<append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modGun') or starts-with(@name, 'modShotgun') or starts-with(@name, 'modMeleeClub') or starts-with(@name, 'modMeleeStun') or starts-with(@name, 'modMeleeSerrated') or starts-with(@name, 'modMeleeWeighted')]"><property name="SellableToTrader" value="false" /></append>
+
+</if>
+</conditional>
+
+<!-- *** 6. Misc Options -->
+<!-- *** 6.1 Tube Extender adds 3 rounds -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_TubeExtender') == '+3'">
+
+<set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@operation">base_add</set>
+<set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@value">3</set>
+
+<!-- <append xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize' and @value='3']">
+<requirement name="ItemHasTags" tags="IZYgunT2TradshotgunLeveractionShotgunModel1887"/>
+</append> -->
+
+<!-- Different value for IZYgunT1TACCompactshotgunSuperShortty -->
+<!-- <insertBefore xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']">
+
+	  <passive_effect name="MagazineSize" operation="base_add" value="10">
+		<requirement name="ItemHasTags" tags="IZYgunT1TACCompactshotgunSuperShortty"/>
+	  </passive_effect>
+
+</insertBefore> -->
+
+</if>
+</conditional>
+<!-- REF
+	<item_modifier name="modGunShotgunTubeExtenderMagazine" installable_tags="modGunShotgunTubeExtenderMagazine" modifier_tags="magazine" blocked_tags="noMods" type="attachment">
+		<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+		<property name="UnlockedBy" value="perkShotgunMessiahMagazine"/>
+		<property name="TraderStageTemplate" value="modsTier2"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value=".375"/>
+		</effect_group>
+	</item_modifier> -->
 
 </RamblingMan>

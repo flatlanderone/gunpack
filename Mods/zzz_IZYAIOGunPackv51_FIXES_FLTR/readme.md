@@ -1,36 +1,91 @@
-# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.4
+# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.5
 
 ## Overview
 
-The **Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack** mod provides fixes, tweaks and enhancements for the IZY-All in One Gun Pack (hereafter the "IGP") v2.6.5.1.3 released on 2026-04-14 on Nexus Mods. 
+The **Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack** mod provides fixes, tweaks and optional settings for 7 Days To Die 2.6 and the IZY-All in One Gun Pack (hereafter the "IGP") v2.6.5.1.3 released on 2026-04-14 on Nexus Mods. 
 
-Several optional enhancements, including the "No Kick" option, are managed exclusively through the Gears mod interface. In order to access these optional enhancements, you must install the Gears mod and the Quartz mod.
+## Optional Settings (Gears)
 
-See Changelog below for a full list of changes and additions.
+To access the mod's options:
+ 1. Click **Mods** in the main menu.
+ 2. Click **Flatlander's Fixes and Tweaks for the IGP** mod entry in the left-hand panel.
+ 3. Click the **Settings** tab in the right-hand panel. 
+
+**Important**
+  1. Remember to click **Apply** after changing the settings.
+  2. Change settings before loading your save.
+  3. Click 'Defaults', then 'Apply' to restore the settings to their default values.
+
+**Available Options**  
+
+Options are organized thematically by tabs.  
+
+In the **1. Weapon Packs** tab you can: 
+ 1. Disable the custom weapon models for the vanilla weapons.
+ 2. Choose the sounds to use with vanilla weapons.
+ 3. Disable each individual weapon pack.
+
+In the **2. Kick Attack** tab you can enable and disable the kick attack for each selected weapon and tool category.
+
+In the **3. T4/T5 Weapons** tab you can:
+ 1. Disable the crafting of T4 weapons.
+ 2. Decrease or increase the quantity of Legendary parts required to craft T4 weapons.
+ 3. Disable the repair of T4/T5 weapons.
+ 4. Enable a recipe for the Advanced Repair Kit that does not require Legendary Parts.
+ 5. Increase the degradation rate of T4/T5 weapons.  
+ 6. Remove T4/T4 weapons from loot.  
+
+In the **4. Looting** tab you can:
+ 1. Select which IGP handguns can be found in toilets and similar containers.
+ 2. Increase the odds of finding common T1 and T2 weapons in logical places.
+ 3. Remove T0 and T-1 weapons from loot.
+
+In the **5. Challenges** tab you can:
+ 1. Choose to play with Pacifist Traders who will not sell you weapons and related items, who will not  buy from you these weapons and related items or who will not offer you weapons, ammo and related items in quest rewards.
+ 2. Disable the crafting of selected weapons and other offensive items.
+ 3. Disable the repair of T0-T3 weapons.
+ 4. Increase the degradation rate of T0-T3 weapons.
+
+In the **6. Misc. Options** tab you can:
+ 1. Configure various options for specific weapons and weapon mods.
+ 2. Enable ammo reboxing recipes.
+ 3. Enable the unlocking of IGP special ammo recipes using perk books.
+
+## Credits and inspirations
+
+ - FlufferNutterSandwich for sharing the code from his **Find Izy Pistols in Cars, Toilets, and Purses** and **Ammo Press Add-On Patch** mods and for allowing me to get involved in the maintenance of the IGP.
+ - khzmusik for the ammo reboxing code in his [Quality of Life](https://www.nexusmods.com/7daystodie/mods/10058) mod. Code explicitly placed in the public domain [here](https://gitlab.com/karlgiesing/7d2d-2.0-mods#license). 
+ - IzPrebuilt for the list of logical places to find common weapons in the [Improved Loot Experience](https://www.nexusmods.com/7daystodie/mods/8440) mod.
+ - Little Red Sonja for the ideas in her [Normalized Craft Times](https://www.nexusmods.com/7daystodie/mods/6513) mod.
+ - Mongrel for reporting a VRP-related issue with steel tools.
+ - Nexus user RezMeRainzy for pointing out inconsistent durability values.
+ - Nexus user Amiud4ke for reporting a missing weapon in the kick options..
+ - Nexus user Terminat0r33Terminat0r33 for reporting issues with the VRP and suggesting workarounds.
 
 ## Requirements
 
  - [IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 on Nexus Mods](https://www.nexusmods.com/7daystodie/mods/5458),
  - [Gears 6.0.0 or later](https://www.nexusmods.com/7daystodie/mods/4017),
  - [Quartz 7.0.0 or later](https://www.nexusmods.com/7daystodie/mods/2409),
- - 7 Days to Die v2.6 and later.
+ - 7 Days to Die v2.6. The mod has not been tested with 7 Days to Die v3.0 Exp. 
 
 ## Manual installation
 
  1. Download the mod file.
  2. Unzip it anywhere on your hard drive.
- 3. Copy the zzz\_IZYAIOGunPackv51\_FIXES\_FLTR folder to the 7 Days to Die Mods folder. The default location is **%APPDATA%\7DaysToDie\Mods**.
- 4. The mod must load after all the IGP mods, patches and extensions.
- 5. Download and install the required Gears and Quartz mods.
+ 3. Copy the zzz\_IZYAIOGunPackv51\_FIXES\_FLTR folder to the 7 Days to Die Mods folder. The default location is **%APPDATA%\7DaysToDie\Mods**. 
+ 4. If you are updating the mod, delete the folder with the old version.
+ 5. The mod must load after all the IGP mods, patches and extensions.
+ 6. Download and install the required Gears and Quartz mods.
 
 ## Important notes
 
- 1. The 2.6.1.4 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
- 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.4 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
+ 1. The 2.6.1.5 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.5 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  5. Removing the mod is probably safe, but you should always make a backup of your game save.
- 6. If you change the settings through the Gears interface, you must restart the game for the changes to take effect. 
+ 6. If you change the settings through the Gears interface, you must reload the game for the changes to take effect. 
 
 ## Bug reports and feature suggestions
 
@@ -41,14 +96,153 @@ See Changelog below for a full list of changes and additions.
 ## About this mod
 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
- - **Download page**: [Flatlander's Fixes for IZY-All in One Gun Pack v5.1 and v2.6.5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
+ - **Download page**: [Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
- - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22).
- - **This release**: 2.6.1.4 (2026-04-29)
+ - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22), 2.6.1.4 (2026-04-29).
+ - **This release**: 2.6.1.5 (2026-06-15)
+
+## Changelogs
+
+# Changelog for 2.6.1.5 (2026-06-15)
+
+## Notes and global changes
+
+ - This update introduces three new sets of options that are managed exclusively through the Gears interface: Looting (toilet pistols, common guns in logical places, T0 weapons in loot), Challenges (Pacifist Traders, No Crafting, No Repair, Faster Degradation) and Miscellaneous Options (Various tweaks for specific weapons and weapon mods, ammo reboxing recipes, unlocking of IGP special ammo recipes using perk books). See **Optional Settings (Gears)** above.
+ - The Vanilla Replacer Pack can now be disabled without removing files.
+ - All ammo recipes can now be crafted in the Oakraven's Ammo Press and benefit from shorter crafting times and reduced resource requirements.
+ - Implemented normalized craft times for vanilla and IGP weapons. This does not override LittleRedSonja_NormalizedCraftTimes.
+ - Added missing workbenchCrafting, packMuleCrafting and other relevant weapon crafting perk tags to vanilla and IGP recipes. Based on LittleRedSonja_NormalizedCraftTimes. 
+ - Implemented normalized recipe ingredient counts for T2 and better weapons. 
+ - Implemented normalized durability values for T0-T4 weapons. 
+ - Reorganized the addition of weapons to loot.
+ - Added IGP ammo to groupQuestAmmo.
+ - Added IGP weapons to groupQuestWeaponsRanged.
+ - Added a graceful fallback when the mod is loaded without the IGP mod being present.
+ - Implemented minor localization fixes.
+ - All bug fixes from previous versions of the patch remain in place unless specified otherwise.
+
+## Known issues
+ - No Crafting challenge: Skill magazines still unlock recipes.
+ - Some option configurations may create unexpected results.
+ 
+## Planned features
+ - Add compatibility for 7 Days to Die 3.0.
+ - Add further challenges.
+ - Move T4 weapons to later loot stages to give more exposure for T3 weapons.
+ - Add support for other weapons and weapon packs.
+ - Implement normalized recipe ingredient counts for T1 weapons. 
+ - Add a toggle for Normalized Craft Times to allow players to choose between this mod and LittleRedSonja_NormalizedCraftTimes.
+
+## 7 Days To Die 2.6 / Vanilla Replacer Pack
+
+### items.xml
+ - Changed display type from rangedShotgunNoMag to rangedShotgun to show rounds per minute for the following weapons: gunShotgunT1DoubleBarrel, gunShotgunT0PipeShotgun.
+ - Added kick effect for meleeToolAxeT2SteelAxe and meleeToolPickT2SteelPickaxe in case IZY_VRP is not loaded.
+ - Added kick effect to vanilla weapons in case IZY_VRP is not loaded.
+ - Added noVRP tag to pipe weapons to remove compatibility with modGunReflexSightA and modGunReflexSightB, as IGP has no visible attachment for these mods.
+ - (Optional) The Vanilla Replacer Pack can now be disabled without removing files.
+ - (Optional) Single-shot weapons reload automatically.
+ 
+### item_modifiers.xml
+ - Added a new tag to block installation of modGunReflexSightA, modGunReflexSightB, IZYmodPistolHoldstyle01 and IZYmodPistolHoldstyle02 when the VRP is disabled.
+ - Removed IGP item_property_overrides for vanilla weapons when the VRP is disabled.
+
+### traders.xml
+ - Added meleeToolAxeT3ChainsawParts to trader inventory.
+
+## IZY_RMP_762pack
+
+### loot.xml
+ -  Added ammo762mmExplosiveFragmentations to loot with a 0.001 loot_stage_count_mod value.
+
+### progression.xml
+ - IZYgunT2BattleRifleFNFALRifle: fixed a typo that was preventing the crafting of the weapon beyond Q1.
+
+### recipes.xml
+ - Added Oakraven's ammo press recipes for ammo762mmExplosiveFragmentations and ammo762mmExplosiveFragmentationsBundle.
+
+## IZY_RMP_Miscpack
+
+### recipes.xml
+ - IZYgunT4BowVanhelsingAutomaticCrossbowVH: fixed resourceLegendaryParts passive effect and missing resourceLeather ingredient.
+
+### loot.xml
+ - Added probability attribute for ammoMuzzleloadershot
+
+## IZY_RMP_SG
+
+### items.xml
+ - IZYgunT1TradshotgunDoubleBarrelOverUnder: removed compatibility with the modGunShotgunTubeExtenderMagazine mod.
+ - (Optional) IZYgunT1TACCompactshotgunSuperShortty: reduced magazine size from 4 to 3 and removed compatibility with the modGunShotgunTubeExtenderMagazine to bring the gun in line with other T1 shotguns.
+ - Added ammoShotgunShellPremiumBundle item.
+
+### recipes.xml 
+ - Made ammoShotgunShellPremium learnable.
+
+### loot.xml
+ - Reverted: Removed IZYgunT4TACshotgunM1014 from loot. (Handled globally)
+ - Added ammoShotgunShellPremium to loot.
+
+### progression.xml
+ - ammoShotgunShellPremiumBundle bundle unlocks at Shotgun Messiah - Completion. 
+ - ammoShotgunShellPremiumBundle bundle unlocks at Shotguns 11. 
+ 
+## IZY_RMP_45ACP
+
+### recipes.xml
+ - IZYgunT0PistolLiberatorImprovisedPistol: added wood to recipe, set ingredient quantities in line with other pipe weapons. 
+ - IZYgunT2DualPistols45M1911A1: added missing resourceDuctTape to ingredients and passive effects.
+
+### loot.xml
+ - Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities.
+ - Reverted: Added missing IZYgunT1Pistol45Type17C96 entries to groupQuestWeaponsRangedT1.
+
+## IZY_RMP_9mmVAL
+
+### recipes.xml
+ - IZYgunT0SMGPIPEsubmachinegun: set ingredient quantities in line with other pipe weapons. 
+ - Added missing resourceDuctTape to passive effects for IZYgunT2SMGUZIsubmachinegun, IZYgunT3SMGMP9submachinegun, IZYgunT4SMGCZScorpionEVO3.
+
+### loot.xml
+ - Reverted: Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger, groupQuestWeaponsRangedT1 and groupWeaponsT1_Ranged.
+ - Reverted: Removed from loot the following items: IZYgunT4DualPistolC96M,  IZYgunT3SMGMP5Ksubmachinegun, IZYgunT4SMGColt9mmsubmachinegun.
+
+## IZY_RMP_44magnum
+
+### recipes.xml
+ - IZYgunT4DualMagnumDesertEagles: added missing resourceDuctTape to ingredients and passive effects.
+ 
+ ### loot.xml:
+ - Reverted: Added IZYgunT3PistolMagnumAutomag44 and IZYgunT4DualMagnumDesertEagles to loot.
+
+## IZY_RMP_556pack
+
+### items.xml 
+ - Added optional drumMagazine support (enabled by default) for the following weapons:
+   IZYgunT1ARCabineM608SurvivalRifle
+   IZYgunT2ARCabineCAR15
+   IZYgunT3ARCabineM4Carbine
+   IZYgunT4ARCabineHK416
+
+### recipes.xml
+ - Fixed incorrect tag in passive effect for IZYgunT4ARCabineHK416 and IZYgunT4BULLPUPFNF2000.
+ - Removed gunRifleT1HuntingRifleParts ingredient from IZYgunT3MarksManRifle556M16A2DMR. Added resourceDuctTape. Fixed passive effect.
+
+### loot.xml
+ - Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities.
+
+## IZY_RMP_Demopack
+
+### items.xml
+ - Added explosivesSkill tag for IZY_RMP_Demopack ammo.
+
+### loot.xml
+ - Added ammo25mm and ammoRocketRPG to loot.
 
 # Changelog for 2.6.1.4 (2026-04-29)
 
 ## Notes
+
  - The main feature of this update is the ability to disable kick attack. Read below for more details.
  - This update introduces three new sets of options (Kick Attack, Weapon Packs, Tier 4 Weapons) that are managed exclusively through the Gears interface. Read below for more details. 
  - Minor localization fixes have been implemented.

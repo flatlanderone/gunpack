@@ -1,9 +1,27 @@
 <RamblingMan>
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
 
-<!-- *** VANILLA 2.6 -->
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/item_modifiers.xml"/>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- *** VANILLA 2.6 and IZY -->
+
+<!-- Start of 2.6.1.5 -->
+<!-- Added a new tag to block installation of modGunReflexSightA, modGunReflexSightB, IZYmodPistolHoldstyle01 and IZYmodPistolHoldstyle02 when the VRP is disabled. -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunReflexSightA' or @name='modGunReflexSightB' or @name='IZYmodPistolHoldstyle01' or @name='IZYmodPistolHoldstyle02']/@blocked_tags" delim="," op="add">noVRP</csv>
+
+<!-- End of 2.6.1.5 -->
 
 <!-- 2.6.1.2 -->
-
 <!-- Added no2xScopesFLTR tag to block the installation of the 2x scope.
 Reason: White square in the place of the red dot https://github.com/flatlanderone/gunpack/issues/15
  -->
@@ -36,6 +54,12 @@ Reason: White square in the place of the red dot https://github.com/flatlanderon
 	<if cond="mod_version('Gears') >= version(6,0,0)">
 		<include filename="Options/item_modifiers.xml"/>
 	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
 </conditional>
 
 </RamblingMan>

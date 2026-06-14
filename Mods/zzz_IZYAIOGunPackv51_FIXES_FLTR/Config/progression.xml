@@ -1,4 +1,15 @@
 <RamblingMan>
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/progression.xml"/>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
 
 <!-- *** IZY_RMP_Demopack -->
 
@@ -23,7 +34,24 @@ IZYgunT3RocketLauncherRPG7 -->
 
 <!-- Removed IZYgunT4TACshotgunM1014 from progression display. -->
 <remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[@item='gunShotgunT3AutoShotgun']/unlock_entry[@item='IZYgunT4TACshotgunM1014']" />
-	
+
+<!-- Start of 2.6.1.5 -->
+ 
+<!-- ammoShotgunShellPremiumBundle bundle unlocked by perkShotgunMessiahComplete. -->
+<append xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunShellPremiumBundle"/>
+	</effect_group>
+</append> 
+
+<!-- ammoShotgunShellPremium unlocked by perkShotgunMessiahBreachingSlugs -->
+<append xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']">
+	<effect_group>
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunShellPremium"/>
+	</effect_group>
+</append> 
+<!-- End of 2.6.1.5 -->
+
 </if>
 </conditional>
 
@@ -79,6 +107,14 @@ IZYgunT3RocketLauncherRPG7 -->
 <conditional>
 <if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
 
+<!-- Start of 2.6.1.5 -->
+
+<!-- IZYgunT2BattleRifleFNFALRifle: fixed a typo that was preventing the crafting of the weapon beyond Q1. -->
+
+<set xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/effect_group/passive_effect[@name='CraftingTier' and @tags='IZYgunT2BattleRifleFNFALRifle']/@value">1,2,3,4,5,5</set>
+
+<!-- End of 2.6.1.5 -->
+
 <!-- ammo762mmExplosiveFragmentations and ammo762mmExplosiveFragmentationsBundle recipes unlock at the same time as IZYgunT4MarksManRifleM110SASS (level 61). -->
 
 <!-- display entry -->
@@ -105,6 +141,12 @@ IZYgunT3RocketLauncherRPG7 -->
 	<if cond="mod_version('Gears') >= version(6,0,0)">
 		<include filename="Options/progression.xml"/>
 	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
 </conditional>
 
 </RamblingMan>
