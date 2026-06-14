@@ -1,0 +1,77 @@
+<RamblingMan>
+<!-- *** 3. Challenge Runs ### -->
+
+<!-- *** 3.1. Challenge Runs: Pacifist Traders: traders won't buy weapons, ammo and ammo crafting resources. -->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+
+<!-- Weapons, turrets, electric traps -->
+<append xpath="/blocks/block[starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'electricfencepost') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret')]"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Mines -->
+<append xpath="/blocks/block[@name='mineCandyTin' or 
+@name='mineCookingPot' or 
+@name='mineHubcap' or 
+@name='mineAirFilter' or 
+@name='mineCandyTinTwitch']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Barbed fence and spike traps -->
+<append xpath="/blocks/block[@name='barbedFence' or 
+@name='barbedWireSheet' or 
+@name='trapSpikesIronDmg0' or 
+@name='trapSpikesWoodDmg0' or 
+@name='trapSpikesWoodMaster' or 
+@name='trapSpikesScrapIronMaster']"><property name="SellableToTrader" value="false" /></append>
+
+</if>
+</conditional>
+
+<!-- *** 3.5 No Crafting challenge: Passive traps can be picked up. -->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingTraps') == 'No'">
+<!-- Not implemented -->
+</if>
+</conditional>
+
+<!-- *** Silenced weapon-based turrets -->
+
+<!-- IZY Classic sounds -->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsSoundOptions.MiscSettings_SilencedVanillaWeapons') == 'On' and modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsSoundOptions.Enable_IZY_VRP_sounds') == 'IZY Classic'">
+
+<!-- SMG turret -->
+<set xpath="/blocks/block[@name='autoTurret']/property[@name='FireSound']/@value">VRsmg5_silen_fire</set>
+
+<!-- Shotgun turret -->
+<set xpath="/blocks/block[@name='shotgunTurret']/property[@name='FireSound']/@value">VRpumpSG_silen_fire</set>
+
+<!-- M60 turret -->
+<set xpath="/blocks/block[@name='m60Turret']/property[@name='FireSound']/@value">VRm60_silen_fire</set>
+
+
+</if>
+</conditional>
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsSoundOptions.MiscSettings_SilencedVanillaWeapons') == 'On' and modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsSoundOptions.Enable_IZY_VRP_sounds') == 'Vanilla'">
+
+<!-- SMG turret -->
+<set xpath="/blocks/block[@name='autoTurret']/property[@name='FireSound']/@value">smg_s_fire</set>
+
+<!-- Shotgun turret -->
+<set xpath="/blocks/block[@name='shotgunTurret']/property[@name='FireSound']/@value">pump_shotgun_s_fire</set>
+
+<!-- M60 turret -->
+<set xpath="/blocks/block[@name='m60Turret']/property[@name='FireSound']/@value">m60_s_fire</set>
+
+</if>
+</conditional>
+
+</RamblingMan>

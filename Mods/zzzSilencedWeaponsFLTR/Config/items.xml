@@ -1,0 +1,41 @@
+<RamblingMan>
+
+<conditional>
+<if cond="game_version() >= version(1,3,0) and mod_loaded('Combat_Sandbox_FLTR') == false">
+
+<!-- *** Vanilla weapons with vanilla silenced sounds -->
+<set xpath="/items/item[@name='gunHandgunT0PipePistol' or @name='gunHandgunT1Pistol']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">pistol_s_fire</set>
+
+<set xpath="/items/item[@name='gunHandgunT3SMG5' or @name='gunMGT0PipeMachineGun']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">smg_s_fire</set>
+
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">44magnum_s_fire</set>
+
+<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">desertvulture_s_fire</set>
+
+<set xpath="/items/item[@name='gunShotgunT0PipeShotgun' or @name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT2PumpShotgun' or @name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">pump_shotgun_s_fire</set>
+
+<!-- <set xpath="/items/item[@name='gunRifleT0PipeRifle' or @name='gunRifleT1HuntingRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">hunting_rifle_s_fire</set>
+ -->
+
+<set xpath="/items/item[@name='gunRifleT0PipeRifle' or @name='gunRifleT1HuntingRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">sniperrifle_s_fire</set>
+
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle' or @name='gunRifleT3SniperRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">sniperrifle_s_fire</set>
+
+<set xpath="/items/item[@name='gunMGT1AK47' or @name='gunMGT2TacticalAR']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">ak47_s_fire</set>
+
+<set xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">m60_s_fire</set>
+
+</if>
+</conditional>
+
+</RamblingMan>

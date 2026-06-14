@@ -1,0 +1,17 @@
+<RamblingMan>
+
+
+<append xpath="/item_modifiers">
+
+<item_modifier name="modGunChangeCaliber" installable_tags="gun" modifier_tags="barrelTipAttachment" blocked_tags="noMods,noSilencer" type="attachment">
+	<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+	<property name="UnlockedBy" value="modGunSoundSuppressorSilencerSchematic"/>
+	<property name="TraderStageTemplate" value="modsTier2"/>
+	<item_property_overrides name="gunHandgunT0PipePistol">
+		<property name="Magazine_items" value="ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP"/>
+	</item_property_overrides>
+</item_modifier>
+
+
+</append>
+</RamblingMan>

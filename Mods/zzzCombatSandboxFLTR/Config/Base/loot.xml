@@ -1,0 +1,17 @@
+<RamblingMan>
+
+<!-- QLTemplateT1 and armorQualityTemplate have incorrect Q4 probability values at the end of the progression. -->
+
+<!-- TODO Add conditional for 2.6 -->
+
+
+<conditional>
+<if cond="game_version() == version(1,2,6)">
+
+<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate[@name='QLTemplateT1']/qualitytemplate[@level='195,999999']/loot[@quality='4' and @prob='0.444']/@prob">0.284</set>
+<set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate[@name='armorQualityTemplate']/qualitytemplate[@level='159,999999']/loot[@quality='4' and @prob='0.556']/@prob">0.496</set>
+
+</if>
+</conditional>
+
+</RamblingMan>
