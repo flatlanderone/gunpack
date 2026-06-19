@@ -1,0 +1,104 @@
+<RamblingMan>
+
+<!-- IGP edits -->
+
+
+<!-- fix burst -->
+
+<!-- item/property
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture -->
+
+<remove xpath="/items/item[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']/property[starts-with(@name, 'Explosion.')]" />
+
+<!-- 
+Action1
+ammo762mmExplosiveFragmentations
+ammoCrossbowLightBoltStone
+ammoCrossbowLightBoltIron
+ammoRocketRPGTraning
+ammoRocketRPGHE
+ammoRocketRPGIncendiary
+ammo25mmGrenadeTraining
+ammo25mmGrenadeFRAGS
+ammo25mmGrenadeHE
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture -->
+<remove xpath="/items/item[@name='ammo762mmExplosiveFragmentations' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']/property[@class='Action1']/property[starts-with(@name, 'Explosion.')]" />
+
+
+<!-- ToolCategory.harvestingTools -->
+
+<remove xpath="/items/item[@name='IZYMeleeT4BatonPunisher9000' or 
+@name='IZYMeleeT4BladeKatana' or 
+@name='IZYMeleeT4DualKnivesKnife' or 
+@name='IZYMeleeT4SpearPoleAxe' or 
+@name='IZYMeleeT4SledghammerSpikeMace']/property/property[starts-with(@name, 'ToolCategory.')]" />
+
+<append xpath="/items/item[starts-with(@name,'IZYgun') or starts-with(@name,'IZYMelee')]">
+	<stats>
+		<!-- quality (0 rolls as base value, >0 rolls as the added value), lootstage, random chance, min, max (.005 precision, limit +-163) -->
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
+
+
+</RamblingMan>
