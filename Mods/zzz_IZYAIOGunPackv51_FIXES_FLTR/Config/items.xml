@@ -10,10 +10,9 @@
 
 <include filename="Base/items.xml"/>
 
-<!-- *** IGP fixes for 3.0-->
+<!-- *** IGP fixes for 2.6 and 3.0 -->
 
-<include filename="IGP30/items.xml"/>
-
+<include filename="IGP/items.xml"/>
 
 <!-- *** V2_OakravenAmmoPress items -->
 <conditional>
