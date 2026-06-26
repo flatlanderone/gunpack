@@ -317,6 +317,8 @@ Too small effect? -->
 
 <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
+<!-- <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and @value='1']/@value">0</set> -->
+
 <!-- *** 4.  Prepend tier tags -->
 <prepend xpath="/items/item[starts-with(@name, 'IZYgunT0')]/property[@name='Tags']/@value">T0,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'IZYgunT1')]/property[@name='Tags']/@value">T1,</prepend>
@@ -372,6 +374,13 @@ Too small effect? -->
 <append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']" >
     <property name="PreviousTechItem" value="meleeWpnSledgeT3SteelSledgehammer" />
 </append>
+
+<!-- *** 7. Set CrosshairOnAim and CrosshairUpAfterShot to true for all Izy weapons to fix a conflict with the 3.0 crosshair  -->
+
+<set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
+
+<!-- *** TO DO test scopes -->
+
 </if>
 </conditional>
 </RamblingMan>
