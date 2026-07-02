@@ -55,7 +55,8 @@ IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture -->
 @name='IZYMeleeT4SledghammerSpikeMace']/property/property[starts-with(@name, 'ToolCategory.')]" />
 
 
-<!-- TODO IN PROGRESS *** B. Add new property -->
+<!-- TODO IN PROGRESS 
+*** B. Add new property -->
 
 <!-- 
 IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
@@ -259,9 +260,23 @@ Too small effect? -->
 
 <!-- *** 2. Add new stats block -->
 
-<append xpath="/items/item[starts-with(@name,'IZYgun') or starts-with(@name,'IZYMelee')]">
+<!-- *** 2.1 Multishot Pistols, revolvers, SMGs, pump-action shotguns and autoshotguns -->
+<!-- 
+CHECK SHORTY
+
+All gunslinger weapons
+Boomstick weapons: pump-action shotguns and autoshotguns.
+
+gunHandgunT0PipePistol
+gunHandgunT1Pistol
+gunHandgunT3SMG5
+gunHandgunT2Magnum44
+gunHandgunT3DesertVulture
+gunShotgunT2PumpShotgun
+gunShotgunT3AutoShotgun -->
+
+<append xpath="/items/item[]">
 	<stats>
-		<!-- quality (0 rolls as base value, >0 rolls as the added value), lootstage, random chance, min, max (.005 precision, limit +-163) -->
 		<!-- Base_Random_Roll -->
 		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
 		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
@@ -313,24 +328,55 @@ Too small effect? -->
 	</stats>
 </append>
 
+<!-- *** 2.2 Multishot Pistols, revolvers, SMGs, pump-action shotguns and autoshotguns -->
+<!-- 
+CHECK SHORTY
+
+Single- and double- barrel shotguns (limited mag size)
+gunShotgunT0PipeShotgun
+gunShotgunT1DoubleBarrel -->
+
+<!-- *** 2.3 One-shot rifles -->
+<!-- One-shot rifles
+gunRifleT0PipeRifle
+gunRifleT1HuntingRifle -->
+
+
+<!-- *** 2.4 Other rifle and machine guns -->
+
+<!-- Other rifles and machine guns
+gunRifleT2LeverActionRifle
+gunRifleT3SniperRifle
+gunMGT0PipeMachineGun
+gunMGT1AK47
+gunMGT2TacticalAR
+gunMGT3M60 -->
+
+<!-- *** 2.5 Launchers -->
+<!-- *** 2.6 Melee -->
+
 <!-- *** 3. BurstRoundCount 1000 changed to 0 -->
 
 <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
 <!-- <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and @value='1']/@value">0</set> -->
 
-<!-- *** 4.  Prepend tier tags -->
+<!-- *** 4.  Prepend tier tags 
+Add T3 to T4 and T4 items to enable support for sandbox setting.
+VRP breaks the system if Gears not installed.
+-->
 <prepend xpath="/items/item[starts-with(@name, 'IZYgunT0')]/property[@name='Tags']/@value">T0,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'IZYgunT1')]/property[@name='Tags']/@value">T1,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'IZYgunT2')]/property[@name='Tags']/@value">T2,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'IZYgunT3')]/property[@name='Tags']/@value">T3,</prepend>
-<prepend xpath="/items/item[starts-with(@name, 'IZYgunT4')]/property[@name='Tags']/@value">T4,</prepend>
-<prepend xpath="/items/item[starts-with(@name, 'IZYgunT5')]/property[@name='Tags']/@value">T5,</prepend>
-<prepend xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='Tags']/@value">T4,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT4')]/property[@name='Tags']/@value">T4,T3,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT5')]/property[@name='Tags']/@value">T5,T3,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='Tags']/@value">T4,T3,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammo25mm')]/property[@name='Tags']/@value">T2,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammoRocketRPG')]/property[@name='Tags']/@value">T3,</prepend>
 
-<!-- *** 5. Append scrap100 tags to T0 firearms and to ammo -->
+<!-- *** 5.1 Append scrap100 tags to T0 firearms and to ammo -->
+
 
 <append xpath="/items/item[starts-with(@name, 'IZYgunT0')]/property[@name='Tags']/@value">,scrap100</append>
 
@@ -357,6 +403,30 @@ Too small effect? -->
 @name='ammoShotgunShellPremium' or 
 @name='ammoShotgunShellDragoBreath']/property[@name='Tags']/@value">,scrap100</append>
 
+<!-- *** 5.1 Append ammo tag to IGP ammo -->
+
+<csv xpath="/items/item[(@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath')]/property[@name='Tags']/@value" delim="," op="add">ammo</csv>
 
 <!-- *** 6. Add PreviousTechItem property to melee weapons-->
 
