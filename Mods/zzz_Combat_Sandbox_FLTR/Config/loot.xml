@@ -1,0 +1,1268 @@
+<RamblingMan>
+
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/loot.xml"/>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** 1. Loot reorganization -->
+
+<!-- *** 1.1 Remove not ready weapons from loot -->
+
+<!-- <remove xpath="/lootcontainers/lootgroup/item[@name='IZYMeleeT4BatonPunisher9000' or 
+@name='IZYMeleeT4DualKnivesKnife' or 
+@name='IZYgunT1ARCabineMASFARifle' or 
+@name='IZYgunT1LRLongRifleM16a1' or 
+@name='IZYgunT2ClassicSMGMP34' or 
+@name='IZYgunT3AREUCabineSG552' or 
+@name='IZYgunT3DualPistols45USP45' or 
+@name='IZYgunT3RifleMagnumLeveractionCarbine44' or 
+@name='IZYgunT3SMGMP5Ksubmachinegun' or 
+@name='IZYgunT4DualPistolC96M' or 
+@name='IZYgunT4MarksManRifle556SSMAR15' or 
+@name='IZYgunT4SMGColt9mmsubmachinegun' or 
+@name='IZYgunT4TACshotgunM1014' or 
+@name='IZYgunT5DualSMGsSuperVectors' or 
+@name='IZYgunT5HeavyWeaponAA12AutoShotgun' or 
+@name='IZYgunT5HeavyWeaponSuperEagle44SMG' or 
+@name='IZYgunTminus1MusketshotgunBlunderbuss' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='ammoShotgunShellDragoBreathBundle']"/> -->
+
+<!-- *** 1.2 Remove all weapons from loot -->
+<remove xpath="/lootcontainers/lootgroup/item[starts-with(@name, 'IZYMeleeT') or starts-with(@name, 'IZYgunT')]"/>
+<remove xpath="/lootcontainers/item[starts-with(@name, 'IZYMeleeT') or starts-with(@name, 'IZYgunT')]"/>
+
+<!-- *** 1.3 Removed IGP single weapon loot groups (firearms and crossbow). -->
+
+<remove xpath="/lootcontainers/lootgroup/item[@group='groupWeaponsT0_MISC_MusketRifle' or 
+@group='groupWeaponsT4_MISC_AutocrossbowVH' or 
+@group='groupWeaponsT1_PISTOL45_M1917' or 
+@group='groupWeaponsT1_PISTOL45_C96Type17' or 
+@group='groupWeaponsT1_TACSMG_MAC10' or 
+@group='groupWeaponsT2_PISTOL45_M1911' or 
+@group='groupWeaponsT2_DUALPISTOL45_DUALM1911' or 
+@group='groupWeaponsT2_SMG_M3GREASE' or 
+@group='groupWeaponsT3_PISTOL45_USP45' or 
+@group='groupWeaponsT3_SMG_M1THOMPSON' or 
+@group='groupWeaponsT3_MMR_CARBINE45' or 
+@group='groupWeaponsT4_PISTOL45_STIE6' or 
+@group='groupWeaponsT4_SMG_M1928Thompson' or 
+@group='groupWeaponsT4_TACSMG_KRISSSUPERV' or 
+@group='groupWeaponsT4_MMR_VECTORCARBINE' or 
+@group='groupWeaponsT2_MG_CAR15' or 
+@group='groupWeaponsT3_MG_M4carbine' or 
+@group='groupWeaponsT3_MMR_M16A2' or 
+@group='groupWeaponsT3_MG_VHS2' or 
+@group='groupWeaponsT3_MG_M249' or 
+@group='groupWeaponsT1_DeadEye_MosinN' or 
+@group='groupWeaponsT1_MG_STG44N' or 
+@group='groupWeaponsT2_DeadEye_M1N' or 
+@group='groupWeaponsT3_DeadEye_PSG1' or 
+@group='groupWeaponsT3_DeadEye_Enfield' or 
+@group='groupWeaponsT3_DeadEye_L96' or 
+@group='groupWeaponsT3_DeadEye_PROSVU' or 
+@group='groupWeaponsT4_MG_SCARH' or 
+@group='groupWeaponsT0_SMG_PIPESMG' or 
+@group='groupWeaponsT1_DW_COLTNV' or 
+@group='groupWeaponsT2_DW_M9B' or 
+@group='groupWeaponsT2_SMG_UZI' or 
+@group='groupWeaponsT3_DW_G18C' or 
+@group='groupWeaponsT3_SMG_MP5K' or 
+@group='groupWeaponsT3_DW_C96M' or 
+@group='groupWeaponsT3_SMG_KOLTM9' or 
+@group='groupWeaponsT2_DEMO_ChinalakeGL' or 
+@group='groupWeaponsT3_DEMO_XM25' or 
+@group='groupWeaponsT3_DEMO_RPG7' or 
+@group='groupWeaponsT1_SHOTGUN_DBOverUnder' or 
+@group='groupWeaponsT1_SHOTGUN_SHORTTY' or 
+@group='groupWeaponsT2_SHOTGUN_1887' or 
+@group='groupWeaponsT3_SHOTGUN_SPAS12' or 
+@group='groupWeaponsT3_SHOTGUN_1897' or 
+@group='groupWeaponsT3_SHOTGUN_M1014' or 
+@group='groupWeaponsT3_SHOTGUN_BNA5']"/>
+ 
+<remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_MISC_MusketRifle' or 
+@name='groupWeaponsT4_MISC_AutocrossbowVH' or 
+@name='groupWeaponsT1_PISTOL45_M1917' or 
+@name='groupWeaponsT1_PISTOL45_C96Type17' or 
+@name='groupWeaponsT1_TACSMG_MAC10' or 
+@name='groupWeaponsT2_PISTOL45_M1911' or 
+@name='groupWeaponsT2_DUALPISTOL45_DUALM1911' or 
+@name='groupWeaponsT2_SMG_M3GREASE' or 
+@name='groupWeaponsT3_PISTOL45_USP45' or 
+@name='groupWeaponsT4_PISTOL45_STIE6' or 
+@name='groupWeaponsT3_SMG_M1THOMPSON' or 
+@name='groupWeaponsT4_SMG_M1928Thompson' or 
+@name='groupWeaponsT4_TACSMG_KRISSSUPERV' or 
+@name='groupWeaponsT3_MMR_CARBINE45' or 
+@name='groupWeaponsT4_MMR_VECTORCARBINE' or 
+@name='groupWeaponsT2_MG_CAR15' or 
+@name='groupWeaponsT3_MG_M4carbine' or 
+@name='groupWeaponsT3_MG_M249' or 
+@name='groupWeaponsT3_MG_VHS2' or 
+@name='groupWeaponsT3_MMR_M16A2' or 
+@name='groupWeaponsT1_MG_STG44N' or 
+@name='groupWeaponsT4_MG_SCARH' or 
+@name='groupWeaponsT1_DeadEye_MosinN' or 
+@name='groupWeaponsT2_DeadEye_M1N' or 
+@name='groupWeaponsT3_DeadEye_PSG1' or 
+@name='groupWeaponsT3_DeadEye_Enfield' or 
+@name='groupWeaponsT3_DeadEye_L96' or 
+@name='groupWeaponsT3_DeadEye_PROSVU' or 
+@name='groupWeaponsT0_SMG_PIPESMG' or 
+@name='groupWeaponsT1_DW_COLTNV' or 
+@name='groupWeaponsT2_DW_M9B' or 
+@name='groupWeaponsT2_SMG_UZI' or 
+@name='groupWeaponsT3_DW_G18C' or 
+@name='groupWeaponsT3_SMG_MP5K' or 
+@name='groupWeaponsT3_DW_C96M' or 
+@name='groupWeaponsT3_SMG_KOLTM9' or 
+@name='groupWeaponsT2_DEMO_ChinalakeGL' or 
+@name='groupWeaponsT3_DEMO_XM25' or 
+@name='groupWeaponsT3_DEMO_RPG7' or 
+@name='groupWeaponsT1_SHOTGUN_DBOverUnder' or 
+@name='groupWeaponsT1_SHOTGUN_SHORTTY' or 
+@name='groupWeaponsT2_SHOTGUN_1887' or 
+@name='groupWeaponsT3_SHOTGUN_SPAS12' or 
+@name='groupWeaponsT3_SHOTGUN_1897' or 
+@name='groupWeaponsT3_SHOTGUN_M1014' or 
+@name='groupWeaponsT3_SHOTGUN_BNA5']"/>
+
+<!-- *** 1.5 Added IGP single weapons to attribute/perk based loot grops. -->
+
+<!-- Gears Options: Optional groups will be added to Scaled groups and assigned ProbT4. Also quality will be extended. -->
+
+<!-- TODO: add conditional -->
+
+<!-- *** IZY_RMP_762pack / IZY_RMP_556pack  -->
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_loaded('IZY_RMP_556pack')">
+ -->
+<!-- Machinegunner -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Machinegunner']">
+	<item name="IZYgunT1ARCabineM608SurvivalRifle" />
+	<item name="IZYgunT1BattleRifleBARbrowningautomaticrifle" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Machinegunner']">
+	<item name="IZYgunT2ARCabineCAR15" />
+	<item name="IZYgunT2LMGLMG36" />
+	<item name="IZYgunT2ARSTG44N" />
+	<item name="IZYgunT2BattleRifleFNFALRifle" />
+	<item name="IZYgunT2LMGlightmachinegunRPD" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Machinegunner']">
+	<item name="IZYgunT3ARAKM" />
+	<item name="IZYgunT3ARCabineM4Carbine" />
+	<item name="IZYgunT3BattleRifleHKG3" />
+	<item name="IZYgunT3BULLPUPHellionVHS2" />
+	<item name="IZYgunT3LMGM249FNminimi" />
+	<item name="IZYgunT4ARCabineHK416" />
+	<item name="IZYgunT4BattleRifleSCARH" />
+	<item name="IZYgunT4BULLPUPFNF2000" />
+	<item name="IZYgunT4LMGlightmachinegunMG34R" />
+	<item name="IZYgunT5HeavyWeaponM134MinigunGatling" />
+</append>
+
+<!-- Optional -->
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Machinegunner']">
+<!-- Pure T3 loot group. -->
+<lootgroup name="groupWeaponsT3_MachinegunnerFLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT3ARAKM" />
+	<item name="IZYgunT3ARCabineM4Carbine" />
+	<item name="IZYgunT3BattleRifleHKG3" />
+	<item name="IZYgunT3BULLPUPHellionVHS2" />
+	<item name="IZYgunT3LMGM249FNminimi" />
+</lootgroup>
+
+<!-- Pure T4/T5 loot group. / IZYgunT5HeavyWeaponM134MinigunGatling -->
+<lootgroup name="groupWeaponsT4_MachinegunnerFLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT4ARCabineHK416" />
+	<item name="IZYgunT4BattleRifleSCARH" />
+	<item name="IZYgunT4BULLPUPFNF2000" />
+	<item name="IZYgunT4LMGlightmachinegunMG34R" />
+	<item name="IZYgunT5HeavyWeaponM134MinigunGatling" />
+</lootgroup>
+</insertAfter>
+
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_RMP_45ACP / IZY_RMP_9mmVAL -->
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_loaded('IZY_RMP_9mmVAL')"> -->
+
+<!-- Gunslinger -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_Gunslinger']">
+	<item name="IZYgunT0PistolLiberatorImprovisedPistol" />
+	<item name="IZYgunT0SMGPIPEsubmachinegun" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Gunslinger']">
+	<item name="IZYgunT1Pistol45M1917" />
+	<item name="IZYgunT1Pistol45Type17C96" />
+	<item name="IZYgunT145TACSMGMAC10" />
+	<item name="IZYgunT1Pistol9Makarov" />
+	<item name="IZYgunT1SMGTec9submachinegun" />
+	<item name="IZYgunT1DualPistolCOLTnavyRevolver" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Gunslinger']">
+	<item name="IZYgunT2Pistol45M1911A1" />
+	<item name="IZYgunT2DualPistols45M1911A1" />
+	<item name="IZYgunT245SMGM3Greasegun" />
+	<item name="IZYgunT2SMGUZIsubmachinegun" />
+	<item name="IZYgunT2DualPistolM9bs" />
+</append>
+
+<!-- TODO: split gunslinger weapons into 
+groupWeaponsT3_Gunslinger01 - SMGs
+groupWeaponsT3_Gunslinger02 - Pistols -->
+
+<!-- SMGs -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger01']">
+	<item name="IZYgunT345SMGM1thompson"/>
+	<item name="IZYgunT3DualPistolGlock18C"/>
+	<item name="IZYgunT3SMGMP9submachinegun"/>
+	<item name="IZYgunT445SMGM1928thompson"/>
+	<item name="IZYgunT445TACSMGKrissSuperV"/>
+	<item name="IZYgunT4DualPistolMP9s"/>
+	<item name="IZYgunT4SMGCZScorpionEVO3"/>
+</append>
+
+<!-- Pistols -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger02']">
+	<item name="IZYgunT3Pistol45USP45"/>
+	<item name="IZYgunT3PistolMagnumAutomag44"/>
+	<item name="IZYgunT4DualMagnumDesertEagles"/>
+	<item name="IZYgunT4Pistol45STIEAGLE6"/>
+</append>
+
+<!-- 
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger']">
+	<item name="IZYgunT345SMGM1thompson" />
+	<item name="IZYgunT3DualPistolGlock18C" />
+	<item name="IZYgunT3Pistol45USP45" />
+	<item name="IZYgunT3PistolMagnumAutomag44" />
+	<item name="IZYgunT3SMGMP9submachinegun" />
+	<item name="IZYgunT445SMGM1928thompson" />
+	<item name="IZYgunT445TACSMGKrissSuperV" />
+	<item name="IZYgunT4DualMagnumDesertEagles" />
+	<item name="IZYgunT4DualPistolMP9s" />
+	<item name="IZYgunT4Pistol45STIEAGLE6" />
+	<item name="IZYgunT4SMGCZScorpionEVO3" />
+</append>
+
+ -->
+
+<!-- Optional -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger']">
+<!-- Pure T3 loot groups. -->
+<!-- SMGs -->
+<lootgroup name="groupWeaponsT3_Gunslinger01FLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT345SMGM1thompson"/>
+	<item name="IZYgunT3SMGMP9submachinegun"/>
+</lootgroup>
+
+<!-- Pistols -->
+<lootgroup name="groupWeaponsT3_Gunslinger02FLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT3DualPistolGlock18C"/>
+	<item name="IZYgunT3Pistol45USP45"/>
+	<item name="IZYgunT3PistolMagnumAutomag44"/>
+</lootgroup>
+
+<!-- Pure T4 loot group. -->
+
+<!-- SMGs -->
+<lootgroup name="groupWeaponsT4_Gunslinger01FLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT445SMGM1928thompson"/>
+	<item name="IZYgunT445TACSMGKrissSuperV"/>
+	<item name="IZYgunT4SMGCZScorpionEVO3"/>
+</lootgroup>
+<!-- Pistols -->
+<lootgroup name="groupWeaponsT4_Gunslinger02FLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT4DualMagnumDesertEagles"/>
+	<item name="IZYgunT4DualPistolMP9s"/>
+	<item name="IZYgunT4Pistol45STIEAGLE6"/>
+</lootgroup>
+</insertAfter>
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_RMP_762pack / IZY_RMP_556pack / IZY_RMP_Miscpack -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_loaded('IZY_RMP_556pack') and mod_loaded('IZY_RMP_762pack')"> -->
+
+<!-- DeadEye -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_DeadEye']">
+	<item name="IZYgunT0SNIPERpipeAR15Broken15Junk" />
+	<item name="IZYgunTminus1MusketM1777Rifle" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_DeadEye']">
+	<item name="IZYgunT1SNIPERRIFLE762Mosinnagant" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_DeadEye']">
+	<item name="IZYgunT2MarksManRifle762M1garandNavyconverted" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_DeadEye']">
+	<item name="IZYgunT3MarksManRifle556M16A2DMR" />
+	<item name="IZYgunT3MarksManRifle762HKPSG1" />
+	<item name="IZYgunT3MarksmanRifleMMRM1Carbine45" />
+	<item name="IZYgunT3SNIPERRIFLE762LeeEnfieldRifle" />
+	<item name="IZYgunT4MarksmanRifle45MMRKrissVectorCarbine" />
+	<item name="IZYgunT4MarksManRifle762SVUprototypeRifle" />
+	<item name="IZYgunT4MarksManRifleM110SASS" />
+	<item name="IZYgunT4SNIPERRIFLE762L96AWMRifle" />
+</append>
+
+<!-- Optional -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_DeadEye']">
+<!-- Pure T3 loot group. -->
+<lootgroup name="groupWeaponsT3_DeadEyeFLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT3MarksManRifle556M16A2DMR" />
+	<item name="IZYgunT3MarksManRifle762HKPSG1" />
+	<item name="IZYgunT3MarksmanRifleMMRM1Carbine45" />
+	<item name="IZYgunT3SNIPERRIFLE762LeeEnfieldRifle" />
+</lootgroup>
+<!-- Pure T4 loot group. -->
+<lootgroup name="groupWeaponsT4_DeadEyeFLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT4MarksmanRifle45MMRKrissVectorCarbine" />
+	<item name="IZYgunT4MarksManRifle762SVUprototypeRifle" />
+	<item name="IZYgunT4MarksManRifleM110SASS" />
+	<item name="IZYgunT4SNIPERRIFLE762L96AWMRifle" />
+</lootgroup>
+</insertAfter>
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_RMP_SG -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
+
+<!-- Boomstick / IZYgunT5HeavyWeaponM2flameThrower -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Boomstick']">
+	<item name="IZYgunT1TradshotgunDoubleBarrelOverUnder" />
+	<item name="IZYgunT1TACCompactshotgunSuperShortty" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Boomstick']">
+	<item name="IZYgunT2TradshotgunLeveractionShotgunModel1887" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Boomstick']">
+	<item name="IZYgunT3TACshotgunSPAS12G" />
+	<item name="IZYgunT3TradshotgunTrenchGunM1897" />
+	<item name="IZYgunT4TradshotgunBrowningAuto5" />
+	<item name="IZYgunT5HeavyWeaponM2flameThrower" />
+</append>
+
+<!-- Optional -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Boomstick']">
+<!-- Pure T3 loot group. -->
+<lootgroup name="groupWeaponsT3_BoomstickFLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT3TACshotgunSPAS12G" />
+	<item name="IZYgunT3TradshotgunTrenchGunM1897" />
+</lootgroup>
+
+<!-- Pure T4/T5 loot group. / IZYgunT5HeavyWeaponM2flameThrower-->
+<lootgroup name="groupWeaponsT4_BoomstickFLTR" count="1" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT4TradshotgunBrowningAuto5" />
+	<item name="IZYgunT5HeavyWeaponM2flameThrower" />
+</lootgroup>
+</insertAfter>
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_RMP_Tech -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)"> -->
+
+<!--  TurretsSyndrome / IZYgunT3TechnicalNailmachinegun -->
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_TurretsSyndrome']">
+	<item name="IZYgunT3TechnicalNailmachinegun" />
+</append>
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_RMP_Demopack -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)"> -->
+
+<!-- Demolitionist -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Demolitionist']">
+	<item name="IZYgunT2LGLChinalakeGrenadeLauncher" />
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Demolitionist01']">
+	<item name="IZYgunT3LGLXM25" />
+	<item name="IZYgunT3RocketLauncherRPG7" />
+</append>
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_RMP_Miscpack -->
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)"> -->
+
+<!-- Archery02 / IZYgunT4BowVanhelsingAutomaticCrossbowVH -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Archery02']">
+	<item name="IZYgunT4BowVanhelsingAutomaticCrossbowVH" />
+</append>
+<!-- </if>
+</conditional> -->
+
+<!-- *** IZY_melee -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+ -->
+<!-- Melee -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']">
+	<item name="IZYMeleeT4BladeKatana" />
+	<item name="IZYMeleeT4SledghammerSpikeMace" />
+	<item name="IZYMeleeT4SpearPoleAxe" />
+</append>
+
+<!-- Optional -->
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']">
+<!-- Pure T4 loot group. -->
+<lootgroup name="groupWeaponsT4_MeleeFLTR" loot_quality_template="QLTemplateT3">
+	<item name="IZYMeleeT4BladeKatana" />
+	<item name="IZYMeleeT4SledghammerSpikeMace" />
+	<item name="IZYMeleeT4SpearPoleAxe" />
+</lootgroup>
+</insertAfter>
+<!-- </if>
+</conditional> -->
+
+<!-- *** Ensure that only 1 weapon from group spawn in loot.-->
+
+<!-- This doesn't seem to work  -->
+<setattribute xpath="/lootcontainers/lootgroup/item[@group='groupWeaponsT0_Ranged' or 
+@group='groupWeaponsT1_Ranged' or 
+@group='groupWeaponsT2_Ranged' or 
+@group='groupWeaponsT3_Ranged']" name="count">1</setattribute>
+
+<!-- Seems to work. -->
+
+<setattribute xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_DeadEye' or 
+@name='groupWeaponsT1_DeadEye' or 
+@name='groupWeaponsT2_DeadEye' or 
+@name='groupWeaponsT3_DeadEye' or 
+@name='groupWeaponsT0_Boomstick' or 
+@name='groupWeaponsT1_Boomstick' or 
+@name='groupWeaponsT2_Boomstick' or 
+@name='groupWeaponsT3_Boomstick' or 
+@name='groupWeaponsT0_Machinegunner' or 
+@name='groupWeaponsT1_Machinegunner' or 
+@name='groupWeaponsT2_Machinegunner' or 
+@name='groupWeaponsT3_Machinegunner' or 
+@name='groupWeaponsT0_Gunslinger' or 
+@name='groupWeaponsT1_Gunslinger' or 
+@name='groupWeaponsT2_Gunslinger' or 
+@name='groupWeaponsT3_Gunslinger01' or 
+@name='groupWeaponsT3_Gunslinger02' or 
+@name='groupWeaponsT3_Gunslinger' or 
+@name='groupWeaponsT2_Demolitionist' or 
+@name='groupWeaponsT3_Demolitionist01' or
+@name='groupWeaponsT3_Archery' or 
+@name='groupWeaponsT3_Archery01' or 
+@name='groupWeaponsT3_Archery02']" name="count">1</setattribute>
+
+<!-- *** 1.3  Remove IGP weapons from groupQuestWeaponsRanged.
+Handled above.
+
+ -->
+<!-- <remove xpath="/lootcontainers/lootgroup[starts-with(@name, 'groupQuestWeaponsRangedT')]/item[starts-with(@name, 'IZYgun')]"/>
+<remove xpath="/lootcontainers/lootgroup[starts-with(@name, 'groupQuestWeaponsMeleeT')]/item[starts-with(@name, 'IZYMeleeT')]"/>
+ -->
+
+<!-- *** Added IGP ammo to groupQuestAmmo -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']">
+	<item name="ammo45ACPBulletBall" count="50" loot_prob_template="QuestT0Prob"/>
+	<item name="ammo556mmBulletBall" count="30" loot_prob_template="QuestT0Prob"/>
+
+	<item name="ammo45ACPBulletBall" count="100" loot_prob_template="QuestT0Prob"/>
+	<item name="ammo556mmBulletBall" count="60" loot_prob_template="QuestT0Prob"/>
+	<item name="ammoShotgunShellPremium" count="60" loot_prob_template="QuestT1Prob"/>
+	
+	<item name="ammo45ACPHighpower" count="50" loot_prob_template="QuestT2Prob"/>
+	<item name="ammo556mmHIpower" count="45" loot_prob_template="QuestT2Prob"/>
+
+	<item name="ammo45ACPArmorpiecing" count="50" loot_prob_template="QuestT2Prob"/>
+	<item name="ammo556mmArmorPiercing" count="45" loot_prob_template="QuestT2Prob"/>
+	<item name="ammo25mmGrenadeTraining" count="5" loot_prob_template="QuestT2Prob"/>
+	<item name="ammo25mmGrenadeFRAGS" count="5" loot_prob_template="QuestT2Prob"/>
+	<item name="ammo25mmGrenadeHE" count="5" loot_prob_template="QuestT2Prob"/>
+
+	<item name="ammo45ACPArmorpiecing" count="50" loot_prob_template="QuestT3Prob"/>
+	<item name="ammo556mmArmorPiercing" count="45" loot_prob_template="QuestT3Prob"/>
+	<item name="ammoRocketRPGTraning" count="5" loot_prob_template="QuestT3Prob"/>
+	<item name="ammoRocketRPGHE" count="5" loot_prob_template="QuestT3Prob"/>
+	<item name="ammoRocketRPGIncendiary" count="5" loot_prob_template="QuestT3Prob"/>
+</append>
+
+<!-- *** 1.3 Added IGP weapons to groupQuestWeaponsRanged. -->
+<!-- Check which are missing -->
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT1']">
+	<item name="IZYgunT145TACSMGMAC10"/>
+	<item name="IZYgunT1ARCabineM608SurvivalRifle"/>
+	<item name="IZYgunT1BattleRifleBARbrowningautomaticrifle"/>
+	<item name="IZYgunT1DualPistolCOLTnavyRevolver"/>
+	<item name="IZYgunT1Pistol45M1917"/>
+	<item name="IZYgunT1Pistol45Type17C96"/>
+	<item name="IZYgunT1Pistol9Makarov"/>
+	<item name="IZYgunT1SMGTec9submachinegun"/>
+	<item name="IZYgunT1SNIPERRIFLE762Mosinnagant"/>
+	<item name="IZYgunT1TACCompactshotgunSuperShortty"/>
+	<item name="IZYgunT1TradshotgunDoubleBarrelOverUnder"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT2']">
+	<item name="IZYgunT245SMGM3Greasegun"/>
+	<item name="IZYgunT2ARCabineCAR15"/>
+	<item name="IZYgunT2ARSTG44N"/>
+	<item name="IZYgunT2BattleRifleFNFALRifle"/>
+	<item name="IZYgunT2DualPistolM9bs"/>
+	<item name="IZYgunT2DualPistols45M1911A1"/>
+	<item name="IZYgunT2LGLChinalakeGrenadeLauncher"/>
+	<item name="IZYgunT2LMGlightmachinegunRPD"/>
+	<item name="IZYgunT2LMGLMG36"/>
+	<item name="IZYgunT2MarksManRifle762M1garandNavyconverted"/>
+	<item name="IZYgunT2Pistol45M1911A1"/>
+	<item name="IZYgunT2SMGUZIsubmachinegun"/>
+	<item name="IZYgunT2TradshotgunLeveractionShotgunModel1887"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT3']">
+	<item name="IZYgunT345SMGM1thompson"/>
+	<item name="IZYgunT3ARAKM"/>
+	<item name="IZYgunT3ARCabineM4Carbine"/>
+	<item name="IZYgunT3BattleRifleHKG3"/>
+	<item name="IZYgunT3BULLPUPHellionVHS2"/>
+	<item name="IZYgunT3DualPistolGlock18C"/>
+	<item name="IZYgunT3LGLXM25"/>
+	<item name="IZYgunT3LMGM249FNminimi"/>
+	<item name="IZYgunT3MarksManRifle556M16A2DMR"/>
+	<item name="IZYgunT3MarksManRifle762HKPSG1"/>
+	<item name="IZYgunT3MarksmanRifleMMRM1Carbine45"/>
+	<item name="IZYgunT3Pistol45USP45"/>
+	<item name="IZYgunT3PistolMagnumAutomag44"/>
+	<item name="IZYgunT3RocketLauncherRPG7"/>
+	<item name="IZYgunT3SMGMP9submachinegun"/>
+	<item name="IZYgunT3SNIPERRIFLE762LeeEnfieldRifle"/>
+	<item name="IZYgunT3TACshotgunSPAS12G"/>
+	<item name="IZYgunT3TechnicalNailmachinegun"/>
+	<item name="IZYgunT3TradshotgunTrenchGunM1897"/>
+	<item name="IZYgunT445SMGM1928thompson"/>
+	<item name="IZYgunT445TACSMGKrissSuperV"/>
+	<item name="IZYgunT4ARCabineHK416"/>
+	<item name="IZYgunT4BattleRifleSCARH"/>
+	<item name="IZYgunT4BowVanhelsingAutomaticCrossbowVH"/>
+	<item name="IZYgunT4BULLPUPFNF2000"/>
+	<item name="IZYgunT4DualMagnumDesertEagles"/>
+	<item name="IZYgunT4DualPistolMP9s"/>
+	<item name="IZYgunT4LMGlightmachinegunMG34R"/>
+	<item name="IZYgunT4MarksmanRifle45MMRKrissVectorCarbine"/>
+	<item name="IZYgunT4MarksManRifle762SVUprototypeRifle"/>
+	<item name="IZYgunT4MarksManRifleM110SASS"/>
+	<item name="IZYgunT4Pistol45STIEAGLE6"/>
+	<item name="IZYgunT4SMGCZScorpionEVO3"/>
+	<item name="IZYgunT4SNIPERRIFLE762L96AWMRifle"/>
+	<item name="IZYgunT4TradshotgunBrowningAuto5"/>
+	<item name="IZYgunT5HeavyWeaponM134MinigunGatling"/>
+	<item name="IZYgunT5HeavyWeaponM2flameThrower"/>
+</append>
+
+<!-- Optional -->
+
+<insertAfter xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT2']">
+<!-- Pure T3 quest reward group. -->
+<lootgroup name="groupQuestWeaponsRangedT3FLTR" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT345SMGM1thompson"/>
+	<item name="IZYgunT3ARAKM"/>
+	<item name="IZYgunT3ARCabineM4Carbine"/>
+	<item name="IZYgunT3BattleRifleHKG3"/>
+	<item name="IZYgunT3BULLPUPHellionVHS2"/>
+	<item name="IZYgunT3DualPistolGlock18C"/>
+	<item name="IZYgunT3LGLXM25"/>
+	<item name="IZYgunT3LMGM249FNminimi"/>
+	<item name="IZYgunT3MarksManRifle556M16A2DMR"/>
+	<item name="IZYgunT3MarksManRifle762HKPSG1"/>
+	<item name="IZYgunT3MarksmanRifleMMRM1Carbine45"/>
+	<item name="IZYgunT3Pistol45USP45"/>
+	<item name="IZYgunT3PistolMagnumAutomag44"/>
+	<item name="IZYgunT3RocketLauncherRPG7"/>
+	<item name="IZYgunT3SMGMP9submachinegun"/>
+	<item name="IZYgunT3SNIPERRIFLE762LeeEnfieldRifle"/>
+	<item name="IZYgunT3TACshotgunSPAS12G"/>
+	<item name="IZYgunT3TechnicalNailmachinegun"/>
+	<item name="IZYgunT3TradshotgunTrenchGunM1897"/>
+</lootgroup>
+
+<!-- Pure T4/T5 quest reward group. -->
+<lootgroup name="groupQuestWeaponsRangedT4FLTR" loot_quality_template="QLTemplateT3">
+	<item name="IZYgunT445SMGM1928thompson"/>
+	<item name="IZYgunT445TACSMGKrissSuperV"/>
+	<item name="IZYgunT4ARCabineHK416"/>
+	<item name="IZYgunT4BattleRifleSCARH"/>
+	<item name="IZYgunT4BowVanhelsingAutomaticCrossbowVH"/>
+	<item name="IZYgunT4BULLPUPFNF2000"/>
+	<item name="IZYgunT4DualMagnumDesertEagles"/>
+	<item name="IZYgunT4DualPistolMP9s"/>
+	<item name="IZYgunT4LMGlightmachinegunMG34R"/>
+	<item name="IZYgunT4MarksmanRifle45MMRKrissVectorCarbine"/>
+	<item name="IZYgunT4MarksManRifle762SVUprototypeRifle"/>
+	<item name="IZYgunT4MarksManRifleM110SASS"/>
+	<item name="IZYgunT4Pistol45STIEAGLE6"/>
+	<item name="IZYgunT4SMGCZScorpionEVO3"/>
+	<item name="IZYgunT4SNIPERRIFLE762L96AWMRifle"/>
+	<item name="IZYgunT4TradshotgunBrowningAuto5"/>
+	<item name="IZYgunT5HeavyWeaponM134MinigunGatling"/>
+	<item name="IZYgunT5HeavyWeaponM2flameThrower"/>
+</lootgroup>
+</insertAfter>
+
+<!-- </if>
+</conditional> -->
+<!-- 
+<append xpath=""></append>
+groupWeaponsT1_Machinegunner
+
+IZYgunT1ARCabineM608SurvivalRifle
+IZYgunT1BattleRifleBARbrowningautomaticrifle
+
+groupWeaponsT2_Machinegunner
+IZYgunT2ARCabineCAR15
+IZYgunT2LMGLMG36
+IZYgunT2ARSTG44N
+IZYgunT2BattleRifleFNFALRifle
+IZYgunT2LMGlightmachinegunRPD
+
+groupWeaponsT3_Machinegunner
+IZYgunT3ARAKM
+IZYgunT3ARCabineM4Carbine
+IZYgunT3BattleRifleHKG3
+IZYgunT3BULLPUPHellionVHS2
+IZYgunT3LMGM249FNminimi
+IZYgunT4ARCabineHK416
+IZYgunT4BattleRifleSCARH
+IZYgunT4BULLPUPFNF2000
+IZYgunT4LMGlightmachinegunMG34R
+IZYgunT5HeavyWeaponM134MinigunGatling
+
+groupWeaponsT0_Gunslinger
+IZYgunT0PistolLiberatorImprovisedPistol
+IZYgunT0SMGPIPEsubmachinegun
+
+groupWeaponsT1_Gunslinger
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT145TACSMGMAC10
+IZYgunT1Pistol9Makarov
+IZYgunT1SMGTec9submachinegun
+IZYgunT1DualPistolCOLTnavyRevolver
+
+groupWeaponsT2_Gunslinger
+IZYgunT2Pistol45M1911A1
+IZYgunT2DualPistols45M1911A1
+IZYgunT245SMGM3Greasegun
+IZYgunT2SMGUZIsubmachinegun
+IZYgunT2DualPistolM9bs
+
+groupWeaponsT3_Gunslinger
+IZYgunT345SMGM1thompson
+IZYgunT3DualPistolGlock18C
+IZYgunT3Pistol45USP45
+IZYgunT3PistolMagnumAutomag44
+IZYgunT3SMGMP9submachinegun
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT4DualMagnumDesertEagles
+IZYgunT4DualPistolMP9s
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT4SMGCZScorpionEVO3
+
+groupWeaponsT0_DeadEye
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunTminus1MusketM1777Rifle
+
+groupWeaponsT1_DeadEye
+IZYgunT1SNIPERRIFLE762Mosinnagant
+
+groupWeaponsT2_DeadEye
+IZYgunT2MarksManRifle762M1garandNavyconverted
+
+groupWeaponsT3_DeadEye
+IZYgunT3MarksManRifle556M16A2DMR
+IZYgunT3MarksManRifle762HKPSG1
+IZYgunT3MarksmanRifleMMRM1Carbine45
+IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+
+groupWeaponsT1_Boomstick
+IZYgunT1TradshotgunDoubleBarrelOverUnder
+IZYgunT1TACCompactshotgunSuperShortty
+
+groupWeaponsT2_Boomstick
+IZYgunT2TradshotgunLeveractionShotgunModel1887
+
+groupWeaponsT3_Boomstick
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT3TACshotgunSPAS12G
+IZYgunT5HeavyWeaponM2flameThrower
+
+groupWeaponsT3_TurretsSyndrome
+IZYgunT3TechnicalNailmachinegun
+
+groupWeaponsT2_Demolitionist
+IZYgunT2LGLChinalakeGrenadeLauncher
+
+groupWeaponsT3_Demolitionist
+IZYgunT3LGLXM25
+IZYgunT3RocketLauncherRPG7
+
+groupWeaponsT3_Archery02
+IZYgunT4BowVanhelsingAutomaticCrossbowVH
+
+groupWeaponsT2_Melee
+IZYMeleeT4BladeKatana
+IZYMeleeT4SledghammerSpikeMace
+IZYMeleeT4SpearPoleAxe
+
+ -->
+
+<!-- End of 2.6.1.5 -->
+
+<!-- *** Betterloot -->
+
+<conditional>
+<if cond="mod_loaded('BetterlootIzy') and mod_version('BetterlootIzy') = version(1,1)">
+
+<!-- Removed ammoShotgunShellDragoBreath from loot. -->
+<!-- <remove xpath="/lootcontainers/lootgroup/item[@name='ammoShotgunShellDragoBreath']" /> -->
+
+<!-- 2.6.1.1 - Change reverted as ammoShotgunShellDragoBreath was removed from loot in BetterlootIzy.  -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Miscpack -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- Added probability attribute for ammoMuzzleloadershot. -->
+<setattribute xpath="/lootcontainers/lootgroup[@name='groupMusketammoSmall']/item[@name='ammoMuzzleloadershot']" name="loot_prob_template">ProbT0</setattribute>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+<!-- Added IZYgunT3TechnicalNailmachinegun to loot groups. -->
+
+<append xpath="//lootgroup[@name='groupWeaponsT3_TurretsSyndrome' or 
+@name='groupQuestWeaponsRangedT2' or 
+@name='groupQuestWeaponsRangedT3' or 
+@name='groupQuestWeaponsRangedT3' or 
+@name='groupInfestedT5MeleeRanged']">	
+	<item name="IZYgunT3TechnicalNailmachinegun"/>
+</append>
+
+<!-- End of 2.6.1.4 -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+<!-- 
+
+TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture to loot. -->
+
+<!-- <insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Boomstick']">
+	<item name="IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture" loot_prob_template="med"/>
+	<item name="IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture" loot_prob_template="med"/>
+</insertAfter> -->
+
+<!-- End of 2.6.1.5 -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+
+<!-- 2.6.1.4 -->
+<!-- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2. -->
+<append xpath="//lootgroup[@name='groupWeaponsT2_Melee']">	
+	<item name="IZYMeleeT4BladeKatana"/>
+</append>
+
+<append xpath="//lootgroup[@name='groupQuestWeaponsMeleeT2']">	
+	<item name="IZYMeleeT4BladeKatana"/>
+</append>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+<!-- Reverted. -->
+
+<!-- Start of 2.6.1.4 -->
+
+<!-- Added missing IZYgunT1Pistol9Makarov entry to groupWeaponsT1_Gunslinger. -->
+	<!-- <insertAfter xpath="//lootgroup[@name='groupWeaponsT1_Gunslinger']"> -->
+					<!-- tier 1  -->
+<!-- 		<lootgroup name="groupWeaponsT1_IZYgunT1Pistol9Makarov" count="all" loot_quality_template="QLTemplateT1">
+			<item name="IZYgunT1Pistol9Makarov"/>
+		</lootgroup>
+	</insertAfter> -->
+
+<!-- Added missing IZYgunT1Pistol9Makarov entry to groupQuestWeaponsRangedT1. -->
+<!-- 	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1Pistol9Makarov"/>
+	</append> -->
+
+<!-- Added missing groupWeaponsT1_IZYgunT1Pistol9Makarov to groupWeaponsT1_Ranged. -->
+<!-- 	<append xpath="//lootgroup[@name='groupWeaponsT1_Ranged']">	
+		<item group="groupWeaponsT1_IZYgunT1Pistol9Makarov"/>
+	</append> -->
+
+<!-- End of 2.6.1.4 -->
+<!-- End of 2.6.1.5 -->
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- Removed IZYgunT4DualPistolC96M from loot. -->
+<!-- <remove xpath="//lootgroup[@name='groupWeaponsT3_DW_C96M']/item[@name='IZYgunT4DualPistolC96M']" />
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT4DualPistolC96M']" />
+ -->
+<!-- Removed IZYgunT3SMGMP5Ksubmachinegun from loot. -->
+<!-- <remove xpath="//lootgroup[@name='groupWeaponsT3_SMG_MP5K']/item[@name='IZYgunT3SMGMP5Ksubmachinegun']" />
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT3SMGMP5Ksubmachinegun']" />
+ -->
+<!-- Removed IZYgunT4SMGColt9mmsubmachinegun from loot. -->
+<!-- <remove xpath="//lootgroup[@name='groupWeaponsT3_SMG_KOLTM9']/item[@name='IZYgunT4SMGColt9mmsubmachinegun']" />
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT4SMGColt9mmsubmachinegun']" /> -->
+<!-- End  of 2.6.1.5 -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** Added ammoShotgunShellPremium to loot. -->
+
+<append xpath="/lootcontainers/lootgroup[@name='groupShotgunShellSmall']">
+	<item name="ammoShotgunShellPremium" count="2,4" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupShotgunShellMedium']">
+	<item name="ammoShotgunShellPremium" count="4,6" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupShotgunShellLarge']">
+	<item name="ammoShotgunShellPremium" count="6,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
+</append>
+
+<!-- Start of 2.6.1.5 -->
+<!-- Reverted. -->
+
+<!-- Removed IZYgunT4TACshotgunM1014 from loot. -->
+<!-- <remove xpath="//lootgroup[@name='groupWeaponsT3_SHOTGUN_M1014']/item[@name='IZYgunT4TACshotgunM1014']" />
+<remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT4TACshotgunM1014']" /> -->
+
+<!-- End of 2.6.1.5 -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities. -->
+
+<!-- group556ammoSmall -->
+<remove xpath="/lootcontainers/lootgroup[@name='group556ammoSmall']/item[@name='ammo556mmBulletBall']" />
+
+<append xpath="/lootcontainers/lootgroup[@name='group556ammoSmall']">
+	<item name="ammo556mmBulletBall" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo556mmHIpower" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo556mmArmorPiercing" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</append>
+
+<!-- group556ammoMedium -->
+<remove xpath="/lootcontainers/lootgroup[@name='group556ammoMedium']/item[@name='ammo556mmBulletBall']" />
+
+<append xpath="/lootcontainers/lootgroup[@name='group556ammoMedium']">
+	<item name="ammo556mmBulletBall" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo556mmHIpower" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo556mmArmorPiercing" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</append>
+
+<!-- group556ammoLarge -->
+<remove xpath="/lootcontainers/lootgroup[@name='group556ammoLarge']/item[@name='ammo556mmBulletBall']" />
+
+<append xpath="/lootcontainers/lootgroup[@name='group556ammoLarge']">
+	<item name="ammo556mmBulletBall" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo556mmHIpower" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo556mmArmorPiercing" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</append>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities. -->
+
+<!-- group45ammoSmall -->
+<remove xpath="/lootcontainers/lootgroup[@name='group45ammoSmall']/item[@name='ammo45ACPBulletBall']" />
+
+<append xpath="/lootcontainers/lootgroup[@name='group45ammoSmall']">
+	<item name="ammo45ACPBulletBall" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo45ACPHighpower" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo45ACPArmorpiecing" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo45ACPEnhanced" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</append>
+
+<!-- group45ammoMedium -->
+<remove xpath="/lootcontainers/lootgroup[@name='group45ammoMedium']/item[@name='ammo45ACPBulletBall']" />
+
+<append xpath="/lootcontainers/lootgroup[@name='group45ammoMedium']">
+	<item name="ammo45ACPBulletBall" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo45ACPHighpower" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo45ACPArmorpiecing" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo45ACPEnhanced" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</append>
+
+<!-- group45ammoLarge -->
+<remove xpath="/lootcontainers/lootgroup[@name='group45ammoLarge']/item[@name='ammo45ACPBulletBall']" />
+
+<append xpath="/lootcontainers/lootgroup[@name='group45ammoLarge']">
+	<item name="ammo45ACPBulletBall" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo45ACPHighpower" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo45ACPArmorpiecing" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo45ACPEnhanced" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</append>
+<!-- End of 2.6.1.5 -->
+
+<!-- Start of 2.6.1.5 -->
+<!-- Reverted. -->
+<!-- Start of 2.6.1.4 -->
+<!-- Added missing IZYgunT1Pistol45M1917 entry to groupQuestWeaponsRangedT1. -->
+<!-- 	<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT1']">	
+		<item name="IZYgunT1Pistol45Type17C96"/>
+	</append> -->
+
+<!-- End of 2.6.1.4 -->
+<!-- End of 2.6.1.5 -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** Added ammo762mmExplosiveFragmentations to loot with a 0.001 loot_stage_count_mod value.-->
+
+<append xpath="/lootcontainers/lootgroup[@name='group762mmSmall']">
+	<item name="ammo762mmExplosiveFragmentations" count="5,7" loot_stage_count_mod="0.001" loot_prob_template="ProbT2Cap"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='group762mmMedium']">
+	<item name="ammo762mmExplosiveFragmentations" count="8,15" loot_stage_count_mod="0.001" loot_prob_template="ProbT2Cap"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='group762mmLarge']">
+	<!-- <item name="ammo762mmExplosiveFragmentations" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/> -->
+	<item name="ammo762mmExplosiveFragmentations" count="20,30" loot_stage_count_mod="0.001" loot_prob_template="ProbT2Cap"/>
+</append>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_44magnum -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+<!-- Reverted -->
+
+<!-- Start of 2.6.1.4 -->
+<!-- Added IZYgunT3PistolMagnumAutomag44 and IZYgunT4DualMagnumDesertEagles to loot. -->
+<!-- <insertAfter xpath="//lootgroup[@name='groupWeaponsT3_Gunslinger']">
+	<lootgroup name="groupWeaponsT3_IZYgunT3PistolMagnumAutomag44" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT3PistolMagnumAutomag44"/>
+	</lootgroup>
+	<lootgroup name="groupWeaponsT4_IZYgunT4DualMagnumDesertEagles" count="all" loot_quality_template="QLTemplateT3">
+		<item name="IZYgunT4DualMagnumDesertEagles"/>
+	</lootgroup>
+</insertAfter>
+<append xpath="//lootgroup[@name='groupWeaponsT3_Ranged']">	
+	<item group="groupWeaponsT3_IZYgunT3PistolMagnumAutomag44"/>
+	<item group="groupWeaponsT4_IZYgunT4DualMagnumDesertEagles"/>
+</append>
+<append xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']">	
+	<item name="IZYgunT3PistolMagnumAutomag44"/>
+	<item name="IZYgunT4DualMagnumDesertEagles"/>
+</append> -->
+<!-- End of 2.6.1.4 -->
+<!-- End of 2.6.1.5 -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- *** Added ammo25mm and ammoRocketRPG to loot.  -->
+
+<!-- Defined groupAmmoRocket25mm and groupAmmoRocketRPG loot groups. -->
+
+<!-- Defined as rocket group -->
+<insertAfter xpath="//lootgroup[@name='groupAmmoRocket']">
+	<lootgroup name="groupAmmoRocket25mm">
+		<item name="ammo25mmGrenadeTraining" count="2,4"/>
+		<item name="ammo25mmGrenadeHE" prob="0.8" count="1,3"/>
+		<item name="ammo25mmGrenadeFRAGS" prob="0.8" count="1,3"/>
+	</lootgroup>
+</insertAfter>
+
+<!-- Defined as ammo group -->
+<insertAfter xpath="//lootgroup[@name='groupShotgunShellLarge']">
+	<lootgroup name="groupAmmoRocket25mmLarge">
+		<item name="ammo25mmGrenadeTraining" count="2,4" loot_prob_template="ProbT1"/>
+		<item name="ammo25mmGrenadeHE" count="1,3" loot_prob_template="ProbT2Cap"/>
+		<item name="ammo25mmGrenadeFRAGS" count="1,3" loot_prob_template="ProbT2Cap"/>
+	</lootgroup>	
+</insertAfter>
+
+<!-- Defined as rocket group -->
+<insertAfter xpath="//lootgroup[@name='groupAmmoRocket']">
+	<lootgroup name="groupAmmoRocketRPG">
+		<item name="ammoRocketRPGTraning" prob="0.7" count="1,2"/>
+		<item name="ammoRocketRPGHE" prob="0.6" count="1,2"/>
+		<item name="ammoRocketRPGIncendiary" prob="0.5" count="1,2"/>
+	</lootgroup>
+</insertAfter>
+
+<!-- Defined as ammo group -->
+<insertAfter xpath="//lootgroup[@name='groupShotgunShellLarge']">
+	<lootgroup name="groupAmmoRocketRPGLarge">
+		<item name="ammoRocketRPGTraning" count="1,2" loot_prob_template="ProbT2Cap"/>
+		<item name="ammoRocketRPGHE" count="1,2" loot_prob_template="ProbT3"/>
+		<item name="ammoRocketRPGIncendiary" count="1,2" loot_prob_template="ProbT3"/>
+	</lootgroup>		
+</insertAfter>
+
+<!-- Add to groupAmmoLarge -->
+<append xpath="/lootcontainers/lootgroup[@name='groupAmmoLarge']">
+	<item group="groupAmmoRocket25mmLarge" loot_prob_template="ProbT2Cap"/>
+	<item group="groupAmmoRocketRPGLarge" loot_prob_template="ProbT3"/>
+</append>
+
+<!-- Added groupAmmoRocket25mm to groupWeaponsT2_Demolitionist -->
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Demolitionist']">
+	<item group="groupAmmoRocket25mm" prob="0.3" count="1,2" />
+	<item group="groupAmmoRocketRPG" prob="0.3" count="1,2" />
+</append>
+
+<!-- Added groupAmmoRocketRPG to groupWeaponsT3_Demolitionist -->
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Demolitionist' or @name='groupWeaponsT3_Demolitionist01']">
+	<item group="groupAmmoRocket25mm" prob="0.6" count="1,2" />
+	<item group="groupAmmoRocketRPG" prob="0.6" count="1,2" />	
+</append>
+
+<!-- End of 2.6.1.5 -->
+
+</if>
+</conditional>
+<!-- Start of 2.6.1.5 -->
+
+<!-- Added new probability templates by FNS.-->
+<!-- Probability templates -->
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="minisculeLowFLTRIGP">
+	<loot level="0,10" prob="0"/>
+	<loot level="11,999999" prob=".16"/>  
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="tinyLowFLTRIGP">
+	<loot level="0,20" prob="0"/>
+	<loot level="21,999999" prob=".12"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="laughablyLowFLTRIGP">
+	<loot level="0,50" prob="0"/>
+	<loot level="51,999999" prob=".08"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<insertBefore xpath="//lootprobtemplate[@name='veryLow']">
+	<lootprobtemplate name="stupidLowFLTRIGP">
+	<loot level="0,70" prob="0"/>
+	<loot level="71,999999" prob=".04"/> 
+	</lootprobtemplate>
+</insertBefore>	
+
+<!-- Added common lootgroups for Options/loot.xml -->
+<!-- Added common loot groups for common weapons.
+TODO: Check if append in parent works.
+  -->
+<!-- Single group for big containers -->
+
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item group="groupCommonSmallWeaponsFLTR"/>	
+		<item group="groupCommonMediumWeaponsFLTR"/>
+	</lootgroup>
+</prepend>
+
+<!-- Added groupCommonSmallWeaponsFLTR for small form-factorweapons that fit in smaller containers. -->
+
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonSmallWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="gunHandgunT1Pistol" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol45M1917" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1Pistol9Makarov" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="tinyLowFLTRIGP"/>
+	</lootgroup>
+</prepend>
+
+<!-- TEST
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonSmallWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="guaranteed"/>
+		<item name="meleeWpnKnucklesT1IronKnuckles" loot_prob_template="guaranteed"/>
+		<item name="gunHandgunT1Pistol" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol45M1917" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT1Pistol9Makarov" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="guaranteed"/>
+		<item name="gunHandgunT2Magnum44" loot_prob_template="guaranteed"/>
+		<item name="IZYgunT2Pistol45M1911A1" loot_prob_template="guaranteed"/>
+	</lootgroup>
+</prepend> -->
+
+<!-- Added groupCommonMediumWeaponsFLTR for medium form-factor weapons that fit in smaller containers. -->
+<prepend xpath="/lootcontainers">
+	<lootgroup name="groupCommonMediumWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item name="gunShotgunT1DoubleBarrel" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="IZYgunT1TradshotgunDoubleBarrelOverUnder" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1TACCompactshotgunSuperShortty" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="gunMGT1AK47" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="IZYgunT1ARCabineM608SurvivalRifle" loot_prob_template="minisculeLowFLTRIGP"/>	
+		<item name="gunRifleT1HuntingRifle" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="IZYgunT1SNIPERRIFLE762Mosinnagant" loot_prob_template="minisculeLowFLTRIGP"/>
+		<item name="gunShotgunT2PumpShotgun" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunMGT2TacticalAR"  loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="gunRifleT2LeverActionRifle" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2BattleRifleFNFALRifle" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2ARCabineCAR15" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2MarksManRifle762M1garandNavyconverted" loot_prob_template="tinyLowFLTRIGP"/>
+		<item name="IZYgunT2TradshotgunLeveractionShotgunModel1887" loot_prob_template="tinyLowFLTRIGP"/>
+	</lootgroup>
+</prepend>
+
+<!-- <insertAfter xpath="/lootcontainers">
+	<lootgroup name="groupCommonWeaponsFLTR" loot_quality_template="qualQ1Template">
+		<item group="groupCommonSmallWeaponsFLTR"/>	
+		<item group="groupCommonMediumWeaponsFLTR"/>
+	</lootgroup>
+</insertAfter> -->   
+
+<!-- End of 2.6.1.5 -->
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/loot.xml"/>
+	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
+</conditional>
+</RamblingMan>

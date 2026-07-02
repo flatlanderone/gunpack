@@ -1,0 +1,7 @@
+<RamblingMan>
+
+<append xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='ammopress']">
+	<crafting_category name="Rockets" icon="ui_game_symbol_explosion" display_name="lblCategoryAmmoPressRockets"/>
+</append>
+
+</RamblingMan>

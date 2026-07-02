@@ -1,0 +1,16 @@
+<RamblingMan>
+
+<!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
+
+<conditional>
+<if cond="game_version() >= version(1,3,0)">
+
+<!-- See buffs.xml -->
+<!-- Fixed mag dump with certain weapons  -->
+
+<!-- <remove xpath="/item_modifiers/item_modifier[@name='modGunTriggerGroupAutomatic' or @name='modGunTriggerGroupBurst3']/effect_group/passive_effect[@name='BurstRoundCount']"/> -->
+
+
+</if>
+</conditional>
+</RamblingMan>

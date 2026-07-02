@@ -1,0 +1,96 @@
+<RamblingMan>
+
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/traders.xml"/>
+
+<!-- Add meleeToolAxeT3ChainsawParts to trader inventory -->
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
+	<item name="meleeToolAxeT3ChainsawParts" count="1,3"/>
+</append>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- *** IZY_RMP_Miscpack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+<!-- Add IZYgunTminus1MusketM1777Rifle to trader inventory -->
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']"><item name="IZYgunTminus1MusketM1777Rifle" quality="2,5"/></append>
+
+<!-- Start of 2.6.1.4 -->
+
+<!-- Removed ammoMuzzleloaderscattershot from trader inventory. -->
+<!-- <remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='ammoMuzzleloaderscattershot']"/> -->
+
+<!-- End of 2.6.1.4 -->
+
+<!-- 2.6.1.1 -->
+<!-- Added traderstage_template ammoTier0 to fix trader inventory crash due to Exception: TraderStageTemplate ammoTier0 for item: Muzzleloader Ammo does not exist. Bug:https://github.com/flatlanderone/gunpack/issues/9 (ammoMuzzleloadershot) reported by Black Wolf. -->
+
+<insertBefore xpath="/traders/traderstage_templates/traderstage_template[@name='ammoTier1']">
+	<traderstage_template name="ammoTier0"> <!-- Flintlock ammo from IZY 5.1.3 -->
+		<entry min="1" max="999999" quality="0"/>
+	</traderstage_template>
+</insertBefore>
+<!-- End of 2.6.1.1 -->
+</if>
+</conditional>
+
+<!-- 2.6.1.0 -->
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- Removed IZYgunT1LRLongRifleM16a1 from trader inventory. -->
+<remove xpath="//trader_item_group[@name='groupRangedAll']/item[@name='IZYgunT1LRLongRifleM16a1']" />
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<!-- No changes. -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- No changes. -->
+
+</if>
+</conditional>
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/traders.xml"/>
+	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
+</conditional>
+
+</RamblingMan>
