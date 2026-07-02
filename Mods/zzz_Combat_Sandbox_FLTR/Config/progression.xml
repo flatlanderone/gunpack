@@ -1,7 +1,7 @@
 <RamblingMan>
-<!-- Override for Survival Sandbox v3 -->
+<!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+<if cond="game_version() >= version(1,3,0)">
 
 <!-- *** Vanilla fixes -->
 
@@ -13,8 +13,8 @@
 
 <!-- *** IZY_RMP_Demopack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)"> -->
 
 <!-- Note: IZYgunT2LGLChinalakeGrenadeLauncher unlocks at 45.  -->
 
@@ -24,13 +24,13 @@ IZYgunT3RocketLauncherRPG7 -->
 <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='IZYgunT3LGLXM25']/@level">50,100</set>
 <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @tags='IZYgunT3RocketLauncherRPG7']/@level">50,100</set>
 	
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_SG -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
 
 <!-- Removed IZYgunT4TACshotgunM1014 from progression display. -->
 <remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingShotguns']/display_entry[@item='gunShotgunT3AutoShotgun']/unlock_entry[@item='IZYgunT4TACshotgunM1014']" />
@@ -52,23 +52,23 @@ IZYgunT3RocketLauncherRPG7 -->
 </append> 
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_45ACP -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)"> -->
 
 <!-- No changes. -->
 
-</if>
-</conditional>	
+<!-- </if>
+</conditional>	 -->
 
 <!-- *** IZY_RMP_556pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)"> -->
 
 <!-- Removed IZYgunT1LRLongRifleM16a1 from progression display. -->
 <remove xpath="/progression/crafting_skills/crafting_skill[@name='craftingMachineGuns']/display_entry[@item='gunMGT1AK47']/unlock_entry[@item='IZYgunT1LRLongRifleM16a1']" />
@@ -99,13 +99,13 @@ IZYgunT3RocketLauncherRPG7 -->
 	</effect_group>
 </append> 
 
-</if>
-</conditional>	
+<!-- </if>
+</conditional>	 -->
 
 <!-- *** IZY_RMP_762pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -132,8 +132,8 @@ IZYgunT3RocketLauncherRPG7 -->
 	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="ammo762mmExplosiveFragmentationsBundle"/>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** Gears Options -->
 

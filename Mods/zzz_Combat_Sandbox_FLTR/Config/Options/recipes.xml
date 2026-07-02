@@ -708,8 +708,10 @@ starts-with(@name, 'modMeleeWeighted')]"/>
 </append>
 <!-- *** IGP ammo Types -->
 <!-- 5.56mmx45 -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack')">
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack')"> -->
+
 <append xpath="/recipes">
 	<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
 		<ingredient name="ammo556mmBulletBall" count="100"/>
@@ -723,11 +725,11 @@ starts-with(@name, 'modMeleeWeighted')]"/>
 		<ingredient name="ammo556mmArmorPiercing" count="100"/>
 	</recipe>
 </append>	
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 <!-- ***.45 ACP -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP')"> -->
 <append xpath="/recipes">
 	<recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
 		<ingredient name="ammo45ACPBulletBall" count="100"/>
@@ -745,29 +747,29 @@ starts-with(@name, 'modMeleeWeighted')]"/>
 		<ingredient name="ammo45ACPEnhanced" count="100"/>
 	</recipe>
 </append>
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** ammoShotgunShellPremiumBundle  -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG')"> -->
 <append xpath="/recipes">
 	<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
 		<ingredient name="ammoShotgunShellPremium" count="100"/>
 	</recipe>
 </append>	
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 <!-- ***ammo762mmExplosiveFragmentationsBundle -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack')"> -->
 <append xpath="/recipes">
 	<recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
 		<ingredient name="ammo762mmExplosiveFragmentations" count="100"/>
 	</recipe>
 </append>
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 </if>
 </conditional>

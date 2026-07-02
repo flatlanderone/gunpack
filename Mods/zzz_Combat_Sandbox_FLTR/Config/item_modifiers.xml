@@ -1,7 +1,7 @@
 <RamblingMan>
-<!-- Override for Survival Sandbox v3 -->
+<!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+<if cond="game_version() >= version(1,3,0)">
 
 <!-- *** Includes -->
 
@@ -41,16 +41,16 @@ Reason: White square in the place of the red dot https://github.com/flatlanderon
 
 <!-- *** IZY_MMVMV2 -->
 
-<conditional>
-<if cond="mod_loaded('IZY_MMVMV2') and mod_version('IZY_MMVMV2') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_MMVMV2') and mod_version('IZY_MMVMV2') = version(1,1,0,4)"> -->
 
 <!-- Enabled localization for IZYmodPistolHoldstyle01Desc and IZYmodPistolHoldstyle02Desc. -->
 <set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle01']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle01Desc</set>
 
 <set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle02']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle02Desc</set>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** Gears Options -->
 

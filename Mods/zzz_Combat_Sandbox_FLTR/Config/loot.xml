@@ -1,8 +1,8 @@
 <RamblingMan>
 
-<!-- Override for Survival Sandbox v3 -->
+<!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+<if cond="game_version() >= version(1,3,0)">
 
 <!-- *** Includes -->
 
@@ -768,6 +768,7 @@ IZYMeleeT4SpearPoleAxe
 
 <!-- *** Betterloot -->
 
+<!-- TODO check -->
 <conditional>
 <if cond="mod_loaded('BetterlootIzy') and mod_version('BetterlootIzy') = version(1,1)">
 
@@ -779,21 +780,21 @@ IZYMeleeT4SpearPoleAxe
 </conditional>
 
 <!-- *** IZY_RMP_Miscpack -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
 <!-- Added probability attribute for ammoMuzzleloadershot. -->
 <setattribute xpath="/lootcontainers/lootgroup[@name='groupMusketammoSmall']/item[@name='ammoMuzzleloadershot']" name="loot_prob_template">ProbT0</setattribute>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_Tech -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.4 -->
 <!-- Added IZYgunT3TechnicalNailmachinegun to loot groups. -->
@@ -808,13 +809,13 @@ IZYMeleeT4SpearPoleAxe
 
 <!-- End of 2.6.1.4 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_HVW -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 <!-- 
@@ -828,13 +829,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_melee -->
 
-<conditional>
-<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)"> -->
 
 <!-- 2.6.1.4 -->
 <!-- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2. -->
@@ -846,13 +847,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 	<item name="IZYMeleeT4BladeKatana"/>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_9mmVAL -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 <!-- Reverted. -->
@@ -894,13 +895,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 <!-- <remove xpath="//lootgroup[@name='groupWeaponsT3_SMG_KOLTM9']/item[@name='IZYgunT4SMGColt9mmsubmachinegun']" />
 <remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT4SMGColt9mmsubmachinegun']" /> -->
 <!-- End  of 2.6.1.5 -->
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_SG -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -926,13 +927,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 <remove xpath="//lootgroup[@name='groupQuestWeaponsRangedT3']/item[@name='IZYgunT4TACshotgunM1014']" /> -->
 
 <!-- End of 2.6.1.5 -->
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_556pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -965,13 +966,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 	<item name="ammo556mmArmorPiercing" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_45ACP -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)"> -->
 <!-- Start of 2.6.1.5 -->
 
 <!-- *** Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities. -->
@@ -1018,13 +1019,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 <!-- End of 2.6.1.4 -->
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_762pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -1043,13 +1044,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 	<item name="ammo762mmExplosiveFragmentations" count="20,30" loot_stage_count_mod="0.001" loot_prob_template="ProbT2Cap"/>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_44magnum -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 <!-- Reverted -->
@@ -1074,13 +1075,13 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 </append> -->
 <!-- End of 2.6.1.4 -->
 <!-- End of 2.6.1.5 -->
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_Demopack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -1145,8 +1146,8 @@ TODO: Added IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture and IZYAmmoHeavy
 
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 <!-- Start of 2.6.1.5 -->
 
 <!-- Added new probability templates by FNS.-->

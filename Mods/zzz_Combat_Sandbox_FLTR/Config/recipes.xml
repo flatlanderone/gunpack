@@ -1,8 +1,8 @@
 <RamblingMan>
 
-<!-- Override for Survival Sandbox v3 -->
+<!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+<if cond="game_version() >= version(1,3,0)">
 
 <!-- *** Includes -->
 
@@ -298,8 +298,8 @@ starts-with(@name, 'meleeWpnSpearT3')]" name="craft_time">240</setattribute>
 <!-- End of 2.6.1.5 -->
 
 <!-- *** IZY_RMP_44magnum -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -313,12 +313,12 @@ starts-with(@name, 'meleeWpnSpearT3')]" name="craft_time">240</setattribute>
 
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_Miscpack -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)"> -->
 
 <!-- Added 2.6.1.1 for 5.1.3 2026-04-15 -->
 
@@ -361,9 +361,11 @@ Check bonus from perkAdvancedEngineering. -->
 <set xpath="/recipes/recipe[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/passive_effect[@tags='resourceLegendaryParts']/@value">1,5</set>
 <insertafter xpath="/recipes/recipe[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/ingredient[@name='resourceDuctTape']"><ingredient name="resourceLeather" count="35"/></insertafter>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
+
+<!-- TODO check -->
 <!-- *** zzz_Ammo_Press_Add-On_Compatibility_Patch -->
 <conditional>
 <if cond="mod_loaded('zzz_Ammo_Press_Add-On_Compatibility_Patch') and mod_version('zzz_Ammo_Press_Add-On_Compatibility_Patch') = version(2,5,2)">
@@ -377,8 +379,8 @@ Check bonus from perkAdvancedEngineering. -->
 
 <!-- *** IZY_RMP_Demopack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)"> -->
 
 <!-- Made the following grenade recipes learnable:
 ammo25mmGrenadeTraining
@@ -391,13 +393,13 @@ ammoRocketRPGIncendiary
 
 <set xpath="/recipes/recipe[@name='ammo25mmGrenadeTraining' or @name='ammo25mmGrenadeHE'or @name='ammo25mmGrenadeFRAGS'or @name='ammoRocketRPGTraning'or @name='ammoRocketRPGHE'or @name='ammoRocketRPGIncendiary']/@tags">learnable,workbenchCrafting</set>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_9mmVAL -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)"> -->
 
 <!-- Removed legendary part requirement from level 6 IZYgunT0SMGPIPEsubmachinegun recipe.  -->
 <remove xpath="/recipes/recipe[@name='IZYgunT0SMGPIPEsubmachinegun']/ingredient[@name='resourceLegendaryParts']" />
@@ -419,12 +421,12 @@ IZYgunT4SMGCZScorpionEVO3
 
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_SG -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -456,12 +458,12 @@ IZYgunT4SMGCZScorpionEVO3
 
 <!-- Reverted 2.6.1.0 removal of IZYgunT4TACshotgunM1014 recipe as this has been implemented in 5.1.3. -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_45ACP -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)"> -->
 
 <!-- Made HP and AP .45 ACP recipes learnable. -->
 <set xpath="/recipes/recipe[@name='ammo45ACPHighpower' or @name='ammo45ACPArmorpiecing']/@tags">learnable,workbenchCrafting</set>
@@ -486,13 +488,13 @@ IZYgunT4SMGCZScorpionEVO3
 
 <!-- End of 2.6.1.5 -->
 
-</if>
-</conditional>	
+<!-- </if>
+</conditional>	 -->
 
 <!-- *** IZY_RMP_556pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)"> -->
 
 <!-- 5.56 ammp  -->
 
@@ -544,13 +546,13 @@ IZYgunT4SMGCZScorpionEVO3
 <insertafter xpath="/recipes/recipe[@name='IZYgunT3MarksManRifle556M16A2DMR']/ingredient[@name='resourceForgedSteel']"> <ingredient name="resourceDuctTape" count="13"/></insertafter>
 <set xpath="/recipes/recipe[@name='IZYgunT3MarksManRifle556M16A2DMR']/effect_group/passive_effect[contains(@tags, 'gunRifleT1HuntingRifleParts')]/@tags">gunMGT1AK47Parts,resourceDuctTape</set>
 
-</if>
-</conditional>	
+<!-- </if>
+</conditional>	 -->
 
 <!-- *** IZY_RMP_762pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">	
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">	 -->
 
 <!-- Added ammo762mmExplosiveFragmentations recipe. Borrowed from zzz_Ammo_Press_Add-On_Compatibility_Patch -->
 <append xpath="/recipes">		
@@ -569,8 +571,8 @@ IZYgunT4SMGCZScorpionEVO3
 <!-- End of 2.6.1.5 -->	
 </append>
 
-</if>
-</conditional>	
+<!-- </if>
+</conditional>	 -->
 
 <!-- *** Gears Options -->
 

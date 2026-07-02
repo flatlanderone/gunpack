@@ -11,8 +11,8 @@ Credits:
 -->
 
 <!-- *** IZY_RMP_556pack -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">	
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">	 -->
 
 <append xpath="/items/item[@name='ammo556mmBulletBall']">    
 	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
@@ -38,13 +38,13 @@ Credits:
 	<property name="Group" value="Ammo/Weapons,Ammo,APAmmo"/>
 </append>
 
-</if>
-</conditional>		
+<!-- </if>
+</conditional>	 -->	
 
 <!-- *** IZY_RMP_45ACP -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)"> -->
 
 <append xpath="/items/item[@name='ammo45ACPBulletBall']">    
 	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
@@ -78,13 +78,13 @@ Credits:
 	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 	
 <!-- *** IZY_RMP_SG -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
  
 <append xpath="/items/item[@name='ammoShotgunShellPremium']">    
 	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
@@ -119,13 +119,13 @@ Credits:
 </item> -->
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 	
 <!-- *** IZY_RMP_762pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)"> -->
 	
 <append xpath="/items/item[@name='ammo762mmExplosiveFragmentations']">    
 	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
@@ -145,8 +145,8 @@ Credits:
 </item> -->
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- Vanilla -->
 
@@ -159,8 +159,9 @@ Credits:
 
 <!-- *** IZY_RMP_Demopack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)"> -->
+
 <append xpath="/items/item[@name='ammoRocketRPGTraning' or 
 @name='ammoRocketRPGHE' or 
 @name='ammoRocketRPGIncendiary' or 
@@ -170,7 +171,7 @@ Credits:
         <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,Rockets"/>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 </RamblingMan>

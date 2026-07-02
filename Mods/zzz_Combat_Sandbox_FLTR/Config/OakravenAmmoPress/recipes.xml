@@ -98,8 +98,9 @@ ammoRocketHE -->
 <!-- *** 2. Add IGP ammo recipes to the AP-->
 
 <!-- *** IZY_RMP_556pack -->
-<conditional>
+<!-- <conditional>
 <if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+ -->
 <append xpath="/recipes">
 
 <!-- Added Oakraven's ammo press recipes for all 5.56mm ammo. -->
@@ -149,13 +150,14 @@ ammoRocketHE -->
 	<ingredient name="resourceBulletCasing" count="60"/>
 </recipe>
 </append>
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_SG  -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
+
 <append xpath="/recipes">
 
 <recipe name="ammoShotgunShellPremium" count="1" craft_area="ammopress" tags="learnable,workbenchCrafting">
@@ -183,13 +185,15 @@ ammoRocketHE -->
 </recipe>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_45ACP  -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)"> -->
+
+
 <!-- Added Oakraven's ammo press recipes for all .45ACP ammo. -->
 
 <append xpath="/recipes">
@@ -250,12 +254,14 @@ ammoRocketHE -->
 	<ingredient name="resourceBulletCasing" count="60"/>
 </recipe>
 </append>
-</if>
-</conditional>
+
+
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_762pack -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)"> -->
 
 <append xpath="/recipes">	
 
@@ -272,8 +278,8 @@ ammoRocketHE -->
 </recipe>
 
 <!-- *** IZY_RMP_Demopack -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Demopack')">		
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack')">	 -->	
 
 <!-- ammo25mmGrenade -->
 <recipe name="ammo25mmGrenadeTraining" count="1" craft_time="10" craft_area="ammopress" tags="learnable,workbenchCrafting">
@@ -343,12 +349,12 @@ ammoRocketHE -->
 	<ingredient name="ammoGasCan" count="75"/>
 </recipe>
 
-</if>
-</conditional>		
+<!-- </if>
+</conditional>	 -->	
 
 </append>
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** 3. Add reboxing recipes -->
 
@@ -413,8 +419,8 @@ ammoRocketHE -->
 
 <!-- ***IGP ammo types -->
 <!-- ***5.56mmx45*** -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack')"> -->
 
 <recipe name="ammo556mmBulletBallBundle" count="1" craft_time="60" craft_area="ammopress" tags="learnable,workbenchCrafting">
 	<ingredient name="ammo556mmBulletBall" count="100"/>
@@ -427,12 +433,12 @@ ammoRocketHE -->
 <recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="90" craft_area="ammopress" tags="learnable,workbenchCrafting">
 	<ingredient name="ammo556mmArmorPiercing" count="100"/>
 </recipe>
-</if>
-</conditional>	
+<!-- </if>
+</conditional>	 -->
 
 <!-- ***.45 ACP -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP')"> -->
 		
 <recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="60" craft_area="ammopress" tags="learnable,workbenchCrafting">
 	<ingredient name="ammo45ACPBulletBall" count="100"/>
@@ -450,30 +456,30 @@ ammoRocketHE -->
 	<ingredient name="ammo45ACPEnhanced" count="100"/>
 </recipe>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** ammoShotgunShellPremiumBundle  -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG')"> -->
 
 <recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="60" craft_area="ammopress" tags="learnable,workbenchCrafting">
 	<ingredient name="ammoShotgunShellPremium" count="100"/>
 </recipe>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** ammo762mmExplosiveFragmentationsBundle -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack')">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack')"> -->
 
 <recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="105" craft_area="ammopress" tags="learnable,workbenchCrafting">
 	<ingredient name="ammo762mmExplosiveFragmentations" count="100"/>
 </recipe>
 	
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 </append>	
 </if>
 </conditional>

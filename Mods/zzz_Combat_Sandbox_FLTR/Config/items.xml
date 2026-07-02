@@ -1,8 +1,8 @@
 <RamblingMan>
 
-<!-- Override for Survival Sandbox v3 -->
+<!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+<if cond="game_version() >= version(1,3,0)">
 
 <!-- *** Includes -->
 
@@ -128,17 +128,17 @@ gunShotgunT3AutoShotgun
 <!-- End of 2.6.1.3 -->
 
 <!-- *** IZY_RMP_44magnum -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)"> -->
 
 <!-- Add weapons to loot. -->
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_Tech -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)"> -->
 
 <!-- 2.6.1.2 -->
 
@@ -147,13 +147,13 @@ gunShotgunT3AutoShotgun
 
 <!-- End of 2.6.1.2 -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_melee -->
 
-<conditional>
-<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.3 -->
 <!-- Removed the ability to kick while crouching for the following weapons: 
@@ -203,13 +203,13 @@ gunShotgunT3AutoShotgun
 	</effect_group>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_Miscpack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.3 -->
 
@@ -272,23 +272,23 @@ ammoCrossbowLightBoltSteelAP
 	<property name="CreativeMode" value="Dev"/>
 </append> 
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_HVW -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)"> -->
 
 <!-- See Localization.txt for changes. -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_Demopack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)"> -->
 
 <!-- 25mm grenades (ammo25mmGrenadeTraining, ammo25mmGrenadeHE, ammo25mmGrenadeFRAGS) have now the correct unlock information (craftingExplosives). -->
 
@@ -308,14 +308,16 @@ ammoCrossbowLightBoltSteelAP
 @name='ammo25mmGrenadeHE']/property[@name='Tags']/@value" delim="," op="add">explosivesSkill</csv>
 
 <!-- End of 2.6.1.5 -->
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_VRP -->
 
 <!-- Start of 2.6.1.5 -->
-<conditional>
-<if cond="mod_loaded('IZY_VRP') == false">
+
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_VRP') == false"> -->
 
 <!-- Added kick effect for meleeToolAxeT2SteelAxe and meleeToolPickT2SteelPickaxe in case IZY_VRP is not loaded. -->
 <append xpath="/items/item[@name='meleeToolAxeT2SteelAxe' or 
@@ -345,13 +347,13 @@ ammoCrossbowLightBoltSteelAP
 	</effect_group>
 </append>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 <!-- End of 2.6.1.5 -->
 
-<conditional>
+<!-- <conditional>
 <if cond="mod_loaded('IZY_VRP') and mod_version('IZY_VRP') = version(1,1,0,4)">
-
+ -->
 <!-- Start of 2.6.1.3 -->
 
 <!-- 
@@ -495,13 +497,13 @@ gunMGT3M60  -->
 
 <set xpath="items/item[@name='gunRifleT1HuntingRifle']/property[@name='DisplayType']/@value">rangedGun</set>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_9mmVAL -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)"> -->
 
 <!-- 2.6.1.2 -->
 
@@ -515,13 +517,13 @@ gunMGT3M60  -->
 
 <!-- IZYgunT0SMGPIPEsubmachinegun localization now cotrrectly shows Material as Scrap Iron, not Handgun Parts. -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_SG -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.5 -->
 
@@ -601,13 +603,13 @@ IZYgunT1TACCompactshotgunSuperShortty
  
 <csv xpath="/items/item[@name='IZYgunT3TradshotgunTrenchGunM1897' or @name='IZYgunT4TradshotgunBrowningAuto5' or @name='IZYgunT1TACCompactshotgunSuperShortty']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunShellPremium</csv>
  
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_556pack -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)"> -->
 
 <!-- 2.6.1.3 -->
 
@@ -677,13 +679,13 @@ IZYgunT4MarksManRifle556SSMAR15
 
 <set xpath="items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or @name='IZYgunT3MarksManRifle556M16A2DMR' or @name='IZYgunT4MarksManRifle556SSMAR15']/property[@name='DisplayType']/@value">rangedGun</set>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_45ACP -->
 
-<conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.4 -->
 <!-- Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick. -->
@@ -765,12 +767,12 @@ IZYgunT4MarksManRifle556SSMAR15
 
 <set xpath="items/item[@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or @name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@name='DisplayType']/@value">rangedGun</set>
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** IZY_RMP_762pack -->
-<conditional>
-<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)"> -->
 
 <!-- Start of 2.6.1.3 -->
 
@@ -857,8 +859,8 @@ IZYgunT2MarksManRifle762M1garandNavyconverted
 IZYgunT3MarksManRifle762HKPSG1 -->
 <set xpath="items/item[@name='IZYgunT4MarksManRifleM110SASS' or @name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or @name='IZYgunT4MarksManRifle762SVUprototypeRifle' or @name='IZYgunT1SNIPERRIFLE762Mosinnagant' or @name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or @name='IZYgunT2MarksManRifle762M1garandNavyconverted' or @name='IZYgunT3MarksManRifle762HKPSG1']/property[@name='DisplayType']/@value">rangedGun</set>
  
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** Gears Options -->
 
