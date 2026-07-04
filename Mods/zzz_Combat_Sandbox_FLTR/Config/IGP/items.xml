@@ -260,10 +260,15 @@ Too small effect? -->
 
 <!-- *** 2. Add new stats block -->
 
-<!-- *** 2.1 Multishot Pistols, revolvers, SMGs, pump-action shotguns and autoshotguns -->
+<!-- *** 2.1 Multishot Pistols, revolvers, SMGs, pump-action shotguns and autoshotguns 
+EXCLUDED
+IZYgunT0PistolLiberatorImprovisedPistol
+
+TO TEST SHORTY -->
 <!-- 
 CHECK SHORTY
 
+VANILLA
 All gunslinger weapons
 Boomstick weapons: pump-action shotguns and autoshotguns.
 
@@ -275,8 +280,39 @@ gunHandgunT3DesertVulture
 gunShotgunT2PumpShotgun
 gunShotgunT3AutoShotgun -->
 
-<append xpath="/items/item[]">
-	<stats>
+
+
+<!-- *** A .gunslinger_and_boomstick_default_stat_block -->
+
+<!-- *** A1. All gunslinger weapons 
+except 
+IZYgunT0PistolLiberatorImprovisedPistol see 
+IZYgunT1Pistol45M1917
+IZYgunT1DualPistolCOLTnavyRevolver
+ -->
+
+<append xpath="/items/item[@name='IZYgunT1Pistol45Type17C96' or 
+@name='IZYgunT2Pistol45M1911A1' or 
+@name='IZYgunT3Pistol45USP45' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT2DualPistols45M1911A1' or 
+@name='IZYgunT245SMGM3Greasegun' or 
+@name='IZYgunT345SMGM1thompson' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT1Pistol9Makarov' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT1SMGTec9submachinegun' or 
+@name='IZYgunT2SMGUZIsubmachinegun' or 
+@name='IZYgunT3SMGMP9submachinegun' or 
+@name='IZYgunT4SMGCZScorpionEVO3' or 
+@name='IZYgunT2DualPistolM9bs' or 
+@name='IZYgunT3DualPistolGlock18C' or 
+@name='IZYgunT4DualPistolMP9s' or 
+@name='IZYgunT3PistolMagnumAutomag44' or 
+@name='IZYgunT4DualMagnumDesertEagles']">
+	<stats name="gunslinger_and_boomstick_default_stat_block">
 		<!-- Base_Random_Roll -->
 		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
 		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
@@ -328,29 +364,396 @@ gunShotgunT3AutoShotgun -->
 	</stats>
 </append>
 
-<!-- *** 2.2 Multishot Pistols, revolvers, SMGs, pump-action shotguns and autoshotguns -->
-<!-- 
-CHECK SHORTY
 
-Single- and double- barrel shotguns (limited mag size)
+<!-- *** A2. Boomstick weapons 
+
+VANILLA:
+gunShotgunT2PumpShotgun
+gunShotgunT3AutoShotgun
+
+IZY:
+IZYgunT2TradshotgunLeveractionShotgunModel1887
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT3TACshotgunSPAS12G
+
+except
+IZYgunT1TradshotgunDoubleBarrelOverUnder
+IZYgunT1TACCompactshotgunSuperShortty
+ -->
+
+<append xpath="/items/item[@name='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@name='IZYgunT3TradshotgunTrenchGunM1897' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYgunT3TACshotgunSPAS12G']">
+	<stats name="gunslinger_and_boomstick_default_stat_block">
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
+
+<!-- *** B. gunslinger_single_shot_stat_block_FLTR 
+IZYgunT0PistolLiberatorImprovisedPistol
+
+Removed:
+ - MagazineSize
+ - RoundsPerMinute
+ -->
+
+<append xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']">
+	<stats name="gunslinger_single_shot_stat_block_FLTR">
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
+
+
+
+<!-- *** C. gunslinger_revolver_stat_block_FLTR 
+
+VANILLA
+gunHandgunT0PipePistol
+gunHandgunT2Magnum44
+
+IZY: 
+IZYgunT1Pistol45M1917
+IZYgunT1DualPistolCOLTnavyRevolver -->
+
+<!-- Vanilla fix -->
+<remove xpath="/items/item[@name='gunHandgunT0PipePistol' or @name='gunHandgunT2Magnum44']/stats/stat[@name='MagazineSize']"/>
+
+<!-- IZY stat block -->
+<append xpath="/items/item[@name='IZYgunT1Pistol45M1917' or @name='IZYgunT1DualPistolCOLTnavyRevolver']">
+	<stats name="gunslinger_revolver_stat_block_FLTR">
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
+
+
+
+
+<!-- *** D. boomstick_limited_mag_size_stat_block
+
+Single- and double- barrel shotguns.
+Compact pump shorguns.
+
+VANILLA:
 gunShotgunT0PipeShotgun
-gunShotgunT1DoubleBarrel -->
+gunShotgunT1DoubleBarrel
 
-<!-- *** 2.3 One-shot rifles -->
-<!-- One-shot rifles
+IZY: 
+IZYgunT1TradshotgunDoubleBarrelOverUnder 
+IZYgunT1TACCompactshotgunSuperShortty
+
+-->
+<append xpath="/items/item[@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or @name='IZYgunT1TACCompactshotgunSuperShortty']">
+	<stats name="boomstick_limited_mag_size_stat_block">
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.04,.05"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
+
+
+<!-- *** D. deadeye_limited_mag_size_stat_block
+
+VANILLA:
 gunRifleT0PipeRifle
-gunRifleT1HuntingRifle -->
+gunRifleT1HuntingRifle 
 
+IZY:
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunTminus1MusketM1777Rifle
 
-<!-- *** 2.4 Other rifle and machine guns -->
+-->
+<append xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or @name='IZYgunTminus1MusketM1777Rifle']">
+	<stats name="deadeye_limited_mag_size_stat_block">
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
 
-<!-- Other rifles and machine guns
+<!-- *** E. deadeye_machine_gunner_default_stat_block
+
+VANILLA:
 gunRifleT2LeverActionRifle
 gunRifleT3SniperRifle
 gunMGT0PipeMachineGun
 gunMGT1AK47
 gunMGT2TacticalAR
-gunMGT3M60 -->
+gunMGT3M60 
+
+IZY
+@name='IZYgunT3MarksManRifle556M16A2DMR' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@name='IZYgunT3MarksManRifle762HKPSG1' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT2ARSTG44N' or 
+@name='IZYgunT3ARAKM' or 
+@name='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@name='IZYgunT2BattleRifleFNFALRifle' or 
+@name='IZYgunT3BattleRifleHKG3' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT2LMGlightmachinegunRPD' or 
+@name='IZYgunT4LMGlightmachinegunMG34R' or 
+@name='IZYgunT5HeavyWeaponM134MinigunGatling' -->
+
+<append xpath="/items/item[@name='IZYgunT3MarksManRifle556M16A2DMR' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine' or 
+@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@name='IZYgunT3MarksManRifle762HKPSG1' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT2ARSTG44N' or 
+@name='IZYgunT3ARAKM' or 
+@name='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@name='IZYgunT2BattleRifleFNFALRifle' or 
+@name='IZYgunT3BattleRifleHKG3' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT2LMGlightmachinegunRPD' or 
+@name='IZYgunT4LMGlightmachinegunMG34R' or 
+@name='IZYgunT5HeavyWeaponM134MinigunGatling']">
+	<stats name="deadeye_machine_gunner_default_stat_block">
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.2,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+	
+	
+	
+</append>
+
+
+
 
 <!-- *** 2.5 Launchers -->
 <!-- *** 2.6 Melee -->
