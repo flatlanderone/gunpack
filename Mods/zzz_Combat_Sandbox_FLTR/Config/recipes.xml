@@ -10,6 +10,11 @@
 
 <include filename="Base/recipes.xml"/>
 
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<!-- Moved to the end of the file. -->
+<!-- <include filename="IGP/recipes.xml"/> -->
+
 <!-- *** V2_OakravenAmmoPress recipes -->
 <conditional>
 <if cond="mod_loaded('V2_OakravenAmmoPress')">
@@ -573,6 +578,12 @@ IZYgunT4SMGCZScorpionEVO3
 
 <!-- </if>
 </conditional>	 -->
+
+
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<!-- Moved to the end of the file. -->
+<include filename="IGP/recipes.xml"/>
 
 <!-- *** Gears Options -->
 

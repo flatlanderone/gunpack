@@ -1,5 +1,23 @@
 <RamblingMan>
 
-<!-- IGP edits -->
+<!-- *** Normalized Craft Times  -->
+
+<!-- *** IZY ammo, workbench recipes. 
+See Config\OakravenAmmoPress\recipes.xml for AmmoPress recipes. -->
+
+<!-- Regular ammo  -->
+<setattribute xpath="/recipes/recipe[(@name='ammo45ACPBulletBall' or @name='ammo556mmBulletBall') and @craft_area='workbench']" name="craft_time">2.4</setattribute>
+<!-- HP ammo  -->
+<setattribute xpath="/recipes/recipe[(@name='ammo45ACPHighpower' or @name='ammo556mmHIpower') and @craft_area='workbench']" name="craft_time">3.6</setattribute>
+<!-- AP ammo  -->
+<setattribute xpath="/recipes/recipe[(@name='ammo45ACPArmorpiecing' or @name='ammo556mmArmorPiercing') and @craft_area='workbench']" name="craft_time">3.6</setattribute>
+<!-- Special ammo -->
+<setattribute xpath="/recipes/recipe[@name='ammo45ACPEnhanced' and @craft_area='workbench']" name="craft_time">4.2</setattribute>
+<setattribute xpath="/recipes/recipe[@name='ammo762mmExplosiveFragmentations' and @craft_area='workbench']" name="craft_time">4.2</setattribute>
+
+<!-- ammoCrossbowLightBolt -->
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltStone' and @craft_area='workbench']" name="craft_time">1.4</setattribute>
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltIron' and @craft_area='workbench']" name="craft_time">1.4</setattribute>
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltSteelAP' and @craft_area='workbench']" name="craft_time">2.4</setattribute>
 
 </RamblingMan>

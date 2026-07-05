@@ -10,6 +10,9 @@
 
 <!-- <remove xpath="/item_modifiers/item_modifier[@name='modGunTriggerGroupAutomatic' or @name='modGunTriggerGroupBurst3']/effect_group/passive_effect[@name='BurstRoundCount']"/> -->
 
+<!-- Reimplemented ShortBarrelmod for modShotgunSawedOffBarrel -->
+
+<csv xpath="/item_modifiers/item_modifier[@name='modShotgunSawedOffBarrel']/@installable_tags" delim="," op="add">ShortBarrelmod</csv>
 
 </if>
 </conditional>
