@@ -220,6 +220,24 @@ Too small effect? -->
 		</property>
 </append>
 
+<!-- ammo25mmGrenadeHE -->
+<append xpath="/items/item[@name='ammo25mmGrenadeHE']/property[@class='Action1']">
+		<property class="Explosion">
+			<property name="BlockDamage" value="200"/>
+			<property name="EntityDamage" value="350"/>	
+			<!-- <property name="ParticleIndex" value="#@modfolder:Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_LGL_Effect_25mmHE.Prefab"/> -->
+<!-- HACK: temporarily using vanilla thrownGrenadeContact ParticleIndex value	 -->
+			<property name="ParticleIndex" value="13"/>
+			<property name="RadiusBlocks" value="2"/>
+			<property name="RadiusEntities" value="2"/>
+			<property class="DamageBonus">
+					<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+
+
 <!-- *** Add property ToolCategory.harvestingTools -->
 
 <append xpath="/items/item[@name='IZYMeleeT4BladeKatana']/property[@class='Action0']">
@@ -242,21 +260,7 @@ Too small effect? -->
 	</property>
 </append>
 
-<!-- ammo25mmGrenadeHE -->
-<append xpath="/items/item[@name='ammo25mmGrenadeHE']/property[@class='Action1']">
-		<property class="Explosion">
-			<property name="BlockDamage" value="200"/>
-			<property name="EntityDamage" value="350"/>	
-			<!-- <property name="ParticleIndex" value="#@modfolder:Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_LGL_Effect_25mmHE.Prefab"/> -->
-<!-- HACK: temporarily using vanilla thrownGrenadeContact ParticleIndex value	 -->
-			<property name="ParticleIndex" value="13"/>
-			<property name="RadiusBlocks" value="2"/>
-			<property name="RadiusEntities" value="2"/>
-			<property class="DamageBonus">
-					<property name="water" value="0"/>
-			</property>
-		</property>
-</append>
+
 
 <!-- *** 2. Add new stats block -->
 
@@ -833,7 +837,7 @@ TODO: look at adding other stats.
 </append>
 
 
-<!-- *** H. Melee melee_default_stat_block
+<!-- *** H. melee_T4_stat_block_FLTR
 
 IZYMeleeT4BladeKatana
 IZYMeleeT4SledghammerSpikeMace
@@ -841,59 +845,59 @@ IZYMeleeT4SpearPoleAxe
 
 -->
 <append xpath="/items/item[@name='IZYMeleeT4BladeKatana' or @name='IZYMeleeT4SledghammerSpikeMace' or @name='IZYMeleeT4SpearPoleAxe']">
-	<stats name="melee_default_stat_block">
+	<stats name="melee_T4_stat_block_FLTR">
 		<!-- Base_Random_Roll -->
 		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
 		<stat name="BlockDamage" 			value="0,0,1,0,.1"/>
-		<stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/>
+		<!-- <stat name="AttacksPerMinute" 		value="0,0,1,0,.02"/> -->
 		<stat name="StaminaLoss" 			value="0,0,1,-.01,0"/>
 		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
 		<!-- Q1_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
 		<stat name="BlockDamage" 			value="1,0,.3,.1,.5"/>
-		<stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/>
+		<!-- <stat name="AttacksPerMinute" 		value="1,0,.3,.02,.1"/> -->
 		<stat name="StaminaLoss" 			value="1,0,.3,-.5,-.1"/>
 		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
 		<!-- Q2_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
 		<stat name="BlockDamage" 			value="2,10,.3,.1,.5"/>
-		<stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/>
+		<!-- <stat name="AttacksPerMinute" 		value="2,10,.3,.02,.1"/> -->
 		<stat name="StaminaLoss" 			value="2,10,.3,-.5,-.1"/>
 		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
 		<!-- Q3_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
 		<stat name="BlockDamage" 			value="3,11,.3,.1,.5"/>
-		<stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/>
+		<!-- <stat name="AttacksPerMinute" 		value="3,11,.3,.02,.1"/> -->
 		<stat name="StaminaLoss" 			value="3,11,.3,-.5,-.1"/>
 		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
 		<!-- Q4_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
 		<stat name="BlockDamage" 			value="4,12,.3,.1,.5"/>
-		<stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/>
+		<!-- <stat name="AttacksPerMinute" 		value="4,12,.3,.02,.1"/> -->
 		<stat name="StaminaLoss" 			value="4,12,.3,-.5,-.1"/>
 		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
 		<!-- Q5_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
 		<stat name="BlockDamage" 			value="5,14,.3,.1,.5"/>
-		<stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/>
+		<!-- <stat name="AttacksPerMinute" 		value="5,14,.3,.02,.1"/> -->
 		<stat name="StaminaLoss" 			value="5,14,.3,-.5,-.1"/>
 		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
 		<!-- Q6_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
 		<stat name="BlockDamage" 			value="6,16,.3,.1,.5"/>
-		<stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/>
+		<!-- <stat name="AttacksPerMinute" 		value="6,16,.3,.02,.1"/> -->
 		<stat name="StaminaLoss" 			value="6,16,.3,-.5,-.1"/>
 		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
 		<!-- Q6_Boosted_Rolls -->
 		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
 		<stat name="BlockDamage" 			value="6,20,.3,.5,.7"/>
-		<stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/>
+		<!-- <stat name="AttacksPerMinute" 		value="6,20,.3,.1,.2"/> -->
 		<stat name="StaminaLoss" 			value="6,20,.3,-.1,-.05"/>
 		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
 	</stats>
 </append>
 
-<!-- *** I. Crossbow 
+<!-- *** I. crossbow_default_stat_block 
 
 VANILLA: 
 gunBowT3CompoundCrossbow
@@ -1009,7 +1013,10 @@ IZYgunT3TechnicalNailmachinegun
 	</stats>
 </append>
 
-<!-- *** 3. BurstRoundCount 1000 changed to 0 -->
+<!-- *** 3. BurstRoundCount 1000 changed to 0 
+TODO: test
+TODO: limit to izy guns.
+-->
 
 <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
