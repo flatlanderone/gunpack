@@ -53,7 +53,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 <!-- Added kick effect to vanilla weapons in case IZY_VRP is not loaded. -->
 
 <conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On' and modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On' and modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
 
 <append xpath="/items/item[@name='gunShotgunT1DoubleBarrel' or 
 @name='gunShotgunT2PumpShotgun' or 
