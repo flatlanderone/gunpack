@@ -9,7 +9,7 @@
 <!-- Kick On -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On'">
 
 <!-- Added kick effect to vanilla and IGP guns who didn't have it. -->
 <append xpath="/items/item[@name='gunRifleT0PipeRifle' 
@@ -53,7 +53,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 <!-- Added kick effect to vanilla weapons in case IZY_VRP is not loaded. -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On' and modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick On' and modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
 
 <append xpath="/items/item[@name='gunShotgunT1DoubleBarrel' or 
 @name='gunShotgunT2PumpShotgun' or 
@@ -97,7 +97,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 </conditional>
 <!-- Kick Off -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFirearms') == 'Kick Off'">
 
 <!-- Removed kick effect from all IGP firearms except for IZYgunT4BowVanhelsingAutomaticCrossbowVH. -->
 <remove xpath="items/item[starts-with(@name, 'IZYgun') and not(contains(@name, 'IZYgunT4BowVanhelsingAutomaticCrossbowVH'))]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
@@ -125,7 +125,7 @@ or @name='gunExplosivesT3RocketLauncher']">
 <!-- Kick On -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick On'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick On'">
 <!-- Added kick effect to vanilla bows and crossbows. -->
 <append xpath="/items/item[@name='gunBowT0PrimitiveBow' 
 or @name='gunBowT1WoodenBow' 
@@ -161,7 +161,7 @@ or @name='gunBowT3CompoundBow']">
 
 <!-- Kick Off -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllBows') == 'Kick Off'">
 <!-- Removed kick effect for IZYgunT4BowVanhelsingAutomaticCrossbowVH. -->
 <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
 <!-- <remove xpath="items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/> -->
@@ -183,7 +183,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick On -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick On'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick On'">
 
 <!-- Enable kick effect for all vanilla melee weapons.  -->
 <append xpath="/items/item[@name='meleeWpnBladeT0BoneKnife' or 
@@ -236,7 +236,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- Kick Off -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeapons') == 'Kick Off'">
 
 <!-- Disable IZY melee weapons. -->
 <remove xpath="items/item[starts-with(@name, 'IZYMelee')]/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
@@ -255,7 +255,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick On -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick On'">
 
 <!-- Added kick effect for vanilla tools except for meleeToolAxeT2SteelAxe and meleeToolPickT2SteelPickaxe. -->
 <append xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
@@ -304,7 +304,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick Off -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllCommonTools') == 'Kick Off'">
 
 <!--  Disabled kick effect for meleeToolAxeT2SteelAxe meleeToolPickT2SteelPickaxe. Other tools have np kick in IGP. -->
 <remove xpath="items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
@@ -324,7 +324,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick On -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFlashlight') == 'Kick On'"> 
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllFlashlight') == 'Kick On'"> 
 
 <!-- Added kick effect to the Flashlight. -->
 <append xpath="/items/item[@name='meleeToolFlashlight02']">
@@ -361,7 +361,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- Kick On -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeaponsTorch') == 'Kick On'"> 
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.KickAllMeleeWeaponsTorch') == 'Kick On'"> 
 
 <!-- Added kick effect to the Torch. -->
 <append xpath="/items/item[@name='meleeToolTorch']">
@@ -398,7 +398,7 @@ IZYMeleeT4SpearPoleAxe -->
  
 <!-- *** TEST: 1.6. Kick Options for all Items -->
 <!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllItems') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.AllItems') == 'Off'">
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@transform_path='Weapon_Kick_FPV']"/>
 <remove xpath="items/item/effect_group/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
@@ -423,7 +423,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- <remove xpath="/items/item[@name='gunShotgunT1DoubleBarrel' and ./property[@name='Tags' and contains(@value, 'IZY')]]"/> -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
 
 <remove xpath="/items/item[(@name='gunShotgunT1DoubleBarrel' or 
 @name='gunShotgunT2PumpShotgun' or 
@@ -460,7 +460,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- Sounds -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'IGP'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'IGP'">
 
 <!-- Readded VRP sounds to all T1-T3 vanilla weapons and T0 shotgun.. -->
 <set xpath="/items/item[@name='gunShotgunT0PipeShotgun']/property[@class='Action0']/property[@name='Sound_start']/@value">VRpumpSG_fire</set>
@@ -514,7 +514,7 @@ IZYMeleeT4SpearPoleAxe -->
 </conditional>
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'Vanilla'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'Vanilla'">
 <!-- Removed silencer sounds in Options/item_modifiers.xml -->
 
 </if>
@@ -525,7 +525,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- Disable the repair of T4 Weapons. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4RepairCategory.Enable_T4_Repair') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4RepairCategory.Enable_T4_Repair') == 'No'">
 
 <!-- Ranged  -->
 <remove xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/property[@name='RepairTools']"/>
@@ -539,14 +539,14 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- Default -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == 'Default'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == 'Default'">
 
 </if>
 </conditional>
 
 <!-- x2 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '2x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '2x'">
 
 <set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">2</set>
 
@@ -557,7 +557,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- x3 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '3x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '3x'">
 
 <set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">3</set>
 
@@ -568,7 +568,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- x4 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '4x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '4x'">
 
 <set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">4</set>
 
@@ -579,7 +579,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- x5 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '5x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '5x'">
 
 <set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">5</set>
 
@@ -590,7 +590,7 @@ IZYMeleeT4SpearPoleAxe -->
 
 <!-- TEST x100 -->
 <!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '100x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4DegradationCategory.Enable_T4_DegradationSelector') == '100x'">
 
 <set xpath="/items/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]/effect_group/passive_effect[@name='DegradationPerUse']/@value">100</set>
 
@@ -604,7 +604,7 @@ IZYMeleeT4SpearPoleAxe -->
 <!-- *** 3.1. Challenge Runs: Pacifist Traders: traders won't buy weapons, ammo and ammo crafting resources. -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
 
 <!-- REF <set xpath="/items/item[]/property[@name='SellableToTrader']/@value">false</set> -->
 
@@ -758,7 +758,7 @@ meleeToolAxeT3ChainsawParts -->
 
 <!-- *** 3.2. Challenge Runs: 'No Repair' Challenge for T0 to T3 weapons -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair') == 'No'">
 
 <!-- Vanilla and IZY TO weapons -->
 <remove xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
@@ -829,14 +829,14 @@ starts-with(@name, 'meleeWpnSpearT3')]/property[@name='RepairTools']"/>
 
 <!-- Default -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == 'Default'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == 'Default'">
 
 </if>
 </conditional>
 
 <!-- x2 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '2x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '2x'">
 
 <!-- T0 weapons -->
 <set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
@@ -905,7 +905,7 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 
 <!-- x3 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '3x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '3x'">
 
 <!-- T0 weapons -->
 <set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
@@ -974,7 +974,7 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 
 <!-- x4 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '4x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '4x'">
 
 <!-- T0 weapons -->
 <set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
@@ -1043,7 +1043,7 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 
 <!-- x5 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '5x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '5x'">
 
 <!-- T0 weapons -->
 <set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
@@ -1113,7 +1113,7 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 <!-- TEST x100 -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '100x'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_DegradationSelector') == '100x'">
 
 <!-- T0 weapons -->
 <set xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
@@ -1183,7 +1183,7 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 <!-- *** 6.Misc Options -->
 <!-- *** 6.xx  Single-shot weapons reload automatically. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryWeaponOptions.MiscSettings_Autoreload') == 'All'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryWeaponOptions.MiscSettings_Autoreload') == 'All'">
 
 <set xpath="/items/item[starts-with(@name, 'gun')]/property/property[@name='AutoReload']/@value">true</set>
 
@@ -1193,7 +1193,7 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 </conditional>
 <!-- *** 6.2 All 5.56mm machine guns take the drummagazine. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_DrumMagazine556') == 'All'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_DrumMagazine556') == 'All'">
 
 <!-- Added optional drumMagazine support for the following weapons:
 IZYgunT1ARCabineM608SurvivalRifle
@@ -1210,7 +1210,7 @@ IZYgunT4ARCabineHK416
 
 <!-- 6.xx Ammo Reboxing in the Workbench --> -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeWorkbench') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeWorkbench') == 'Yes'">
 
 <set xpath="/items/item[@name='ammoBundleMaster']/property[@name='DescriptionKey']/@value">ammoBundleGroupReboxDesc</set>
 </if>
@@ -1218,7 +1218,7 @@ IZYgunT4ARCabineHK416
 
 <!-- 6.xx Ammo Reboxing in Oakraven's Ammo Press -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeAmmoPress') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeAmmoPress') == 'Yes'">
 
 <set xpath="/items/item[@name='ammoBundleMaster']/property[@name='DescriptionKey']/@value">ammoBundleGroupReboxDesc</set>
 </if>
@@ -1226,7 +1226,7 @@ IZYgunT4ARCabineHK416
 
 <!-- 6. Super Shorty Options -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryShorty.MiscSettings_Shorty') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryShorty.MiscSettings_Shorty') == 'Yes'">
 
 <!-- IZYgunT1TACCompactshotgunSuperShortty: Reduced magazine size from 4 to 3 and removed compatibility with the modGunShotgunTubeExtenderMagazine to bring the gun more in line with other T1 shotguns. -->
 
@@ -1245,7 +1245,7 @@ IZYgunT4ARCabineHK416
 <!-- 6. Lever-action rifle Options -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryLeverAction.MiscSettings_LAR44magnum') == '.44 Magnum'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryLeverAction.MiscSettings_LAR44magnum') == '.44 Magnum'">
 
 <!-- gunRifleT2LeverActionRifle ammo type -->
 <set xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo44MagnumBulletBall,ammo44MagnumBulletHP,ammo44MagnumBulletAP</set>
@@ -1270,7 +1270,7 @@ IZYgunT4ARCabineHK416
 <!-- *** 6.xx  Perk Books unlock special IGP ammo. -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_45ACP556APHPBookUnlock') == 'Yes'"> 
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_45ACP556APHPBookUnlock') == 'Yes'"> 
 
 <!-- Set alt localization for bookAutoWeaponsMachineGuns -->
 <set xpath="/items/item[@name='bookAutoWeaponsMachineGuns']/property[@name='DescriptionKey']/@value">perkAutoWeaponsMachineGunsLongDescAlt</set>

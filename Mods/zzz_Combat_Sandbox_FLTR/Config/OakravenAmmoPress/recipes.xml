@@ -359,7 +359,7 @@ ammoRocketHE -->
 <!-- *** 3. Add reboxing recipes -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeAmmoPress') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeAmmoPress') == 'Yes'">
 
 <!-- ***Vanilla ammo types -->
 

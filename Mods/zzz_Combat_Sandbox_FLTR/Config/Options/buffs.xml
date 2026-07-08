@@ -4,7 +4,7 @@
 
 <!-- Remove kick buffs -->
 <!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick']"/>
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick2']"/>
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeDAMAGE']"/>
@@ -17,7 +17,7 @@
 
 <!-- Remove kick guffs for firearms -->
 <!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Kick Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Kick Off'">
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick']"/>
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick2']"/>
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeDAMAGE']"/>

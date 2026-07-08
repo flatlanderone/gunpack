@@ -4,7 +4,7 @@
 <!-- *** 1. Restricted Runs: Pacifist Traders: traders won't give weapons, ammo, traps and ammo crafting resources as quest rewards. Challenges not affected.
 -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderQuestRewards') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderQuestRewards') == 'No'">
 <remove xpath="/quests/quest[contains(@id, 'complete')]/reward[@id='groupQuestAmmo' or 
 @id='groupQuestShotgunTurret' or 
 @id='groupQuestAutoTurret' or 

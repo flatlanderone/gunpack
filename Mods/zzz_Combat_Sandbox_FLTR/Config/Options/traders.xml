@@ -6,7 +6,7 @@
 
 <!-- *** IZY_melee -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
 <!-- 
 Removed trader entry for 
 IZYMeleeT4BladeKatana
@@ -19,7 +19,7 @@ IZYMeleeT4SpearPoleAxe
 
 <!-- *** IZY_RMP_9mmVAL -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_9mmVAL guns.
 
@@ -50,7 +50,7 @@ IZYgunT4SMGCZScorpionEVO3
 
 <!-- *** IZY_RMP_44magnum -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_44magnum guns.
 
@@ -65,7 +65,7 @@ IZYgunT4DualMagnumDesertEagles
 
 <!-- *** IZY_RMP_45ACP -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_45ACP guns.
 ammo45ACPBulletBall
@@ -118,7 +118,7 @@ IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
 
 <!-- *** IZY_RMP_556pack -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_556pack guns and ammo:
 ammo556mmBulletBall
@@ -162,7 +162,7 @@ IZYgunT3MarksManRifle556M16A2DMR'
 
 <!-- *** IZY_RMP_762pack -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_762pack guns and ammo:
 ammo762mmExplosiveFragmentations
@@ -204,7 +204,7 @@ IZYgunT4LMGlightmachinegunMG34R -->
 
 <!-- *** IZY_RMP_SG -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_SG guns and ammo:
 ammoShotgunShellPremium
@@ -232,7 +232,7 @@ IZYgunT4TACshotgunM1014
 
 <!-- *** IZY_RMP_Demopack -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_Demopack guns and ammo:
 ammo25mmGrenadeFRAGS
@@ -260,7 +260,7 @@ IZYgunT3RocketLauncherRPG7
 
 <!-- *** IZY_RMP_HVW -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
 <!-- Removed trader entry for IZYgunT5HeavyWeaponM2flameThrower and IZYgunT5HeavyWeaponM134MinigunGatling -->
 <remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='IZYgunT5HeavyWeaponM2flameThrower' or 
 @name='IZYgunT5HeavyWeaponM134MinigunGatling']"/>
@@ -278,7 +278,7 @@ IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture
 
 <!-- *** IZY_RMP_Miscpack -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_Miscpack guns and ammo:
 ammoCrossbowLightBoltIron
@@ -308,7 +308,7 @@ IZYgunTminus1MusketshotgunBlunderbuss
 
 <!-- *** IZY_RMP_Tech -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
 
 <!-- Removed trader entry for IZY_RMP_Tech guns and ammo:
 IZYgunT3TechnicalNailmachinegun
@@ -322,7 +322,7 @@ IZYgunT3TechnicalNailmachinegun
 DISABLED, as it's implemented in Pacifis Traders  -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4LootingCategory.Enable_T4_Trading') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4LootingCategory.Enable_T4_Trading') == 'No'">
 
 <remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYgunT5')]"/>
 
@@ -333,7 +333,7 @@ DISABLED, as it's implemented in Pacifis Traders  -->
 -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoSell') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoSell') == 'No'">
 
 <!-- Weapons, turrets, traps -->
 
@@ -488,7 +488,7 @@ starts-with(@name, 'meleeWpn')]"/>
 
 <!-- T0 and Tminus1 weapons -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
 
 <!-- bowsTier0 -->
 <append xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier0']"><entry min="15" max="25" quality="6"/></append>
@@ -504,7 +504,7 @@ starts-with(@name, 'meleeWpn')]"/>
 
 <!-- Remaining weapon tiers -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
 
 <!-- bowsTier1 -->
 <append xpath="/traders/traderstage_templates/traderstage_template[@name='bowsTier1']"><entry min="35" max="50" quality="6"/></append>

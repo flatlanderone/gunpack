@@ -4,7 +4,7 @@
 <!-- *** 3.1. Challenge Runs: Pacifist Traders: traders won't buy weapons, ammo and ammo crafting resources. -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
 
 <!-- Weapons, turrets, electric traps -->
 <append xpath="/blocks/block[starts-with(@name, 'bladeTrap') or 
@@ -34,7 +34,7 @@ starts-with(@name, 'shotgunTurret')]"><property name="SellableToTrader" value="f
 <!-- *** 3.5 No Crafting challenge: Passive traps can be picked up. -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingTraps') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingTraps') == 'No'">
 <!-- Not implemented -->
 </if>
 </conditional>

@@ -15,7 +15,7 @@ Added cars.
  -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsT1') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsT1') == 'Yes'">
 
 <!-- Added chance to find IGP T1 Pistols in Toilets.
 IZYgunT1Pistol45M1917
@@ -134,8 +134,8 @@ No T3!
 @name='groupFootlocker'   -->
    
 <conditional>
-<!-- <if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsGeneral') == 'Yes'"> -->
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsBagsRacksCrates') == 'Yes'">
+<!-- <if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsGeneral') == 'Yes'"> -->
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsBagsRacksCrates') == 'Yes'">
 
 <!-- ### Weapon Bags, Racks, Crates -->
 
@@ -163,7 +163,7 @@ No T3!
 </conditional>
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsSafes') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsSafes') == 'Yes'">
 
 <!-- ###  Gun Safes and Wall Safes -->
 
@@ -180,7 +180,7 @@ No T3!
 </conditional>
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsArmyTrucksPoliceCars') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsArmyTrucksPoliceCars') == 'Yes'">
 <!-- ###  Army Trucks and Police Cars -->
 <!-- Added to groupArmyTruck and groupPoliceCarBonus -->
 <append xpath="/lootcontainers/lootgroup[@name='groupArmyTruck' or @name='groupPoliceCarBonus']">
@@ -196,7 +196,7 @@ No T3!
 </conditional>
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsFootlockers') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootCommonGuns.LootCommonGunsFootlockers') == 'Yes'">
 <!-- ###  Footlockers and Military Footlockers -->
 <!-- Added to groupFootlocker and groupMilitaryFootlocker -->
 <append xpath="/lootcontainers/lootgroup[@name='groupMilitaryFootlocker' or @name='groupFootlocker']">
@@ -293,7 +293,7 @@ Added loot_quality_template="qualQ1Template" to ensure that only Q1 weapons drop
 -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsFNS') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsFNS') == 'Yes'">
 
 <!-- Probability templates -->
 <!-- Moved to options.xml -->
@@ -418,7 +418,7 @@ Added loot_quality_template="qualQ1Template" to ensure that only Q1 weapons drop
 <!-- *** 3.4 Remove T0 weapons from loot -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsRanged') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsRanged') == 'No'">
 
 <!-- Remove vanilla and IGP pipe guns from loot.
 
@@ -449,7 +449,7 @@ IZYgunTminus1MusketM1777Rifle
 </conditional>
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsBows') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsBows') == 'No'">
 
 <!-- Remove vanilla Primitive Bows from loot.
 
@@ -463,7 +463,7 @@ gunBowT0PrimitiveBow -->
 <!-- T0 melee weapons -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsMelee') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootTierZeroWeapons.LootTierZeroWeaponsMelee') == 'No'">
 
 <!-- Remove vanilla primitive weapons from loot.
 
@@ -502,7 +502,7 @@ groupQuestWeaponsRangedT1 -->
 
 <!-- Remove gunpowder from groupQuestResources -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderQuestRewards') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderQuestRewards') == 'No'">
 
 <remove xpath="/lootcontainers/lootgroup[@name='groupQuestResourcesT0' or @name='groupQuestResourcesT1']/item[@name='resourceGunPowder']"/>
 
@@ -514,7 +514,7 @@ groupQuestWeaponsRangedT1 -->
 <!-- *** 2. Removing Tier 4 and T5 Weapons from loot. ### -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4LootingCategory.Enable_T4_Looting') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4LootingCategory.Enable_T4_Looting') == 'No'">
 
 <remove xpath="/lootcontainers/lootgroup/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYgunT5')]"/>
 
@@ -523,7 +523,7 @@ groupQuestWeaponsRangedT1 -->
 
 <!-- *** RestrictedRunNoCraftingQ6InLoot NOT IMPLEMENTED-->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingQ6InLoot') == 'Yes'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingQ6InLoot') == 'Yes'">
 <!-- <set xpath="/lootcontainers/lootcontainer[@loot_quality_template='qualBaseTemplate' or  @loot_quality_template='qualPlus1Template']/@loot_quality_template">q6Template</set>
 
 <set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate[@name='q6Template']/qualitytemplate/loot[@quality='1' or @quality='2' or @quality='3' or @quality='4' or @quality='5']/@prob">0.001</set>
@@ -537,7 +537,7 @@ groupQuestWeaponsRangedT1 -->
 <!-- *** IZY_melee -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
 <!-- 
 Removed loot entries for 
 IZYMeleeT4BladeKatana
@@ -552,7 +552,7 @@ from groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2. -->
 <!-- *** IZY_RMP_9mmVAL -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
 <!-- 
 Removed loot entries for 
 IZYgunT0SMGPIPEsubmachinegun
@@ -583,7 +583,7 @@ IZYgunT4SMGCZScorpionEVO3 -->
 <!-- *** IZY_RMP_44magnum -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
 <!-- 
 Removed loot entries for 
 IZYgunT3PistolMagnumAutomag44
@@ -599,7 +599,7 @@ IZYgunT4DualMagnumDesertEagles
 <!-- *** IZY_RMP_45ACP -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
 <!-- 
 Removed loot entries for 
 ammo45ACPBulletBall
@@ -656,7 +656,7 @@ IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
 <!-- *** IZY_RMP_556pack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
 <!-- 
 Removed loot entries for 
 ammo556mmBulletBall
@@ -702,7 +702,7 @@ IZYgunT3MarksManRifle556M16A2DMR'
 <!-- *** IZY_RMP_762pack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
 <!-- 
 Removed loot entries for 
 ammo762mmExplosiveFragmentations
@@ -748,7 +748,7 @@ IZYgunT4LMGlightmachinegunMG34R
 <!-- *** IZY_RMP_SG -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
 <!-- 
 Removed loot entries for 
 ammoShotgunShellPremium
@@ -778,7 +778,7 @@ IZYgunT4TACshotgunM1014
 <!-- *** IZY_RMP_Demopack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
 <!-- 
 Removed loot entries for 
 ammo25mmGrenadeFRAGS
@@ -807,7 +807,7 @@ IZYgunT3RocketLauncherRPG7  -->
 <!-- *** IZY_RMP_HVW -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
 <!-- 
 2.6.1.5
 TODO: 
@@ -825,7 +825,7 @@ IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture
 <!-- *** IZY_RMP_Miscpack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
 <!-- 
 Removed loot entries for 
 ammoCrossbowLightBoltIron
@@ -858,7 +858,7 @@ IZYgunTminus1MusketshotgunBlunderbuss
 <!-- *** IZY_RMP_Tech -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
 <!-- 
 Removed loot entries for 
 IZYgunT3TechnicalNailmachinegun  -->

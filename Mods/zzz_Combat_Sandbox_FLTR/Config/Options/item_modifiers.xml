@@ -4,7 +4,7 @@
 <!-- ***Weapon Packs -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP') == 'Off'">
 
 <!-- Add a blocked tag for modGunReflexSightA and modGunReflexSightB -->
 <!-- Moved to core item_modifiers.xml. -->
@@ -90,7 +90,7 @@
 </conditional>
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'Vanilla'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.VRPCategory.Enable_IZY_VRP_sounds') == 'Vanilla'">
 <!-- Removed VRP silencer sounds. -->
 <remove xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer' ]/item_property_overrides[@name='gunShotgunT1DoubleBarrel' or 
 @name='gunShotgunT2PumpShotgun' or 
@@ -118,14 +118,14 @@
 
 <!-- Remove kick for all weapons -->
 <!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.AllWeapons') == 'Off'">
 <remove xpath="item_modifiers/item_modifier[@name='modGunFlashlight']/effect_group/requirement[@buff='IZYRangeWPmeleeKick']"/>
 </if>
 </conditional> -->
 
 <!-- Remove kick for all firearms -->
 <!-- <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Off'">
 <remove xpath="item_modifiers/item_modifier[@name='modGunFlashlight']/effect_group/requirement[@buff='IZYRangeWPmeleeKick']"/>
 </if>
 </conditional> -->
@@ -136,7 +136,7 @@
 -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
 
 <!-- Weapon mods -->
 <append xpath="/item_modifiers/item_modifier[starts-with(@name, 'modGun') or starts-with(@name, 'modShotgun') or starts-with(@name, 'modMeleeClub') or starts-with(@name, 'modMeleeStun') or starts-with(@name, 'modMeleeSerrated') or starts-with(@name, 'modMeleeWeighted')]"><property name="SellableToTrader" value="false" /></append>
@@ -147,7 +147,7 @@
 <!-- *** 6. Misc Options -->
 <!-- *** 6.1 Tube Extender adds 3 rounds -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_TubeExtender') == '+3'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_TubeExtender') == '+3'">
 
 <set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@operation">base_add</set>
 <set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@value">3</set>

@@ -8,7 +8,7 @@
 To avoid issues when selecting the 'No Crafting challenge', I replaced the Craft Wooden Club/Bow/Arrows challenges with a Craft and Wear Armor (Helmet/GLoves/Boots) challenges. It's now safe to disable T0 weapon crafting as you can still complete the starting Basics of Survival challenges. -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
 
 <!-- A. Craft Wood Club changed to Craft and Wear Armor (Helmet)  -->
 
@@ -86,7 +86,7 @@ To avoid issues when selecting the 'No Crafting challenge', I replaced the Craft
 
 <!-- Change craftPipeBomb challenge 'Craft' objective to 'Gather' objective to avoid issues when 'Craft thrown explosives' is set to 'No'. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingThrown') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingThrown') == 'No'">
 
 <!-- Changed the icon. -->
 <set xpath="/challenges/challenge[@name='craftPipeBomb']/@icon">ui_game_symbol_explosion</set>

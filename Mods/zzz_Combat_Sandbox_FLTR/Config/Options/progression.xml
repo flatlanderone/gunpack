@@ -6,7 +6,7 @@
 <!-- *** IZY_melee -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
 <!-- 
 Removed progression info for 
 IZYMeleeT4BladeKatana
@@ -22,7 +22,7 @@ IZYMeleeT4SpearPoleAxe
 <!-- *** IZY_RMP_9mmVAL -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
 <!-- 
 Removed progression info for 
 IZYgunT0SMGPIPEsubmachinegun
@@ -63,7 +63,7 @@ IZYgunT4SMGCZScorpionEVO3
 <!-- *** IZY_RMP_44magnum -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
 <!-- 
 Removed progression info for 
 IZYgunT3PistolMagnumAutomag44
@@ -80,7 +80,7 @@ IZYgunT4DualMagnumDesertEagles
 <!-- *** IZY_RMP_45ACP -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
 <!-- 
 Removed progression info for 
 ammo45ACPBulletBall
@@ -158,7 +158,7 @@ IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
 <!-- *** IZY_RMP_556pack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
 <!-- 
 Removed progression info for 
 ammo556mmBulletBall
@@ -221,7 +221,7 @@ IZYgunT3MarksManRifle556M16A2DMR
 <!-- *** IZY_RMP_762pack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
 <!-- 
 Removed progression info for 
 ammo762mmExplosiveFragmentations
@@ -283,7 +283,7 @@ IZYgunT4LMGlightmachinegunMG34R
 <!-- *** IZY_RMP_SG -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
 <!-- 
 Removed progression info for 
 ammoShotgunShellPremium
@@ -323,7 +323,7 @@ IZYgunT4TACshotgunM1014 -->
 <!-- *** IZY_RMP_Demopack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
 <!-- 
 Removed progression info for 
 ammo25mmGrenadeFRAGS
@@ -366,7 +366,7 @@ IZYgunT3RocketLauncherRPG7 -->
 
 <!-- No recipes. -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
 
 <!-- n/a -->
 
@@ -376,7 +376,7 @@ IZYgunT3RocketLauncherRPG7 -->
 <!-- *** IZY_RMP_Miscpack -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
 <!-- 
 Removed progression info for 
 ammoCrossbowLightBoltIron
@@ -416,7 +416,7 @@ IZYgunTminus1MusketshotgunBlunderbuss  -->
 <!-- *** IZY_RMP_Tech -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
 <!-- 
 Removed progression info for 
 IZYgunT3TechnicalNailmachinegun
@@ -431,7 +431,7 @@ IZYgunT3TechnicalNailmachinegun
 <!-- *** 2. Removing progression unlocks for Tier 4 Weapons.  -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Crafting') == 'Off'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Crafting') == 'Off'">
 <!-- Melee weapons -->
 <!-- 
 IZYMeleeT4BladeKatana
@@ -502,7 +502,7 @@ IZYgunT4TradshotgunBrowningAuto5 -->
 
 <!-- *** 3.1. NOT IMPLEMENTED Hide T1-T3 IZY weapon unlocks  -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
 
 <!-- <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[starts-with(@item, 'IZYgunT1')]"/>
 <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[starts-with(@item, 'IZYgunT2')]"/>
@@ -528,7 +528,7 @@ REF
 <!-- *** 3.2.  Hide T0 weapon unlocks  -->
 <!-- TODO check this option -->
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
 
 <!-- <remove xpath="/progression/crafting_skills/crafting_skill/display_entry/unlock_entry[@tags='gunBowT0PrimitiveBow' or 
 @tags='gunHandgunT0PipePistol' or 
@@ -613,7 +613,7 @@ ammo762mmExplosiveFragmentations
  -->
 
 <conditional>
-<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_45ACP556APHPBookUnlock') == 'Yes'"> 
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_45ACP556APHPBookUnlock') == 'Yes'"> 
 
 <!-- Set alt localization for perkAutoWeaponsMachineGuns -->
 <!-- <setattribute xpath="/progression/perks/book[@name='perkAutoWeaponsMachineGuns']" name="name_key">bookAutoWeaponsMachineGunsAlt</setattribute>  -->
