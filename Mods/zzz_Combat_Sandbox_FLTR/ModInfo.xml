@@ -1,7 +1,7 @@
 <xml>
     <Name value="Combat_Sandbox_FLTR" />
     <DisplayName value="Flatlander's Combat Sandbox (FCS)" />
-    <Description value="The [FFB400]Combat_Sandbox_FLTR[-] mod provides fixes, tweaks and enhancements for 7 Days To Die 3.0 and the following weapon packs and mods: IZY Classic, Oakraven's Ammo Press. Optional enhancements are managed exclusively through the Gears mod interface." />
+    <Description value="The [FFB400]Flatlander's Combat Sandbox (FCS)[-] mod provides fixes, tweaks and enhancements for 7 Days To Die 3.0 and the following weapon packs and mods: IZY Classic, Oakraven's Ammo Press. Optional enhancements are managed exclusively through the Gears mod interface." />
     <Author value="Flatlander" />
     <Version value="3.0.1.0" />
 	<Website value="https://github.com/flatlanderone/gunpack" />

@@ -101,7 +101,6 @@
         <Switch name="MiscSettings_Autoreload" displayKey="uiMiscSettings_Autoreload" tooltipKey="tipMiscSettings_Autoreload" defaultValue="All" leftValue="All" rightValue="Default" />
       </Category>
       <Category name="MiscSettingsCategoryModOptions" displayKey="uiMiscSettingsCategoryModOptions" tooltipKey="tipMiscSettingsCategoryModOptions">
-        <Switch name="MiscSettings_TubeExtender" displayKey="uiMiscSettings_TubeExtender" tooltipKey="tipMiscSettings_TubeExtender" defaultValue="+3" leftValue="+3" rightValue="Default" />
         <Switch name="MiscSettings_DrumMagazine556" displayKey="uiMiscSettings_DrumMagazine556" tooltipKey="tipMiscSettings_DrumMagazine556" defaultValue="All" leftValue="All" rightValue="Some" />
       </Category>
       <Category name="MiscSettingsCategoryAmmoOptions" displayKey="uiMiscSettingsCategoryAmmoOptions" tooltipKey="tipMiscSettingsCategoryAmmoOptions">
@@ -111,6 +110,7 @@
       </Category>
       <Category name="MiscSettingsCategoryLeverAction" displayKey="uiMiscSettingsCategory1LeverAction" tooltipKey="tipMiscSettingsCategory1LeverAction">
         <Switch name="MiscSettings_LAR44magnum" displayKey="uiMiscSettings_LAR44magnum" tooltipKey="tipMiscSettings_LAR44magnum" defaultValue="7.62mm" leftValue=".44 Magnum" rightValue="7.62mm" />
+        <Switch name="MiscSettings_modGunShotgunTubeExtenderMagazine" displayKey="uiMiscSettings_modGunShotgunTubeExtenderMagazine" tooltipKey="tipMiscSettings_modGunShotgunTubeExtenderMagazine" defaultValue="Yes" leftValue="No" rightValue="Yes" />	
       </Category>
       <Category name="MiscSettingsCategoryShorty" displayKey="uiMiscSettingsCategoryShorty" tooltipKey="tipMiscSettingsCategoryShorty">
         <Switch name="MiscSettings_Shorty" displayKey="uiMiscSettings_Shorty" tooltipKey="tipMiscSettings_Shorty" defaultValue="Yes" leftValue="No" rightValue="Yes" />

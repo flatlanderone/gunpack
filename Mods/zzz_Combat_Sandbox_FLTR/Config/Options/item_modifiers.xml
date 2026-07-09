@@ -146,11 +146,17 @@
 
 <!-- *** 6. Misc Options -->
 <!-- *** 6.1 Tube Extender adds 3 rounds -->
+
+<!-- TODO: disable for 3.0 -->
 <conditional>
 <if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_TubeExtender') == '+3'">
 
-<set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@operation">base_add</set>
-<set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@value">3</set>
+<!-- REMOVE for 3.0.1.6 -->
+
+<!-- <set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@operation">base_add</set>
+<set xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize']/@value">3</set> -->
+
+<!-- END OF REMOVE for 3.0.1.6 -->
 
 <!-- <append xpath="/item_modifiers/item_modifier[@name='modGunShotgunTubeExtenderMagazine']/effect_group/passive_effect[@name='MagazineSize' and @value='3']">
 <requirement name="ItemHasTags" tags="IZYgunT2TradshotgunLeveractionShotgunModel1887"/>

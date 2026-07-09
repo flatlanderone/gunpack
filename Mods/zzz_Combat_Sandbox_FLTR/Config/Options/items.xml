@@ -1267,6 +1267,16 @@ IZYgunT4ARCabineHK416
 </if>
 </conditional>
 
+<!-- ADDED for 3.0.1.6 -->
+<!-- Added support for modGunShotgunTubeExtenderMagazine -->
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryLeverAction.MiscSettings_modGunShotgunTubeExtenderMagazine') == 'Yes'">
+
+<csv xpath="/items/item[@name='gunRifleT2LeverActionRifle']/property[@name='Tags']/@value" delim="," op="add">modGunShotgunTubeExtenderMagazine</csv>
+
+</if>
+</conditional>
+
 <!-- *** 6.xx  Perk Books unlock special IGP ammo. -->
 
 <conditional>
