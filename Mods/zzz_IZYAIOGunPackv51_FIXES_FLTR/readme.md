@@ -1,4 +1,4 @@
-# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.5
+# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.6
 
 ## Overview
 
@@ -67,7 +67,7 @@ In the **6. Misc. Options** tab you can:
  - [IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 on Nexus Mods](https://www.nexusmods.com/7daystodie/mods/5458),
  - [Gears 6.0.0 or later](https://www.nexusmods.com/7daystodie/mods/4017),
  - [Quartz 7.0.0 or later](https://www.nexusmods.com/7daystodie/mods/2409),
- - 7 Days to Die v2.6. The mod has not been tested with 7 Days to Die v3.0 Exp. 
+ - 7 Days to Die v2.6. The mod will not work with 7 Days to Die v3.0. 
 
 ## Manual installation
 
@@ -80,7 +80,7 @@ In the **6. Misc. Options** tab you can:
 
 ## Important notes
 
- 1. The 2.6.1.5 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
+ 1. The 2.6.1.6 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
  2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.5 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
  3. Do not bother Izayo with questions regarding this mod. 
  4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
@@ -98,10 +98,14 @@ In the **6. Misc. Options** tab you can:
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
  - **Download page**: [Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
  - **Initial release**: 2.5.1.0 (2026-03-30)
- - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22), 2.6.1.4 (2026-04-29).
- - **This release**: 2.6.1.5 (2026-06-15)
+ - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22), 2.6.1.4 (2026-04-29), 2.6.1.5 (2026-06-15).
+ - **This release**: 2.6.1.6 (2026-07-10)
 
 ## Changelogs
+
+# Changelog for 2.6.1.6 (2026-07-10)
+
+ - Added code to disable the mod when you are running 7 Days To Die 3.0.
 
 # Changelog for 2.6.1.5 (2026-06-15)
 
