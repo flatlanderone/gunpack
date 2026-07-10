@@ -502,7 +502,7 @@ IZYgunT1DualPistolCOLTnavyRevolver -->
 
 <!-- Vanilla fix. 
 Available separately at https://www.nexusmods.com/7daystodie/mods/11040 -->
-
+<!-- TODO: move to Base. -->
 <remove xpath="/items/item[@name='gunHandgunT0PipePistol' or @name='gunHandgunT2Magnum44']/stats/stat[@name='MagazineSize']"/>
 
 <!-- IZY stat block -->
