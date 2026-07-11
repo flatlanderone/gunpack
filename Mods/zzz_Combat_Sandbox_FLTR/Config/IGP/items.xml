@@ -492,18 +492,14 @@ Removed stats:
 
 <!-- *** C. gunslinger_revolver_stat_block_FLTR 
 
-VANILLA
-gunHandgunT0PipePistol
-gunHandgunT2Magnum44
-
 IZY: 
 IZYgunT1Pistol45M1917
-IZYgunT1DualPistolCOLTnavyRevolver -->
+IZYgunT1DualPistolCOLTnavyRevolver 
 
-<!-- Vanilla fix. 
-Available separately at https://www.nexusmods.com/7daystodie/mods/11040 -->
-<!-- TODO: move to Base. -->
-<remove xpath="/items/item[@name='gunHandgunT0PipePistol' or @name='gunHandgunT2Magnum44']/stats/stat[@name='MagazineSize']"/>
+See 
+gunHandgunT0PipePistol
+gunHandgunT2Magnum44
+-->
 
 <!-- IZY stat block -->
 <append xpath="/items/item[@name='IZYgunT1Pistol45M1917' or @name='IZYgunT1DualPistolCOLTnavyRevolver']">
