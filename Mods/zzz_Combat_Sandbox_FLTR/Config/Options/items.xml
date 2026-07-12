@@ -1322,34 +1322,43 @@ IZYgunT4ARCabineHK416
 </conditional>
 
 
-<!-- *** Added ALT ammo icons  -->
+<!-- *** TODO: ALT ammo icons  -->
+<!-- 
 
-<!-- <append xpath="/items/item[@name='ammo9mmBulletAP']">
-	<property name="CustomIcon" value="ammo9mmBulletAPTEST"/>
-</append> -->
 <append xpath="/items/item[@name='ammo9mmBulletAP']">
 	<property name="CustomIcon" value="ammo9mmBulletAP_RLTJ"/>
+	<property name="ItemTypeIcon" value="pistol"/>
+	<property name="ItemTypeIconTint" value="FFFF00"/>
 </append>
 <append xpath="/items/item[@name='ammo9mmBulletBall']">
 	<property name="CustomIcon" value="ammo9mmBulletBall_RLTJ"/>
+	<property name="ItemTypeIcon" value="pistol"/>
+	<property name="ItemTypeIconTint" value="FFFF00"/>
 </append>
 <append xpath="/items/item[@name='ammo9mmBulletHP']">
 	<property name="CustomIcon" value="ammo9mmBulletHP_RLTJ"/>
+	<property name="ItemTypeIcon" value="pistol"/>
+	<property name="ItemTypeIconTint" value="FFFF00"/>
 </append>
 <append xpath="/items/item[@name='ammo44MagnumBulletAP']">
 	<property name="CustomIcon" value="ammo44MagnumBulletAP_RLTJ"/>
+	<property name="ItemTypeIcon" value="gunslinger"/>
 </append>
 <append xpath="/items/item[@name='ammo44MagnumBulletBall']">
 	<property name="CustomIcon" value="ammo44MagnumBulletBall_RLTJ"/>
+	<property name="ItemTypeIcon" value="gunslinger"/>
 </append>
 <append xpath="/items/item[@name='ammo44MagnumBulletHP']">
 	<property name="CustomIcon" value="ammo44MagnumBulletHP_RLTJ"/>
+	<property name="ItemTypeIcon" value="gunslinger"/>
 </append>
 <append xpath="/items/item[@name='ammo45ACPArmorpiecing']">
 	<property name="CustomIcon" value="ammo45ACPArmorpiecing_RLTJ"/>
+	<property name="ItemTypeIcon" value="gunslinger"/>
 </append>
 <append xpath="/items/item[@name='ammo45ACPBulletBall']">
 	<property name="CustomIcon" value="ammo45ACPBulletBall_RLTJ"/>
+	
 </append>
 <append xpath="/items/item[@name='ammo45ACPEnhanced']">
 	<property name="CustomIcon" value="ammo45ACPENH_RLTJ"/>
@@ -1393,5 +1402,5 @@ IZYgunT4ARCabineHK416
 <append xpath="/items/item[@name='ammo556mmHIpower']">
 	<property name="CustomIcon" value="IZYammo556mmHighPower_RLTJ"/>
 </append>
-
+ -->
 </RamblingMan>

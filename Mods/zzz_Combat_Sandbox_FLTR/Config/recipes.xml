@@ -22,6 +22,18 @@
 </if>
 </conditional>
 
+
+
+<!-- *** V3_OakravenAmmoPress recipes -->
+<conditional>
+<if cond="mod_loaded('V3_OakravenAmmoPress')">
+	<include filename="OakravenAmmoPress/recipes.xml"/>
+</if>
+</conditional>
+
+
+
+
 <!-- Load only if Izayo_WeaponFixes is present. -->
 <conditional>
 <if cond="mod_loaded('Izayo_WeaponFixes')">
