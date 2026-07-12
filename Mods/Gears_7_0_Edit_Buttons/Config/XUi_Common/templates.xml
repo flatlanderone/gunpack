@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <GearsUI name="XUi_Common/controls.xml">
 
-<set xpath="/templates/options_buttons_gears/rect[@name='buttons']/@pos">-390, -820</set>
+
+<!-- Optimal -385, -820 -->
+<set xpath="/templates/options_buttons_gears/rect[@name='buttons']/@pos">-385, -820</set>
+<!-- <set xpath="/templates/options_buttons_gears/rect[@name='buttons']/@pos">0, 0</set> -->
 
 </GearsUI>
