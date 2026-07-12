@@ -1009,14 +1009,9 @@ IZYgunT3TechnicalNailmachinegun
 	</stats>
 </append>
 
-<!-- *** 3. BurstRoundCount 1000 changed to 0 
-TODO: test
-TODO: limit to izy guns.
--->
+<!-- *** 3. BurstRoundCount 1000/999 changed to 0 to fix mag dump issue. See also fix for trigger grouos in buffs.xml. -->
 
-<set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
-
-<!-- <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and @value='1']/@value">0</set> -->
+<set xpath="/items/item[starts-with(@name, 'IZYgun')]/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
 <!-- *** 4.  Prepend tier tags 
 Add T3 to T4 and T4 items to enable support for sandbox setting.
@@ -1107,6 +1102,16 @@ VRP breaks the system if Gears not installed.
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
 
 <!-- *** TO DO test scopes -->
+
+
+<!-- *** 8. Remove IZYMMR tag from IZYgunT3BattleRifleHKG3 
+ to fix burst fire.
+-->
+
+<!-- <csv xpath="/items/item[@name='IZYgunT3BattleRifleHKG3' or @name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@name='Tags']/@value" delim="," op="remove">IZYMMR</csv> -->
+
+<!-- <item name="IZYgunT3BattleRifleHKG3">
+	<property name="Tags" value="IZY,IZYMMR,IZYBRBAR,overrideSounds,weapon,ranged,ShortBarrelmod,holdBreathAiming,reloadPenalty,gun,barrelAttachments,sideAttachments,smallTopAttachments,mediumTopAttachments,stock,magazine,drumMagazine,firingMode,bottomAttachments,attFortitude,perkMachineGunner,perkBookAutoWeapons,attachmentsIncluded,canHaveCosmetic,machinegunSkill"/> -->
 
 </if>
 </conditional>

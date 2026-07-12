@@ -1,11 +1,10 @@
 <RamblingMan>
 
-<!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
-
 <conditional>
 <if cond="game_version() >= version(1,3,0)">
 
-<!-- Fixed mag dump with certain weapons  -->
+<!-- Fixed mag dump issue. -->
+
 <!-- IZYMMRBattleRifleEffect
 IZYMMRBattleRifleBurstEffect
 IZYBRBAR
@@ -15,16 +14,15 @@ IZYSGautoShotgunEffect
 IZYSGautoShotgunBurstEffect
 -->
 
+<!-- Custom Auto Effects -->
 <set xpath="/buffs/buff[@name='IZYMMRBattleRifleEffect' or 
-@name='IZYMMRBattleRifleBurstEffect' or 
 @name='IZYBRBAR' or 
 @name='IZYAUTOPISTOLEffect' or 
-@name='IZYBURSTPISTOLEffect' or 
-@name='IZYSGautoShotgunEffect' or 
-@name='IZYSGautoShotgunBurstEffect']/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
+@name='IZYSGautoShotgunEffect']/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
-<!-- TODO: test value 3 -->
-<!-- <set xpath="/buffs/buff[@name='IZYMMRBattleRifleEffect']/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set> -->
+<!-- Custom Burst Effects -->
+<set xpath="/buffs/buff[@name='IZYMMRBattleRifleBurstEffect' or @name='IZYBURSTPISTOLEffect' or 
+@name='IZYSGautoShotgunBurstEffect']/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">3</set>
 
 </if>
 </conditional>

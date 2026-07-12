@@ -45,11 +45,13 @@ IZYgunT3RocketLauncherRPG7 -->
 </append> 
 
 <!-- ammoShotgunShellPremium unlocked by perkShotgunMessiahBreachingSlugs -->
-<append xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']">
+
+<!-- REMOVED 2026-07-11  -->
+<!-- <append xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']">
 	<effect_group>
 		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoShotgunShellPremium"/>
 	</effect_group>
-</append> 
+</append>  -->
 <!-- End of 2.6.1.5 -->
 
 <!-- </if>
