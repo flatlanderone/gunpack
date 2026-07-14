@@ -1011,7 +1011,25 @@ IZYgunT3TechnicalNailmachinegun
 
 <!-- *** 3. BurstRoundCount 1000/999 changed to 0 to fix mag dump issue. See also fix for trigger grouos in buffs.xml. -->
 
+<!-- IZY -->
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
+
+
+<!-- Vanilla/VRP -->
+<set xpath="/items/item[(@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
+
 
 <!-- *** 4.  Prepend tier tags 
 Add T3 to T4 and T4 items to enable support for sandbox setting.
@@ -1099,7 +1117,24 @@ VRP breaks the system if Gears not installed.
 
 <!-- *** 7. Set CrosshairOnAim and CrosshairUpAfterShot to true for all Izy weapons to fix a conflict with the 3.0 crosshair  -->
 
+<!-- IZY -->
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
+
+
+<!-- Vanilla / VRP -->
+<set xpath="/items/item[(@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
 
 <!-- *** TO DO test scopes -->
 
