@@ -1,6 +1,11 @@
 <RamblingMan>
 
-<!-- *** Normalized Craft Times  -->
+<!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
+
+<conditional>
+<if cond="game_version() >= version(1,3,0)">
+
+<!-- *** Single ammo craft times aligned on vanilla.  -->
 
 <!-- *** IZY ammo, workbench recipes. 
 See Config\OakravenAmmoPress\recipes.xml for AmmoPress recipes. -->
@@ -16,8 +21,16 @@ See Config\OakravenAmmoPress\recipes.xml for AmmoPress recipes. -->
 <setattribute xpath="/recipes/recipe[@name='ammo762mmExplosiveFragmentations' and @craft_area='workbench']" name="craft_time">4.2</setattribute>
 
 <!-- ammoCrossbowLightBolt -->
-<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltStone' and @craft_area='workbench']" name="craft_time">1.4</setattribute>
+<!-- <setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltStone' and @craft_area='workbench']" name="craft_time">1.4</setattribute>
 <setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltIron' and @craft_area='workbench']" name="craft_time">1.4</setattribute>
-<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltSteelAP' and @craft_area='workbench']" name="craft_time">2.4</setattribute>
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltSteelAP' and @craft_area='workbench']" name="craft_time">2.4</setattribute> -->
+
+
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltStone']" name="craft_time">1.4</setattribute>
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltIron']" name="craft_time">1.4</setattribute>
+<setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltSteelAP']" name="craft_time">2.4</setattribute>
+
+</if>
+</conditional>
 
 </RamblingMan>
