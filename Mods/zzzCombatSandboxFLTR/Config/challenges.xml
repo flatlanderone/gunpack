@@ -16,7 +16,7 @@
 
 <!-- Gears Options -->
 <conditional>
-	<if cond="mod_version('Gears') >= version(6,0,0)">
+	<if cond="mod_version('Gears') >= version(7,0,0)">
 		<include filename="Options/challenges.xml"/>
 	</if>
 </conditional>

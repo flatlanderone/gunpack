@@ -1256,7 +1256,7 @@ TODO: Check if append in parent works.
 <!-- *** Gears Options -->
 
 <conditional>
-	<if cond="mod_version('Gears') >= version(6,0,0)">
+	<if cond="mod_version('Gears') >= version(7,0,0)">
 		<include filename="Options/loot.xml"/>
 	</if>
 </conditional>

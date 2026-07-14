@@ -21,16 +21,12 @@
 </if>
 </conditional>
 
-
 <!-- *** V3_OakravenAmmoPress items -->
 <conditional>
 <if cond="mod_loaded('V3_OakravenAmmoPress')">
 	<include filename="OakravenAmmoPress/items.xml"/>
 </if>
 </conditional>
-
-
-
 
 <!-- Load only if Izayo_WeaponFixes is present. -->
 <conditional>
@@ -876,7 +872,7 @@ IZYgunT3MarksManRifle762HKPSG1 -->
 <!-- *** Gears Options -->
 
 <conditional>
-	<if cond="mod_version('Gears') >= version(6,0,0)">
+	<if cond="mod_version('Gears') >= version(7,0,0)">
 		<include filename="Options/items.xml"/>
 	</if>
 </conditional>
