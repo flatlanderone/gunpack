@@ -4,7 +4,7 @@
     <DisplayName value="Flatlander's Combat Sandbox (FCS)" />
     <Description value="The [FFB400]Flatlander's Combat Sandbox (FCS)[-] mod provides weapon- and combat-related fixes, tweaks and enhancements for 7 Days To Die v3.0 and IZY Classic.&#13;&#10;&#13;&#10;IMPORTANT:&#13;&#10;Settings are managed exclusively through the Gears mod interface." />
     <Author value="Flatlander" />
-    <Version value="3.0.1.0.1" />
+    <Version value="3.0.1.x.x" />
 	<SkipWithAntiCheat value="true" />
 	<Website value="https://github.com/flatlanderone/gunpack" />
 	<Icon value="Textures/RMM_ICON.png" />
