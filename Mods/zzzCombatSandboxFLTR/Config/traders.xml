@@ -90,6 +90,10 @@
 </if>
 </conditional>
 
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<include filename="IGP/traders.xml"/>
+
 </if>
 </conditional>
 

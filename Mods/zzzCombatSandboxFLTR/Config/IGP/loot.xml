@@ -1,5 +1,7 @@
 <RamblingMan>
 
-<!-- IGP edits -->
+<!-- HACK: Temporarily remove IZYgunT5HeavyWeaponM2flameThrower and ammo762mmExplosiveFragmentations from loot -->
+
+<remove xpath="/lootcontainers/lootgroup/item[@name='IZYgunT5HeavyWeaponM2flameThrower' or @name='ammo762mmExplosiveFragmentations']"/>
 
 </RamblingMan>

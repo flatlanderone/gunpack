@@ -1,5 +1,6 @@
 <RamblingMan>
 
-<!-- IGP edits -->
+<!-- HACK: Temporarily removed trader entry for IZYgunT5HeavyWeaponM2flameThrower and ammo762mmExplosiveFragmentations -->
+<remove xpath="/traders/trader_item_groups/trader_item_group/item[@name='IZYgunT5HeavyWeaponM2flameThrower' or @name='ammo762mmExplosiveFragmentations']"/>
 
 </RamblingMan>

@@ -763,11 +763,13 @@ starts-with(@name, 'modMeleeWeighted')]"/>
 <!-- ***ammo762mmExplosiveFragmentationsBundle -->
 <!-- <conditional>
 <if cond="mod_loaded('IZY_RMP_762pack')"> -->
-<append xpath="/recipes">
+
+<!-- HACK: temporarily disabled -->
+<!-- <append xpath="/recipes">
 	<recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
 		<ingredient name="ammo762mmExplosiveFragmentations" count="100"/>
 	</recipe>
-</append>
+</append> -->
 <!-- </if>
 </conditional> -->
 

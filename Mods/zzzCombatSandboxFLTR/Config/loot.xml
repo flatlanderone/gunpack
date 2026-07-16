@@ -1253,6 +1253,10 @@ TODO: Check if append in parent works.
 
 <!-- End of 2.6.1.5 -->
 
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<include filename="IGP/loot.xml"/>
+
 <!-- *** Gears Options -->
 
 <conditional>
@@ -1263,6 +1267,8 @@ TODO: Check if append in parent works.
 
 </if>
 </conditional>
+
+
 
 </if>
 </conditional>

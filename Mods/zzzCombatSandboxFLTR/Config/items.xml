@@ -12,7 +12,7 @@
 
 <!-- *** IGP fixes for 2.6 and 3.0 -->
 
-<include filename="IGP/items.xml"/>
+<!-- <include filename="IGP/items.xml"/> -->
 
 <!-- *** V2_OakravenAmmoPress items -->
 <conditional>
@@ -890,6 +890,10 @@ IZYgunT3MarksManRifle762HKPSG1 -->
 
 </if>
 </conditional>
+
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<include filename="IGP/items.xml"/>
 
 </if>
 </conditional>
