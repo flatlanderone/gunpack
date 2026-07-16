@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <xml>
 	<Name value="ImmersiveWeaponNamesFLTR" />
-	<DisplayName value="Immersive Weapon Names for IZY-All in One Gun Pack v5.1.3" />
-	<Version value="2.6.1.0" />
-	<Description value="This modlet removes the tier info from IZY and vanilla weapon names introduced by Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack." />
+	<DisplayName value="Immersive Weapon Names for IZY Classic" />
+	<Version value="3.0.1.0" />
+	<Description value="This modlet removes the extended tier info from IZY Classic and vanilla weapon names introduced by Flatlander's Combat Sandbox." />
 	<Author value="flatlander" />
 	<Website value="https://github.com/flatlanderone" />
 </xml>
