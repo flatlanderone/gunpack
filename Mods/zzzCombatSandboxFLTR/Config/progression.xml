@@ -7,6 +7,14 @@
 
 <include filename="Base/progression.xml"/>
 
+<!-- *** V3_Preppocalypse  -->
+<conditional>
+<if cond="mod_loaded('V3_Preppocalypse')">
+	<include filename="Preppocalypse/progression.xml"/>
+</if>
+</conditional>
+
+
 <!-- Load only if Izayo_WeaponFixes is present. -->
 <conditional>
 <if cond="mod_loaded('Izayo_WeaponFixes')">

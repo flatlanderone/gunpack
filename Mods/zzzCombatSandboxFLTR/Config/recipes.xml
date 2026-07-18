@@ -22,16 +22,19 @@
 </if>
 </conditional>
 
-
-
 <!-- *** V3_OakravenAmmoPress recipes -->
 <conditional>
-<if cond="mod_loaded('V3_OakravenAmmoPress')">
+<if cond="mod_loaded('V3_OakravenAmmoPress') or mod_loaded('V3_Preppocalypse')">
 	<include filename="OakravenAmmoPress/recipes.xml"/>
 </if>
 </conditional>
 
-
+<!-- *** V3_Preppocalypse items -->
+<conditional>
+<if cond="mod_loaded('V3_Preppocalypse')">
+	<include filename="Preppocalypse/recipes.xml"/>
+</if>
+</conditional>
 
 
 <!-- Load only if Izayo_WeaponFixes is present. -->

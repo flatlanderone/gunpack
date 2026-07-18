@@ -21,10 +21,17 @@
 </if>
 </conditional>
 
-<!-- *** V3_OakravenAmmoPress items -->
+<!-- *** V3_OakravenAmmoPress / V3_Preppocalypse items -->
 <conditional>
-<if cond="mod_loaded('V3_OakravenAmmoPress')">
+<if cond="mod_loaded('V3_OakravenAmmoPress') or mod_loaded('V3_Preppocalypse')">
 	<include filename="OakravenAmmoPress/items.xml"/>
+</if>
+</conditional>
+
+<!-- *** V3_Preppocalypse items -->
+<conditional>
+<if cond="mod_loaded('V3_Preppocalypse')">
+	<include filename="Preppocalypse/items.xml"/>
 </if>
 </conditional>
 

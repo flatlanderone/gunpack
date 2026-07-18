@@ -17,7 +17,7 @@
 
 <!-- *** V3_OakravenAmmoPress recipes -->
 <conditional>
-<if cond="mod_loaded('V3_OakravenAmmoPress')">
+<if cond="mod_loaded('V3_OakravenAmmoPress') or mod_loaded('V3_Preppocalypse')">
 	<include filename="OakravenAmmoPress/ui_display.xml"/>
 </if>
 </conditional>
