@@ -1480,6 +1480,13 @@ ammo556mmArmorPiercing
 	</effect_group>
 </append>
 
+
+<!-- *** 	No reload sound in third person for some weapons -->
+ 
+<!-- <append xpath="/items/item[@name='IZYgunT3Pistol45USP45']">
+	<property name="Sound_reload" value="chainsaw_reload"/>
+</append> -->
+ 
 </if>
 </conditional>
 
