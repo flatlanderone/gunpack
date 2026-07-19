@@ -289,6 +289,7 @@ gunHandgunT3DesertVulture
 gunShotgunT2PumpShotgun
 gunShotgunT3AutoShotgun -->
 
+<!-- *** VRP -->
 <!-- VRP Guns
 gunHandgunT1Pistol
 gunHandgunT3SMG5
@@ -303,62 +304,7 @@ gunShotgunT3AutoShotgun
 @name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]
  -->
 
-<append xpath="/items/item[(@name='gunShotgunT2PumpShotgun' or 
-@name='gunShotgunT3AutoShotgun' or 
-@name='gunHandgunT1Pistol' or 
-@name='gunHandgunT3SMG5' or 
-@name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]">
-	<stats name="gunslinger_and_boomstick_default_stat_block">
-		<!-- Base_Random_Roll -->
-		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
-		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
-		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
-		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
-		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
-		<!-- Q1_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
-		<!-- Q2_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
-		<!-- Q3_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
-		<!-- Q4_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
-		<!-- Q5_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
-		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
-		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
-		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
-		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
-	</stats>
-</append>
+<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- *** A. gunslinger_and_boomstick_default_stat_block -->
 
@@ -575,52 +521,7 @@ gunHandgunT0PipePistol
 gunHandgunT2Magnum44
 -->
 
-<!-- Vanilla VRP -->
-
-<append xpath="/items/item[@name='gunHandgunT2Magnum44' and ./property[@name='Tags' and contains(@value, 'IZY')]]">
-	<stats name="gunslinger_revolver_stat_block_FLTR">
-		<!-- Base_Random_Roll -->
-		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
-		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
-		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
-		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
-		<!-- Q1_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
-		<!-- Q2_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
-		<!-- Q3_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
-		<!-- Q4_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
-		<!-- Q5_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
-		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
-		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
-		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
-	</stats>
-</append>
+<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- IZY stat block -->
 <append xpath="/items/item[@name='IZYgunT1Pistol45M1917' or @name='IZYgunT1DualPistolCOLTnavyRevolver']">
@@ -683,43 +584,8 @@ IZYgunT1TACCompactshotgunSuperShortty
 
 -->
 
-<!-- VANILLA VRP-->
-<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel' and ./property[@name='Tags' and contains(@value, 'IZY')]]">
-	<stats name="boomstick_limited_mag_size_stat_block">
-		<!-- Base_Random_Roll -->
-		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
-		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
-		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
-		<!-- Q1_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
-		<!-- Q2_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
-		<!-- Q3_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
-		<!-- Q4_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
-		<!-- Q5_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
-		<stat name="DamageFalloffRange" 	value="6,20,.3,.04,.05"/>
-		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
-	</stats>
-</append>
+<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+
 
 <!-- IZY -->
 <append xpath="/items/item[@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or @name='IZYgunT1TACCompactshotgunSuperShortty']">
@@ -772,43 +638,8 @@ IZYgunTminus1MusketM1777Rifle
 
 -->
 
-<!-- VRP VANILLA -->
-<append xpath="/items/item[@name='gunRifleT1HuntingRifle' and ./property[@name='Tags' and contains(@value, 'IZY')]]">
-	<stats name="deadeye_limited_mag_size_stat_block">
-		<!-- Base_Random_Roll -->
-		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
-		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
-		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
-		<!-- Q1_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
-		<!-- Q2_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
-		<!-- Q3_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
-		<!-- Q4_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
-		<!-- Q5_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
-		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
-		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
-		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
-	</stats>
-</append>
+<!-- Moced to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+
 
 <!-- IZY -->
 <append xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or @name='IZYgunTminus1MusketM1777Rifle']">
@@ -897,65 +728,7 @@ IZY
 @name='IZYgunT4LMGlightmachinegunMG34R' or 
 @name='IZYgunT5HeavyWeaponM134MinigunGatling' -->
 
-<!-- VANILLA VRP -->
-<append xpath="/items/item[@name='gunRifleT2LeverActionRifle' or 
-@name='gunRifleT3SniperRifle' or 
-@name='gunMGT1AK47' or 
-@name='gunMGT2TacticalAR' or 
-@name='gunMGT3M60' and ./property[@name='Tags' and contains(@value, 'IZY')]]">
-	<stats name="deadeye_machine_gunner_default_stat_block">
-		<!-- Base_Random_Roll -->
-		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
-		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
-		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
-		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
-		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
-		<!-- Q1_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
-		<!-- Q2_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
-		<!-- Q3_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
-		<!-- Q4_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
-		<!-- Q5_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
-		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
-		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
-		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
-		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
-		<!-- Q6_Boosted_Rolls -->
-		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
-		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
-		<stat name="RoundsPerMinute" 		value="6,20,.3,.2,.3"/>
-		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
-		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
-	</stats>
-</append>
-
-
+<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- IZY -->
 
@@ -1303,22 +1076,7 @@ IZYgunT3TechnicalNailmachinegun
 <!-- IZY -->
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
-
-<!-- Vanilla/VRP -->
-<set xpath="/items/item[(@name='gunShotgunT1DoubleBarrel' or 
-@name='gunShotgunT2PumpShotgun' or 
-@name='gunShotgunT3AutoShotgun' or 
-@name='gunMGT1AK47' or 
-@name='gunMGT2TacticalAR' or 
-@name='gunMGT3M60' or 
-@name='gunRifleT1HuntingRifle' or 
-@name='gunRifleT2LeverActionRifle' or 
-@name='gunRifleT3SniperRifle' or 
-@name='gunHandgunT1Pistol' or 
-@name='gunHandgunT3SMG5' or 
-@name='gunHandgunT2Magnum44' or 
-@name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
-
+<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- *** 4.  Prepend tier tags 
 Add T3 to T4 and T4 items to enable support for sandbox setting.
@@ -1333,6 +1091,10 @@ VRP breaks the system if Gears not installed.
 <prepend xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='Tags']/@value">T4,T3,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammo25mm')]/property[@name='Tags']/@value">T2,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammoRocketRPG')]/property[@name='Tags']/@value">T3,</prepend>
+
+
+<!-- *** TODO for VRP? Prepend tier tags -->
+
 
 <!-- *** 5.1 Append scrap100 tags to T0 firearms and to ammo -->
 
@@ -1409,21 +1171,7 @@ VRP breaks the system if Gears not installed.
 <!-- IZY -->
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
 
-
-<!-- Vanilla / VRP -->
-<set xpath="/items/item[(@name='gunShotgunT1DoubleBarrel' or 
-@name='gunShotgunT2PumpShotgun' or 
-@name='gunShotgunT3AutoShotgun' or 
-@name='gunMGT1AK47' or 
-@name='gunMGT2TacticalAR' or 
-@name='gunMGT3M60' or 
-@name='gunRifleT1HuntingRifle' or 
-@name='gunRifleT2LeverActionRifle' or 
-@name='gunRifleT3SniperRifle' or 
-@name='gunHandgunT1Pistol' or 
-@name='gunHandgunT3SMG5' or 
-@name='gunHandgunT2Magnum44' or 
-@name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
+<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- *** TO DO test scopes -->
 
