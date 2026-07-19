@@ -304,7 +304,7 @@ gunShotgunT3AutoShotgun
 @name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]
  -->
 
-<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+<!-- Moved to zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- *** A. gunslinger_and_boomstick_default_stat_block -->
 
@@ -521,7 +521,7 @@ gunHandgunT0PipePistol
 gunHandgunT2Magnum44
 -->
 
-<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+<!-- Moved to zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- IZY stat block -->
 <append xpath="/items/item[@name='IZYgunT1Pistol45M1917' or @name='IZYgunT1DualPistolCOLTnavyRevolver']">
@@ -584,7 +584,7 @@ IZYgunT1TACCompactshotgunSuperShortty
 
 -->
 
-<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+<!-- Moved to zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 
 <!-- IZY -->
@@ -728,7 +728,7 @@ IZY
 @name='IZYgunT4LMGlightmachinegunMG34R' or 
 @name='IZYgunT5HeavyWeaponM134MinigunGatling' -->
 
-<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+<!-- Moved to zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- IZY -->
 
@@ -1076,7 +1076,7 @@ IZYgunT3TechnicalNailmachinegun
 <!-- IZY -->
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
 
-<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+<!-- Moved to zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- *** 4.  Prepend tier tags 
 Add T3 to T4 and T4 items to enable support for sandbox setting.
@@ -1091,11 +1091,13 @@ VRP breaks the system if Gears not installed.
 <prepend xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='Tags']/@value">T4,T3,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammo25mm')]/property[@name='Tags']/@value">T2,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammoRocketRPG')]/property[@name='Tags']/@value">T3,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'ammo762mmExplosiveFragmentations')]/property[@name='Tags']/@value">T3,</prepend>
 
-<!-- *** TODO for VRP? Prepend tier tags -->
+<!-- *** VRP Prepend tier tags -->
+
+<!-- See zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
 <!-- *** 5.1 Append scrap100 tags to T0 firearms and to ammo -->
-
 
 <append xpath="/items/item[starts-with(@name, 'IZYgunT0')]/property[@name='Tags']/@value">,scrap100</append>
 
@@ -1169,9 +1171,9 @@ VRP breaks the system if Gears not installed.
 <!-- IZY -->
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
 
-<!-- Moved to C:\Users\AMD\AppData\Roaming\7DaysToDie\Mods\zzzCombatSandboxFLTR\Config\Options\items.xml -->
+<!-- Moved to zzzCombatSandboxFLTR\Config\Options\items.xml -->
 
-<!-- *** TO DO test scopes -->
+<!-- *** TODO test scopes -->
 
 
 <!-- *** 8. Remove IZYMMR tag from IZYgunT3BattleRifleHKG3 
@@ -1232,7 +1234,10 @@ ammo556mmArmorPiercing
 <!-- <append xpath="/items/item[@name='IZYgunT3Pistol45USP45']">
 	<property name="Sound_reload" value="chainsaw_reload"/>
 </append> -->
- 
+
+<!-- *** Added missing modslots to IZYgunT0PistolLiberatorImprovisedPistol -->
+<set xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol' or @name='IZYgunTminus1MusketFlintlockPistol' or @name='IZYgunT4TACshotgunM1014']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>		
+
 </if>
 </conditional>
 

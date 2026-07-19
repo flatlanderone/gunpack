@@ -701,6 +701,42 @@ IZYMeleeT4SpearPoleAxe -->
 @name='gunHandgunT2Magnum44' or 
 @name='gunHandgunT3DesertVulture') and ./property[@name='Tags' and contains(@value, 'IZY')]]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
 
+<!-- *** Prepend tier tags to VRP  -->
+
+<!-- T1
+@name='gunHandgunT1Pistol' or 
+@name='gunMGT1AK47' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunShotgunT1DoubleBarrel'
+
+ -->
+<prepend xpath="/items/item[(@name='gunHandgunT1Pistol' or 
+@name='gunMGT1AK47' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunShotgunT1DoubleBarrel') and ./property[@name='Tags' and contains(@value, 'IZY')]]/property[@name='Tags']/@value">T1,</prepend>
+ 
+<!-- T2
+@name='gunHandgunT2Magnum44' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunShotgunT2PumpShotgun' --> 
+
+<prepend xpath="/items/item[(@name='gunHandgunT2Magnum44' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunShotgunT2PumpShotgun') and ./property[@name='Tags' and contains(@value, 'IZY')]]/property[@name='Tags']/@value">T2,</prepend>
+
+<!-- T3
+@name='gunHandgunT3DesertVulture'
+@name='gunHandgunT3SMG5' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunShotgunT3AutoShotgun' --> 
+<prepend xpath="/items/item[(@name='gunHandgunT3DesertVulture' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunMGT3M60' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunShotgunT3AutoShotgun') and ./property[@name='Tags' and contains(@value, 'IZY')]]/property[@name='Tags']/@value">T3,</prepend>
 
 </if>
 </conditional>

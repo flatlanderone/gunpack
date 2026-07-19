@@ -1,6 +1,143 @@
 <RamblingMan>
 <!-- Gears Options -->
 
+<!-- 
+6. Misc Options
+6.xx *** Ammo Reboxing in the Workbench -->
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeWorkbench') == 'Yes'">
+
+<append xpath="/recipes">
+<!-- *** VANILLA AMMO TYPES  -->
+
+<!-- Based on public domain code from the Quality of Life mod by Karl Giesing / hzmusik. See https://gitlab.com/karlgiesing/7d2d-2.0-mods. -->
+
+<!-- Workbench recipes -->
+
+<!-- 9mm ammo-->
+	<recipe name="ammoBundle9mmBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo9mmBulletBall" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle9mmBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo9mmBulletHP" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle9mmBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo9mmBulletAP" count="100"/>
+	</recipe>
+
+<!-- .44 Magnum ammo -->
+	<recipe name="ammoBundle44MagnumBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo44MagnumBulletBall" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle44MagnumBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo44MagnumBulletHP" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle44MagnumBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo44MagnumBulletAP" count="100"/>
+	</recipe>
+
+<!-- 7.62mm ammo -->
+	<recipe name="ammoBundle762mmBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmBulletBall" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle762mmBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmBulletHP" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle762mmBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmBulletAP" count="100"/>
+	</recipe>
+
+<!-- Shotgun shells and slugs -->
+	<recipe name="ammoBundleShotgunShell" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunShell" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundleShotgunSlug" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunSlug" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundleShotgunBreachingSlug" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunBreachingSlug" count="100"/>
+	</recipe>
+</append>
+<!-- *** IGP ammo Types -->
+<!-- 5.56mmx45 -->
+
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_556pack')"> -->
+
+<append xpath="/recipes">
+	<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo556mmBulletBall" count="100"/>
+	</recipe>
+	
+	<recipe name="ammo556mmHIpowerBundle" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo556mmHIpower" count="100"/>
+	</recipe>
+	
+	<recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo556mmArmorPiercing" count="100"/>
+	</recipe>
+</append>	
+<!-- </if>
+</conditional> -->
+<!-- ***.45 ACP -->
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP')"> -->
+<append xpath="/recipes">
+	<recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPBulletBall" count="100"/>
+	</recipe>
+	
+	<recipe name="ammoBundle45ACPHighpower" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPHighpower" count="100"/>
+	</recipe>
+	
+	<recipe name="ammoBundle45ACPArmorpiecing" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPArmorpiecing" count="100"/>
+	</recipe>
+			
+	<recipe name="ammoBundle45ACPEnhanced" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPEnhanced" count="100"/>
+	</recipe>
+</append>
+<!-- </if>
+</conditional> -->
+
+<!-- *** ammoShotgunShellPremiumBundle  -->
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_SG')"> -->
+<append xpath="/recipes">
+	<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunShellPremium" count="100"/>
+	</recipe>
+</append>	
+<!-- </if>
+</conditional> -->
+<!-- ***ammo762mmExplosiveFragmentationsBundle -->
+<!-- <conditional>
+<if cond="mod_loaded('IZY_RMP_762pack')"> -->
+
+<!-- HACK: temporarily disabled -->
+<!-- <append xpath="/recipes">
+	<recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmExplosiveFragmentations" count="100"/>
+	</recipe>
+</append> -->
+<!-- </if>
+</conditional> -->
+
+</if>
+</conditional>
+
+
+
 <!-- *** 1. Start of Weapon Pack Options ### -->
 
 <!-- *** Removing recipes per weapon pack.
@@ -641,138 +778,8 @@ starts-with(@name, 'modMeleeWeighted')]"/>
 </if>
 </conditional>
 
-<!-- 
-6. Misc Options
-6.xx *** Ammo Reboxing in the Workbench -->
-<conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeWorkbench') == 'Yes'">
 
-<append xpath="/recipes">
-<!-- *** VANILLA AMMO TYPES  -->
 
-<!-- Based on public domain code from the Quality of Life mod by Karl Giesing / hzmusik. See https://gitlab.com/karlgiesing/7d2d-2.0-mods. -->
 
-<!-- Workbench recipes -->
 
-<!-- 9mm ammo-->
-	<recipe name="ammoBundle9mmBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo9mmBulletBall" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundle9mmBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo9mmBulletHP" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundle9mmBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo9mmBulletAP" count="100"/>
-	</recipe>
-
-<!-- .44 Magnum ammo -->
-	<recipe name="ammoBundle44MagnumBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo44MagnumBulletBall" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundle44MagnumBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo44MagnumBulletHP" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundle44MagnumBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo44MagnumBulletAP" count="100"/>
-	</recipe>
-
-<!-- 7.62mm ammo -->
-	<recipe name="ammoBundle762mmBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo762mmBulletBall" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundle762mmBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo762mmBulletHP" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundle762mmBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo762mmBulletAP" count="100"/>
-	</recipe>
-
-<!-- Shotgun shells and slugs -->
-	<recipe name="ammoBundleShotgunShell" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammoShotgunShell" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundleShotgunSlug" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammoShotgunSlug" count="100"/>
-	</recipe>
-
-	<recipe name="ammoBundleShotgunBreachingSlug" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammoShotgunBreachingSlug" count="100"/>
-	</recipe>
-</append>
-<!-- *** IGP ammo Types -->
-<!-- 5.56mmx45 -->
-
-<!-- <conditional>
-<if cond="mod_loaded('IZY_RMP_556pack')"> -->
-
-<append xpath="/recipes">
-	<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo556mmBulletBall" count="100"/>
-	</recipe>
-	
-	<recipe name="ammo556mmHIpowerBundle" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo556mmHIpower" count="100"/>
-	</recipe>
-	
-	<recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo556mmArmorPiercing" count="100"/>
-	</recipe>
-</append>	
-<!-- </if>
-</conditional> -->
-<!-- ***.45 ACP -->
-<!-- <conditional>
-<if cond="mod_loaded('IZY_RMP_45ACP')"> -->
-<append xpath="/recipes">
-	<recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo45ACPBulletBall" count="100"/>
-	</recipe>
-	
-	<recipe name="ammoBundle45ACPHighpower" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo45ACPHighpower" count="100"/>
-	</recipe>
-	
-	<recipe name="ammoBundle45ACPArmorpiecing" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo45ACPArmorpiecing" count="100"/>
-	</recipe>
-			
-	<recipe name="ammoBundle45ACPEnhanced" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo45ACPEnhanced" count="100"/>
-	</recipe>
-</append>
-<!-- </if>
-</conditional> -->
-
-<!-- *** ammoShotgunShellPremiumBundle  -->
-<!-- <conditional>
-<if cond="mod_loaded('IZY_RMP_SG')"> -->
-<append xpath="/recipes">
-	<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammoShotgunShellPremium" count="100"/>
-	</recipe>
-</append>	
-<!-- </if>
-</conditional> -->
-<!-- ***ammo762mmExplosiveFragmentationsBundle -->
-<!-- <conditional>
-<if cond="mod_loaded('IZY_RMP_762pack')"> -->
-
-<!-- HACK: temporarily disabled -->
-<!-- <append xpath="/recipes">
-	<recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
-		<ingredient name="ammo762mmExplosiveFragmentations" count="100"/>
-	</recipe>
-</append> -->
-<!-- </if>
-</conditional> -->
-
-</if>
-</conditional>
 </RamblingMan>

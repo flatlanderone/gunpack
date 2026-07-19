@@ -10,6 +10,12 @@
 
 <include filename="Base/traders.xml"/>
 
+
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<include filename="IGP/traders.xml"/>
+
+
 <!-- Add meleeToolAxeT3ChainsawParts to trader inventory -->
 
 <append xpath="/traders/trader_item_groups/trader_item_group[@name='rareTools']">
@@ -89,10 +95,6 @@
 
 </if>
 </conditional>
-
-<!-- *** IGP fixes for 2.6 and 3.0 -->
-
-<include filename="IGP/traders.xml"/>
 
 </if>
 </conditional>
