@@ -1092,9 +1092,7 @@ VRP breaks the system if Gears not installed.
 <prepend xpath="/items/item[starts-with(@name, 'ammo25mm')]/property[@name='Tags']/@value">T2,</prepend>
 <prepend xpath="/items/item[starts-with(@name, 'ammoRocketRPG')]/property[@name='Tags']/@value">T3,</prepend>
 
-
 <!-- *** TODO for VRP? Prepend tier tags -->
-
 
 <!-- *** 5.1 Append scrap100 tags to T0 firearms and to ammo -->
 
