@@ -1,6 +1,30 @@
 <RamblingMan>
 <!-- Gears Options -->
-<!-- *** Global Edits -->
+
+<!-- *** 7. Remove custom gloves effect -->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.GlovesCategory.Enable_IZY_Gloves') == 'Off'">
+
+<!-- <remove xpath="/buffs/buff[@name='WearingArmorBrownLeather' or 
+@name='WearingArmorBlackLeather' or 
+@name='WearingArmorDarkLeather' or 
+@name='IZYGlovesEffect' or 
+@name='RefreshHand']"/> -->
+
+
+
+<!-- 
+<remove xpath="/buffs/buff[@name='WearingArmorBrownLeather' or 
+@name='WearingArmorBlackLeather' or 
+@name='WearingArmorDarkLeather' or 
+@name='IZYGlovesEffect']"/>
+ -->
+
+
+
+</if>
+</conditional>
 
 <!-- Remove kick buffs -->
 <!-- <conditional>
@@ -15,7 +39,7 @@
 </if>
 </conditional> -->
 
-<!-- Remove kick guffs for firearms -->
+<!-- Remove kick buffs for firearms -->
 <!-- <conditional>
 <if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'KickSettings.ItemGroups.AllFirearms') == 'Kick Off'">
 <remove xpath="/buffs/buff[@name='IZYRangeWPmeleeKick']"/>

@@ -1645,6 +1645,60 @@ IZYgunT4ARCabineHK416
 </conditional>
 
 
+<!-- *** 7. Remove custom gloves effect 
+
+items.xml
+buffs.xml
+-->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.GlovesCategory.Enable_IZY_Gloves') == 'Off'">
+
+<!-- Removed armor effect groups. -->
+<remove xpath="/items/item[@name='armorPrimitiveGloves' or 
+@name='armorLumberjackGloves' or 
+@name='armorPreacherGloves' or 
+@name='armorRogueGloves' or 
+@name='armorAthleticGloves' or 
+@name='armorEnforcerGloves' or 
+@name='armorFarmerGloves' or 
+@name='armorBikerGloves' or 
+@name='armorScavengerGloves' or 
+@name='armorRangerGloves' or 
+@name='armorCommandoGloves' or 
+@name='armorAssassinGloves' or 
+@name='armorMinerGloves' or 
+@name='armorNomadGloves' or 
+@name='armorNerdGloves' or 
+@name='armorRaiderGloves']/effect_group[./triggered_effect[@buff='RefreshHand']]"/>
+
+<remove xpath="/items/item[@name='armorPrimitiveGloves' or 
+@name='armorLumberjackGloves' or 
+@name='armorPreacherGloves' or 
+@name='armorRogueGloves' or 
+@name='armorAthleticGloves' or 
+@name='armorEnforcerGloves' or 
+@name='armorFarmerGloves' or 
+@name='armorBikerGloves' or 
+@name='armorScavengerGloves' or 
+@name='armorRangerGloves' or 
+@name='armorCommandoGloves' or 
+@name='armorAssassinGloves' or 
+@name='armorMinerGloves' or 
+@name='armorNomadGloves' or 
+@name='armorNerdGloves' or 
+@name='armorRaiderGloves']/effect_group[./triggered_effect[@buff='WearingArmorBrownLeather' or 
+@buff='WearingArmorDarkLeather' or 
+@buff='WearingArmorBlackLeather']]"/>
+
+
+<!-- Remove custom hands from weapons -->
+<!-- <remove xpath="/items/item[starts-with(@name,'IZYgun') or starts-with(@name,'IZYMelee')]/effect_group[./triggered_effect[@transform_path='hands_A']]"/> -->
+
+</if>
+</conditional>
+
+
 <!-- *** TODO: ALT ammo icons  -->
 <!-- 
 

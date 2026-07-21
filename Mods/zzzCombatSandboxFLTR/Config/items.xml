@@ -8,6 +8,15 @@
 
 <!-- *** Vanilla fixes -->
 
+<!-- *** ProjectZ compatibility patch -->
+<conditional>
+<if cond="mod_loaded('ProjectZ') and mod_version('ProjectZ') >= version(3,0)">
+	<include filename="ProjectZ/items.xml"/>
+</if>
+</conditional>
+
+<!-- *** Vanilla fixes -->
+
 <include filename="Base/items.xml"/>
 
 <!-- *** IGP fixes for 2.6 and 3.0 -->

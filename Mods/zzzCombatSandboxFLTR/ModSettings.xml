@@ -8,6 +8,9 @@
           <Property type="arrayValues" allowedValues="IGP,Vanilla" />
         </Selector>
       </Category>
+      <Category name="GlovesCategory" displayKey="uiGlovesCategory" tooltipKey="tipGlovesCategory">
+        <Switch name="Enable_IZY_Gloves" displayKey="uiEnable_IZY_Gloves" tooltipKey="tipEnable_IZY_Gloves" defaultValue="Off" leftValue="Off" rightValue="On" />
+      </Category>
       <Category name="WeaponPacksCategory" displayKey="uiWeaponPacksCategory" tooltipKey="tipWeaponPacksCategory">
         <Switch name="Enable_IZY_melee" displayKey="ui_IZY_melee" tooltipKey="tip_IZY_melee" defaultValue="On" leftValue="Off" rightValue="On" />
         <Switch name="Enable_IZY_RMP_9mmVAL" displayKey="ui_IZY_RMP_9mmVAL" tooltipKey="tip_IZY_RMP_9mmVAL" defaultValue="On" leftValue="Off" rightValue="On" />
