@@ -1,4 +1,13 @@
 <ref>
+
+<!-- ABOUT THIS FILE
+1. Use these lootgroups as a starting point for your modifications.
+2. Make sure to load your mod AFTER zzzCombatSandboxFLTR. 
+3. ammo762mmExplosiveFragmentations is temporarily disabled.
+4. ammoShotgunShellDragoBreath is permanently disabled.
+
+ -->
+
 <!-- *** 1. Custom ammo for firearms-->
 
 <lootgroup name="group45ammoSmall">
