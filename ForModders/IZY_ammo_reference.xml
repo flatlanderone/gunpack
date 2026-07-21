@@ -1,0 +1,88 @@
+<ref>
+<!-- *** 1. Custom ammo for firearms-->
+
+<lootgroup name="group45ammoSmall">
+	<item name="ammo45ACPBulletBall" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo45ACPHighpower" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo45ACPArmorpiecing" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo45ACPEnhanced" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
+
+<lootgroup name="group45ammoMedium">
+	<item name="ammo45ACPBulletBall" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo45ACPHighpower" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo45ACPArmorpiecing" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo45ACPEnhanced" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
+
+<lootgroup name="group45ammoLarge">
+	<item name="ammo45ACPBulletBall" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo45ACPHighpower" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo45ACPArmorpiecing" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo45ACPEnhanced" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
+
+<lootgroup name="group556ammoSmall">
+	<item name="ammo556mmBulletBall" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo556mmHIpower" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo556mmArmorPiercing" count="5,7" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
+
+<lootgroup name="group556ammoMedium">
+	<item name="ammo556mmBulletBall" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo556mmHIpower" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo556mmArmorPiercing" count="8,15" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
+
+<lootgroup name="group556ammoLarge">
+	<item name="ammo556mmBulletBall" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+	<item name="ammo556mmHIpower" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+	<item name="ammo556mmArmorPiercing" count="20,30" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+</lootgroup>
+
+<lootgroup name="groupShotgunShellSmall">
+	<item name="ammoShotgunShell" count="2,4" loot_stage_count_mod="0.01" loot_prob_template="ProbT0" />
+	<item name="ammoShotgunSlug" count="2,4" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap" />
+	<item name="ammoShotgunShellPremium" count="2,4" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
+</lootgroup>
+
+<lootgroup name="groupShotgunShellMedium">
+	<item name="ammoShotgunShell" count="4,6" loot_stage_count_mod="0.01" loot_prob_template="ProbT0" />
+	<item name="ammoShotgunSlug" count="4,6" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap" />
+	<item name="ammoShotgunShellPremium" count="4,6" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
+</lootgroup>
+
+<lootgroup name="groupShotgunShellLarge">
+	<item name="ammoShotgunShell" count="6,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT0" />
+	<item name="ammoShotgunSlug" count="6,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap" />
+	<item name="ammoShotgunShellPremium" count="6,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
+</lootgroup>
+
+
+<!-- *** 2. Custom ammo groups for rocket launchers -->
+
+<lootgroup name="groupAmmoRocket25mm">
+	<item name="ammo25mmGrenadeTraining" count="2,4"/>
+	<item name="ammo25mmGrenadeHE" prob="0.8" count="1,3"/>
+	<item name="ammo25mmGrenadeFRAGS" prob="0.8" count="1,3"/>
+</lootgroup>
+
+<lootgroup name="groupAmmoRocket25mmLarge">
+	<item name="ammo25mmGrenadeTraining" count="2,4" loot_prob_template="ProbT1"/>
+	<item name="ammo25mmGrenadeHE" count="1,3" loot_prob_template="ProbT2Cap"/>
+	<item name="ammo25mmGrenadeFRAGS" count="1,3" loot_prob_template="ProbT2Cap"/>
+</lootgroup>	
+
+<lootgroup name="groupAmmoRocketRPG">
+	<item name="ammoRocketRPGTraning" prob="0.7" count="1,2"/>
+	<item name="ammoRocketRPGHE" prob="0.6" count="1,2"/>
+	<item name="ammoRocketRPGIncendiary" prob="0.5" count="1,2"/>
+</lootgroup>
+
+<lootgroup name="groupAmmoRocketRPGLarge">
+	<item name="ammoRocketRPGTraning" count="1,2" loot_prob_template="ProbT2Cap"/>
+	<item name="ammoRocketRPGHE" count="1,2" loot_prob_template="ProbT3"/>
+	<item name="ammoRocketRPGIncendiary" count="1,2" loot_prob_template="ProbT3"/>
+</lootgroup>
+
+</ref>
