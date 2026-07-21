@@ -67,7 +67,6 @@
 	<item name="ammoShotgunShellPremium" count="6,10" loot_stage_count_mod="0.01" loot_prob_template="ProbT1Cap"/>
 </lootgroup>
 
-
 <!-- *** 2. Custom ammo groups for rocket launchers -->
 
 <lootgroup name="groupAmmoRocket25mm">
