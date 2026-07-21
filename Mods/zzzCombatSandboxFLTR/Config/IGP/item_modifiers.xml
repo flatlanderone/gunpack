@@ -14,6 +14,12 @@
 
 <csv xpath="/item_modifiers/item_modifier[@name='modShotgunSawedOffBarrel']/@installable_tags" delim="," op="add">ShortBarrelmod</csv>
 
+
+<!-- *** 7. Set CrosshairOnAim and CrosshairUpAfterShot to true for all weapon mods to fix a conflict with the 3.0 crosshair  -->
+
+<set xpath="/item_modifiers/item_modifier/item_property_overrides/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
+
+
 </if>
 </conditional>
 </RamblingMan>
