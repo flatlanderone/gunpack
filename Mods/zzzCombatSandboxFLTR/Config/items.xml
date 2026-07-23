@@ -15,6 +15,13 @@
 </if>
 </conditional>
 
+<!-- *** keitrans_Stacks_x10 compatibility patch -->
+<conditional>
+<if cond="mod_loaded('keitrans_Stacks_x10')">
+	<include filename="keitrans_Stacks_x10/items.xml"/>
+</if>
+</conditional>
+
 <!-- *** Vanilla fixes -->
 
 <include filename="Base/items.xml"/>
