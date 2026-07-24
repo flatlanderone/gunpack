@@ -15,6 +15,13 @@
 </if>
 </conditional>
 
+<!-- *** ExplosiveAmmoMod compatibility patch -->
+<!-- <conditional>
+<if cond="mod_loaded('ExplosiveAmmoMod')">
+	<include filename="ExplosiveAmmoMod/items.xml"/>
+</if>
+</conditional> -->
+
 <!-- *** keitrans_Stacks_x10 compatibility patch -->
 <conditional>
 <if cond="mod_loaded('keitrans_Stacks_x10')">

@@ -1,0 +1,69 @@
+<RamblingMan>
+
+<!-- 7.62mm weapons -->
+
+<csv xpath="/items/item[@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@name='IZYgunT3MarksManRifle762HKPSG1' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT2ARSTG44N' or 
+@name='IZYgunT3ARAKM' or 
+@name='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@name='IZYgunT2BattleRifleFNFALRifle' or 
+@name='IZYgunT3BattleRifleHKG3' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT2LMGlightmachinegunRPD' or 
+@name='IZYgunT4LMGlightmachinegunMG34R' or 
+@name='IZYgunT5HeavyWeaponM134MinigunGatling']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo762mmBulletExplosive</csv>
+
+<!-- 9mm weapons -->
+
+<csv xpath="/items/item[@name='IZYgunT1Pistol9Makarov' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT1SMGTec9submachinegun' or 
+@name='IZYgunT2SMGUZIsubmachinegun' or 
+@name='IZYgunT3SMGMP9submachinegun' or 
+@name='IZYgunT4SMGCZScorpionEVO3' or 
+@name='IZYgunT1DualPistolCOLTnavyRevolver' or 
+@name='IZYgunT2DualPistolM9bs' or 
+@name='IZYgunT3DualPistolGlock18C' or 
+@name='IZYgunT4DualPistolMP9s']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo9mmBulletExplosive</csv>
+
+
+<!-- .45 ACP weapons -->
+
+<csv xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT1Pistol45M1917' or 
+@name='IZYgunT1Pistol45Type17C96' or 
+@name='IZYgunT2Pistol45M1911A1' or 
+@name='IZYgunT3Pistol45USP45' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT2DualPistols45M1911A1' or 
+@name='IZYgunT245SMGM3Greasegun' or 
+@name='IZYgunT345SMGM1thompson' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo44MagnumBulletExplosive</csv>
+
+<!-- .44 Magnum weapons -->
+
+<csv xpath="/items/item[@name='IZYgunT3PistolMagnumAutomag44' or 
+@name='IZYgunT4DualMagnumDesertEagles']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo44MagnumBulletExplosive</csv>
+
+
+<!-- Shotguns -->
+
+<csv xpath="/items/item[@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@name='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@name='IZYgunT3TradshotgunTrenchGunM1897' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYgunT1TACCompactshotgunSuperShortty' or 
+@name='IZYgunT3TACshotgunSPAS12G']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo44MagnumBulletExplosive</csv>
+
+
+</RamblingMan>
