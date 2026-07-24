@@ -30,7 +30,6 @@ See Config\OakravenAmmoPress\recipes.xml for AmmoPress recipes. -->
 <setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltIron']" name="craft_time">1.4</setattribute>
 <setattribute xpath="/recipes/recipe[@name='ammoCrossbowLightBoltSteelAP']" name="craft_time">2.4</setattribute>
 
-
 <!-- *** HACK: Temporarily ammo762mmExplosiveFragmentations and bundle removed from recipes -->
 
 <remove xpath="/recipes/recipe[@name='ammo762mmExplosiveFragmentations' or @name='ammo762mmExplosiveFragmentationsBundle']"/>
