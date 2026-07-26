@@ -9,11 +9,11 @@
 <!-- *** Vanilla fixes -->
 
 <!-- *** ProjectZ compatibility patch -->
-<conditional>
+<!-- <conditional>
 <if cond="mod_loaded('ProjectZ') and mod_version('ProjectZ') >= version(3,0)">
 	<include filename="ProjectZ/items.xml"/>
 </if>
-</conditional>
+</conditional> -->
 
 <!-- *** ExplosiveAmmoMod compatibility patch -->
 <!-- <conditional>

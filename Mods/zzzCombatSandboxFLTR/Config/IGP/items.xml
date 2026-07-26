@@ -1238,6 +1238,19 @@ ammo556mmArmorPiercing
 <!-- *** Added missing modslots to IZYgunT0PistolLiberatorImprovisedPistol -->
 <set xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol' or @name='IZYgunTminus1MusketFlintlockPistol' or @name='IZYgunT4TACshotgunM1014']/effect_group/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>		
 
+
+<!-- *** Disabled modGunLaserSight from weapons not set up to display the laser beam.
+IZYgunT145TACSMGMAC10
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunTminus1MusketM1777Rifle
+IZYgunT0PistolLiberatorImprovisedPistol
+ -->
+
+<csv xpath="/items/item[@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@name='IZYgunTminus1MusketM1777Rifle' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol']/property[@name='Tags']/@value" delim="," op="add">nomodGunLaserSightFLTR</csv>
+
 </if>
 </conditional>
 

@@ -19,6 +19,16 @@
 
 <set xpath="/item_modifiers/item_modifier/item_property_overrides/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
 
+<!-- *** Added nomodGunLaserSightFLTR tag to block the installation of the modGunLaserSight. 
+
+Reason modGunLaserSight not set up to display the laser beam on the following weapons.
+IZYgunT145TACSMGMAC10
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunTminus1MusketM1777Rifle
+IZYgunT0PistolLiberatorImprovisedPistol
+ -->
+
+<csv xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/@blocked_tags" delim="," op="add">nomodGunLaserSightFLTR</csv>
 
 </if>
 </conditional>

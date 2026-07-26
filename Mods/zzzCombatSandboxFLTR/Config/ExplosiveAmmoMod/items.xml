@@ -1,5 +1,8 @@
 <RamblingMan>
 
+
+<!-- Added ammo762mmBulletExplosive  -->
+
 <!-- 7.62mm weapons -->
 
 <csv xpath="/items/item[@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 

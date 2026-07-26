@@ -1695,9 +1695,47 @@ buffs.xml
 <!-- Remove custom hands from weapons -->
 <!-- <remove xpath="/items/item[starts-with(@name,'IZYgun') or starts-with(@name,'IZYMelee')]/effect_group[./triggered_effect[@transform_path='hands_A']]"/> -->
 
+
 </if>
 </conditional>
 
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_Universalammo45ACPEnhanced') == 'All .45 ACP Weapons'">
+
+<!-- *** Added ammo45ACPEnhanced compatibility for all .45 ACP weapons:
+IZYgunT0PistolLiberatorImprovisedPistol
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT2Pistol45M1911A1
+IZYgunT3Pistol45USP45
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT2DualPistols45M1911A1
+IZYgunT245SMGM3Greasegun
+IZYgunT345SMGM1thompson
+IZYgunT445SMGM1928thompson
+IZYgunT145TACSMGMAC10
+IZYgunT445TACSMGKrissSuperV
+IZYgunT3MarksmanRifleMMRM1Carbine45
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+ -->
+ 
+<csv xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT1Pistol45M1917' or 
+@name='IZYgunT1Pistol45Type17C96' or 
+@name='IZYgunT2Pistol45M1911A1' or 
+@name='IZYgunT3Pistol45USP45' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT2DualPistols45M1911A1' or 
+@name='IZYgunT245SMGM3Greasegun' or 
+@name='IZYgunT345SMGM1thompson' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@class='Action0']/property[@name='Magazine_items' and not(contains(@value,'ammo45ACPEnhanced'))]/@value" delim="," op="add">ammo45ACPEnhanced</csv>
+
+</if>
+</conditional>
 
 <!-- *** TODO: ALT ammo icons  -->
 <!-- 
