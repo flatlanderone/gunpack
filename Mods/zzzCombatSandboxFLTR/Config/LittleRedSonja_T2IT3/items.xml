@@ -1,0 +1,23 @@
+<RamblingMan>
+
+<!-- Moved to options -->
+<!-- *** LittleRedSonja_T2IT3 compatibility patch for ammoShotgunHellFire shotguns -->
+
+
+<!-- IZY Classic weapons -->
+
+<!-- <csv xpath="/items/item[@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@name='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@name='IZYgunT3TradshotgunTrenchGunM1897' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYgunT1TACCompactshotgunSuperShortty' or 
+@name='IZYgunT3TACshotgunSPAS12G']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunHellFire</csv> -->
+
+<!-- Vanilla weapons -->
+
+<!-- <csv xpath="/items/item[@name='gunShotgunT0PipeShotgun' or 
+@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunHellFire</csv> -->
+
+</RamblingMan>

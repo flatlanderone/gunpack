@@ -61,6 +61,7 @@
     </Tab>
     <Tab name="LootSettings" displayKey="uiLootSettings" tooltipKey="tipLootSettings">
       <Category name="LootToiletPistols" displayKey="uiLootToiletPistols" tooltipKey="tipLootToiletPistols">
+        <Switch name="LootToiletPistolsT1vanilla" displayKey="uiLootToiletPistolsT1vanilla" tooltipKey="tipLootToiletPistolsT1vanilla" defaultValue="Yes" leftValue="No" rightValue="Yes" />
         <Switch name="LootToiletPistolsT1" displayKey="uiLootToiletPistolsT1" tooltipKey="tipLootToiletPistolsT1" defaultValue="Yes" leftValue="No" rightValue="Yes" />
         <Switch name="LootToiletPistolsFNS" displayKey="uiLootToiletPistolsFNS" tooltipKey="tipLootToiletPistolsFNS" defaultValue="No" leftValue="No" rightValue="Yes" />
       </Category>
@@ -111,6 +112,7 @@
         <Switch name="MiscSettings_LooseAmmoBundleRecipeAmmoPress" displayKey="uiMiscSettings_LooseAmmoBundleRecipeAmmoPress" tooltipKey="tipMiscSettings_LooseAmmoBundleRecipeAmmoPress" defaultValue="Yes" leftValue="No" rightValue="Yes" />
         <Switch name="MiscSettings_45ACP556APHPBookUnlock" displayKey="uiMiscSettings_45ACP556APHPBookUnlock" tooltipKey="tipMiscSettings_45ACP556APHPBookUnlock" defaultValue="No" leftValue="No" rightValue="Yes" />
         <Switch name="MiscSettings_Universalammo45ACPEnhanced" displayKey="uiMiscSettings_Universalammo45ACPEnhanced" tooltipKey="tipMiscSettings_Universalammo45ACPEnhanced" defaultValue="All .45 ACP Weapons" leftValue="Some .45 ACP Weapons" rightValue="All .45 ACP Weapons" />
+        <Switch name="MiscSettings_UniversalammoShotgunHellFire" displayKey="uiMiscSettings_UniversalammoShotgunHellFire" tooltipKey="tipMiscSettings_UniversalammoShotgunHellFire" defaultValue="Default" leftValue="Default" rightValue="All Shotguns" />
       </Category>
       <Category name="MiscSettingsCategoryLeverAction" displayKey="uiMiscSettingsCategory1LeverAction" tooltipKey="tipMiscSettingsCategory1LeverAction">
         <Switch name="MiscSettings_LAR44magnum" displayKey="uiMiscSettings_LAR44magnum" tooltipKey="tipMiscSettings_LAR44magnum" defaultValue="7.62mm" leftValue=".44 Magnum" rightValue="7.62mm" />

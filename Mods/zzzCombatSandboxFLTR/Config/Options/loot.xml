@@ -8,7 +8,22 @@
 
 <!-- *** 3. Loot Options Tab ### -->
 
-<!-- *** 3.1. T1 Pistols in Toilets.  -->
+<!-- *** 3.1.a Remove Vanilla T1 Pistols and Knives from Toilets.  -->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'LootSettings.LootToiletPistols.LootToiletPistolsT1vanilla') == 'No'">
+
+<!--Removed from groupToilet03
+gunHandgunT1Pistol
+meleeWpnBladeT1HuntingKnife
+ -->
+
+<remove xpath="/lootcontainers/lootgroup[@name='groupToilet03']/item[@name='gunHandgunT1Pistol' or @name='meleeWpnBladeT1HuntingKnife']"/>
+ 
+</if>
+</conditional>
+
+<!-- *** 3.1.b T1 Pistols in Toilets.  -->
 <!-- Same rate as gunHandgunT1Pistol
 Added regular footlockers.
 Added cars.

@@ -28,6 +28,12 @@
 	<include filename="keitrans_Stacks_x10/items.xml"/>
 </if>
 </conditional>
+<!-- *** LittleRedSonja_T2IT3 compatibility patch -->
+<conditional>
+<if cond="mod_loaded('LittleRedSonja_T2IT3')">
+	<include filename="LittleRedSonja_T2IT3/items.xml"/>
+</if>
+</conditional>
 
 <!-- *** Vanilla fixes -->
 
