@@ -1,5 +1,7 @@
 <RamblingMan>
 
+
+
 <!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
 
 <conditional>
@@ -33,6 +35,61 @@ See Config\OakravenAmmoPress\recipes.xml for AmmoPress recipes. -->
 <!-- *** HACK: Temporarily ammo762mmExplosiveFragmentations and bundle removed from recipes -->
 
 <remove xpath="/recipes/recipe[@name='ammo762mmExplosiveFragmentations' or @name='ammo762mmExplosiveFragmentationsBundle']"/>
+
+
+
+<!-- *** Balanced T4 Melee recipes 
+TODO: move to options
+IZYMeleeT4BladeKatana
+IZYMeleeT4SledghammerSpikeMace
+IZYMeleeT4SpearPoleAxe
+
+
+-->
+<remove xpath="recipes/recipe[@name='IZYMeleeT4BladeKatana' or  @name='IZYMeleeT4SledghammerSpikeMace' or  @name='IZYMeleeT4SpearPoleAxe']"/>
+
+<append xpath="/recipes">
+
+<recipe name="IZYMeleeT4BladeKatana" count="1" craft_area="workbench" tags="learnable,perkDeepCuts,workbenchCrafting">
+	<ingredient name="meleeWpnBladeT3MacheteParts" count="10"/>
+	<ingredient name="resourceForgedSteel" count="60"/>
+	<ingredient name="resourceWood" count="30"/>
+	<ingredient name="resourceDuctTape" count="20"/>
+	<ingredient name="resourceLegendaryParts" count="5"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="meleeWpnBladeT3MacheteParts,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel,resourceWood"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="IZYMeleeT4SledghammerSpikeMace" count="1" craft_area="workbench" tags="learnable,perkSkullCrusher,workbenchCrafting">
+	<ingredient name="meleeWpnSledgeT3SteelSledgehammerParts" count="10"/>
+	<ingredient name="resourceForgedSteel" count="60"/>
+	<ingredient name="resourceWood" count="60"/>
+	<ingredient name="resourceDuctTape" count="20"/>
+	<ingredient name="resourceLegendaryParts" count="5"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="meleeWpnSledgeT3SteelSledgehammerParts,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel,resourceWood"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="IZYMeleeT4SpearPoleAxe" count="1" craft_area="workbench" tags="learnable,perkJavelinMaster,craftingSpears,workbenchCrafting">
+	<ingredient name="meleeWpnSpearT3SteelSpearParts" count="10"/>
+	<ingredient name="resourceForgedSteel" count="60"/>
+	<ingredient name="resourceWood" count="60"/>
+	<ingredient name="resourceDuctTape" count="20"/>
+	<ingredient name="resourceLegendaryParts" count="5"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="meleeWpnSpearT3SteelSpearParts,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel,resourceWood"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+</append>
 
 </if>
 </conditional>
