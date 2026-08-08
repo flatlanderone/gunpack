@@ -37,7 +37,10 @@ IZYgunT1Pistol45M1917
 IZYgunT1Pistol45Type17C96
 IZYgunT1Pistol9Makarov
  -->
-<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
+
+<!-- CHANGED: 20260809002606 groupToilet02 changed to groupToilet03 -->
+<!-- <append xpath="/lootcontainers/lootgroup[@name='groupToilet02']"> -->
+<append xpath="/lootcontainers/lootgroup[@name='groupToilet03']">
 	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
@@ -46,18 +49,32 @@ IZYgunT1Pistol9Makarov
 <!-- testing -->
 <!-- <set xpath="/lootcontainers/lootgroup[@name='groupToilet']/item[@group='groupToilet02']/@loot_prob_template">guaranteed</set> -->
 
+
+<!-- CHANGED:  removed loot_prob_template. -->
+
 <!-- Added chance to find IGP T1 Pistols in Military Footlockers. -->
+
+<!-- OLD 
 <append xpath="/lootcontainers/lootgroup[@name='groupFootlockerWeapons02']">
 	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
+</append> -->
+
+<append xpath="/lootcontainers/lootgroup[@name='groupFootlockerWeapons02']">
+	<item name="IZYgunT1Pistol45M1917"/>
+	<item name="IZYgunT1Pistol45Type17C96"/>
+	<item name="IZYgunT1Pistol9Makarov"/>
 </append>
+
+
 
 <!-- Added chance to find IGP T1 Pistols as well as gunHandgunT1Pistol,  meleeWpnKnucklesT1IronKnuckles and meleeWpnBladeT1HuntingKnife in regular Footlockers by adding groupFootlockerWeapons03FLTRIGP to groupFootlocker. 
 This addresses a vanilla bug where regular footlockers are placed in military POIs. Of course, regular footlockers will also spawn these items.
 -->
 <!-- test loot_quality_template="qualQ1Template" -->
 
+<!-- *** REGULAR FOOTLOCKERS -->
 <insertAfter xpath="/lootcontainers/lootgroup[@name='groupFootlocker02']">
 <lootgroup name="groupFootlockerWeapons03FLTRIGP" loot_quality_template="qualQ1Template">
 	<item name="gunHandgunT1Pistol" loot_prob_template="veryLow"/>
@@ -73,12 +90,15 @@ This addresses a vanilla bug where regular footlockers are placed in military PO
 	<item group="groupFootlockerWeapons03FLTRIGP" loot_prob_template="ProbT1"/>
 </append>
 
+<!-- *** PURSES -->
 <!-- Added chance to find IGP T1 Pistols in Purses. -->
-<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Gunslinger']">
+<!-- CHECK if needed -->
+<!-- REMOVED -->
+<!-- <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Gunslinger']">
 	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
 	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
-</append>
+</append> -->
 
 <!-- 
 REF:
@@ -130,7 +150,16 @@ REF:
 	<item group="groupWeaponsT0_Ranged" loot_prob_template="ProbT0"/>
 	<item group="groupWeaponsT1_Ranged" loot_prob_template="ProbT1"/>
 </lootgroup> -->
- 
+
+
+<!-- 1.1.0 -->
+<!-- ADDED: IGP pistols to groupNightstand02 -->
+<append xpath="/lootcontainers/lootgroup[@name='groupNightstand02']">
+	<item name="IZYgunT1Pistol45M1917" loot_prob_template="veryLow"/>
+	<item name="IZYgunT1Pistol45Type17C96" loot_prob_template="veryLow"/>
+	<item name="IZYgunT1Pistol9Makarov" loot_prob_template="veryLow"/>
+</append>
+
 </if>
 </conditional>
 
