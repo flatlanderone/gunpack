@@ -1251,6 +1251,17 @@ IZYgunT0PistolLiberatorImprovisedPistol
 @name='IZYgunTminus1MusketM1777Rifle' or 
 @name='IZYgunT0PistolLiberatorImprovisedPistol']/property[@name='Tags']/@value" delim="," op="add">nomodGunLaserSightFLTR</csv>
 
+<!-- *** Fixed EntityDamage for 
+IZYgunT3MarksmanRifleMMRM1Carbine45
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine  -->
+
+<set xpath="/items/item[@name='IZYgunT3MarksmanRifleMMRM1Carbine45']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']/@value">40</set>
+
+<set xpath="/items/item[@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/effect_group/passive_effect[@name='EntityDamage' and @operation='base_add']/@value">50</set>
+
+<csv xpath="/items/item[@name='ammo45ACPBulletBall' or @name='ammo45ACPHighpower' or @name='ammo45ACPArmorpiecing' or @name='ammo45ACPEnhanced']/effect_group/passive_effect[@name='EntityDamage']/@tags" op="add" delim=",">perkDeadEye</csv>
+
+
 </if>
 </conditional>
 
