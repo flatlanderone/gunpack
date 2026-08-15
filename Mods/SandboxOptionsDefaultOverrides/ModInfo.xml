@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Author value="Byteblazar" />
+    <Description value="Overrides the default value of certain sandbox options" />
+    <DisplayName value="Sandbox Options Default Overrides" />
+    <Name value="Byteblazars_Sandbox_Options_Default_Overrides" />
+    <Version value="1.0.0"/>
+    <Website value=""/> 
+</xml>

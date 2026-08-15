@@ -1,0 +1,14 @@
+<RamblingMan>
+
+<!-- *** 3.2. Challenge Runs: 'No Repair' Challenge for T0 to T3 weapons -->
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair') == 'No'">
+
+<!-- 	<append xpath="/sandbox_overrides">
+		<sandbox_override option="RepairTypes" />
+	</append> -->
+
+</if>
+</conditional>
+
+</RamblingMan>

@@ -1,0 +1,9 @@
+<RamblingMan>
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(7,0,0)">
+		<include filename="Options/sandbox_overrides.xml"/>
+	</if>
+</conditional>
+
+</RamblingMan>
