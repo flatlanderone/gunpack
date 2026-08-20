@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <xml>
 	<Name value="ImmersiveWeaponNamesFLTR" />
-	<DisplayName value="Immersive Weapon Names for IZY Classic" />
-	<Version value="3.0.1.0" />
-	<Description value="This modlet removes the extended tier info from IZY Classic and vanilla weapon names introduced by Flatlander's Combat Sandbox." />
+	<DisplayName value="Immersive Weapon Names for IZY Classic and IZY New Weapon Pack" />
+	<Version value="3.1.0.110" />
+	<InternalVersion value="3.1.0.1.1.0" />
+	<Description value="This modlet removes the extended tier info from IZY Classic and vanilla weapon names introduced by Flatlander's Combat Sandbox. It does the same for IZY New Weapon Pack v1.0." />
 	<Author value="flatlander" />
 	<Website value="https://github.com/flatlanderone" />
 </xml>
