@@ -1081,17 +1081,20 @@ meleeToolAxeT3ChainsawParts -->
 
 <!-- *** 3.2. Challenge Runs: 'No Repair' Challenge for T0 to T3 weapons -->
 <conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair') == 'No'">
+<!-- <if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair') == 'No'"> -->
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair_RepairKit') == 'No'">
 
 <!-- Vanilla and IZY TO weapons -->
+<!-- 
+@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolShovelT0StoneShovel' or  -->
+
 <remove xpath="/items/item[@name='gunBowT0PrimitiveBow' or 
 @name='gunHandgunT0PipePistol' or 
 @name='gunMGT0PipeMachineGun' or 
 @name='gunRifleT0PipeRifle' or 
 @name='gunShotgunT0PipeShotgun' or 
-@name='meleeToolRepairT0StoneAxe' or 
-@name='meleeToolRepairT0TazasStoneAxe' or 
-@name='meleeToolShovelT0StoneShovel' or 
 @name='meleeWpnBatonT0PipeBaton' or 
 @name='meleeWpnBladeT0BoneKnife' or 
 @name='meleeWpnClubT0WoodenClub' or 
@@ -1147,6 +1150,31 @@ starts-with(@name, 'meleeWpnSpearT3')]/property[@name='RepairTools']"/>
 
 </if>
 </conditional>
+
+<!-- *** No repair challenge: Tools -->
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair_RepairKit_Tools') == 'No'">
+
+<remove xpath="/items/item[@name='meleeToolRepairT0StoneAxe' or 
+@name='meleeToolRepairT0TazasStoneAxe' or 
+@name='meleeToolRepairT1ClawHammer' or 
+@name='meleeToolRepairT3Nailgun' or 
+@name='meleeToolAxeT1IronFireaxe' or 
+@name='meleeToolAxeT2SteelAxe' or 
+@name='meleeToolPickT1IronPickaxe' or 
+@name='meleeToolPickT2SteelPickaxe' or 
+@name='meleeToolShovelT0StoneShovel' or 
+@name='meleeToolShovelT1IronShovel' or 
+@name='meleeToolShovelT2SteelShovel' or 
+@name='meleeToolAxeT3Chainsaw' or 
+@name='meleeToolPickT3Auger' or 
+@name='meleeToolSalvageT1Wrench' or 
+@name='meleeToolSalvageT2Ratchet' or 
+@name='meleeToolSalvageT3ImpactDriver']/property[@name='RepairTools']"/>
+
+</if>
+</conditional>
+
 
 <!-- *** 3.3. Challenge Runs: T0-T3 degradation Rate Options -->
 

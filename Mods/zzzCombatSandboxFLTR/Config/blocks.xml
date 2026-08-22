@@ -27,4 +27,6 @@
 </if>
 </conditional>
 
+<include filename="hardcoded-features.xml"/>
+
 </RamblingMan>

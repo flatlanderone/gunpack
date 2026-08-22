@@ -93,7 +93,9 @@
         <Switch name="RestrictedRunNoCraftingMines" displayKey="uiRestrictedRunNoCraftingMines" tooltipKey="tipRestrictedRunNoCraftingMines" defaultValue="Yes" leftValue="No" rightValue="Yes" />
       </Category>
       <Category name="AllWeaponsRepairDegradationCategory" displayKey="uiAllWeaponsRepairDegradationCategory" tooltipKey="tipAllWeaponsRepairDegradationCategory">
-        <Switch name="Enable_AllWeapons_Repair" displayKey="ui_Enable_AllWeapons_Repair" tooltipKey="tip_Enable_AllWeapons_Repair" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="Enable_AllWeapons_Repair_RepairKit" displayKey="ui_Enable_AllWeapons_Repair_RepairKit" tooltipKey="tip_Enable_AllWeapons_Repair_RepairKit" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="Enable_AllWeapons_Repair_RepairKit_Tools" displayKey="ui_Enable_AllWeapons_Repair_RepairKit_Tools" tooltipKey="tip_Enable_AllWeapons_Repair_RepairKit_Tools" defaultValue="Yes" leftValue="No" rightValue="Yes" />
+        <Switch name="Enable_AllWeapons_Repair_CombineStation" displayKey="ui_Enable_AllWeapons_Repair_CombineStation" tooltipKey="tip_Enable_AllWeapons_Repair_CombineStation" defaultValue="Yes" leftValue="No" rightValue="Yes" />
         <Selector name="Enable_AllWeapons_DegradationSelector" displayKey="ui_Enable_AllWeapons_DegradationSelector" tooltipKey="tip_Enable_AllWeapons_DegradationSelector" defaultValue="Default">
           <Property type="arrayValues" allowedValues="Default,2x,3x,4x,5x" />
         </Selector>
