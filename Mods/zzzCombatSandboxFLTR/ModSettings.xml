@@ -103,9 +103,16 @@
       <Category name="NoteKick2" displayKey="uiNoteKick2" tooltipKey="tipNoteKick2" />
     </Tab>
     <Tab name="MiscSettings" displayKey="uiMiscSettings" tooltipKey="tipMiscSettings">
-      <Category name="MiscSettingsCategoryWeaponOptions" displayKey="uiMiscSettingsCategoryWeaponOptions" tooltipKey="tipMiscSettingsCategoryWeaponOptions">
+      <Category name="MiscSettingsSoundOptions" displayKey="uiMiscSettingsSoundOptions" tooltipKey="tipMiscSettingsSoundOptions">
+        <Switch name="MiscSettings_SilencedIZYWeapons" displayKey="uiMiscSettings_SilencedIZYWeapons" tooltipKey="tipMiscSettings_SilencedIZYWeapons" defaultValue="Off" leftValue="Off" rightValue="On" />
+		<Switch name="MiscSettings_SilencedVanillaWeapons" displayKey="uiMiscSettings_SilencedVanillaWeapons" tooltipKey="tipMiscSettings_SilencedVanillaWeapons" defaultValue="Off" leftValue="Off" rightValue="On" />
+		
+      </Category>
+	  
+	  <Category name="MiscSettingsCategoryWeaponOptions" displayKey="uiMiscSettingsCategoryWeaponOptions" tooltipKey="tipMiscSettingsCategoryWeaponOptions">
         <Switch name="MiscSettings_Autoreload" displayKey="uiMiscSettings_Autoreload" tooltipKey="tipMiscSettings_Autoreload" defaultValue="All" leftValue="All" rightValue="Default" />
       </Category>
+	  
       <Category name="MiscSettingsCategoryModOptions" displayKey="uiMiscSettingsCategoryModOptions" tooltipKey="tipMiscSettingsCategoryModOptions">
         <Switch name="MiscSettings_DrumMagazine556" displayKey="uiMiscSettings_DrumMagazine556" tooltipKey="tipMiscSettings_DrumMagazine556" defaultValue="All" leftValue="All" rightValue="Some" />
       </Category>
