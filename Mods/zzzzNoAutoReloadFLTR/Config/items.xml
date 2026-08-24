@@ -1,0 +1,51 @@
+<RamblingMan>
+
+
+<!-- ***Vanilla firearms -->
+<prepend xpath="/items/item[@name='gunHandgunT0PipePistol' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunExplosivesT3RocketLauncher']/property[@class='Action0']">
+	<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+</prepend>
+
+<set xpath="/items/item[@name='gunHandgunT0PipePistol' or 
+@name='gunHandgunT1Pistol' or 
+@name='gunHandgunT3SMG5' or 
+@name='gunHandgunT2Magnum44' or 
+@name='gunHandgunT3DesertVulture' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='gunShotgunT1DoubleBarrel' or 
+@name='gunShotgunT2PumpShotgun' or 
+@name='gunShotgunT3AutoShotgun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunRifleT1HuntingRifle' or 
+@name='gunRifleT2LeverActionRifle' or 
+@name='gunRifleT3SniperRifle' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunMGT1AK47' or 
+@name='gunMGT2TacticalAR' or 
+@name='gunMGT3M60' or 
+@name='gunExplosivesT3RocketLauncher']/property[@class='Action0']/property[@name='AutoReload']/@value">false</set>
+
+<prepend xpath="/items/item[starts-with(@name, 'gun')]/property[@class='Action0']">
+	<requirement name="RoundsInMagazine" operation="GT" value="0"/>
+</prepend>
+
+<set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[@class='Action0']/property[@name='AutoReload']/@value">false</set>
+
+</RamblingMan>

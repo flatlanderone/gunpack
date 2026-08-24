@@ -1,0 +1,145 @@
+<RamblingMan>
+
+<set xpath="/items/item[@name='gunHandgunT0PipePistol' or @name='gunHandgunT1Pistol']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">pistol_s_fire</set>
+
+<set xpath="/items/item[@name='gunHandgunT3SMG5' or @name='gunMGT0PipeMachineGun']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">smg_s_fire</set>
+
+<set xpath="/items/item[@name='gunHandgunT2Magnum44']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">44magnum_s_fire</set>
+
+<set xpath="/items/item[@name='gunHandgunT3DesertVulture']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">desertvulture_s_fire</set>
+
+<set xpath="/items/item[@name='gunShotgunT0PipeShotgun' or @name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT2PumpShotgun' or @name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">pump_shotgun_s_fire</set>
+
+
+<!-- <set xpath="/items/item[@name='gunRifleT0PipeRifle' or @name='gunRifleT1HuntingRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">hunting_rifle_s_fire</set>
+ -->
+
+<set xpath="/items/item[@name='gunRifleT0PipeRifle' or @name='gunRifleT1HuntingRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">sniperrifle_s_fire</set>
+
+
+<set xpath="/items/item[@name='gunRifleT2LeverActionRifle' or @name='gunRifleT3SniperRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">sniperrifle_s_fire</set>
+
+<set xpath="/items/item[@name='gunMGT1AK47' or @name='gunMGT2TacticalAR']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">ak47_s_fire</set>
+
+<set xpath="/items/item[@name='gunMGT3M60']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">m60_s_fire</set>
+
+
+<!-- IZY Weapons -->
+
+<conditional>
+<if cond="game_version() >= version(1,3,0) and mod_loaded('IGP_Classic')">
+
+<set xpath="/items/item[@name='IZYgunT1Pistol9Makarov' or 
+@name='IZYgunT1DualPistolCOLTnavyRevolver']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M9pistol_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT0SMGPIPEsubmachinegun' or @name='IZYgunT2SMGUZIsubmachinegun' or @name='IZYgunT1SMGTec9submachinegun']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">UZIsmg_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT2DualPistolM9bs' or 
+@name='IZYgunT3DualPistolGlock18C' or 
+@name='IZYgunT4DualPistolMP9s' or 
+@name='IZYgunT3SMGMP9submachinegun' or 
+@name='IZYgunT4SMGCZScorpionEVO3' or 
+@name='IZYgunT3SMGMP5Ksubmachinegun' or 
+@name='IZYgunT4SMGColt9mmsubmachinegun']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">MP5Ksmg_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT3PistolMagnumAutomag44' or 
+@name='IZYgunT4DualMagnumDesertEagles']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">DWDE_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol' or  
+@name='IZYgunT2Pistol45M1911A1' or 
+@name='IZYgunT1Pistol45M1917' or 
+@name='IZYgunT1Pistol45Type17C96' or 
+@name='IZYgunT2DualPistols45M1911A1']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M1911A1_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT3Pistol45USP45' or 
+@name='IZYgunT4Pistol45STIEAGLE6']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">USP45b_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT245SMGM3Greasegun' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">IZY_Carbine45_silen_fire</set>
+
+
+<set xpath="/items/item[@name='IZYgunT345SMGM1thompson' or 
+@name='IZYgunT445SMGM1928thompson']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M1928D_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT5HeavyWeaponM134MinigunGatling' or 
+@name='IZYgunT1ARCabineM608SurvivalRifle' or 
+@name='IZYgunT2ARCabineCAR15' or 
+@name='IZYgunT3ARCabineM4Carbine' or 
+@name='IZYgunT4ARCabineHK416']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M4CARINE_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@name='IZYgunT3BULLPUPHellionVHS2' or 
+@name='IZYgunT4BULLPUPFNF2000' or 
+@name='IZYgunT3MarksManRifle556M16A2DMR' or 
+@name='IZYgunT2LMGLMG36' or 
+@name='IZYgunT3LMGM249FNminimi']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M16A2S_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">MosinN2_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT4SNIPERRIFLE762L96AWMRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">L96_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT2MarksManRifle762M1garandNavyconverted']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M1garandN_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT3MarksManRifle762HKPSG1' or 
+@name='IZYgunT2ARSTG44N' or 
+@name='IZYgunT3ARAKM' or 
+@name='IZYgunT2LMGlightmachinegunRPD' or 
+@name='IZYgunT4LMGlightmachinegunMG34R']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">SturmRifle_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT4MarksManRifle762SVUprototypeRifle']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">SVUb_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT4MarksManRifleM110SASS']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M110SASS_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@name='IZYgunT2BattleRifleFNFALRifle' or 
+@name='IZYgunT3BattleRifleHKG3' or 
+@name='IZYgunT4BattleRifleSCARH']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">BARs_silen_fire</set>
+
+<set xpath="/items/item[@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@name='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@name='IZYgunT4TACshotgunM1014']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">M1014A1_silen_fire</set>
+
+
+
+<set xpath="/items/item[@name='IZYgunT3TradshotgunTrenchGunM1897' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYgunT1TACCompactshotgunSuperShortty' or 
+@name='IZYgunT3TACshotgunSPAS12G']/property[@class='Action0']/property
+[@name='Sound_start' or @name='Sound_loop']/@value">Universal_silen_fire_01</set>
+
+</if>
+</conditional>
+
+</RamblingMan>

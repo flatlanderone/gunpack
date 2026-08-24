@@ -1540,6 +1540,13 @@ starts-with(@name, 'meleeWpnSpearT3')]/effect_group/passive_effect[@name='Degrad
 
 <set xpath="/items/item[starts-with(@name, 'IZYgun')]/property/property[@name='AutoReload']/@value">true</set>
 
+<!-- <set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@class='Action0']/property[@name='Delay']/@value">5</set>
+
+<append xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@class='Action0']">
+	<property name="Reload_time" value="4"/>
+</append> -->
+
+
 </if>
 </conditional>
 <!-- *** 6.2 All 5.56mm machine guns take the drummagazine. -->
@@ -1794,6 +1801,10 @@ gunShotgunT3Remington -->
 
 </if>
 </conditional>
+
+
+<!-- *** Quieter weapons: all firearms use the sounds as if they were equipped with a silencer. -->
+
 
 <!-- *** TODO: ALT ammo icons  -->
 <!-- 
