@@ -114,7 +114,11 @@
       </Category>
 	  
       <Category name="MiscSettingsCategoryModOptions" displayKey="uiMiscSettingsCategoryModOptions" tooltipKey="tipMiscSettingsCategoryModOptions">
-        <Switch name="MiscSettings_DrumMagazine556" displayKey="uiMiscSettings_DrumMagazine556" tooltipKey="tipMiscSettings_DrumMagazine556" defaultValue="All" leftValue="All" rightValue="Some" />
+        
+		<Switch name="MiscSettings_DrumMagazine556" displayKey="uiMiscSettings_DrumMagazine556" tooltipKey="tipMiscSettings_DrumMagazine556" defaultValue="All" leftValue="All" rightValue="Some" />
+		
+		<Switch name="MiscSettings_modGunMeleeTheHunter" displayKey="uiMiscSettings_modGunMeleeTheHunter" tooltipKey="tipMiscSettings_modGunMeleeTheHunter" defaultValue="Only Live Animals" leftValue="All Animals" rightValue="Only Live Animals" />
+		
       </Category>
       <Category name="MiscSettingsCategoryAmmoOptions" displayKey="uiMiscSettingsCategoryAmmoOptions" tooltipKey="tipMiscSettingsCategoryAmmoOptions">
         <Switch name="MiscSettings_LooseAmmoBundleRecipeWorkbench" displayKey="uiMiscSettings_LooseAmmoBundleRecipe" tooltipKey="tipMiscSettings_LooseAmmoBundleRecipe" defaultValue="Yes" leftValue="No" rightValue="Yes" />
