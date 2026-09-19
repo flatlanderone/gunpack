@@ -1,0 +1,42 @@
+<RamblingMan>
+<!-- *** 3. Challenge Runs ### -->
+
+<!-- *** 3.1. Challenge Runs: Pacifist Traders: traders won't buy weapons, ammo and ammo crafting resources. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunPacifistTrader.RestrictedRunPacifistTraderNoBuy') == 'No'">
+
+<!-- Weapons, turrets, electric traps -->
+<append xpath="/blocks/block[starts-with(@name, 'bladeTrap') or 
+starts-with(@name, 'dartTrap') or 
+starts-with(@name, 'electricfencepost') or 
+starts-with(@name, 'autoTurret') or 
+starts-with(@name, 'shotgunTurret')]"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Mines -->
+<append xpath="/blocks/block[@name='mineCandyTin' or 
+@name='mineCookingPot' or 
+@name='mineHubcap' or 
+@name='mineAirFilter' or 
+@name='mineCandyTinTwitch']"><property name="SellableToTrader" value="false" /></append>
+
+<!-- Barbed fence and spike traps -->
+<append xpath="/blocks/block[@name='barbedFence' or 
+@name='barbedWireSheet' or 
+@name='trapSpikesIronDmg0' or 
+@name='trapSpikesWoodDmg0' or 
+@name='trapSpikesWoodMaster' or 
+@name='trapSpikesScrapIronMaster']"><property name="SellableToTrader" value="false" /></append>
+
+</if>
+</conditional>
+
+<!-- *** 3.5 No Crafting challenge: Passive traps can be picked up. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingTraps') == 'No'">
+<!-- Not implemented -->
+</if>
+</conditional>
+
+</RamblingMan>
