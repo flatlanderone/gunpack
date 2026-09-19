@@ -1,0 +1,35 @@
+<RamblingMan>
+
+<!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
+
+<conditional>
+<if cond="game_version() >= version(1,3,0)">
+
+<!-- See buffs.xml -->
+<!-- Fixed mag dump with certain weapons  -->
+
+<!-- <remove xpath="/item_modifiers/item_modifier[@name='modGunTriggerGroupAutomatic' or @name='modGunTriggerGroupBurst3']/effect_group/passive_effect[@name='BurstRoundCount']"/> -->
+
+<!-- Reimplemented ShortBarrelmod for modShotgunSawedOffBarrel -->
+
+<csv xpath="/item_modifiers/item_modifier[@name='modShotgunSawedOffBarrel']/@installable_tags" delim="," op="add">ShortBarrelmod</csv>
+
+
+<!-- *** 7. Set CrosshairOnAim and CrosshairUpAfterShot to true for all weapon mods to fix a conflict with the 3.0 crosshair  -->
+
+<set xpath="/item_modifiers/item_modifier/item_property_overrides/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
+
+<!-- *** Added nomodGunLaserSightFLTR tag to block the installation of the modGunLaserSight. 
+
+Reason modGunLaserSight not set up to display the laser beam on the following weapons.
+IZYgunT145TACSMGMAC10
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunTminus1MusketM1777Rifle
+IZYgunT0PistolLiberatorImprovisedPistol
+ -->
+
+<csv xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/@blocked_tags" delim="," op="add">nomodGunLaserSightFLTR</csv>
+
+</if>
+</conditional>
+</RamblingMan>

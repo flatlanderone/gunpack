@@ -1,0 +1,69 @@
+<RamblingMan>
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/item_modifiers.xml"/>
+
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<include filename="IGP/item_modifiers.xml"/>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- *** VANILLA 2.6 and IZY -->
+
+<!-- Start of 2.6.1.5 -->
+<!-- Added a new tag to block installation of modGunReflexSightA, modGunReflexSightB, IZYmodPistolHoldstyle01 and IZYmodPistolHoldstyle02 when the VRP is disabled. -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunReflexSightA' or @name='modGunReflexSightB' or @name='IZYmodPistolHoldstyle01' or @name='IZYmodPistolHoldstyle02']/@blocked_tags" delim="," op="add">noVRP</csv>
+
+<!-- End of 2.6.1.5 -->
+
+<!-- 2.6.1.2 -->
+<!-- Added no2xScopesFLTR tag to block the installation of the 2x scope.
+Reason: White square in the place of the red dot https://github.com/flatlanderone/gunpack/issues/15
+ -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']/@blocked_tags" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- Added tag to exclude 4x scope -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']/@blocked_tags" delim="," op="add">no4xScopesFLTR</csv>
+
+<!-- Added tag to exclude 8x scope -->
+<csv xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']/@blocked_tags" delim="," op="add">no8xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
+<!-- *** IZY_MMVMV2 -->
+
+<conditional>
+<if cond="mod_loaded('IZY_MMVMV2') and mod_version('IZY_MMVMV2') = version(1,1,0,4)">
+
+<!-- Enabled localization for IZYmodPistolHoldstyle01Desc and IZYmodPistolHoldstyle02Desc. -->
+<set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle01']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle01Desc</set>
+
+<set xpath="/item_modifiers/item_modifier[@name='IZYmodPistolHoldstyle02']/property[@name='DescriptionKey']/@value">IZYmodPistolHoldstyle02Desc</set>
+
+</if>
+</conditional>
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/item_modifiers.xml"/>
+	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
+</conditional>
+
+</RamblingMan>

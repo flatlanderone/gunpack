@@ -1,0 +1,5 @@
+<RamblingMan>
+
+<csv xpath="/items/item[@name='ammoRocketFire']/property[@name='Group']/@value" delim="," op="add">Rockets</csv>
+
+</RamblingMan>

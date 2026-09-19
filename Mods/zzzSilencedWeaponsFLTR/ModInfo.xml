@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml>
+	<Name value="SilencedWeaponsFLTR" />
+	<DisplayName value="SilencedWeaponsFLTR" />
+	<Version value="3.2.0.100" />
+	<InternalVersion value="3.2.0.1.0.0" />
+	<Description value="This modlet changes the shooting sound of all vanilla firearms and weapon-based turrets to a quieter version, identical to the sound used when a silencer is equipped. Great for streaming and playing without headphones." />
+	<Author value="flatlander" />
+	<Website value="https://github.com/flatlanderone" />
+</xml>

@@ -1,0 +1,30 @@
+<RamblingMan>
+<!-- Override for Survival Sandbox v3 -->
+
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/challenges.xml"/>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- Gears Options -->
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/challenges.xml"/>
+	</if>
+</conditional>
+
+</if>
+</conditional>
+
+</if>
+</conditional>
+
+</RamblingMan>

@@ -1,0 +1,774 @@
+<RamblingMan>
+<!-- Gears Options -->
+
+<!-- *** 1. Start of Weapon Pack Options ### -->
+
+<!-- *** Removing recipes per weapon pack.
+ -->
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_melee') == 'Off'">
+<!-- 
+Removed recipes for 
+IZYMeleeT4BladeKatana
+IZYMeleeT4SledghammerSpikeMace
+IZYMeleeT4SpearPoleAxe
+ -->
+<remove xpath="/recipes/recipe[starts-with(@name, 'IZYMelee')]"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_9mmVAL') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_9mmVAL guns.
+
+IZYgunT0SMGPIPEsubmachinegun
+IZYgunT1DualPistolCOLTnavyRevolver
+IZYgunT1Pistol9Makarov
+IZYgunT1SMGTec9submachinegun
+IZYgunT2DualPistolM9bs
+IZYgunT2SMGUZIsubmachinegun
+IZYgunT3DualPistolGlock18C
+IZYgunT3SMGMP9submachinegun
+IZYgunT4DualPistolMP9s
+IZYgunT4SMGCZScorpionEVO3  -->
+<remove xpath="/recipes/recipe[@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT1DualPistolCOLTnavyRevolver' or 
+@name='IZYgunT1Pistol9Makarov' or 
+@name='IZYgunT1SMGTec9submachinegun' or 
+@name='IZYgunT2DualPistolM9bs' or 
+@name='IZYgunT2SMGUZIsubmachinegun' or 
+@name='IZYgunT3DualPistolGlock18C' or 
+@name='IZYgunT3SMGMP9submachinegun' or 
+@name='IZYgunT4DualPistolMP9s' or 
+@name='IZYgunT4SMGCZScorpionEVO3']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_44magnum -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_44magnum') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_44magnum guns.
+
+IZYgunT3PistolMagnumAutomag44
+IZYgunT4DualMagnumDesertEagles
+
+ -->
+<remove xpath="/recipes/recipe[@name='IZYgunT3PistolMagnumAutomag44' or 
+@name='IZYgunT4DualMagnumDesertEagles']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_45ACP') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_45ACP guns.
+ammo45ACPBulletBall
+ammo45ACPHighpower
+ammo45ACPArmorpiecing
+ammo45ACPEnhanced
+ammoBundle45ACPBulletBall
+ammoBundle45ACPHighpower
+ammoBundle45ACPArmorpiecing
+ammoBundle45ACPEnhanced
+IZYgunT0PistolLiberatorImprovisedPistol
+IZYgunT1Pistol45M1917
+IZYgunT1Pistol45Type17C96
+IZYgunT2Pistol45M1911A1
+IZYgunT2DualPistols45M1911A1
+IZYgunT3Pistol45USP45
+IZYgunT4Pistol45STIEAGLE6
+IZYgunT145TACSMGMAC10
+IZYgunT245SMGM3Greasegun
+IZYgunT345SMGM1thompson
+IZYgunT445SMGM1928thompson
+IZYgunT445TACSMGKrissSuperV
+IZYgunT3MarksmanRifleMMRM1Carbine45
+IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+ -->
+<remove xpath="/recipes/recipe[@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT1Pistol45M1917' or 
+@name='IZYgunT1Pistol45Type17C96' or 
+@name='IZYgunT2Pistol45M1911A1' or 
+@name='IZYgunT2DualPistols45M1911A1' or 
+@name='IZYgunT3Pistol45USP45' or 
+@name='IZYgunT4Pistol45STIEAGLE6' or 
+@name='IZYgunT145TACSMGMAC10' or 
+@name='IZYgunT245SMGM3Greasegun' or 
+@name='IZYgunT345SMGM1thompson' or 
+@name='IZYgunT445SMGM1928thompson' or 
+@name='IZYgunT445TACSMGKrissSuperV' or 
+@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or 
+@name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_556pack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_556pack guns and ammo:
+ammo556mmBulletBall
+ammo556mmHIpower
+ammo556mmArmorPiercing
+ammo556mmBulletBallBundle
+ammo556mmHIpowerBundle
+ammo556mmArmorPiercingBundle
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunT1ARCabineM608SurvivalRifle
+IZYgunT2ARCabineCAR15
+IZYgunT3ARCabineM4Carbine
+IZYgunT4ARCabineHK416
+IZYgunT1LRLongRifleM16a1
+IZYgunT3BULLPUPHellionVHS2
+IZYgunT4BULLPUPFNF2000
+IZYgunT2LMGLMG36
+IZYgunT3LMGM249FNminimi
+IZYgunT3MarksManRifle556M16A2DMR'
+
+ -->
+<remove xpath="/recipes/recipe[@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or 
+@name='IZYgunT1ARCabineM608SurvivalRifle' or 
+@name='IZYgunT2ARCabineCAR15' or 
+@name='IZYgunT3ARCabineM4Carbine' or 
+@name='IZYgunT4ARCabineHK416' or 
+@name='IZYgunT1LRLongRifleM16a1' or 
+@name='IZYgunT3BULLPUPHellionVHS2' or 
+@name='IZYgunT4BULLPUPFNF2000' or 
+@name='IZYgunT2LMGLMG36' or 
+@name='IZYgunT3LMGM249FNminimi' or 
+@name='IZYgunT3MarksManRifle556M16A2DMR']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_762pack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_762pack guns and ammo:
+ammo762mmExplosiveFragmentations
+ammo762mmExplosiveFragmentationsBundle
+IZYgunT1SNIPERRIFLE762Mosinnagant
+IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT2MarksManRifle762M1garandNavyconverted
+IZYgunT3MarksManRifle762HKPSG1
+IZYgunT4MarksManRifle762SVUprototypeRifle
+IZYgunT4MarksManRifleM110SASS
+IZYgunT2ARSTG44N
+IZYgunT3ARAKM
+IZYgunT1BattleRifleBARbrowningautomaticrifle
+IZYgunT2BattleRifleFNFALRifle
+IZYgunT3BattleRifleHKG3
+IZYgunT4BattleRifleSCARH
+IZYgunT2LMGlightmachinegunRPD
+IZYgunT4LMGlightmachinegunMG34R -->
+<remove xpath="/recipes/recipe[@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or 
+@name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or 
+@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or 
+@name='IZYgunT2MarksManRifle762M1garandNavyconverted' or 
+@name='IZYgunT3MarksManRifle762HKPSG1' or 
+@name='IZYgunT4MarksManRifle762SVUprototypeRifle' or 
+@name='IZYgunT4MarksManRifleM110SASS' or 
+@name='IZYgunT2ARSTG44N' or 
+@name='IZYgunT3ARAKM' or 
+@name='IZYgunT1BattleRifleBARbrowningautomaticrifle' or 
+@name='IZYgunT2BattleRifleFNFALRifle' or 
+@name='IZYgunT3BattleRifleHKG3' or 
+@name='IZYgunT4BattleRifleSCARH' or 
+@name='IZYgunT2LMGlightmachinegunRPD' or 
+@name='IZYgunT4LMGlightmachinegunMG34R']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_SG') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_SG guns and ammo:
+ammoShotgunShellPremium
+ammoBundleShotgunShellPremium
+ammoShotgunShellPremiumBundle
+IZYgunT1TradshotgunDoubleBarrelOverUnder
+IZYgunT2TradshotgunLeveractionShotgunModel1887
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT1TACCompactshotgunSuperShortty
+IZYgunT3TACshotgunSPAS12G
+IZYgunT4TACshotgunM1014  -->
+<remove xpath="/recipes/recipe[@name='ammoShotgunShellPremium' or 
+@name='ammoBundleShotgunShellPremium' or 
+@name='ammoShotgunShellPremiumBundle' or 
+@name='IZYgunT1TradshotgunDoubleBarrelOverUnder' or 
+@name='IZYgunT2TradshotgunLeveractionShotgunModel1887' or 
+@name='IZYgunT3TradshotgunTrenchGunM1897' or 
+@name='IZYgunT4TradshotgunBrowningAuto5' or 
+@name='IZYgunT1TACCompactshotgunSuperShortty' or 
+@name='IZYgunT3TACshotgunSPAS12G' or 
+@name='IZYgunT4TACshotgunM1014']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Demopack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_Demopack guns and ammo:
+ammo25mmGrenadeFRAGS
+ammo25mmGrenadeHE
+ammo25mmGrenadeTraining
+ammoRocketRPGHE
+ammoRocketRPGIncendiary
+ammoRocketRPGTraning
+IZYgunT2LGLChinalakeGrenadeLauncher
+IZYgunT3LGLXM25
+IZYgunT3RocketLauncherRPG7
+
+ -->
+<remove xpath="/recipes/recipe[@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='IZYgunT2LGLChinalakeGrenadeLauncher' or 
+@name='IZYgunT3LGLXM25' or 
+@name='IZYgunT3RocketLauncherRPG7']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_HVW') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_HVW ammo:
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture
+ -->
+<remove xpath="/recipes/recipe[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Miscpack -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Miscpack') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_Miscpack guns and ammo:
+ammoCrossbowLightBoltIron
+ammoCrossbowLightBoltSteelAP
+ammoCrossbowLightBoltStone
+ammoleadball
+ammoMuzzleloaderscattershot
+ammoMuzzleloadershot
+IZYgunT4BowVanhelsingAutomaticCrossbowVH'
+IZYgunTminus1MusketFlintlockPistol
+IZYgunTminus1MusketM1777Rifle
+IZYgunTminus1MusketshotgunBlunderbuss
+
+ -->
+<remove xpath="/recipes/recipe[@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoleadball' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoMuzzleloadershot' or 
+@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH' or 
+@name='IZYgunTminus1MusketFlintlockPistol' or 
+@name='IZYgunTminus1MusketM1777Rifle' or 
+@name='IZYgunTminus1MusketshotgunBlunderbuss']"/>
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'WeaponPackSettings.WeaponPacksCategory.Enable_IZY_RMP_Tech') == 'Off'">
+
+<!-- Removed recipes for IZY_RMP_Tech guns:
+IZYgunT3TechnicalNailmachinegun
+
+ -->
+<remove xpath="/recipes/recipe[@name='IZYgunT3TechnicalNailmachinegun']"/>
+</if>
+</conditional>
+
+<!-- *** 2. Tier 4/5 Weapons ### -->
+
+<!-- *** 2.1 Removing recipes for Tier 4 Weapons.  -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_Crafting') == 'No'">
+
+<!-- Ranged weapons -->
+<remove xpath="/recipes/recipe[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYgunT5')]"/>
+
+<!-- Melee weapons -->
+<remove xpath="/recipes/recipe[starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYMeleeT5')]"/>
+
+</if>
+</conditional>
+
+<!-- *** 2.2 Easier repair: Alternative recipe for the Advanced Repair Kit (no legendary parts).  -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4RepairCategory.Enable_T4_RepairNoLegParts') == 'No'">
+
+<!-- Temporary alternative recipe -->
+<remove xpath="/recipes/recipe[@name='IZYadvancegunrepairkit']/ingredient[@name='resourceLegendaryParts']"/>
+<remove xpath="/recipes/recipe[@name='IZYadvancegunrepairkit']/ingredient[@name='resourceRepairKit']"/>
+<set xpath="/recipes/recipe[@name='IZYadvancegunrepairkit']/ingredient[@name='resourceForgedSteel']/@count">30</set>
+<append xpath="/recipes/recipe[@name='IZYadvancegunrepairkit']"><ingredient name="resourceDuctTape" count="5"/></append>
+<append xpath="/recipes/recipe[@name='IZYadvancegunrepairkit']"><ingredient name="resourceSpring" count="15"/></append>
+
+<!-- REF <recipe name="IZYadvancegunrepairkit" count="1">
+	<ingredient name="resourceRepairKit" count="1"/>
+	<ingredient name="resourceLegendaryParts" count="1"/>
+	<ingredient name="resourceForgedSteel" count="4"/>
+</recipe> -->
+
+</if>
+</conditional>
+
+<!-- *** 2.3 Easier T4 crafting: fewer legendary parts -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_CraftingEasierCrafting') == 'Fewer'">
+
+<set xpath="/recipes/recipe[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4')]/ingredient[@name='resourceLegendaryParts']/@count">1</set>
+</if>
+</conditional>
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_CraftingEasierCrafting') == 'More'">
+
+<set xpath="/recipes/recipe[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4')]/ingredient[@name='resourceLegendaryParts']/@count">10</set>
+</if>
+</conditional>
+
+<!-- 
+REF
+<recipe name="IZYgunT4SMGCZScorpionEVO3" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
+	<ingredient name="gunHandgunT1PistolParts" count="30"/>
+	<ingredient name="resourceForgedSteel" count="120"/>
+	<ingredient name="resourceDuctTape" count="25"/>
+	<ingredient name="resourceSpring" count="30"/>
+	<ingredient name="resourceLegendaryParts" count="5"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe> -->
+
+<!-- *** 2.4 Faster T4 crafting: reduce crafting time to T3 Q6 -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'T4Settings.T4CraftingCategory.Enable_T4_CraftingFasterCrafting') == 'Faster Crafting'">
+
+<!-- <removeattribute xpath="/recipes/recipe[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4')]/@craft_time" /> -->
+
+</if>
+</conditional>
+
+<!-- *** 3. Challenge Runs: Disabling weapon and ammo crafting -->
+
+<!-- *** 3.1 Disable the crafting of T0 weapons and stone arrows/bolts. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+
+<!-- Vanilla stone arrows/bolts 
+ammoArrowStone
+ammoCrossbowBoltStone
+ammoBundleArrowStone
+ammoBundleCrossbowBoltStone -->
+
+<remove xpath="/recipes/recipe[@name='ammoArrowStone' or 
+@name='ammoCrossbowBoltStone' or 
+@name='ammoBundleArrowStone' or 
+@name='ammoBundleCrossbowBoltStone']"/>
+
+<!-- Vanilla TO weapons-->
+<remove xpath="/recipes/recipe[@name='gunBowT0PrimitiveBow' or 
+@name='gunHandgunT0PipePistol' or 
+@name='gunMGT0PipeMachineGun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='meleeWpnBatonT0PipeBaton' or 
+@name='meleeWpnBladeT0BoneKnife' or 
+@name='meleeWpnClubT0WoodenClub' or 
+@name='meleeWpnKnucklesT0LeatherKnuckles' or 
+@name='meleeWpnSledgeT0StoneSledgehammer' or 
+@name='meleeWpnSpearT0StoneSpear']"/>
+
+<!-- Izy T0 weapons -->
+<remove xpath="/recipes/recipe[@name='IZYgunT0PistolLiberatorImprovisedPistol' or 
+@name='IZYgunT0SMGPIPEsubmachinegun' or 
+@name='IZYgunT0SNIPERpipeAR15Broken15Junk']"/>
+
+</if>
+</conditional>
+
+<!-- *** 3.2 Disable the crafting of thrown explosives -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingThrown') == 'No'">
+
+<remove xpath="/recipes/recipe[@name='thrownAmmoPipeBomb' or 
+@name='thrownGrenadeContact' or 
+@name='thrownGrenade' or 
+@name='thrownTimedCharge' or 
+@name='thrownDynamite' or 
+@name='thrownAmmoMolotovCocktail']"/>
+
+</if>
+</conditional>
+
+<!-- *** 3.3 Disable the crafting of T1-T3 weapons and offensive mods. 
+For T4 weapons,see the T4 weapons Tab. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingWeapons') == 'No'">
+
+<remove xpath="/recipes/recipe[starts-with(@name, 'IZYgunT1') or 
+starts-with(@name, 'IZYgunT2') or 
+starts-with(@name, 'IZYgunT3') or 
+starts-with(@name, 'IZYgunTminus1') or 
+starts-with(@name, 'gunBowT1') or 
+starts-with(@name, 'gunBowT2') or 
+starts-with(@name, 'gunBowT3') or 
+starts-with(@name, 'gunExplosivesT1') or 
+starts-with(@name, 'gunExplosivesT2') or 
+starts-with(@name, 'gunExplosivesT3') or 
+starts-with(@name, 'gunHandgunT1') or 
+starts-with(@name, 'gunHandgunT2') or 
+starts-with(@name, 'gunHandgunT3') or 
+starts-with(@name, 'gunShotgunT1') or 
+starts-with(@name, 'gunShotgunT2') or 
+starts-with(@name, 'gunShotgunT3') or 
+starts-with(@name, 'gunRifleT1') or 
+starts-with(@name, 'gunRifleT2') or 
+starts-with(@name, 'gunRifleT3') or 
+starts-with(@name, 'gunMGT1') or 
+starts-with(@name, 'gunMGT2') or 
+starts-with(@name, 'gunMGT3') or 
+starts-with(@name, 'gunBotT1') or 
+starts-with(@name, 'gunBotT2') or 
+starts-with(@name, 'meleeWpnBatonT1') or 
+starts-with(@name, 'meleeWpnBatonT2') or 
+starts-with(@name, 'meleeWpnBatonT3') or 
+starts-with(@name, 'meleeWpnBladeT1') or 
+starts-with(@name, 'meleeWpnBladeT2') or 
+starts-with(@name, 'meleeWpnBladeT3') or 
+starts-with(@name, 'meleeWpnClubT1') or 
+starts-with(@name, 'meleeWpnClubT2') or 
+starts-with(@name, 'meleeWpnClubT3') or 
+starts-with(@name, 'meleeWpnKnucklesT1') or 
+starts-with(@name, 'meleeWpnKnucklesT2') or 
+starts-with(@name, 'meleeWpnKnucklesT3') or 
+starts-with(@name, 'meleeWpnSledgeT1') or 
+starts-with(@name, 'meleeWpnSledgeT2') or 
+starts-with(@name, 'meleeWpnSledgeT3') or 
+starts-with(@name, 'meleeWpnSpearT1') or 
+starts-with(@name, 'meleeWpnSpearT2') or 
+starts-with(@name, 'meleeWpnSpearT3') or 
+starts-with(@name, 'modGun') or 
+starts-with(@name, 'modShotgun') or 
+starts-with(@name, 'modMeleeClub') or 
+starts-with(@name, 'modMeleeStun') or 
+starts-with(@name, 'modMeleeSerrated') or 
+starts-with(@name, 'modMeleeWeighted')]"/>
+</if>
+</conditional>
+
+<!-- *** 3.4 Disable the crafting of ammo. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingAmmo') == 'No'">
+
+<!-- Vanilla ammo, excluding single stone arrows and bolts and bundles. See 3.1 -->
+<remove xpath="/recipes/recipe[@name='ammo9mmBulletBall' or 
+@name='ammo9mmBulletHP' or 
+@name='ammo9mmBulletAP' or 
+@name='ammo44MagnumBulletBall' or 
+@name='ammo44MagnumBulletHP' or 
+@name='ammo44MagnumBulletAP' or 
+@name='ammo762mmBulletBall' or 
+@name='ammo762mmBulletHP' or 
+@name='ammo762mmBulletAP' or 
+@name='ammoShotgunShell' or 
+@name='ammoShotgunSlug' or 
+@name='ammoShotgunBreachingSlug' or 
+@name='ammoJunkTurretRegular' or 
+@name='ammoJunkTurretShell' or 
+@name='ammoJunkTurretAP' or 
+@name='ammoRocketHE' or 
+@name='ammoRocketFrag' or 
+@name='ammoArrowIron' or 
+@name='ammoArrowSteelAP' or 
+@name='ammoArrowFlaming' or 
+@name='ammoArrowExploding' or 
+@name='ammoCrossbowBoltIron' or 
+@name='ammoCrossbowBoltSteelAP' or 
+@name='ammoCrossbowBoltFlaming' or 
+@name='ammoCrossbowBoltExploding' or 
+@name='ammoBundle9mmBulletBall' or 
+@name='ammoBundle9mmBulletHP' or 
+@name='ammoBundle9mmBulletAP' or 
+@name='ammoBundle44MagnumBulletBall' or 
+@name='ammoBundle44MagnumBulletHP' or 
+@name='ammoBundle44MagnumBulletAP' or 
+@name='ammoBundle762mmBulletBall' or 
+@name='ammoBundle762mmBulletHP' or 
+@name='ammoBundle762mmBulletAP' or 
+@name='ammoBundleShotgunShell' or 
+@name='ammoBundleShotgunSlug' or 
+@name='ammoBundleShotgunBreachingSlug' or 
+@name='ammoBundleJunkTurretRegular' or 
+@name='ammoBundleJunkTurretShell' or 
+@name='ammoBundleJunkTurretAP' or 
+@name='ammoBundleArrowIron' or 
+@name='ammoBundleArrowSteelAP' or 
+@name='ammoBundleArrowFlaming' or 
+@name='ammoBundleArrowExploding' or 
+@name='ammoBundleCrossbowBoltIron' or 
+@name='ammoBundleCrossbowBoltSteelAP' or 
+@name='ammoBundleCrossbowBoltFlaming' or 
+@name='ammoBundleCrossbowBoltExploding' or 
+@name='ammoDartIron' or 
+@name='resourceGunPowderBundle' or 
+@name='resourceArrowHeadIron' or 
+@name='resourceArrowHeadSteelAP' or 
+@name='resourceGunPowder' or 
+@name='resourceBuckshot' or 
+@name='resourceBulletCasing' or 
+@name='resourceBulletTip' or 
+@name='resourceRocketTip' or 
+@name='resourceRocketCasing']"/>
+
+<!-- IZY ammo -->
+<remove xpath="/recipes/recipe[@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammoBundle45ACPBulletBall' or 
+@name='ammoBundle45ACPHighpower' or 
+@name='ammoBundle45ACPArmorpiecing' or 
+@name='ammoBundle45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo556mmBulletBallBundle' or 
+@name='ammo556mmHIpowerBundle' or 
+@name='ammo556mmArmorPiercingBundle' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammo762mmExplosiveFragmentationsBundle' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture']"/>
+
+</if>
+</conditional>
+
+<!-- *** 3.5 Disable the crafting of traps. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingTraps') == 'No'">
+
+<remove xpath="/recipes/recipe[@name='autoTurret' or 
+@name='barbedFence' or 
+@name='bladeTrap' or 
+@name='dartTrap' or 
+@name='electricfencepost' or 
+@name='shotgunTurret' or 
+@name='trapSpikesIronDmg0' or 
+@name='trapSpikesWoodDmg0']"/>
+
+</if>
+</conditional>
+
+<!-- *** 3.6 Disable the crafting of mines. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingMines') == 'No'">
+
+<remove xpath="/recipes/recipe[@name='mineAirFilter' or 
+@name='mineCandyTin' or 
+@name='mineCookingPot' or 
+@name='mineHubcap']"/>
+
+</if>
+</conditional>
+
+<!-- 
+6. Misc Options
+6.xx *** Ammo Reboxing in the Workbench -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryAmmoOptions.MiscSettings_LooseAmmoBundleRecipeWorkbench') == 'Yes'">
+
+<append xpath="/recipes">
+<!-- *** VANILLA AMMO TYPES  -->
+
+<!-- Based on public domain code from the Quality of Life mod by Karl Giesing / hzmusik. See https://gitlab.com/karlgiesing/7d2d-2.0-mods. -->
+
+<!-- Workbench recipes -->
+
+<!-- 9mm ammo-->
+	<recipe name="ammoBundle9mmBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo9mmBulletBall" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle9mmBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo9mmBulletHP" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle9mmBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo9mmBulletAP" count="100"/>
+	</recipe>
+
+<!-- .44 Magnum ammo -->
+	<recipe name="ammoBundle44MagnumBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo44MagnumBulletBall" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle44MagnumBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo44MagnumBulletHP" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle44MagnumBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo44MagnumBulletAP" count="100"/>
+	</recipe>
+
+<!-- 7.62mm ammo -->
+	<recipe name="ammoBundle762mmBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmBulletBall" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle762mmBulletHP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmBulletHP" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundle762mmBulletAP" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmBulletAP" count="100"/>
+	</recipe>
+
+<!-- Shotgun shells and slugs -->
+	<recipe name="ammoBundleShotgunShell" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunShell" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundleShotgunSlug" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunSlug" count="100"/>
+	</recipe>
+
+	<recipe name="ammoBundleShotgunBreachingSlug" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunBreachingSlug" count="100"/>
+	</recipe>
+</append>
+<!-- *** IGP ammo Types -->
+<!-- 5.56mmx45 -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack')">
+<append xpath="/recipes">
+	<recipe name="ammo556mmBulletBallBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo556mmBulletBall" count="100"/>
+	</recipe>
+	
+	<recipe name="ammo556mmHIpowerBundle" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo556mmHIpower" count="100"/>
+	</recipe>
+	
+	<recipe name="ammo556mmArmorPiercingBundle" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo556mmArmorPiercing" count="100"/>
+	</recipe>
+</append>	
+</if>
+</conditional>
+<!-- ***.45 ACP -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP')">
+<append xpath="/recipes">
+	<recipe name="ammoBundle45ACPBulletBall" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPBulletBall" count="100"/>
+	</recipe>
+	
+	<recipe name="ammoBundle45ACPHighpower" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPHighpower" count="100"/>
+	</recipe>
+	
+	<recipe name="ammoBundle45ACPArmorpiecing" count="1" craft_time="180" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPArmorpiecing" count="100"/>
+	</recipe>
+			
+	<recipe name="ammoBundle45ACPEnhanced" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo45ACPEnhanced" count="100"/>
+	</recipe>
+</append>
+</if>
+</conditional>
+
+<!-- *** ammoShotgunShellPremiumBundle  -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG')">
+<append xpath="/recipes">
+	<recipe name="ammoShotgunShellPremiumBundle" count="1" craft_time="120" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammoShotgunShellPremium" count="100"/>
+	</recipe>
+</append>	
+</if>
+</conditional>
+<!-- ***ammo762mmExplosiveFragmentationsBundle -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack')">
+<append xpath="/recipes">
+	<recipe name="ammo762mmExplosiveFragmentationsBundle" count="1" craft_time="210" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="ammo762mmExplosiveFragmentations" count="100"/>
+	</recipe>
+</append>
+</if>
+</conditional>
+
+</if>
+</conditional>
+</RamblingMan>

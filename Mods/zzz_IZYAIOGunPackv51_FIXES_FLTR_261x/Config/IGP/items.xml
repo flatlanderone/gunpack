@@ -1,0 +1,386 @@
+<RamblingMan>
+
+<!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
+
+<conditional>
+<if cond="game_version() >= version(1,3,0)">
+<!-- 
+TO DO Find criterion/pattern for .5 vs 1 
+<property name="harvestingTools" value="1" param1="1"/>
+<property name="harvestingTools" value=".5" param1="1"/> -->
+
+<!-- *** 1. Migrate Explosion. and ToolCategory. and properties to new format. -->
+
+<!-- *** A. Removed old property. -->
+
+<!-- item/property
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture -->
+
+<remove xpath="/items/item[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']/property[starts-with(@name, 'Explosion.')]" />
+
+<!-- 
+Action1
+ammo762mmExplosiveFragmentations
+ammoCrossbowLightBoltStone
+ammoCrossbowLightBoltIron
+ammoRocketRPGTraning
+ammoRocketRPGHE
+ammoRocketRPGIncendiary
+ammo25mmGrenadeTraining
+ammo25mmGrenadeFRAGS
+ammo25mmGrenadeHE
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture -->
+<remove xpath="/items/item[@name='ammo762mmExplosiveFragmentations' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or 
+@name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']/property[@class='Action1']/property[starts-with(@name, 'Explosion.')]" />
+
+
+<!-- *** ToolCategory.harvestingTools -->
+
+<remove xpath="/items/item[@name='IZYMeleeT4BatonPunisher9000' or 
+@name='IZYMeleeT4BladeKatana' or 
+@name='IZYMeleeT4DualKnivesKnife' or 
+@name='IZYMeleeT4SpearPoleAxe' or 
+@name='IZYMeleeT4SledghammerSpikeMace']/property/property[starts-with(@name, 'ToolCategory.')]" />
+
+
+<!-- TODO IN PROGRESS *** B. Add new property -->
+
+<!-- 
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture	 -->
+<append xpath="/items/item[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or @name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']">
+	<!-- <property name="Class" value="Projectile"/> only nested in properrty Action1 -->
+	<property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder:Resources/IZY_FlameThrower_asset.unity3d?IZY_Flamethrowner_DOT.Prefab"/>
+		<property name="Duration" value="2"/>
+		<property name="CustomScriptTypes" value="ExplosionAreaBuffTick,CustomParticleLoaderBuffArea"/>
+		<property name="TickInterval" value="0.5"/>
+		<property name="Buff" value="buffBurningMolotov"/>
+	</property>
+</append>
+
+<append xpath="/items/item[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or @name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']/property[@class='Action1']">
+<!-- <property name="Class" value="Projectile"/> -->
+<property class="Explosion">
+	<property name="ParticleIndex" value="#@modfolder:Resources/IZY_FlameThrower_asset.unity3d?IZY_Flamethrowner_DOT.Prefab"/>
+	<property name="Duration" value="8"/>
+	<property name="RadiusBlocks" value="1"/>
+	<property name="RadiusEntities" value="1"/>
+	<property name="BlastPower" value="1"/>
+	<property class="DamageBonus">
+		<property name="stone" value="0"/>
+		<property name="metal" value="0"/>
+		<property name="earth" value="0"/>
+		<property name="water" value="0"/>
+		<property name="wood" value="100"/>
+	</property>
+	<property name="ExplodeOnHit" value="true"/>
+	<property name="StickPercent" value=".5"/>
+</property>	
+</append>
+
+<!-- 
+ammoCrossbowLightBoltStone 
+ammoCrossbowLightBoltIron
+-->
+
+<append xpath="/items/item[@name='ammoCrossbowLightBoltStone' or @name='ammoCrossbowLightBoltIron']/property[@class='Action1']">
+	<property class="Explosion">
+		<property name="ParticleIndex" value="0"/>
+	</property>
+</append>
+
+<!-- ammo762mmExplosiveFragmentations -->
+
+<!-- TODO: waiting for CLS update -->
+<!-- 
+Fixed Explosion.
+
+<append xpath="/items/item[@name='ammo762mmExplosiveFragmentations']/property[@class='Action1']">
+	<property class="Explosion">
+		<property name="ParticleIndex" value="#@modfolder:Resources/IZY_762_Pack_MainResource_SNP_MMR.unity3d?IZY_FRAGExplosive762round_effect.Prefab"/>
+		<property name="Duration" value="10"/>
+		<property name="RadiusBlocks" value="0"/>
+		<property name="RadiusEntities" value="3"/>
+		<property name="BlockDamage" value="0"/>
+		<property name="EntityDamage" value="100"/>
+		<property name="BlastPower" value="20"/>
+		<property class="DamageBonus">
+			<property name="stone" value="0"/>
+			<property name="metal" value="0"/>
+			<property name="earth" value="0"/>
+			<property name="water" value="0"/>
+			<property name="wood" value="0"/>
+		</property>
+	</property>
+</append> -->
+
+
+<!-- REF		<effect_group name="ammo762mmBulletBall" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionRayHit" action="RangedExplosion, CustomParticleLoader" particle_index="#@modfolder:Resources/IZY_762_Pack_MainResource_SNP_MMR.unity3d?IZY_FRAGExplosive762round_effect.Prefab" explode_delay="0"/>	
+			<passive_effect name="EntityDamage" operation="base_set" value="85" tags="perkDeadEye"/>
+			<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDeadEye"/>
+			<passive_effect name="BlockDamage" operation="base_add" value="0" tags="barrelExplosive"/>
+			<passive_effect name="DegradationPerUse" operation="base_set" value="10"/>
+		</effect_group> -->
+
+<!-- ammoRocketRPGTraning -->
+
+<!-- TODO: add minimal particle effect? -->
+
+<append xpath="/items/item[@name='ammoRocketRPGTraning']/property[@class='Action1']">
+		<property class="Explosion">
+			<!-- <property name="ParticleIndex" value="0"/> -->
+			<!-- HACK: Use thrownAmmoPipeBomb ParticleIndex -->
+			<property name="ParticleIndex" value="20"/>
+			<property name="RadiusBlocks" value="0"/>
+			<property name="RadiusEntities" value="0"/>
+			<property class="DamageBonus">
+				<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+<!-- ammoRocketRPGHE -->
+<append xpath="/items/item[@name='ammoRocketRPGHE']/property[@class='Action1']">
+		<property class="Explosion">
+			<property name="BlockDamage" value="2500"/>
+			<property name="EntityDamage" value="800"/>	
+			<!-- <property name="ParticleIndex" value="#@modfolder:Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_DemolisEffect_RPG_HE.Prefab"/> -->
+			
+<!-- HACK: temporarily using vanilla ammoRocketHE ParticleIndex value			 -->
+			<property name="ParticleIndex" value="5"/>
+			<property name="RadiusBlocks" value="6"/>
+			<property name="RadiusEntities" value="6"/>
+			<property class="DamageBonus">
+					<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+<!-- ammoRocketRPGIncendiary -->
+<append xpath="/items/item[@name='ammoRocketRPGIncendiary']/property[@class='Action1']">
+		<property class="Explosion">
+			<!-- <property name="ParticleIndex" value="#@modfolder:Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_DemolisEffect_RPG_Incendiary.Prefab"/> -->
+
+<!-- HACK: temporarily using vanilla thrownAmmoMolotovCocktail ParticleIndex value
+Too small effect? -->
+			<property name="ParticleIndex" value="10"/>
+			<property name="RadiusBlocks" value="0"/>
+			<property name="RadiusEntities" value="7"/>
+			<property class="DamageBonus">
+					<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+<!-- ammo25mmGrenadeTraining -->
+<append xpath="/items/item[@name='ammo25mmGrenadeTraining']/property[@class='Action1']">
+		<property class="Explosion">
+			<!-- <property name="ParticleIndex" value="0"/> -->
+			<!-- Use thrownAmmoPipeBomb ParticleIndex -->
+			<property name="ParticleIndex" value="20"/>
+			<property name="RadiusBlocks" value="0"/>
+			<property name="RadiusEntities" value="0"/>
+			<property class="DamageBonus">
+				<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+<!-- ammo25mmGrenadeFRAGS -->
+<append xpath="/items/item[@name='ammo25mmGrenadeFRAGS']/property[@class='Action1']">
+		<property class="Explosion">
+			<property name="BlockDamage" value="0"/>
+			<property name="EntityDamage" value="200"/>	
+			<!-- <property name="ParticleIndex" value="#@modfolder:Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_LGL_Effect_25mmFRAGS.Prefab"/> -->
+
+
+<!-- HACK: temporarily using vanilla thrownGrenadeContact ParticleIndex value	 -->
+
+			<property name="ParticleIndex" value="13"/>
+			<property name="RadiusBlocks" value="4"/>
+			<property name="RadiusEntities" value="4"/>
+			<property class="DamageBonus">
+					<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+<!-- *** Add property ToolCategory.harvestingTools -->
+
+<append xpath="/items/item[@name='IZYMeleeT4BladeKatana']/property[@class='Action0']">
+<!-- meleeWpnBladeT3Machete -->
+	<property class="ToolCategory">
+		<property name="Butcher" value="0" param1="4.7"/>
+		<property name="harvestingTools" value=".5" param1="1"/>
+	</property>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/property[@class='Action0' or  @class='Action1']">
+	<property class="ToolCategory">
+		<property name="harvestingTools" value="1" param1="1"/>
+	</property>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']/property[@class='Action0']">
+	<property class="ToolCategory">
+		<property name="harvestingTools" value=".5" param1="1"/>
+	</property>
+</append>
+
+<!-- ammo25mmGrenadeHE -->
+<append xpath="/items/item[@name='ammo25mmGrenadeHE']/property[@class='Action1']">
+		<property class="Explosion">
+			<property name="BlockDamage" value="200"/>
+			<property name="EntityDamage" value="350"/>	
+			<!-- <property name="ParticleIndex" value="#@modfolder:Resources/IZY_Demolis_Effects_and_Projectiles.unity3d?IZY_LGL_Effect_25mmHE.Prefab"/> -->
+<!-- HACK: temporarily using vanilla thrownGrenadeContact ParticleIndex value	 -->
+			<property name="ParticleIndex" value="13"/>
+			<property name="RadiusBlocks" value="2"/>
+			<property name="RadiusEntities" value="2"/>
+			<property class="DamageBonus">
+					<property name="water" value="0"/>
+			</property>
+		</property>
+</append>
+
+<!-- *** 2. Add new stats block -->
+
+<append xpath="/items/item[starts-with(@name,'IZYgun') or starts-with(@name,'IZYMelee')]">
+	<stats>
+		<!-- quality (0 rolls as base value, >0 rolls as the added value), lootstage, random chance, min, max (.005 precision, limit +-163) -->
+		<!-- Base_Random_Roll -->
+		<stat name="EntityDamage"			value="0,0,1,0,.1"/>
+		<stat name="MagazineSize" 			value="0,0,1,0,.1"/>
+		<stat name="RoundsPerMinute" 		value="0,0,1,0,.02"/>
+		<stat name="DamageFalloffRange" 	value="0,0,1,0,.1"/>
+		<stat name="DegradationMax" 		value="0,0,1,0,.1"/>
+		<!-- Q1_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="1,0,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="1,0,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="1,0,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="1,0,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="1,0,.3,.1,.5"/>
+		<!-- Q2_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="2,10,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="2,10,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="2,10,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="2,10,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="2,10,.3,.1,.5"/>
+		<!-- Q3_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="3,11,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="3,11,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="3,11,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="3,11,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="3,11,.3,.1,.5"/>
+		<!-- Q4_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="4,12,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="4,12,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="4,12,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="4,12,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="4,12,.3,.1,.5"/>
+		<!-- Q5_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="5,14,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="5,14,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="5,14,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="5,14,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="5,14,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,16,.3,.1,.5"/>
+		<stat name="MagazineSize" 			value="6,16,.3,.1,.5"/>
+		<stat name="RoundsPerMinute" 		value="6,16,.3,.02,.1"/>
+		<stat name="DamageFalloffRange" 	value="6,16,.3,.1,.5"/>
+		<stat name="DegradationMax" 		value="6,16,.3,.1,.5"/>
+		<!-- Q6_Boosted_Rolls -->
+		<stat name="EntityDamage" 			value="6,20,.3,.5,.7"/>
+		<stat name="MagazineSize" 			value="6,20,.3,.5,1"/>
+		<stat name="RoundsPerMinute" 		value="6,20,.3,.1,.3"/>
+		<stat name="DamageFalloffRange" 	value="6,20,.3,.5,.7"/>
+		<stat name="DegradationMax" 		value="6,20,.3,.5,.7"/>
+	</stats>
+</append>
+
+<!-- *** 3. BurstRoundCount 1000 changed to 0 -->
+
+<set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and (@value='1000' or @value='999')]/@value">0</set>
+
+<!-- <set xpath="/items/item/effect_group/passive_effect[@name='BurstRoundCount' and @value='1']/@value">0</set> -->
+
+<!-- *** 4.  Prepend tier tags -->
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT0')]/property[@name='Tags']/@value">T0,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT1')]/property[@name='Tags']/@value">T1,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT2')]/property[@name='Tags']/@value">T2,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT3')]/property[@name='Tags']/@value">T3,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT4')]/property[@name='Tags']/@value">T4,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYgunT5')]/property[@name='Tags']/@value">T5,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'IZYMeleeT4')]/property[@name='Tags']/@value">T4,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'ammo25mm')]/property[@name='Tags']/@value">T2,</prepend>
+<prepend xpath="/items/item[starts-with(@name, 'ammoRocketRPG')]/property[@name='Tags']/@value">T3,</prepend>
+
+<!-- *** 5. Append scrap100 tags to T0 firearms and to ammo -->
+
+<append xpath="/items/item[starts-with(@name, 'IZYgunT0')]/property[@name='Tags']/@value">,scrap100</append>
+
+<append xpath="/items/item[@name='ammoleadball' or 
+@name='ammoMuzzleloadershot' or 
+@name='ammoMuzzleloaderscattershot' or 
+@name='ammoCrossbowLightBoltStone' or 
+@name='ammoCrossbowLightBoltIron' or 
+@name='ammoCrossbowLightBoltSteelAP' or 
+@name='ammo45ACPBulletBall' or 
+@name='ammo45ACPHighpower' or 
+@name='ammo45ACPArmorpiecing' or 
+@name='ammo45ACPEnhanced' or 
+@name='ammo556mmBulletBall' or 
+@name='ammo556mmHIpower' or 
+@name='ammo556mmArmorPiercing' or 
+@name='ammo762mmExplosiveFragmentations' or 
+@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE' or 
+@name='ammoShotgunShellPremium' or 
+@name='ammoShotgunShellDragoBreath']/property[@name='Tags']/@value">,scrap100</append>
+
+
+<!-- *** 6. Add PreviousTechItem property to melee weapons-->
+
+<!-- IZYMeleeT4BladeKatana -->
+<append xpath="/items/item[@name='IZYMeleeT4BladeKatana']" >
+    <property name="PreviousTechItem" value="meleeWpnBladeT3Machete" />
+</append>
+
+<!-- IZYMeleeT4SpearPoleAxe -->
+<append xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']" >
+    <property name="PreviousTechItem" value="meleeWpnSpearT3SteelSpear" />
+</append>
+
+<!-- IZYMeleeT4SledghammerSpikeMace -->
+<append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']" >
+    <property name="PreviousTechItem" value="meleeWpnSledgeT3SteelSledgehammer" />
+</append>
+
+<!-- *** 7. Set CrosshairOnAim and CrosshairUpAfterShot to true for all Izy weapons to fix a conflict with the 3.0 crosshair  -->
+
+<set xpath="/items/item[starts-with(@name, 'IZYgun')]/property[(@name='CrosshairOnAim' or @name='CrosshairUpAfterShot') and @value='false']/@value">true</set>
+
+<!-- *** TO DO test scopes -->
+
+</if>
+</conditional>
+</RamblingMan>

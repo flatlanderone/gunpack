@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+    <Name value="IZY_Classic_Patch_for_keitrans_Stacks_x10" />
+    <DisplayName value="IZY Classic Patch for keitrans Stacks x10" />
+    <Description value="This patch multiplies the IZY Classic ammo stacks by 10 if the keitrans Stacks x10 mod is loaded." />
+    <Author value="Flatlander" />
+    <Version value="3.0.1.0" />
+    <Website value="https://www.nexusmods.com/profile/flatlanderone" />
+	<Icon value="Textures/RMM_ICON.png" />
+	<Banner value="Textures/RMM_BANNER.png" />
+</xml>
+

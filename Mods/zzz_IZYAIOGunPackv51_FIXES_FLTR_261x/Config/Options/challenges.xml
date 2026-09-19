@@ -1,0 +1,105 @@
+<RamblingMan>
+<!-- Gears Options -->
+
+<!-- *** 3. Restricted Runs: Disabling weapon and ammo crafting -->
+
+<!-- *** 3.1 Disable the crafting of T0 weapons and stone arrows/bolts. 
+
+To avoid issues when selecting the 'No Crafting challenge', I replaced the Craft Wooden Club/Bow/Arrows challenges with a Craft and Wear Armor (Helmet/GLoves/Boots) challenges. It's now safe to disable T0 weapon crafting as you can still complete the starting Basics of Survival challenges. -->
+
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingT0') == 'No'">
+
+<!-- A. Craft Wood Club changed to Craft and Wear Armor (Helmet)  -->
+
+<!-- Changed the title_key. -->
+<set xpath="/challenges/challenge[@name='craftWoodClub']/@title_key">challengeCraftClothesHelmet</set>
+
+<!-- Changed the icon. -->
+<set xpath="/challenges/challenge[@name='craftWoodClub']/@icon">ui_game_symbol_challenge_basics_craft_clothing</set>
+
+<!-- Changed the hint. -->
+<set xpath="/challenges/challenge[@name='craftWoodClub']/@hint">challengeCraftClothesHint1</set>
+
+<!-- Changed the short_description_key. -->
+<set xpath="/challenges/challenge[@name='craftWoodClub']/@short_description_key">challengeCraftClothesShort</set>
+
+<!-- Changed the description_key. -->
+<set xpath="/challenges/challenge[@name='craftWoodClub']/@description_key">challengeCraftClothesDesc</set>
+
+<!-- Changed the objective type -->
+<set xpath="/challenges/challenge[@name='craftWoodClub']/objective/@item">armorPrimitiveHelmet</set>
+
+<!-- Added Wear objective type -->
+<append xpath="/challenges/challenge[@name='craftWoodClub']"><objective type="Wear" item="armorPrimitiveHelmet"/></append>
+
+<!-- B. Craft Bow changed to Craft and Wear Armor (Gloves)  -->
+
+<!-- Changed the title_key. -->
+<set xpath="/challenges/challenge[@name='craftBow']/@title_key">challengeCraftClothesGloves</set>
+
+<!-- Changed the icon. -->
+<set xpath="/challenges/challenge[@name='craftBow']/@icon">ui_game_symbol_challenge_basics_craft_clothing</set>
+
+<!-- Changed the hint. -->
+<set xpath="/challenges/challenge[@name='craftBow']/@hint">challengeCraftClothesHint1</set>
+
+<!-- Changed the short_description_key. -->
+<set xpath="/challenges/challenge[@name='craftBow']/@short_description_key">challengeCraftClothesShort</set>
+
+<!-- Changed the description_key. -->
+<set xpath="/challenges/challenge[@name='craftBow']/@description_key">challengeCraftClothesDesc</set>
+
+<!-- Changed the objective type -->
+<set xpath="/challenges/challenge[@name='craftBow']/objective/@item">armorPrimitiveGloves</set>
+
+<!-- Added Wear objective type -->
+<append xpath="/challenges/challenge[@name='craftBow']"><objective type="Wear" item="armorPrimitiveGloves"/></append>
+
+<!-- C. Craft Arrows changed to Craft and Wear Armor (Boots).  -->
+
+<!-- Changed the title_key. -->
+<set xpath="/challenges/challenge[@name='craftArrows']/@title_key">challengeCraftClothesBoots</set>
+
+<!-- Changed the icon. -->
+<set xpath="/challenges/challenge[@name='craftArrows']/@icon">ui_game_symbol_challenge_basics_craft_clothing</set>
+
+<!-- Changed the hint. -->
+<set xpath="/challenges/challenge[@name='craftArrows']/@hint">challengeCraftClothesHint1</set>
+
+<!-- Changed the short_description_key. -->
+<set xpath="/challenges/challenge[@name='craftArrows']/@short_description_key">challengeCraftClothesShort</set>
+
+<!-- Changed the description_key. -->
+<set xpath="/challenges/challenge[@name='craftArrows']/@description_key">challengeCraftClothesDesc</set>
+
+<!-- Changed the objective type -->
+<set xpath="/challenges/challenge[@name='craftArrows']/objective/@item">armorPrimitiveBoots</set>
+
+<!-- Added Wear objective type -->
+<append xpath="/challenges/challenge[@name='craftArrows']"><objective type="Wear" item="armorPrimitiveBoots"/></append>
+
+</if>
+</conditional>
+
+<!-- *** 3.2 Disable the crafting of Thrown Explosives -->
+
+<!-- Change craftPipeBomb challenge 'Craft' objective to 'Gather' objective to avoid issues when 'Craft thrown explosives' is set to 'No'. -->
+<conditional>
+<if cond="modsetting('IZYAIOGunPackv51_FIXES_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingThrown') == 'No'">
+
+<!-- Changed the icon. -->
+<set xpath="/challenges/challenge[@name='craftPipeBomb']/@icon">ui_game_symbol_explosion</set>
+
+<!-- Changed the objective type -->
+<set xpath="/challenges/challenge[@name='craftPipeBomb']/objective/@type">Gather</set>
+
+<!-- Changed the title_key. -->
+<set xpath="/challenges/challenge[@name='craftPipeBomb']/@title_key">challengeGatherPipeBomb</set>
+
+<!-- Changed the short_description_key. -->
+<set xpath="/challenges/challenge[@name='craftPipeBomb']/@short_description_key">challengeGatherPipeBombShort</set>
+
+</if>
+</conditional>
+</RamblingMan>

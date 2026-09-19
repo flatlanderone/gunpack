@@ -1,0 +1,773 @@
+# Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3 released on 2026-04-14 - version 2.6.1.5
+
+## Overview
+
+The **Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack** mod provides fixes, tweaks and optional settings for 7 Days To Die 2.6 and the IZY-All in One Gun Pack (hereafter the "IGP") v2.6.5.1.3 released on 2026-04-14 on Nexus Mods. 
+
+## Optional Settings (Gears)
+
+To access the mod's options:
+ 1. Click **Mods** in the main menu.
+ 2. Click **Flatlander's Fixes and Tweaks for the IGP** mod entry in the left-hand panel.
+ 3. Click the **Settings** tab in the right-hand panel. 
+
+**Important**
+  1. Remember to click **Apply** after changing the settings.
+  2. Change settings before loading your save.
+  3. Click 'Defaults', then 'Apply' to restore the settings to their default values.
+
+**Available Options**  
+
+Options are organized thematically by tabs.  
+
+In the **1. Weapon Packs** tab you can: 
+ 1. Disable the custom weapon models for the vanilla weapons.
+ 2. Choose the sounds to use with vanilla weapons.
+ 3. Disable each individual weapon pack.
+
+In the **2. Kick Attack** tab you can enable and disable the kick attack for each selected weapon and tool category.
+
+In the **3. T4/T5 Weapons** tab you can:
+ 1. Disable the crafting of T4 weapons.
+ 2. Decrease or increase the quantity of Legendary parts required to craft T4 weapons.
+ 3. Disable the repair of T4/T5 weapons.
+ 4. Enable a recipe for the Advanced Repair Kit that does not require Legendary Parts.
+ 5. Increase the degradation rate of T4/T5 weapons.  
+ 6. Remove T4/T4 weapons from loot.  
+
+In the **4. Looting** tab you can:
+ 1. Select which IGP handguns can be found in toilets and similar containers.
+ 2. Increase the odds of finding common T1 and T2 weapons in logical places.
+ 3. Remove T0 and T-1 weapons from loot.
+
+In the **5. Challenges** tab you can:
+ 1. Choose to play with Pacifist Traders who will not sell you weapons and related items, who will not  buy from you these weapons and related items or who will not offer you weapons, ammo and related items in quest rewards.
+ 2. Disable the crafting of selected weapons and other offensive items.
+ 3. Disable the repair of T0-T3 weapons.
+ 4. Increase the degradation rate of T0-T3 weapons.
+
+In the **6. Misc. Options** tab you can:
+ 1. Configure various options for specific weapons and weapon mods.
+ 2. Enable ammo reboxing recipes.
+ 3. Enable the unlocking of IGP special ammo recipes using perk books.
+
+## Credits and inspirations
+
+ - FlufferNutterSandwich for sharing the code from his **Find Izy Pistols in Cars, Toilets, and Purses** and **Ammo Press Add-On Patch** mods and for allowing me to get involved in the maintenance of the IGP.
+ - khzmusik for the ammo reboxing code in his [Quality of Life](https://www.nexusmods.com/7daystodie/mods/10058) mod. Code explicitly placed in the public domain [here](https://gitlab.com/karlgiesing/7d2d-2.0-mods#license). 
+ - IzPrebuilt for the list of logical places to find common weapons in the [Improved Loot Experience](https://www.nexusmods.com/7daystodie/mods/8440) mod.
+ - Little Red Sonja for the ideas in her [Normalized Craft Times](https://www.nexusmods.com/7daystodie/mods/6513) mod.
+ - Mongrel for reporting a VRP-related issue with steel tools.
+ - Nexus user RezMeRainzy for pointing out inconsistent durability values.
+ - Nexus user Amiud4ke for reporting a missing weapon in the kick options..
+ - Nexus user Terminat0r33Terminat0r33 for reporting issues with the VRP and suggesting workarounds.
+
+## Requirements
+
+ - [IZY-All in One Gun Pack v2.6.5.1.3 released on 2026-04-14 on Nexus Mods](https://www.nexusmods.com/7daystodie/mods/5458),
+ - [Gears 6.0.0 or later](https://www.nexusmods.com/7daystodie/mods/4017),
+ - [Quartz 7.0.0 or later](https://www.nexusmods.com/7daystodie/mods/2409),
+ - 7 Days to Die v2.6. The mod has not been tested with 7 Days to Die v3.0 Exp. 
+
+## Manual installation
+
+ 1. Download the mod file.
+ 2. Unzip it anywhere on your hard drive.
+ 3. Copy the zzz\_IZYAIOGunPackv51\_FIXES\_FLTR folder to the 7 Days to Die Mods folder. The default location is **%APPDATA%\7DaysToDie\Mods**. 
+ 4. If you are updating the mod, delete the folder with the old version.
+ 5. The mod must load after all the IGP mods, patches and extensions.
+ 6. Download and install the required Gears and Quartz mods.
+
+## Important notes
+
+ 1. The 2.6.1.5 version of the mod is designed to work with the **2.6.5.1.3** version of the IGP released on 2026-04-14. Check the version of your IGP. NO OTHER VERSION WILL BE SUPPORTED.
+ 2. If you are still on the previous **5.1** version of the IGP, DO NOT INSTALL THE 2.6.1.6 VERSION OF THIS MOD. Use the 2.6.1.0 version of this mod instead.
+ 3. Do not bother Izayo with questions regarding this mod. 
+ 4. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
+ 5. Removing the mod is probably safe, but you should always make a backup of your game save.
+ 6. If you change the settings through the Gears interface, you must reload the game for the changes to take effect. 
+
+## Bug reports and feature suggestions
+
+ - [GitHub](https://github.com/flatlanderone/gunpack/issues) (preferred).
+ - [My channel on Guppy's Modding Server](https://discord.gg/yPFh79rq8J),
+ - This mod's page on Nexus Mods.
+
+## About this mod
+
+ - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/flatlander-releases) / [Nexus Mods](https://next.nexusmods.com/profile/flatlanderone)
+ - **Download page**: [Flatlander's Fixes and Tweaks for IZY-All in One Gun Pack v5.1.3](https://www.nexusmods.com/7daystodie/mods/9980)
+ - **Initial release**: 2.5.1.0 (2026-03-30)
+ - **Previous releases**: 2.6.1.0 (2026-04-12), 2.6.1.1 (2026-04-15), 2.6.1.2 (2026-04-17), 2.6.1.3 (2026-04-22), 2.6.1.4 (2026-04-29), 2.6.1.5 (2026-06-15)
+ - **This release**: 2.6.1.6 (2026-xx-xx)
+
+## Changelogs
+
+# Changelog for 2.6.1.6 (2026-xx-xx)
+
+## IZY_FPV_GLOVES
+## IZY_melee
+## IZY_MMVMV2
+## IZY_RMP_9mmVAL
+## IZY_RMP_44magnum
+## IZY_RMP_45ACP
+## IZY_RMP_556pack
+## IZY_RMP_762pack
+## IZY_RMP_SG
+## IZY_RMP_Demopack
+## IZY_RMP_HVW
+## IZY_RMP_Miscpack
+## IZY_RMP_Tech
+## IZY_VRP
+
+
+# Changelog for 2.6.1.5 (2026-06-15)
+
+## Notes and global changes
+
+ - This update introduces three new sets of options that are managed exclusively through the Gears interface: Looting (toilet pistols, common guns in logical places, T0 weapons in loot), Challenges (Pacifist Traders, No Crafting, No Repair, Faster Degradation) and Miscellaneous Options (Various tweaks for specific weapons and weapon mods, ammo reboxing recipes, unlocking of IGP special ammo recipes using perk books). See **Optional Settings (Gears)** above.
+ - The Vanilla Replacer Pack can now be disabled without removing files.
+ - All ammo recipes can now be crafted in the Oakraven's Ammo Press and benefit from shorter crafting times and reduced resource requirements.
+ - Implemented normalized craft times for vanilla and IGP weapons. This does not override LittleRedSonja_NormalizedCraftTimes.
+ - Added missing workbenchCrafting, packMuleCrafting and other relevant weapon crafting perk tags to vanilla and IGP recipes. Based on LittleRedSonja_NormalizedCraftTimes. 
+ - Implemented normalized recipe ingredient counts for T2 and better weapons. 
+ - Implemented normalized durability values for T0-T4 weapons. 
+ - Reorganized the addition of weapons to loot.
+ - Added IGP ammo to groupQuestAmmo.
+ - Added IGP weapons to groupQuestWeaponsRanged.
+ - Added a graceful fallback when the mod is loaded without the IGP mod being present.
+ - Implemented minor localization fixes.
+ - All bug fixes from previous versions of the patch remain in place unless specified otherwise.
+
+## Known issues
+ - No Crafting challenge: Skill magazines still unlock recipes.
+ - Some option configurations may create unexpected results.
+ 
+## Planned features
+ - Add compatibility for 7 Days to Die 3.0.
+ - Add further challenges.
+ - Move T4 weapons to later loot stages to give more exposure for T3 weapons.
+ - Add support for other weapons and weapon packs.
+ - Implement normalized recipe ingredient counts for T1 weapons. 
+ - Add a toggle for Normalized Craft Times to allow players to choose between this mod and LittleRedSonja_NormalizedCraftTimes.
+
+## 7 Days To Die 2.6 / Vanilla Replacer Pack
+
+### items.xml
+ - Changed display type from rangedShotgunNoMag to rangedShotgun to show rounds per minute for the following weapons: gunShotgunT1DoubleBarrel, gunShotgunT0PipeShotgun.
+ - Added kick effect for meleeToolAxeT2SteelAxe and meleeToolPickT2SteelPickaxe in case IZY_VRP is not loaded.
+ - Added kick effect to vanilla weapons in case IZY_VRP is not loaded.
+ - Added noVRP tag to pipe weapons to remove compatibility with modGunReflexSightA and modGunReflexSightB, as IGP has no visible attachment for these mods.
+ - (Optional) The Vanilla Replacer Pack can now be disabled without removing files.
+ - (Optional) Single-shot weapons reload automatically.
+ 
+### item_modifiers.xml
+ - Added a new tag to block installation of modGunReflexSightA, modGunReflexSightB, IZYmodPistolHoldstyle01 and IZYmodPistolHoldstyle02 when the VRP is disabled.
+ - Removed IGP item_property_overrides for vanilla weapons when the VRP is disabled.
+
+### traders.xml
+ - Added meleeToolAxeT3ChainsawParts to trader inventory.
+
+## IZY_RMP_762pack
+
+### loot.xml
+ -  Added ammo762mmExplosiveFragmentations to loot with a 0.001 loot_stage_count_mod value.
+
+### progression.xml
+ - IZYgunT2BattleRifleFNFALRifle: fixed a typo that was preventing the crafting of the weapon beyond Q1.
+
+### recipes.xml
+ - Added Oakraven's ammo press recipes for ammo762mmExplosiveFragmentations and ammo762mmExplosiveFragmentationsBundle.
+
+## IZY_RMP_Miscpack
+
+### recipes.xml
+ - IZYgunT4BowVanhelsingAutomaticCrossbowVH: fixed resourceLegendaryParts passive effect and missing resourceLeather ingredient.
+
+### loot.xml
+ - Added probability attribute for ammoMuzzleloadershot
+
+## IZY_RMP_SG
+
+### items.xml
+ - IZYgunT1TradshotgunDoubleBarrelOverUnder: removed compatibility with the modGunShotgunTubeExtenderMagazine mod.
+ - (Optional) IZYgunT1TACCompactshotgunSuperShortty: reduced magazine size from 4 to 3 and removed compatibility with the modGunShotgunTubeExtenderMagazine to bring the gun in line with other T1 shotguns.
+ - Added ammoShotgunShellPremiumBundle item.
+
+### recipes.xml 
+ - Made ammoShotgunShellPremium learnable.
+
+### loot.xml
+ - Reverted: Removed IZYgunT4TACshotgunM1014 from loot. (Handled globally)
+ - Added ammoShotgunShellPremium to loot.
+
+### progression.xml
+ - ammoShotgunShellPremiumBundle bundle unlocks at Shotgun Messiah - Completion. 
+ - ammoShotgunShellPremiumBundle bundle unlocks at Shotguns 11. 
+ 
+## IZY_RMP_45ACP
+
+### recipes.xml
+ - IZYgunT0PistolLiberatorImprovisedPistol: added wood to recipe, set ingredient quantities in line with other pipe weapons. 
+ - IZYgunT2DualPistols45M1911A1: added missing resourceDuctTape to ingredients and passive effects.
+
+### loot.xml
+ - Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities.
+ - Reverted: Added missing IZYgunT1Pistol45Type17C96 entries to groupQuestWeaponsRangedT1.
+
+## IZY_RMP_9mmVAL
+
+### recipes.xml
+ - IZYgunT0SMGPIPEsubmachinegun: set ingredient quantities in line with other pipe weapons. 
+ - Added missing resourceDuctTape to passive effects for IZYgunT2SMGUZIsubmachinegun, IZYgunT3SMGMP9submachinegun, IZYgunT4SMGCZScorpionEVO3.
+
+### loot.xml
+ - Reverted: Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger, groupQuestWeaponsRangedT1 and groupWeaponsT1_Ranged.
+ - Reverted: Removed from loot the following items: IZYgunT4DualPistolC96M,  IZYgunT3SMGMP5Ksubmachinegun, IZYgunT4SMGColt9mmsubmachinegun.
+
+## IZY_RMP_44magnum
+
+### recipes.xml
+ - IZYgunT4DualMagnumDesertEagles: added missing resourceDuctTape to ingredients and passive effects.
+ 
+ ### loot.xml:
+ - Reverted: Added IZYgunT3PistolMagnumAutomag44 and IZYgunT4DualMagnumDesertEagles to loot.
+
+## IZY_RMP_556pack
+
+### items.xml 
+ - Added optional drumMagazine support (enabled by default) for the following weapons:
+   IZYgunT1ARCabineM608SurvivalRifle
+   IZYgunT2ARCabineCAR15
+   IZYgunT3ARCabineM4Carbine
+   IZYgunT4ARCabineHK416
+
+### recipes.xml
+ - Fixed incorrect tag in passive effect for IZYgunT4ARCabineHK416 and IZYgunT4BULLPUPFNF2000.
+ - Removed gunRifleT1HuntingRifleParts ingredient from IZYgunT3MarksManRifle556M16A2DMR. Added resourceDuctTape. Fixed passive effect.
+
+### loot.xml
+ - Added AP and HP IGP ammo to loot. Readded regular ammo with correct probabilities.
+
+## IZY_RMP_Demopack
+
+### items.xml
+ - Added explosivesSkill tag for IZY_RMP_Demopack ammo.
+
+### loot.xml
+ - Added ammo25mm and ammoRocketRPG to loot.
+
+# Changelog for 2.6.1.4 (2026-04-29)
+
+## Notes
+
+ - The main feature of this update is the ability to disable kick attack. Read below for more details.
+ - This update introduces three new sets of options (Kick Attack, Weapon Packs, Tier 4 Weapons) that are managed exclusively through the Gears interface. Read below for more details. 
+ - Minor localization fixes have been implemented.
+ - All bug fixes from previous versions of the patch remain in place.
+
+## Known issues
+
+ - Issues (A) and (B) from 2.6.1.3 are still occurring.
+ - Issue (C) from 2.6.1.3 is resolved in 2.6.1.4.
+ - See https://github.com/flatlanderone/gunpack/issues?q=is%3Aissue%20state%3Aopen%20label%3Abug for a full list of unresolved issues. 
+
+## Planned features
+
+See https://github.com/flatlanderone/gunpack/issues?q=is%3Aissue%20state%3Aopen%20label%3A2.6.1.5 for a list of planned fixes and enhancements.
+
+### How to use Gears
+
+ - To manage the new settings introduced in this update, click on 'Mods' in the 'Main Menu' of the game and select this mod's entry in the left-hand panel.
+ - Each set of options is managed in its own tab in the right-hand panel. 
+ - After changing the settings, click 'Apply'.
+ - Click 'Defaults', then 'Apply' to restore the settings to their default values. 
+ 
+## New Settings
+
+The new settings introduced in this update present as follows:
+
+### 1. Kick Attack
+
+The IGP added the kick attack only to some vanilla firearms and two harvesting tools.
+
+This update adds the option:
+- to enable the kick attack for the remaining vanilla firearms, the bows/crossbows and all the tools,
+- to disable the kick attack per item group.
+
+By default, the kick attack is already ENABLED for:
+ - All vanilla and IGP handguns, rifles, submachine guns, machine guns and grenade launchers,
+ - All vanilla and IGP bows and crossbows.
+
+The kick attack is by default DISABLED for all IGP and vanilla melee weapons and tools.
+
+Select 'Kick On' or 'Kick Off' for each group. By selecting 'Kick Off', you will disable the kick attack for the selected group.
+
+### 2. Weapon Packs
+
+This update adds the option to disable the various weapon packs that make up the IGP. Weapons and ammo from disabled weapon packs will not appear in loot. You will not be able to craft them nor buy them from the traders. However the weapons and ammo are not removed from the game and can be spawned using the 'Creative Menu'. 
+
+Click 'Off' to disable the chosen weapon pack. Click 'On' to enable it again.
+
+Note that the Vanilla Replacer Pack and other packs cannot currently be disabled.
+
+### 3. Tier 4 Weapons
+
+This update adds the option to modify your gameplay experience with Tier 4 Weapons. You can:
+ - disable the crafting of these weapons,
+ - prevent them from appearing in loot containers,
+ - prevent them from appearing in trader inventory,
+ - disable the possibility to repair them,
+ - accelerate the rate at which they degrade up to 500%.
+
+By default these options are not active.
+
+## 7 Days To Die 2.6 / IZY_VRP
+
+### Options/items.xml (managed by Gears, see above)
+ - Added kick to the following vanilla guns, launchers, bows, melee weapons amd tools:
+   - gunBowT0PrimitiveBow
+   - gunBowT1WoodenBow
+   - gunBowT1IronCrossbow
+   - gunBowT3CompoundCrossbow 
+   - gunRifleT0PipeRifle
+   - gunHandgunT0PipePistol
+   - gunShotgunT0PipeShotgun
+   - gunRifleT1HuntingRifle
+   - gunExplosivesT3RocketLauncher
+   - meleeWpnBladeT0BoneKnife
+   - meleeWpnBladeT1HuntingKnife
+   - meleeWpnBladeT1CandyKnife
+   - meleeWpnBladeT3Machete
+   - meleeWpnClubT0WoodenClub
+   - meleeWpnClubT1BaseballBat
+   - meleeWpnClubT1CandyClub
+   - meleeWpnClubT3SteelClub
+   - meleeWpnBatonT0PipeBaton
+   - meleeWpnBatonT2StunBaton
+   - meleeWpnSpearT0StoneSpear
+   - meleeWpnSpearT1IronSpear
+   - meleeWpnSpearT3SteelSpear
+   - meleeWpnSledgeT0StoneSledgehammer
+   - meleeWpnSledgeT1IronSledgehammer
+   - meleeWpnSledgeT3SteelSledgehammer
+   - meleeWpnKnucklesT0LeatherKnuckles
+   - meleeWpnKnucklesT1IronKnuckles
+   - meleeWpnKnucklesT3SteelKnuckles
+   - meleeToolRepairT0StoneAxe
+   - meleeToolRepairT0TazasStoneAxe
+   - meleeToolRepairT1ClawHammer
+   - meleeToolRepairT3Nailgun
+   - meleeToolAxeT1IronFireaxe
+   - meleeToolPickT1IronPickaxe
+   - meleeToolShovelT0StoneShovel
+   - meleeToolShovelT1IronShovel
+   - meleeToolShovelT2SteelShovel
+   - meleeToolAxeT3Chainsaw
+   - meleeToolPickT3Auger
+   - meleeToolSalvageT1Wrench
+   - meleeToolSalvageT2Ratchet
+   - meleeToolSalvageT3ImpactDriver
+   - meleeToolTorch
+
+## IZY_melee
+
+### loot.xml
+- Added IZYMeleeT4BladeKatana to groupWeaponsT2_Melee and groupQuestWeaponsMeleeT2.
+
+## IZY_RMP_44magnum
+
+### loot.xml:
+ - Added IZYgunT3PistolMagnumAutomag44 and IZYgunT4DualMagnumDesertEagles to loot.
+
+## IZY_RMP_45ACP
+
+### items.xml
+ - Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick.
+
+### loot.xml
+ - Added missing IZYgunT1Pistol45Type17C96 entry to groupQuestWeaponsRangedT1.
+
+## IZY_RMP_9mmVAL
+
+### loot.xml
+ - Added missing IZYgunT1Pistol9Makarov entries to groupWeaponsT1_Gunslinger, groupQuestWeaponsRangedT1 and groupWeaponsT1_Ranged.
+
+## IZY_RMP_Miscpack
+
+### traders.xml
+ - Removed ammoMuzzleloaderscattershot from trader inventory.
+
+## IZY_RMP_Tech
+
+### loot.xml
+ - Added IZYgunT3TechnicalNailmachinegun to loot groups.
+
+# Changelog for 2.6.1.3 (2026-04-22)
+
+## Notes
+
+ - This is a hotfix release to remove the ability to kick while crouching and sneaking for several weapons across multiple weapon packs. Big thanks to Nexus user HatomugiBread for bringing my attention to this issue.
+ - Additional localization changes were implemented to ensure a consistent presention for all weapon types.
+ - The description panel of all special ammo types (Enhanced .45 ACP, Light Bolts, 7.62mm Explosive Ammo, 25mm Grenades, 40mm Grenades) contains information about compatible weapons. Thank you to Black Wolf for bringing this to my attention.
+ - The weapon description template was further tweaked to enhance readability and prepare the ground for the planned automation of certain fields.
+ - All bug fixes from previous versions of the patch remain in place.
+ 
+## Known issues
+
+ - (A) When holding the majority of vanilla weapons from the IZY_VRP pack, the player is unable to switch off the weapon flashlight. Also the flashlight starts turned on. I am investigating the cause and the possible fixes.
+ - (B) Pressing F while crouching affects the stealth meter even when the weapon doesn't have a flashlight.
+ - (C) Several weapons do not have the kick feature, notably the following vanilla weapons: 
+   - gunBowT0PrimitiveBow
+   - gunBowT1WoodenBow
+   - gunBowT1IronCrossbow
+   - gunBowT3CompoundCrossbow 
+   - gunRifleT0PipeRifle
+   - gunHandgunT0PipePistol
+   - gunShotgunT0PipeShotgun
+   - gunRifleT1HuntingRifle
+   - gunExplosivesT3RocketLauncher
+ - See https://github.com/flatlanderone/gunpack/issues?q=is%3Aissue%20state%3Aopen%20label%3A%22Base%20IGP%20issue%22 for more information on issues that require an update of the base IGP files.
+   
+## 7 Days To Die 2.6
+
+### items.xml 
+- Added ammoShotgunShellPremium compatibility for the vanilla shotguns:
+   - gunShotgunT0PipeShotgun
+   - gunShotgunT1DoubleBarrel
+   - gunShotgunT2PumpShotgun
+   - gunShotgunT3AutoShotgun
+
+## IZY_melee
+
+### items.xml
+ - Removed the ability to kick while crouching for the following weapons: 
+   - IZYMeleeT4SpearPoleAxe
+   - IZYMeleeT4BladeKatana
+   - IZYMeleeT4SledghammerSpikeMace
+ 
+## IZY_VRP
+ 
+### items.xml
+ - Removed the ability to kick while crouching for the following weapons: 
+   - gunHandgunT1Pistol
+   - gunHandgunT3SMG5
+   - gunHandgunT2Magnum44
+   - gunHandgunT3DesertVulture
+   - gunShotgunT1DoubleBarrel
+   - gunShotgunT2PumpShotgun
+   - gunShotgunT3AutoShotgun
+   - gunRifleT2LeverActionRifle
+   - gunRifleT3SniperRifle
+   - gunMGT1AK47
+   - gunMGT2TacticalAR
+   - gunMGT3M60
+ 
+## IZY_RMP_556pack
+
+### items.xml
+ - Removed the ability to kick while crouching for the following weapons: 
+   - IZYgunT0SNIPERpipeAR15Broken15Junk
+   - IZYgunT3MarksManRifle556M16A2DMR
+
+## IZY_RMP_SG
+
+### items.xml
+ - Removed the ability to kick while crouching for the IZYgunT1TACCompactshotgunSuperShortty.
+
+## IZY_RMP_Miscpack
+
+### items.xml
+ - Removed the ability to kick while crouching for the IZYgunTminus1MusketM1777Rifle.
+ - ammoMuzzleloadershot display changed from ammoBullet to ammoBulletAP.
+ 
+## IZY_RMP_762pack
+
+### items.xml 
+  - ammo762mmExplosiveFragmentations display changed from ammoBullet to ammoBulletAP.
+  
+# Changelog for 2.6.1.2 (2026-04-17)
+
+## Notes
+
+ - This is a hotfix release to address the issues described at https://github.com/flatlanderone/gunpack/issues/15 and https://github.com/flatlanderone/gunpack/issues/16. Big thanks to Nexus user reichi1996 for first reporting the "White square in the place of the red dot issue".
+ - The weapon description template has been further tweaked to enhance readability and prepare the ground for the planned automation of certain fields.
+ - The changelog format was slightly updated to enhance readability.
+ - All bug fixes from previous versions of the patch remain in place.
+
+## 7 Days To Die 2.6
+
+### item_modifiers.xml
+ - Added no2xScopesFLTR tag to block the installation of the 2x scope.
+ - Added no4xScopesFLTR tag to block the installation of the 4x scope.
+ - Added no8xScopesFLTR tag to block the installation of the 8x scope.
+
+## IZY_RMP_Tech
+
+### items.xml
+ - IZYgunT3TechnicalNailmachinegun now scraps to Robotics Parts instead of Machine Gun Parts.
+
+## IZY_MMVMV2
+
+### Localization.xml
+ -  Added full localization for modGunReflexSightA and modGunReflexSightB.
+ -  Added temporary localization for modGunFlashHider.
+
+## IZY_RMP_762pack
+
+### items.xml
+ - Hotfix: IZYgunT1SNIPERRIFLE762Mosinnagant and IZYgunT2MarksManRifle762M1garandNavyconverted cannot install the Scope 2x Mod to avoid "White square in the place of the red dot" issue https://github.com/flatlanderone/gunpack/issues/15
+
+ - Hotfix: IZYgunT3SNIPERRIFLE762LeeEnfieldRifle cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16
+
+## IZY_RMP_556pack
+
+### items.xml
+ - Hotfix: IZYgunT2ARCabineCAR15 and IZYgunT3MarksManRifle556M16A2DMR cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16 
+
+## IZY_RMP_SG
+
+### items.xml
+ - Hotfix: IZYgunT3TradshotgunTrenchGunM1897 and IZYgunT4TradshotgunBrowningAuto5 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16 
+
+## IZY_RMP_9mmVAL
+
+### items.xml
+ - Hotfix: IZYgunT4SMGCZScorpionEVO3 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16
+
+# Changelog for 2.6.1.1 (2026-04-15)
+
+## Notes
+
+All bug fixes from 2.5.1.0 and 2.6.1.0, except those specified below as reverted, remain in place.
+
+## Known Issues
+
+None.
+
+## Black Wolf's better loot spawns 
+
+ - See Nexus Mods: https://www.nexusmods.com/7daystodie/mods/3872
+
+### loot.xml
+ - 2.6.1.0 Change reverted: ammoShotgunShellDragoBreath was removed from loot in BetterlootIzy.
+
+## IZY_RMP_762pack
+
+### items.xml
+ - Replaced missing drop mesh for IZYgunT3BattleRifleHKG3 with sack_dropped. 
+
+## IZY_RMP_556pack
+
+### items.xml
+ - Replaced leather drop mesh for IZYgunT0SNIPERpipeAR15Broken15Junk with sack_dropped.
+ - Replaced missing drop mesh for IZYgunT4ARCabineHK416 with sack_dropped. 
+
+## IZY_RMP_SG
+
+### recipes.xml
+ - Reverted 2.6.1.0 removal of IZYgunT4TACshotgunM1014 recipe as this has been implemented in 5.1.3.
+
+## IZY_RMP_Miscpack
+
+### items.xml
+  - Reverted from 2.6.1.0. IZYgunTminus1MusketM1777Rifle is visible again in the Creative menu for players.
+
+### traders.xml
+ - Added traderstage_template ammoTier0 to fix trader inventory crash due to Exception: TraderStageTemplate ammoTier0 for item: Muzzleloader Ammo does not exist. Bug:https://github.com/flatlanderone/gunpack/issues/9 (ammoMuzzleloadershot) reported by Black Wolf.
+   
+### recipes.xml
+ - Enabled and updated the campfire recipe for ammoleadball.
+ - Added a new forge recipe for ammoleadball.
+ - Enabled and updated the backpack recipe for ammoMuzzleloadershot.
+
+### Localization.txt:
+ - Added localization for ammoleadball, ammoMuzzleloadershot and IZYgunTminus1MusketM1777Rifle.
+
+# Changelog for 2.5.1.0 and 2.6.1.0
+ 
+## Global changes
+
+ - Removed all items that are disabled or not ready from the player view in Creative Mode.
+ - Removed all items that are disabled or not ready from recipes, loot, and trader inventory.
+ - All vanilla and IGP weapons have a new expanded description based on the original IGP format.
+ - All vanilla and IGP weapon names display their weapon tier. For example, it is now possible to filter for all T3 weapons by typing "(T3)" in the search field.
+ - Most vanilla and IGP weapon names display their weapon type. For example, it is now possible to display all shotguns by typing "shotgun" in the search field.
+ - Localization has been reviewed and updated for clarity and consistency.
+ 
+## IZY_FPV_GLOVES
+
+### buffs.xml
+ - Set IZYBeltAmmoCheck_02 buff to hidden. 
+
+## IZY_MMVMV2
+
+### item_modifiers.xml
+ - Enabled localization for IZYmodPistolHoldstyle01Desc and IZYmodPistolHoldstyle02Desc.
+
+### buffs.xml
+ - Added name_key attribute to IZYNightHunterKit and IZYNightHunterKit_Aiming to enable localization.
+
+### Localization.txt
+ - Added full localization for Holdstyle Mod names and descriptions.  
+
+## IZY_melee
+
+### items.xml
+ - IZYMeleeT4SpearPoleAxe can be sold like the other T4 melee weapons.
+ - IZYMeleeT4BladeKatana has now the same sneak damage bonus as meleeWpnBladeT3Machete.
+ 
+### Localization.txt  
+ - Updated for clarity and consistency.
+
+## IZY_RMP_Miscpack
+
+### items.xml
+ - IZYgunT4BowVanhelsingAutomaticCrossbowVH has its own description.
+ - gunBowT3CompoundCrossbow has its own description.
+
+### Localization.txt
+ - Added descriptions for:
+   - ammoCrossbowLightBoltStone
+   - ammoCrossbowLightBoltIron
+   - ammoCrossbowLightBoltSteelAP.
+ - Updated for clarity and consistency.
+
+## IZY_RMP_HVW
+
+### Localization.txt:
+ - Updated for clarity and consistency.
+ 
+## IZY_RMP_Demopack
+
+### items.xml 
+ - 25mm grenades (ammo25mmGrenadeTraining, ammo25mmGrenadeHE, ammo25mmGrenadeFRAGS) have now the correct unlock information (craftingExplosives).
+
+### progression.xml
+ - Changed unlock levels from 45 to 50 for IZYgunT3LGLXM25 and IZYgunT3RocketLauncherRPG7, as intended in original Localization.txt.
+
+### recipes.xml
+ - Made the following grenade recipes learnable: ammo25mmGrenadeTraining, ammo25mmGrenadeHE, ammo25mmGrenadeFRAGS, ammoRocketRPGTraning, ammoRocketRPGHE, ammoRocketRPGIncendiary.
+
+### Localization.txt:
+ - Renamed ammoRocketRPGTraning, ammoRocketRPGHE, ammoRocketRPGIncendiary to 40mm Grenades.
+ - Updated for clarity and consistency
+
+## IZY_VRP
+
+### items.xml
+ - gunRifleT1HuntingRifle now shows rounds per minute.
+  
+## IZY_RMP_9mmVAL
+
+### loot.xml
+ - Removed from loot the following items: IZYgunT4DualPistolC96M,  IZYgunT3SMGMP5Ksubmachinegun, IZYgunT4SMGColt9mmsubmachinegun.
+  
+### recipes.xml
+ - Removed legendary part requirement from level 6 IZYgunT0SMGPIPEsubmachinegun recipe.
+
+### Localization.txt
+ - IZYgunT1Pistol9Makarov and IZYgunT1Pistol9MakarovDesc have a full localization.
+ - IZYgunT0SMGPIPEsubmachinegun localization now correctly shows Material as Scrap Iron, not Handgun Parts.
+ - Renamed vanilla Pipe Pistol to Pipe Revolver.
+ - Renamed vanilla Pistol to M9 Pistol.
+ - Updated for clarity and consistency.  
+
+## IZY_RMP_SG
+
+### items.xml
+ - Removed firingMode tag from IZYgunT2TradshotgunLeveractionShotgunModel1887 to prevent the installation of Trigger Group mods on a lever-action weapon.
+ - Added ammoShotgunShellPremium compatibility for the following shotguns: IZYgunT3TradshotgunTrenchGunM1897, IZYgunT4TradshotgunBrowningAuto5, IZYgunT1TACCompactshotgunSuperShortty.
+
+### progression.xml
+ - Removed IZYgunT4TACshotgunM1014 from progression display.
+
+### loot.xml
+ - Removed IZYgunT4TACshotgunM1014 from loot.
+
+### recipes.xml
+ - Removed IZYgunT4TACshotgunM1014 from recipes.
+
+### Localization.txt:
+ - Updated for clarity and consistency.
+
+## IZY_RMP_556pack
+
+### items.xml
+ - ammo556mmHIpower and ammo556mmArmorPiercing recipes unlock through craftingMachineGuns progression.
+ - All 5.56mm bundles recipes unlock at Automatic Weapons Handbook - Completion.
+ - 5.56 ammo displays penetration values.
+ - IZYgunT0SNIPERpipeAR15Broken15Junk now scraps to Scrap Iron instead of Rifle Parts.
+ - Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons:
+   - IZYgunT0SNIPERpipeAR15Broken15Junk
+   - IZYgunT3MarksManRifle556M16A2DMR
+   - IZYgunT4MarksManRifle556SSMAR15
+
+### progression.xml
+ - Removed IZYgunT1LRLongRifleM16a1 from progression display.
+ - ammo556mmHIpower recipe unlocks at level 26.
+ - ammo556mmArmorPiercing recipe unlocks at level 46.
+ - Added name_key attribute to perkAutoWeaponsCompleteName. Missing in vanilla.
+ - All 5.56mm bundles recipes unlock at Automatic Weapons Handbook - Completion.
+
+### traders.xml
+ - Removed IZYgunT1LRLongRifleM16a1 from trader inventory.
+
+### recipes.xml
+ - Made HP and AP 5.56mm (single round and bundle) recipes learnable.
+ - Removed IZYgunT1LRLongRifleM16a1 from recipes.
+
+### Localization.txt:
+ - Updated for clarity and consistency.
+ - Added 5.56mm ammo to Automatic Weapons Handbook book perk descriptions.
+
+## IZY_RMP_45ACP
+
+### items.xml
+ - Changed display type of all .45 ACP types to ammoBulletAP to show penetration values.
+ - Added missing armor piercing code to ammo45ACPArmorpiecing. Copied values from AP 9mm.
+ - Added missing armor piercing code to ammo45ACPEnhanced. Copied values from AP 5.56mm.
+ - IZYgunT4Pistol45STIEAGLE6 is now compatible with ALL .45 ACP ammo types.
+ - IZYgunT0PistolLiberatorImprovisedPistol now scraps to Scrap Iron instead of Handgun  Parts.
+ - Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons:
+   - IZYgunT3MarksmanRifleMMRM1Carbine45
+   - IZYgunT4MarksmanRifle45MMRKrissVectorCarbine
+
+### recipes.xml
+ - Made HP and AP .45 ACP recipes learnable.
+ - Removed legendary part requirement from level 6 IZYgunT0PistolLiberatorImprovisedPistol recipe.
+
+### Localization.txt:
+ - Updated for clarity and consistency.
+ - Added .45 ACP ammo to Pistol Pete book perk descriptions.
+ 
+## IZY_RMP_762pack
+
+### items.xml
+ - Fixed the number of mod slots for level 6 RPD Machine Gun (T2) and Antique Machine Gun (T4).
+ - ammoBundle762mmBulletHP now uses the correct custom item icon.
+ - Added ammo762mmExplosiveFragmentationsBundle. Borrowed from zzz_Ammo_Press_Add-On_Compatibility_Patch.
+ - ammo762mmExplosiveFragmentations is now compatible with the following T4 7.62mm sniper rifles:
+   - IZYgunT4SNIPERRIFLE762L96AWMRifle
+   - IZYgunT4MarksManRifle762SVUprototypeRifle
+ - Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons: IZYgunT4MarksManRifleM110SASS, IZYgunT4SNIPERRIFLE762L96AWMRifle,, IZYgunT4MarksManRifle762SVUprototypeRifle, IZYgunT1SNIPERRIFLE762Mosinnagant, IZYgunT3SNIPERRIFLE762LeeEnfieldRifle, IZYgunT2MarksManRifle762M1garandNavyconverted, IZYgunT3MarksManRifle762HKPSG1.
+
+### progression.xml
+ - ammo762mmExplosiveFragmentations and ammo762mmExplosiveFragmentationsBundle recipes unlock at the same time as IZYgunT4MarksManRifleM110SASS (level 61).
+   
+### recipes.xml
+ - Added ammo762mmExplosiveFragmentations recipe. Borrowed from zzz_Ammo_Press_Add-On_Compatibility_Patch
+
+### Localization.txt:
+ - Updated for clarity and consistency.
+ 
+## Ammo Press Add-On Patch for EFT and Izy v2
+ - See Nexus Mods: https://www.nexusmods.com/7daystodie/mods/6993 
+### recipes.xml
+ - Removed ammoShotgunShellDragoBreath and ammoShotgunShellDragoBreathBundle recipe.
+
+## Black Wolf's better loot spawns 
+ - See Nexus Mods: https://www.nexusmods.com/7daystodie/mods/3872
+
+### loot.xml
+ - Removed ammoShotgunShellDragoBreath from loot.

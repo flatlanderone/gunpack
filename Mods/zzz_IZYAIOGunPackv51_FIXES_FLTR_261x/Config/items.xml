@@ -1,0 +1,888 @@
+<RamblingMan>
+
+<!-- Override for Survival Sandbox v3 -->
+<conditional>
+<if cond="mod_loaded('survivalsandboxfltrv3') == false">
+
+<!-- *** Includes -->
+
+<!-- *** Vanilla fixes -->
+
+<include filename="Base/items.xml"/>
+
+<!-- *** IGP fixes for 2.6 and 3.0 -->
+
+<include filename="IGP/items.xml"/>
+
+<!-- *** V2_OakravenAmmoPress items -->
+<conditional>
+<if cond="mod_loaded('V2_OakravenAmmoPress')">
+	<include filename="OakravenAmmoPress/items.xml"/>
+</if>
+</conditional>
+
+<!-- Load only if Izayo_WeaponFixes is present. -->
+<conditional>
+<if cond="mod_loaded('Izayo_WeaponFixes')">
+
+<!-- *** Global Edits -->
+
+<!-- 2.6.1.5 -->
+<!-- *** Normalize durability values for guns from T0 to T4  -->
+
+<!-- perkDeadEye, perkMachineGunner, perkBoomstick weapons
+T0 100,200
+T1 200,400
+T2 400,700
+T3 700,1100
+T4 1100,1600
+ -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT0')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDeadEye') or contains(@tags, 'perkMachineGunner') or contains(@tags, 'perkBoomstick'))]/@value">100,200</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDeadEye') or contains(@tags, 'perkMachineGunner') or contains(@tags, 'perkBoomstick'))]/@value">200,400</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT2')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDeadEye') or contains(@tags, 'perkMachineGunner') or contains(@tags, 'perkBoomstick'))]/@value">400,700</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT3')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDeadEye') or contains(@tags, 'perkMachineGunner') or contains(@tags, 'perkBoomstick'))]/@value">700,1100</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDeadEye') or contains(@tags, 'perkMachineGunner') or contains(@tags, 'perkBoomstick'))]/@value">1100,1600</set>
+
+<!-- perkGunslinger
+t0 pipe pistol 100,200
+t1 pistol 300,400
+t2 magnum 400,500
+t3 smg 500,700
+t3 desert vulture 500,700
+t4 700,1000
+ -->
+<set xpath="/items/item[starts-with(@name, 'IZYgunT0')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkGunslinger'))]/@value">100,200</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkGunslinger'))]/@value">300,400</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT2')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkGunslinger'))]/@value">400,500</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT3')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkGunslinger'))]/@value">500,700</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkGunslinger'))]/@value">700,1000</set>
+
+<!-- perkDemolitionsExpert
+
+<set xpath="/items/item[starts-with(@name, 'IZYgunT0')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDemolitionsExpert'))]/@value">100,200</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT1')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDemolitionsExpert'))]/@value">300,400</set>
+
+Same as gunShotgunT2PumpShotgun
+<set xpath="/items/item[starts-with(@name, 'IZYgunT2')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDemolitionsExpert'))]/@value">400,700</set>
+Same as vanilla gunExplosivesT3RocketLauncher
+<set xpath="/items/item[starts-with(@name, 'IZYgunT3')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDemolitionsExpert'))]/@value">100,200</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT3')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDemolitionsExpert'))]/@value">500,700</set>
+<set xpath="/items/item[starts-with(@name, 'IZYgunT4')]/effect_group/passive_effect[@name='DegradationMax' and (contains(@tags, 'perkDemolitionsExpert'))]/@value">700,1000</set>
+ -->
+
+<!-- *** NOT READY WEAPONS -->
+<!-- Remove from the player view in Creative Mode items that are not ready and disabled. -->
+
+<append xpath="/items/item[@name='IZYMeleeT4BatonPunisher9000' or 
+@name='IZYMeleeT4DualKnivesKnife' or 
+@name='IZYgunT1ARCabineMASFARifle' or 
+@name='IZYgunT1LRLongRifleM16a1' or 
+@name='IZYgunT2ClassicSMGMP34' or 
+@name='IZYgunT3AREUCabineSG552' or 
+@name='IZYgunT3DualPistols45USP45' or 
+@name='IZYgunT3RifleMagnumLeveractionCarbine44' or 
+@name='IZYgunT3SMGMP5Ksubmachinegun' or 
+@name='IZYgunT4DualPistolC96M' or 
+@name='IZYgunT4MarksManRifle556SSMAR15' or 
+@name='IZYgunT4SMGColt9mmsubmachinegun' or 
+@name='IZYgunT4TACshotgunM1014' or 
+@name='IZYgunT5DualSMGsSuperVectors' or 
+@name='IZYgunT5HeavyWeaponAA12AutoShotgun' or 
+@name='IZYgunT5HeavyWeaponSuperEagle44SMG' or 
+@name='IZYgunTminus1MusketshotgunBlunderbuss' or 
+@name='ammoShotgunShellDragoBreath' or 
+@name='ammoShotgunShellDragoBreathBundle']">
+	<property name="CreativeMode" value="Dev"/>
+</append>
+
+<!-- *** Vanilla -->
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- Added noVRP tag to pipe weapons to remove compatibility with modGunReflexSightA and modGunReflexSightB, as IGP has no visible attachment for these mods. -->
+
+<csv xpath="/items/item[@name='gunHandgunT0PipePistol' or 
+@name='gunShotgunT0PipeShotgun' or 
+@name='gunRifleT0PipeRifle' or 
+@name='gunMGT0PipeMachineGun']/property[@name='Tags']/@value" delim="," op="add">noVRP</csv>
+
+<!-- Changed display type from rangedShotgunNoMag to rangedShotgun to show rounds per minute for the following weapons:
+gunShotgunT1DoubleBarrel
+gunShotgunT0PipeShotgun
+-->
+
+<set xpath="items/item[@name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT0PipeShotgun']/property[@name='DisplayType']/@value">rangedShotgun</set>
+
+<!-- Start of 2.6.1.3 -->
+<!-- 
+Added ammoShotgunShellPremium compatibility for the vanilla shotguns:
+gunShotgunT0PipeShotgun
+gunShotgunT1DoubleBarrel
+gunShotgunT2PumpShotgun
+gunShotgunT3AutoShotgun
+
+ -->
+ 
+<csv xpath="/items/item[@name='gunShotgunT0PipeShotgun' or @name='gunShotgunT1DoubleBarrel' or @name='gunShotgunT2PumpShotgun' or @name='gunShotgunT3AutoShotgun']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunShellPremium</csv>
+
+<!-- End of 2.6.1.3 -->
+
+<!-- *** IZY_RMP_44magnum -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_44magnum') and mod_version('IZY_RMP_44magnum') = version(1,1,0,4)">
+
+<!-- Add weapons to loot. -->
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Tech -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Tech') and mod_version('IZY_RMP_Tech') = version(1,1,0,4)">
+
+<!-- 2.6.1.2 -->
+
+<!-- IZYgunT3TechnicalNailmachinegun now scraps to Robotics Parts instead of Machine Gun Parts. -->
+<set xpath="items/item[@name='IZYgunT3TechnicalNailmachinegun']/property[@name='Material']/@value">MJunkTurretParts</set>
+
+<!-- End of 2.6.1.2 -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_melee -->
+
+<conditional>
+<if cond="mod_loaded('IZY_melee') and mod_version('IZY_melee') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.3 -->
+<!-- Removed the ability to kick while crouching for the following weapons: 
+   - IZYMeleeT4SpearPoleAxe
+   - IZYMeleeT4BladeKatana
+   - IZYMeleeT4SledghammerSpikeMace -->
+
+<!-- IZYMeleeT4SpearPoleAxe  -->
+<append xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/effect_group[@name='meleeWpnSpearT3SteelSpear']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/effect_group[@name='meleeWpnSpearT3SteelSpear']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- IZYMeleeT4SledghammerSpikeMace  -->
+<append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']/effect_group[@name='Blocking']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4SledghammerSpikeMace']/effect_group[@name='Blocking']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- IZYMeleeT4BladeKatana  -->
+<append xpath="/items/item[@name='IZYMeleeT4BladeKatana']/effect_group[@name='meleeWpnBladeT3Machete']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYMeleeT4BladeKatana']/effect_group[@name='meleeWpnBladeT3Machete']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+<!-- End of 2.6.1.3 -->
+
+<!-- IZYMeleeT4SpearPoleAxe can be sold like the other T4 melee weapons. -->
+<set xpath="/items/item[@name='IZYMeleeT4SpearPoleAxe']/property[@name='SellableToTrader']/@value">true</set> 
+
+<!-- IZYMeleeT4BladeKatana has now the same sneak damage bonus as meleeWpnBladeT3Machete. -->
+<append  xpath="/items/item[@name='IZYMeleeT4BladeKatana']">
+	<effect_group name="sneak damage bonus">
+		<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+		<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+			<passive_effect name="DamageBonus" operation="base_add" value="4"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="4" tags="perkDeepCuts"/>
+			<display_value name="dEntityDamageSneak" value="4"/>
+	</effect_group>
+</append>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Miscpack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Miscpack') and mod_version('IZY_RMP_Miscpack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.3 -->
+
+<!-- Removed the ability to kick while crouching for the IZYgunTminus1MusketM1777Rifle. -->
+<append xpath="/items/item[@name='IZYgunTminus1MusketM1777Rifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunTminus1MusketM1777Rifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- ammoMuzzleloadershot display changed from ammoBullet to ammoBulletAP. -->
+<append xpath="/items/item[@name='ammoMuzzleloadershot']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
+
+<!-- Added 2026-04-15 2.6.1.1 for 5.1.3. -->
+
+<!-- Added DescriptionKey for ammoMuzzleloadershot -->
+<set xpath="/items/item[@name='ammoMuzzleloadershot']/property[@name='DescriptionKey']/@value">ammoMuzzleloadershotDesc</set>
+
+<!-- Added ammoleadball to CFChemicals crafting group in campfire -->
+
+<csv xpath="/items/item[@name='ammoleadball']/property[@name='Group']/@value" delim="," op="add">CFChemicals</csv>
+
+<!-- End of 2.6.1.1 -->
+
+<!-- 2.5.1.0 -->
+
+<!-- IZYgunT4BowVanhelsingAutomaticCrossbowVH has its own description.  -->
+
+<set xpath="/items/item[@name='IZYgunT4BowVanhelsingAutomaticCrossbowVH']/property[@name='DescriptionKey']/@value">IZYgunT4BowVanhelsingAutomaticCrossbowVHDesc</set>
+
+<!-- gunBowT3CompoundCrossbow has its own description.  -->
+
+<set xpath="/items/item[@name='gunBowT3CompoundCrossbow']/property[@name='DescriptionKey']/@value">gunBowT3CompoundCrossbowDesc</set>
+
+<!-- 
+Add localization for the description of the following items:
+ammoCrossbowLightBoltStone
+ammoCrossbowLightBoltIron
+ammoCrossbowLightBoltSteelAP
+ -->
+ 
+<!-- Set not ready and disabled weapons and ammo as Dev only in the Creative menu. -->
+
+<!-- <append xpath="/items/item[@name='IZYgunTminus1MusketshotgunBlunderbuss' or 
+@name='IZYgunTminus1MusketFlintlockPistol' or 
+@name='IZYgunTminus1MusketM1777Rifle']">
+	<property name="CreativeMode" value="Dev"/>
+</append>  -->
+
+<!-- Added 2.6.1.1 for 5.1.3 2026-04-15 -->
+<!-- IZYgunTminus1MusketM1777Rifle is now available in loot. -->
+<append xpath="/items/item[@name='IZYgunTminus1MusketshotgunBlunderbuss' or 
+@name='IZYgunTminus1MusketFlintlockPistol']">
+	<property name="CreativeMode" value="Dev"/>
+</append> 
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_HVW -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_HVW') and mod_version('IZY_RMP_HVW') = version(1,1,0,4)">
+
+<!-- See Localization.txt for changes. -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_Demopack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_Demopack') and mod_version('IZY_RMP_Demopack') = version(1,1,0,4)">
+
+<!-- 25mm grenades (ammo25mmGrenadeTraining, ammo25mmGrenadeHE, ammo25mmGrenadeFRAGS) have now the correct unlock information (craftingExplosives). -->
+
+<append xpath="/items/item[@name='ammo25mmGrenadeTraining' or @name='ammo25mmGrenadeHE' or @name='ammo25mmGrenadeFRAGS']">
+	<property name="UnlockedBy" value="craftingExplosives"/>
+</append>
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- Added explosivesSkill tag for IZY_RMP_Demopack ammo. -->
+
+<csv xpath="/items/item[@name='ammoRocketRPGTraning' or 
+@name='ammoRocketRPGHE' or 
+@name='ammoRocketRPGIncendiary' or 
+@name='ammo25mmGrenadeTraining' or 
+@name='ammo25mmGrenadeFRAGS' or 
+@name='ammo25mmGrenadeHE']/property[@name='Tags']/@value" delim="," op="add">explosivesSkill</csv>
+
+<!-- End of 2.6.1.5 -->
+</if>
+</conditional>
+
+<!-- *** IZY_VRP -->
+
+<!-- Start of 2.6.1.5 -->
+<conditional>
+<if cond="mod_loaded('IZY_VRP') == false">
+
+<!-- Added kick effect for meleeToolAxeT2SteelAxe and meleeToolPickT2SteelPickaxe in case IZY_VRP is not loaded. -->
+<append xpath="/items/item[@name='meleeToolAxeT2SteelAxe' or 
+@name='meleeToolPickT2SteelPickaxe']">
+	<effect_group name="KickOn_tools_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+</if>
+</conditional>
+<!-- End of 2.6.1.5 -->
+
+<conditional>
+<if cond="mod_loaded('IZY_VRP') and mod_version('IZY_VRP') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.3 -->
+
+<!-- 
+Removed the ability to kick while crouching for the following weapons: 
+gunHandgunT1Pistol
+gunHandgunT3SMG5
+gunHandgunT2Magnum44
+gunHandgunT3DesertVulture
+gunShotgunT1DoubleBarrel
+gunShotgunT2PumpShotgun
+gunShotgunT3AutoShotgun
+gunRifleT2LeverActionRifle
+gunRifleT3SniperRifle
+gunMGT1AK47
+gunMGT2TacticalAR
+gunMGT3M60  -->
+
+<!-- gunHandgunT1Pistol  -->
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunHandgunT3SMG5 -->
+<append xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT3SMG5']/effect_group[@name='gunHandgunT3SMG5']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunHandgunT2Magnum44 -->
+<append xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT2Magnum44']/effect_group[@name='gunHandgunT2Magnum44']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunHandgunT3DesertVulture -->
+<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunHandgunT3DesertVulture']/effect_group[@name='gunHandgunT3DesertVulture']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick2']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunShotgunT1DoubleBarrel -->
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/effect_group[@name='gunShotgunT1DoubleBarrel']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunShotgunT2PumpShotgun -->
+<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunShotgunT2PumpShotgun']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunShotgunT3AutoShotgun -->
+<append xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunShotgunT3AutoShotgun']/effect_group[@name='gunShotgunT3AutoShotgun']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunRifleT2LeverActionRifle -->
+<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunRifleT2LeverActionRifle']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunRifleT3SniperRifle -->
+<append xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunRifleT3SniperRifle']/effect_group[@name='gunRifleT3SniperRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunMGT1AK47 -->
+<append xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunMGT1AK47']/effect_group[@name='gunMGT1AK47']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunMGT2TacticalAR -->
+<append xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunMGT2TacticalAR']/effect_group[@name='gunMGT2TacticalAR']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- gunMGT3M60 -->
+<append xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='gunMGT3M60']/effect_group[@name='gunMGT3M60']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
+
+<!-- Start of 2.6.1.5 -->
+<!-- No kick when crouching for meleeToolAxeT2SteelAxe' and  meleeToolPickT2SteelPickaxe. -->
+<append xpath="/items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='meleeToolAxeT2SteelAxe' or @name='meleeToolPickT2SteelPickaxe']/effect_group/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- End of 2.6.1.5 -->
+
+<!-- gunRifleT1HuntingRifle now shows rounds per minute. -->
+
+<set xpath="items/item[@name='gunRifleT1HuntingRifle']/property[@name='DisplayType']/@value">rangedGun</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_9mmVAL -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_9mmVAL') and mod_version('IZY_RMP_9mmVAL') = version(1,1,0,4)">
+
+<!-- 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT4SMGCZScorpionEVO3 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT4SMGCZScorpionEVO3']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
+<!-- IZYgunT1Pistol9Makarov and IZYgunT1Pistol9MakarovDesc have a full localization. -->
+
+<!-- IZYgunT0SMGPIPEsubmachinegun localization now cotrrectly shows Material as Scrap Iron, not Handgun Parts. -->
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_SG -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_SG') and mod_version('IZY_RMP_SG') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.5 -->
+
+<!-- Made ammoShotgunShellPremium unlockable with craftingShotguns. -->
+<append xpath="/items/item[@name='ammoShotgunShellPremium']">
+	<property name="UnlockedBy" value="craftingShotguns"/>
+</append>
+
+<!-- Added ammoShotgunShellPremiumBundle item -->
+<append xpath="/items">
+<item name="ammoShotgunShellPremiumBundle">
+	<property name="Extends" value="ammoBundleMaster"/>
+	<property name="CustomIcon" value="ammoShotgunShellPremium"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle762mmBulletBall -->
+    <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>	
+	<property name="UnlockedBy" value="perkShotgunMessiahComplete"/> <!-- BOOK_PERK -->
+	<property class="Action0">
+		<property name="Create_item" value="ammoShotgunShellPremium"/>
+	</property>
+</item>
+
+<!-- Added ammoShotgunShellDragoBreathBundle. -->
+<item name="ammoShotgunShellDragoBreathBundle">
+	<property name="Extends" value="ammoBundleMaster"/>
+	<property name="CustomIcon" value="ammoShotgunShellDragoBreath"/>
+	<property name="EconomicValue" value="2400"/>
+	<property name="TraderStageTemplate" value="ammoTier3"/>
+    <property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>		
+	<property class="Action0">
+		<property name="Create_item" value="ammoShotgunShellDragoBreath"/>
+	</property>
+</item>
+
+</append>
+
+<!-- IZYgunT1TradshotgunDoubleBarrelOverUnder: removed compatibility with the modGunShotgunTubeExtenderMagazine mod. -->
+<csv xpath="/items/item[@name='IZYgunT1TradshotgunDoubleBarrelOverUnder']/property[@name='Tags']/@value" delim="," op="Remove" >modGunShotgunTubeExtenderMagazine</csv>
+
+<!-- End of 2.6.1.5 -->
+
+<!-- Start of 2.6.1.3 -->
+
+<!-- Removed the ability to kick while crouching for the IZYgunT1TACCompactshotgunSuperShortty. -->
+<append xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunT1TACCompactshotgunSuperShortty']/effect_group[@name='gunShotgunT2PumpShotgun']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
+
+<!-- Start of 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT3TradshotgunTrenchGunM1897 and IZYgunT4TradshotgunBrowningAuto5 cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT3TradshotgunTrenchGunM1897' or @name='IZYgunT4TradshotgunBrowningAuto5']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
+<!-- Remove IZYgunT4TACshotgunM1014 from the player view in Creative Mode 
+See Global Edits above.. -->
+
+<!-- Remove firingMode tag from IZYgunT2TradshotgunLeveractionShotgunModel1887 to prevent the installation of Trigger Group mods on a lever-action weapon. -->
+
+<csv xpath="/items/item[@name='IZYgunT2TradshotgunLeveractionShotgunModel1887']/property[@name='Tags']/@value" delim="," op="remove">firingMode</csv>
+
+<!-- 
+Add ammoShotgunShellPremium compatibility for the following shotguns:
+IZYgunT3TradshotgunTrenchGunM1897
+IZYgunT4TradshotgunBrowningAuto5
+IZYgunT1TACCompactshotgunSuperShortty
+
+ -->
+ 
+<csv xpath="/items/item[@name='IZYgunT3TradshotgunTrenchGunM1897' or @name='IZYgunT4TradshotgunBrowningAuto5' or @name='IZYgunT1TACCompactshotgunSuperShortty']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammoShotgunShellPremium</csv>
+ 
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_556pack -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_556pack') and mod_version('IZY_RMP_556pack') = version(1,1,0,4)">
+
+<!-- 2.6.1.3 -->
+
+<!-- Removed the ability to kick while crouching for IZYgunT0SNIPERpipeAR15Broken15Junk. -->
+<append xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group[@name='gunRifleT1HuntingRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/effect_group[@name='gunRifleT1HuntingRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- Removed the ability to kick while crouching for IZYgunT3MarksManRifle556M16A2DMR. -->
+<append xpath="/items/item[@name='IZYgunT3MarksManRifle556M16A2DMR']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemActivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<append xpath="/items/item[@name='IZYgunT3MarksManRifle556M16A2DMR']/effect_group[@name='gunRifleT2LeverActionRifle']/triggered_effect[@trigger='onSelfItemDeactivate' and @buff='IZYRangeWPmeleeKick']">
+<requirement name="!HasBuff" buff="buffCrouching"/>
+</append>
+
+<!-- End of 2.6.1.3 -->
+<!-- Start of 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT2ARCabineCAR15 and IZYgunT3MarksManRifle556M16A2DMR cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT2ARCabineCAR15' or @name='IZYgunT3MarksManRifle556M16A2DMR']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
+<!-- Start 2.6.1.1 -->
+
+<!-- Replaced leather drop mesh for IZYgunT0SNIPERpipeAR15Broken15Junk with sack_dropped -->
+
+<set xpath="/items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- Replaced missing drop mesh for IZYgunT4ARCabineHK416 with sack_dropped. -->
+<set xpath="/items/item[@name='IZYgunT4ARCabineHK416']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- End 2.6.1.1 -->
+
+<!-- ammo556mmHIpower and ammo556mmArmorPiercing recipes unlock through craftingMachineGuns progression. -->
+
+<append xpath="/items/item[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing']">
+	<property name="UnlockedBy" value="craftingMachineGuns"/>
+</append>
+
+<!-- All 5.56mm bundles recipes unlock at Automatic Weapons Handbook - Completion. -->
+<append xpath="/items/item[@name='ammo556mmBulletBallBundle' or @name='ammo556mmHIpowerBundle' or @name='ammo556mmArmorPiercingBundle']">
+	<property name="UnlockedBy" value="perkAutoWeaponsComplete"/> <!-- BOOK_PERK -->
+</append>
+
+<!-- 5.56 ammo displays penetration values. -->
+<append xpath="/items/item[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing' or @name='ammo556mmBulletBall']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+</append>
+
+<!-- IZYgunT0SNIPERpipeAR15Broken15Junk now scraps to Scrap Iron instead of Rifle Parts. -->
+
+<set xpath="items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk']/property[@name='Material']/@value">Mmetal</set>
+
+<!-- Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons:
+IZYgunT0SNIPERpipeAR15Broken15Junk
+IZYgunT3MarksManRifle556M16A2DMR
+IZYgunT4MarksManRifle556SSMAR15
+-->
+
+<set xpath="items/item[@name='IZYgunT0SNIPERpipeAR15Broken15Junk' or @name='IZYgunT3MarksManRifle556M16A2DMR' or @name='IZYgunT4MarksManRifle556SSMAR15']/property[@name='DisplayType']/@value">rangedGun</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_45ACP -->
+
+<conditional>
+<if cond="mod_loaded('IZY_RMP_45ACP') and mod_version('IZY_RMP_45ACP') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.4 -->
+<!-- Fixed IZYgunT0PistolLiberatorImprovisedPistol high kick. -->
+
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@transform_path='FPV_GROUP_MELEE']"/>
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@buff='IZYRangeWPmeleeKick']"/>
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@buff='IZYweaponHosting']"/>
+<remove xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/effect_group[@name='gunHandgunT1Pistol']/triggered_effect[@buff='IZYBashingCooldown']"/>
+
+<!-- Readded IZYRangeWPmeleeKick2_FLTR effect group with lower kick -->
+
+<append xpath="/items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']">
+	<effect_group name="IZYRangeWPmeleeKick2_FLTR">
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="RemoveBuff" buff="IZYRangeWPmeleeKick2"/>
+		
+		<triggered_effect trigger="onSelfItemActivate" action="AddBuff" buff="IZYRangeWPmeleeKick2">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfItemDeactivate" action="AddBuff" buff="IZYRangeWPmeleeKick2">
+			<requirement name="!HasBuff" buff="IZYweaponHosting"/>
+			<requirement name="!HasBuff" buff="IZYBashingCooldown"/>
+			<requirement name="!HasBuff" buff="buffCrouching"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="IZYRangeWPmeleeKick2"/>
+		<triggered_effect trigger="onSelfEquipStop" action="SetTransformActive" active="false" parent_transform="#HeldItemRoot" transform_path="FPV_GROUP_MELEE"/>
+		<triggered_effect trigger="onSelfHoldingItemCreated" action="AddBuff" buff="IZYweaponHosting">
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="IZYBashingCooldown">
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+		</triggered_effect>
+		<triggered_effect trigger="onOtherAttackedSelf" action="RemoveBuff" buff="IZYBashingCooldown">
+		</triggered_effect>
+	</effect_group>
+</append>
+
+<!-- End of 2.6.1.4 -->
+
+<!-- Changed display type of all -45 ACP types to ammoBulletAP to show penetration values. -->
+<append xpath="/items/item[@name='ammo45ACPBulletBall' or @name='ammo45ACPHighpower']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+</append>
+
+<!-- Added armor piercing code to ammo45ACPArmorpiecing. Copied values from AP 9mm. -->
+<!-- Change display type to ammoBulletAP to show penetration values. -->
+<append xpath="/items/item[@name='ammo45ACPArmorpiecing']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+	<effect_group name="ammo45ACPArmorpiecingFLTR" tiered="false">
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.5" />
+		<display_value name="dTargetArmor" value="-.5"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="1" />
+		<display_value name="dTargetPenetration" value="1"/>
+	</effect_group>
+</append>
+
+<!-- Added missing armor piercing code to ammo45ACPEnhanced. Copied values from AP 5.56mm. -->
+<append xpath="/items/item[@name='ammo45ACPEnhanced']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+	<effect_group name="ammo45ACPArmorpiecingFLTR" tiered="false">
+		<passive_effect name="TargetArmor" operation="perc_add" value="-.8" />
+		<display_value name="dTargetArmor" value="-.8"/>
+		<passive_effect name="EntityPenetrationCount" operation="base_set" value="3" />
+		<display_value name="dTargetPenetration" value="3"/>
+	</effect_group>
+</append>
+
+<!-- IZYgunT4Pistol45STIEAGLE6 is now compatible with ALL .45 ACP ammo types. -->
+<set xpath="items/item[@name='IZYgunT4Pistol45STIEAGLE6']/property[@class='Action0']/property[@name='Magazine_items']/@value">ammo45ACPBulletBall,ammo45ACPHighpower,ammo45ACPArmorpiecing,ammo45ACPEnhanced</set>
+
+<!-- IZYgunT0PistolLiberatorImprovisedPistol now scraps to Scrap Iron instead of Handgun  Parts. -->
+
+<set xpath="items/item[@name='IZYgunT0PistolLiberatorImprovisedPistol']/property[@name='Material']/@value">Mmetal</set>
+
+<!-- Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following weapons:
+   - IZYgunT3MarksmanRifleMMRM1Carbine45
+   - IZYgunT4MarksmanRifle45MMRKrissVectorCarbine. -->
+
+<set xpath="items/item[@name='IZYgunT3MarksmanRifleMMRM1Carbine45' or @name='IZYgunT4MarksmanRifle45MMRKrissVectorCarbine']/property[@name='DisplayType']/@value">rangedGun</set>
+
+</if>
+</conditional>
+
+<!-- *** IZY_RMP_762pack -->
+<conditional>
+<if cond="mod_loaded('IZY_RMP_762pack') and mod_version('IZY_RMP_762pack') = version(1,1,0,4)">
+
+<!-- Start of 2.6.1.3 -->
+
+<!-- ammo762mmExplosiveFragmentations display changed from ammoBullet to ammoBulletAP. -->
+<append xpath="/items/item[@name='ammo762mmExplosiveFragmentations']">
+	<property name="DisplayType" value="ammoBulletAP"/>
+	<!-- <property name="DisplayType" value="ammoFragFTLR"/> -->
+</append>
+
+<!-- End of 2.6.1.3 -->
+
+<!-- 2.6.1.2 -->
+
+<!-- Hotfix: IZYgunT1SNIPERRIFLE762Mosinnagant and IZYgunT2MarksManRifle762M1garandNavyconverted cannot install the Scope 2x Mod to avoid "White square in the place of the red dot" issue https://github.com/flatlanderone/gunpack/issues/15  -->
+
+<!-- Hotfix: IZYgunT3SNIPERRIFLE762LeeEnfieldRifle cannot install the Scope 2x Mod to avoid "Black or purple sight image when ADS" issue https://github.com/flatlanderone/gunpack/issues/16  -->
+
+<csv xpath="/items/item[@name='IZYgunT1SNIPERRIFLE762Mosinnagant' or @name='IZYgunT2MarksManRifle762M1garandNavyconverted' or @name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle']/property[@name='Tags']/@value" delim="," op="add">no2xScopesFLTR</csv>
+
+<!-- End of 2.6.1.2 -->
+
+<!-- 2.6.1.1 -->
+<!-- Replaced missing drop mesh for IZYgunT3BattleRifleHKG3 with sack_dropped. -->
+<set xpath="/items/item[@name='IZYgunT3BattleRifleHKG3']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- End of 2.6.1.1 -->
+
+<!-- Fixed the number of mod slots for level 6 RPD Machine Gun (T2) and Antique Machine Gun (T4). -->
+
+<set xpath="/items/item[@name='IZYgunT4LMGlightmachinegunMG34R' or @name='IZYgunT2LMGlightmachinegunRPD']/effect_group[@name='gunMGT3M60']/passive_effect[@name='ModSlots']/@value">1,2,3,4,5,6</set>
+
+<!-- ammoBundle762mmBulletHP now uses the correct custom item icon.
+
+This fixes a vanilla bug described at https://discord.com/channels/243577046616375297/1193195163716173926/1480311761826742382
+
+<item name="ammoBundle762mmBulletHP"> doesn't use the custom icon 7D1.0_Izayo_WeaponpackRemastered_762pack\UIAtlases\ItemIconAtlas\ammo762mmBulletHP.png
+
+This is due to a typo in vanilla:
+It is: 
+<property name="CustomIcon" value="ammo762mmBulletHp"/>
+It should be:
+    <property name="CustomIcon" value="ammo762mmBulletHP"/>
+	 -->
+<setattribute xpath="/items/item[@name='ammoBundle762mmBulletHP']/property[@name='CustomIcon']" name="value">ammo762mmBulletHP</setattribute>
+
+<!-- Added ammo762mmExplosiveFragmentationsBundle. Borrowed from zzz_Ammo_Press_Add-On_Compatibility_Patch. -->
+<append xpath="/items">
+	<item name="ammo762mmExplosiveFragmentationsBundle">
+		<property name="Extends" value="ammoBundleMaster"/>
+		<property name="CustomIcon" value="ammo762mmExplosiveFragmentations"/>
+		<property name="EconomicValue" value="3500"/>
+		<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoBundle762mmBulletBall -->
+		<property name="UnlockedBy" value="craftingRifles"/>
+		<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>	
+		<property class="Action0">
+			<property name="Create_item" value="ammo762mmExplosiveFragmentations"/>
+		</property>
+	</item>
+</append>
+
+<!-- Start of 2.6.1.5 -->
+<!-- Added Ammo Press display info from Ammo Press Add-On Patch for EFT and Izy v2 -->
+
+<append xpath="/items/item[@name='ammo762mmExplosiveFragmentations']">    
+	<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons,RegularAmmo"/>
+</append>
+<!-- End of 2.6.1.5 -->
+
+<!-- 
+ammo762mmExplosiveFragmentations is now compatible with the following T4 7.62 sniper rifles:
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle
+ -->
+ 
+<csv xpath="/items/item[@name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or @name='IZYgunT4MarksManRifle762SVUprototypeRifle']/property[@class='Action0']/property[@name='Magazine_items']/@value" delim="," op="add">ammo762mmExplosiveFragmentations</csv>
+
+<!-- Changed display type from rangedGunNoMag to rangedGun to show rounds per minute for the following wweapons:
+IZYgunT4MarksManRifleM110SASS
+IZYgunT4SNIPERRIFLE762L96AWMRifle
+IZYgunT4MarksManRifle762SVUprototypeRifle 
+IZYgunT1SNIPERRIFLE762Mosinnagant
+IZYgunT3SNIPERRIFLE762LeeEnfieldRifle
+IZYgunT2MarksManRifle762M1garandNavyconverted
+IZYgunT3MarksManRifle762HKPSG1 -->
+<set xpath="items/item[@name='IZYgunT4MarksManRifleM110SASS' or @name='IZYgunT4SNIPERRIFLE762L96AWMRifle' or @name='IZYgunT4MarksManRifle762SVUprototypeRifle' or @name='IZYgunT1SNIPERRIFLE762Mosinnagant' or @name='IZYgunT3SNIPERRIFLE762LeeEnfieldRifle' or @name='IZYgunT2MarksManRifle762M1garandNavyconverted' or @name='IZYgunT3MarksManRifle762HKPSG1']/property[@name='DisplayType']/@value">rangedGun</set>
+ 
+</if>
+</conditional>
+
+<!-- *** Gears Options -->
+
+<conditional>
+	<if cond="mod_version('Gears') >= version(6,0,0)">
+		<include filename="Options/items.xml"/>
+	</if>
+</conditional>
+
+<!-- Not implemented -->
+<!-- Move non gears edits to items_no_gears.xml -->
+<!-- <conditional>
+	<if cond="mod_loaded('Gears') == 'true'">
+		<include filename="Conditionals/nav_objects_gears.xml" />
+	</if>
+	<else>
+		<include filename="Conditionals/nav_objects_no_gears.xml" />
+	</else>
+</conditional> -->
+
+</if>
+</conditional>
+
+</if>
+</conditional>
+
+</RamblingMan>
