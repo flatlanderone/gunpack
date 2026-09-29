@@ -1,4 +1,4 @@
-# Flatlander's Combat Sandbox for IZY Classic - version 3.2.0.2.0.0 / 3.2.0.200
+# Flatlander's Combat Sandbox for IZY Classic - version 3.2.0.2.0.1 / 3.2.0.201
 
 ## Overview
 
@@ -81,7 +81,7 @@ In the **6. Misc. Options** tab you can:
 
 ## Important notes
 
- 1. The 3.2.0.2.0.0 version of the mod is designed to work with the IZY Classic mod released on 2026-07-16. NO OTHER VERSION WILL BE SUPPORTED.
+ 1. The 3.2.0.2.0.1 version of the mod is designed to work with the IZY Classic mod released on 2026-07-16. NO OTHER VERSION WILL BE SUPPORTED.
  2. Do not bother Izayo with questions regarding this mod. 
  3. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  4. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -96,7 +96,7 @@ In the **6. Misc. Options** tab you can:
 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/) / [Nexus Mods](https://www.nexusmods.com/profile/flatlanderone) / [7daystodiemods.com](https://7daystodiemods.com/profiles/flatlanderone)
   - **Initial release**: 3.0.1.0.0 (2026-07-16)
-  - **This release**: 3.2.0.2.0.0 (2026-09-19)
+  - **This release**: 3.2.0.2.0.1 (2026-09-29)
   
 ## Changelog
 

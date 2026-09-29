@@ -8,6 +8,14 @@ From release 3.2.0.2.0.0 this project adheres to [Semantic Versioning](https://s
 
 ## [Unreleased]
 
+## [Unreleased]
+
+## [3.2.0.2.0.1] - 2026-09-29
+
+### Fixed
+
+- DropMeshfile missing for some weapons. (Reported by RedTorch)
+
 ## [3.2.0.2.0.0] - 2026-09-19
 
 ### Credits and Acknowledgements

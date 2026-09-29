@@ -694,6 +694,16 @@ IZYgunT1TACCompactshotgunSuperShortty
 
 <!-- End 2.6.1.1 -->
 
+
+<!-- Start 3.2.0.2.0.1 -->
+
+<set xpath="/items/item[@name='IZYgunTminus1MusketshotgunBlunderbuss' or @name='IZYgunTminus1MusketFlintlockPistol' or @name='IZYgunTminus1MusketM1777Rifle' or @name='IZYgunT3RifleMagnumLeveractionCarbine44' or @name='IZYgunT5HeavyWeaponAA12AutoShotgun']/property[@name='DropMeshfile']/@value">@:Other/Items/Misc/sack_droppedPrefab.prefab</set>
+
+<!-- End 3.2.0.2.0.1 -->
+
+
+
+
 <!-- ammo556mmHIpower and ammo556mmArmorPiercing recipes unlock through craftingMachineGuns progression. -->
 
 <append xpath="/items/item[@name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing']">
