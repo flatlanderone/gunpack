@@ -1,0 +1,18 @@
+<RamblingMan>
+
+<append xpath="/items/item[@name='gunHandgunT1Pistol']/effect_group[@name='gunHandgunT1Pistol']">
+		<!-- <passive_effect name="EntityDamage" operation="perc_add" value="-.5,.5" tags="perkGunslinger"/>  -->
+		<!-- <passive_effect name="EntityDamage" operation="perc_add" value="-.5,.5"/>  -->
+		<!-- <passive_effect name="EntityDamage" operation="perc_add" value="-.02,.02" tags="perkGunslinger"/>  -->
+		
+		<!-- random EntityDmg -->
+</append>
+
+<append xpath="/items/item[@name='ammo9mmBulletBall']/effect_group[@name='ammo9mmBulletBall']">
+	<!-- <passive_effect name="EntityDamage" operation="perc_add" value="-.5,.5"/>  -->
+</append>
+
+
+
+
+</RamblingMan>

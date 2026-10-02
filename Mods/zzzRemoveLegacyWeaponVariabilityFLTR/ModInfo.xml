@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml>
+	<Name value="RemoveLegacyWeaponVariabilityFLTR" />
+	<DisplayName value="RemoveLegacyWeaponVariabilityFLTR" />
+	<Description value="This modlet disables the legacy variability system for all vanilla weapons and tools." />
+    <Author value="Flatlander" />
+    <Version value="3.2.0.100" />
+    <InternalVersion value="3.2.0.1.0.0" />
+	<SkipWithAntiCheat value="false" />
+	<Website value="https://github.com/flatlanderone" />
+	<Icon value="Textures/RMM_ICON.png" />
+	<Banner value="Textures/RMM_BANNER.png" />
+</xml>

@@ -1,0 +1,87 @@
+<RamblingMan>
+
+<append xpath="/items">
+
+<item name="thrownAmmoPipeBombTiered">
+	<property name="Tags" value="T1,ammo,weapon,attPerception,perkDemolitionsExpert,explosivesSkill"/>
+	<property name="PreviousTechItem" value="thrownAmmoMolotovCocktail"/>
+	<property name="ItemTypeIcon" value="explosion"/>
+	<property name="DisplayType" value="ammoGrenade"/>
+	<property name="Class" value="ItemClassTimeBomb"/>
+	<property name="HoldType" value="25"/>
+	<property name="Meshfile" value="@:Other/Items/Weapons/Ranged/PipeBomb/PipeBombPrefab.prefab"/>
+	<property name="DropScale" value="2.5"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="20"/>
+	<property name="EconomicValue" value="50"/>
+	<property name="TraderStageTemplate" value="baseTier1"/><!-- thrownAmmoPipeBomb -->
+	<property name="Weight" value="0"/>
+	
+<!-- START OF TIER CODE -->
+	<property name="ShowQuality" value="true"/>
+	<property name="CustomIcon" value="thrownAmmoPipeBomb"/>
+	<property name="CustomIconTint" value="ffb0b0"/>
+	
+	<effect_group name="thrownAmmoPipeBombTiered">
+		<!-- <passive_effect name="EntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkDemolitionsExpert"/>  -->
+		<!-- tier bonus -->
+		<!-- <passive_effect name="EntityDamage" operation="perc_add" value="1,5" tier="2,6" tags="perkDemolitionsExpert"/>  -->
+		<!-- tier bonus -->
+		
+		<!-- <passive_effect name="ExplosionEntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkDemolitionsExpert"/>  -->
+		<passive_effect name="ExplosionEntityDamage" operation="perc_add" value="1,5" tier="2,6" tags="perkDemolitionsExpert"/> 
+		
+		<!-- tier bonus -->
+	</effect_group>
+
+<!-- END OF TIER CODE -->
+	
+	<property class="Explosion">
+		<property name="BlockDamage" value="5"/>
+		<property name="EntityDamage" value="253"/>
+		<property name="ParticleIndex" value="20"/>
+		<property name="RadiusBlocks" value="4"/>
+		<property name="RadiusEntities" value="4"/>
+		<property class="DamageBonus">
+			<property name="earth" value="0"/> <!-- should work? -->
+			<property name="water" value="0"/>
+		</property>
+		<property name="BlastPower" value="75"/> <!-- (int,100) how far ragdolls and such are flung -->
+	</property>
+	<property name="FuseTime" value="4"/> <!-- End: Needed for time in sec, max 6 -->
+	<property name="StickPercent" value=".4"/>
+	<property name="UnlockedBy" value="craftingExplosives"/><!-- perkDemolitionsExpert,thrownAmmoPipeBombSchematic, -->
+	<property name="Group" value="Ammo/Weapons,Ammo"/>
+	<property name="ActivationTransformToHide" value="Sparks"/>
+	<property name="SoundPickup" value="pipebomb_grab"/>
+	<property name="SoundPlace" value="pipebomb_place"/>
+	<property class="Action0">
+		<property name="Class" value="ThrowAway"/>
+		<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+		<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Throw_strength_default" value="8"/>
+		<property name="Throw_strength_max" value="50"/>
+		<property name="Max_strain_time" value="1.25"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="triggerEffectTriggerPullDualsense" value="ShotgunTrigger"/>
+		<property name="triggerEffectTriggerPullXbox" value="ShotgunTrigger"/>
+		<property name="triggerEffectShootDualsense" value="ShotgunShoot"/>
+		<property name="triggerEffectShootXbox" value="PistolShoot"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Activate"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
+		<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+	</property>
+	<property name="ThrowableDecoy" value="true"/>
+	<effect_group tiered="false">
+		<display_value name="dExRadius" value="1.5"/>
+		<display_value name="dExBlockDamage" value="5"/>
+		<display_value name="dExEntityDamage" value="253"/>
+		<display_value name="dFuseTime" value="4"/>
+		<triggered_effect trigger="onSelfWaterSubmerge" action="ResetHeldItem"/>
+	</effect_group>
+</item>
+</append>
+
+</RamblingMan>

@@ -1,0 +1,5 @@
+<RamblingMan>
+
+<remove xpath="/items/item/stats" />
+
+</RamblingMan>
