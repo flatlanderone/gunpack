@@ -8,13 +8,13 @@ From release 3.2.0.2.0.0 this project adheres to [Semantic Versioning](https://s
 
 ## [Unreleased]
 
-## [Unreleased]
-
-## [3.2.0.2.0.1] - 2026-09-29
+## [3.2.0.2.0.1] - 2026-10-04
 
 ### Fixed
 
 - DropMeshfile missing for some weapons. (Reported by RedTorch)
+- Add missing tags="ammo9mm" to small, medium and large .45ACP ammo groups. (Reported by msewell)
+- Add missing tags="ammo762mm" to small, medium and large 5.56mm ammo groups and muskte ammo group. (Reported by msewell)
 
 ## [3.2.0.2.0.0] - 2026-09-19
 

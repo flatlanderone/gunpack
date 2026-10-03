@@ -68,7 +68,8 @@ In the **6. Misc. Options** tab you can:
 
  - [Gears 7.x.x](https://www.nexusmods.com/7daystodie/mods/4017),
  - [Quartz 8.x.x](https://www.nexusmods.com/7daystodie/mods/2409),
- - 7 Days to Die v3.2.0. The mod is not compatible with 7 Days to Die v2. 
+ - 7 Days to Die v3.2.0. The mod is not compatible with 7 Days to Die v2.
+ - Not tested with 7 Days to Die v3.3.0.
 
 ## Manual installation
 
@@ -96,7 +97,7 @@ In the **6. Misc. Options** tab you can:
 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/) / [Nexus Mods](https://www.nexusmods.com/profile/flatlanderone) / [7daystodiemods.com](https://7daystodiemods.com/profiles/flatlanderone)
   - **Initial release**: 3.0.1.0.0 (2026-07-16)
-  - **This release**: 3.2.0.2.0.1 (2026-09-29)
+  - **This release**: 3.2.0.2.0.1 (2026-10-04)
   
 ## Changelog
 

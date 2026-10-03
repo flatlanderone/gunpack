@@ -1,5 +1,15 @@
 <RamblingMan>
 
+<!-- 
+[3.2.0.2.0.1]
+Add tags="ammo9mm" to small, medium and large .45ACP ammo groups.
+Add tags="ammo762mm" to small, medium and large 5.56mm ammo groups.
+ -->
+
+<setattribute xpath="/lootcontainers/lootgroup/item[@group='group45ammoSmall' or @group='group45ammoMedium' or @group='group45ammoLarge']" name="tags">ammo9mm</setattribute>
+<setattribute xpath="/lootcontainers/lootgroup/item[@group='group556ammoSmall' or @group='group556ammoMedium' or @group='group556ammoLarge' or @group='groupMusketammoSmall']" name="tags">ammo762mm</setattribute>
+
+	
 <!-- HACK: Temporarily remove IZYgunT5HeavyWeaponM2flameThrower and ammo762mmExplosiveFragmentations from loot -->
 
 <remove xpath="/lootcontainers/lootgroup/item[@name='IZYgunT5HeavyWeaponM2flameThrower' or @name='ammo762mmExplosiveFragmentations']"/>
