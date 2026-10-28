@@ -1,4 +1,4 @@
-# Flatlander's Combat Sandbox for IZY Classic - version 3.2.0.2.0.1 / 3.2.0.201
+# Flatlander's Combat Sandbox for IZY Classic - version 3.3.0.3.0.0 / 3.3.0.300
 
 ## Overview
 
@@ -66,10 +66,10 @@ In the **6. Misc. Options** tab you can:
 
 ## Requirements
 
- - [Gears 7.x.x](https://www.nexusmods.com/7daystodie/mods/4017),
- - [Quartz 8.x.x](https://www.nexusmods.com/7daystodie/mods/2409),
- - 7 Days to Die v3.2.0. The mod is not compatible with 7 Days to Die v2.
- - Not tested with 7 Days to Die v3.3.0.
+ - [Gears 8.x.x](https://www.nexusmods.com/7daystodie/mods/4017),
+ - [Quartz 10.x.x](https://www.nexusmods.com/7daystodie/mods/2409),
+ - 7 Days to Die v3.3.0. The mod is not compatible with earlier versions of 7 Days to Die.
+ - Not tested with 7 Days to Die v3.4.0.
 
 ## Manual installation
 
@@ -82,7 +82,7 @@ In the **6. Misc. Options** tab you can:
 
 ## Important notes
 
- 1. The 3.2.0.2.0.1 version of the mod is designed to work with the IZY Classic mod released on 2026-07-16. NO OTHER VERSION WILL BE SUPPORTED.
+ 1. This version of the mod is designed to work with the IZY Classic mod released on or after 2026-07-16. NO OTHER VERSION WILL BE SUPPORTED.
  2. Do not bother Izayo with questions regarding this mod. 
  3. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  4. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -97,7 +97,7 @@ In the **6. Misc. Options** tab you can:
 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/) / [Nexus Mods](https://www.nexusmods.com/profile/flatlanderone) / [7daystodiemods.com](https://7daystodiemods.com/profiles/flatlanderone)
   - **Initial release**: 3.0.1.0.0 (2026-07-16)
-  - **This release**: 3.2.0.2.0.1 (2026-10-04)
+  - **This release**: 3.3.0.3.0.0 (2026-10-29)
   
 ## Changelog
 
