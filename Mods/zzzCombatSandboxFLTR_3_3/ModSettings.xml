@@ -22,7 +22,7 @@
 
 <!-- <Switch name="Enable_IZY_Gloves" displayKey="uiEnable_IZY_Gloves" tooltipKey="tipEnable_IZY_Gloves" defaultValue="Off" leftValue="Off" rightValue="On" /> -->
 
-	<Switch name="Enable_IZY_Gloves" displayKey="uiEnable_IZY_Gloves" type="string"  defaultValue="On">
+	<Switch name="Enable_IZY_Gloves" displayKey="uiEnable_IZY_Gloves" type="string"  defaultValue="Off">
 		<Description key="tipEnable_IZY_Gloves" />
 		<Buttons left="Off" right="On" />
 	</Switch>

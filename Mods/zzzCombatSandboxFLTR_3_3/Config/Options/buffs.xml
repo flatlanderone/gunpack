@@ -9,11 +9,11 @@
 <conditional>
 <if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'WeaponPackSettings.GlovesCategory.Enable_IZY_Gloves') == 'Off'">
 
-<!-- <remove xpath="/buffs/buff[@name='WearingArmorBrownLeather' or 
+<remove xpath="/buffs/buff[@name='WearingArmorBrownLeather' or 
 @name='WearingArmorBlackLeather' or 
 @name='WearingArmorDarkLeather' or 
 @name='IZYGlovesEffect' or 
-@name='RefreshHand']"/> -->
+@name='RefreshHand']"/>
 
 
 

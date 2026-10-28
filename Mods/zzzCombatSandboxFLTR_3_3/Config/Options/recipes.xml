@@ -1,6 +1,81 @@
 <RamblingMan>
 <!-- Gears Options -->
 
+
+
+<!-- 6. *** Balanced crafting costs for some dual weapons -->
+
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryDualWeapons.MiscSettings_CostDualWeapons') == 'Balanced'">
+
+<!-- IZYgunT2DualPistolM9bs and IZYgunT2DualPistols45M1911A1 same recipe as gunHandgunT3DesertVulture 
+IZYgunT3DualPistolGlock18C same recipe as IZYgunT4Pistol45STIEAGLE6 -->
+
+<remove xpath="/recipes/recipe[@name='IZYgunT2DualPistolM9bs' or @name='IZYgunT2DualPistols45M1911A1' or @name='IZYgunT3DualPistolGlock18C']"/>
+
+<append xpath="/recipes">
+<!-- IZYgunT2DualPistolM9bs -->
+<recipe name="IZYgunT2DualPistolM9bs" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
+	<ingredient name="gunHandgunT1PistolParts" count="13"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceDuctTape" count="13"/>
+	<ingredient name="resourceSpring" count="25"/>
+	<ingredient name="resourceLegendaryParts" count="0"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
+		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<!-- IZYgunT2DualPistols45M1911A1 -->
+<recipe name="IZYgunT2DualPistols45M1911A1" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
+	<ingredient name="gunHandgunT1PistolParts" count="13"/>
+	<ingredient name="resourceForgedSteel" count="100"/>
+	<ingredient name="resourceDuctTape" count="13"/>
+	<ingredient name="resourceSpring" count="25"/>
+	<ingredient name="resourceLegendaryParts" count="0"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
+		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+<!-- IZYgunT3DualPistolGlock18C -->
+<recipe name="IZYgunT3DualPistolGlock18C" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
+	<ingredient name="gunHandgunT1PistolParts" count="20"/>
+	<ingredient name="resourceForgedSteel" count="150"/>
+	<ingredient name="resourceDuctTape" count="20"/>
+	<ingredient name="resourceSpring" count="35"/>
+	<ingredient name="resourceLegendaryParts" count="0"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
+		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+	</effect_group>
+</recipe>
+
+</append>
+
+</if>
+</conditional>
+
+<!-- *** 6. Disable the crafting of dual weapons -->
+
+<conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryDualWeapons.MiscSettings_EnableDualWeapons') == 'Off'">
+
+<remove xpath="/recipes/recipe[starts-with(@name, 'IZY') and contains(@name,'Dual')]"/>
+
+</if>
+</conditional>
+
+
 <!-- 
 6. Misc Options
 6.xx *** Ammo Reboxing in the Workbench -->
@@ -781,77 +856,5 @@ starts-with(@name, 'modMeleeWeighted')]"/>
 
 
 
-
-<!-- 6. *** Balanced crafting costs for some dual weapons -->
-
-
-<conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryDualWeapons.MiscSettings_CostDualWeapons') == 'Balanced'">
-
-<!-- IZYgunT2DualPistolM9bs and IZYgunT2DualPistols45M1911A1 same recipe as gunHandgunT3DesertVulture 
-IZYgunT3DualPistolGlock18C same recipe as IZYgunT4Pistol45STIEAGLE6 -->
-
-<remove xpath="/recipes/recipe[@name='IZYgunT2DualPistolM9bs' or @name='IZYgunT2DualPistols45M1911A1' or @name='IZYgunT3DualPistolGlock18C']"/>
-
-<append xpath="/recipes">
-<!-- IZYgunT2DualPistolM9bs -->
-<recipe name="IZYgunT2DualPistolM9bs" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
-	<ingredient name="gunHandgunT1PistolParts" count="13"/>
-	<ingredient name="resourceForgedSteel" count="100"/>
-	<ingredient name="resourceDuctTape" count="13"/>
-	<ingredient name="resourceSpring" count="25"/>
-	<ingredient name="resourceLegendaryParts" count="0"/>
-	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
-		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
-	</effect_group>
-</recipe>
-
-<!-- IZYgunT2DualPistols45M1911A1 -->
-<recipe name="IZYgunT2DualPistols45M1911A1" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
-	<ingredient name="gunHandgunT1PistolParts" count="13"/>
-	<ingredient name="resourceForgedSteel" count="100"/>
-	<ingredient name="resourceDuctTape" count="13"/>
-	<ingredient name="resourceSpring" count="25"/>
-	<ingredient name="resourceLegendaryParts" count="0"/>
-	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
-		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
-	</effect_group>
-</recipe>
-
-<!-- IZYgunT3DualPistolGlock18C -->
-<recipe name="IZYgunT3DualPistolGlock18C" count="1" craft_area="workbench" tags="learnable,perkGunslinger,workbenchCrafting">
-	<ingredient name="gunHandgunT1PistolParts" count="20"/>
-	<ingredient name="resourceForgedSteel" count="150"/>
-	<ingredient name="resourceDuctTape" count="20"/>
-	<ingredient name="resourceSpring" count="35"/>
-	<ingredient name="resourceLegendaryParts" count="0"/>
-	<effect_group>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunHandgunT1PistolParts,resourceDuctTape"/>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
-		<passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
-		<passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
-	</effect_group>
-</recipe>
-
-</append>
-
-</if>
-</conditional>
-
-<!-- *** 6. Disable the crafting of dual weapons -->
-
-<conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryDualWeapons.MiscSettings_EnableDualWeapons') == 'Off'">
-
-<remove xpath="/recipes/recipe[starts-with(@name, 'IZY') and contains(@name,'Dual')]"/>
-
-</if>
-</conditional>
 
 </RamblingMan>

@@ -8,6 +8,17 @@ From release 3.2.0.2.0.0 this project adheres to [Semantic Versioning](https://s
 
 ## [Unreleased]
 
+
+## [3.3.0.3.0.0] - 2026-10-27
+
+## Known Issues
+
+- FPV/TPV hands may appear glitched with IZY Classic weapons. Swapping to another slot usually helps.
+
+## Changed
+
+- Added support for Gears v8.
+
 ## [3.2.0.2.0.1] - 2026-10-04
 
 ### Fixed
