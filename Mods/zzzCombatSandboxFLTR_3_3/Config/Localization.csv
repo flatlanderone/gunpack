@@ -228,7 +228,7 @@ tipMiscSettings_SilencedIZYWeapons,UI,Display,,,"Click 'On' to make IZY Classic 
 uiMiscSettingsCategoryWeaponOptions,UI,Display,,,[FFB400]Auto-reload Options[-],,,,,,,,,,,,,
 tipMiscSettingsCategoryWeaponOptions,UI,Display,,,-,,,,,,,,,,,,,
 uiMiscSettings_Autoreload,UI,Display,,,Single-shot Weapons,,,,,,,,,,,,,
-tipMiscSettings_Autoreload,UI,Display,,,"Click 'All' to enable automatic reloading for all single-shot weapons, such the Pipe Rifle, the Pipe Shotgun, the FP-45 Liberator Pistol, the Broken AR-15, all crossbows and all grenade and rocket launchers.",,,,,,,,,,,,,
+tipMiscSettings_Autoreload,UI,Display,,,"Click 'All' to enable automatic reloading for all single-shot weapons, such as the Pipe Rifle, the Pipe Shotgun, the FP-45 Liberator Pistol, the Broken AR-15, all crossbows and all grenade and rocket launchers.",,,,,,,,,,,,,
 uiMiscSettingsCategoryModOptions,UI,Display,,,[FFB400]Weapon Mod Options[-],,,,,,,,,,,,,
 tipMiscSettingsCategoryModOptions,UI,Display,,,-,,,,,,,,,,,,,
 uiMiscSettings_TubeExtender,UI,Display,,,Tube Extender Mod Options,,,,,,,,,,,,,
