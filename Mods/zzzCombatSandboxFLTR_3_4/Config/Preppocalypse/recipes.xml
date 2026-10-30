@@ -1,0 +1,26 @@
+<RamblingMan>
+<append xpath="/recipes">
+	<!-- ammoRocketFire 50% faster, 20% discount on resources. -->		
+	<recipe name="ammoRocketFire" count="1" craft_time="20" craft_area="ammopress" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceOil" count="1"/>
+		<ingredient name="resourceGunPowder" count="8"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+		<ingredient name="ammoGasCan" count="80"/>
+		<ingredient name="resourceRocketCasing" count="1"/>
+	</recipe>
+<!-- 	
+REF WB
+	<recipe name="ammoRocketFire" count="1" craft_time="40" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<ingredient name="resourceOil" count="1"/>
+		<ingredient name="resourceGunPowder" count="10"/>
+		<ingredient name="resourceDuctTape" count="1"/>
+		<ingredient name="ammoGasCan" count="100"/>
+		<ingredient name="resourceRocketCasing" count="1"/>
+	</recipe> -->	
+
+
+
+	
+</append>
+
+</RamblingMan>

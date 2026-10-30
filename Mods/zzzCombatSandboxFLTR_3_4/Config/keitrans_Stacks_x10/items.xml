@@ -1,0 +1,73 @@
+<RamblingMan>
+
+<!-- *** keitrans_Stacks_x10 compatibility patch for IZY Classic ammo-->
+
+<!-- IZYadvancegunrepairkit 250
+ammo762mmExplosiveFragmentations 1500
+bundle handled by ammoBundleMaster
+
+ammoleadball 1000
+ammoMuzzleloadershot 500
+ammoMuzzleloaderscattershot 1500
+ammoCrossbowLightBoltStone 3000
+ammoCrossbowLightBoltIron 3000
+ammoCrossbowLightBoltSteelAP 3000
+
+ammo45ACPBulletBall 3000
+ammo45ACPHighpower 3000
+ammo45ACPArmorpiecing 3000
+ammo45ACPEnhanced 3000
+ammoBundle45ACPBulletBall 100
+ammoBundle45ACPHighpower 100
+ammoBundle45ACPArmorpiecing 100 
+ammoBundle45ACPEnhanced 100
+
+ammo556mmBulletBall 2000
+ammo556mmHIpower 2000
+ammo556mmArmorPiercing 2000
+ammo556mmBulletBallBundle 50
+ammo556mmHIpowerBundle 50
+ammo556mmArmorPiercingBundle 50
+
+ammoRocketRPGTraning 200
+ammoRocketRPGHE 200
+ammoRocketRPGIncendiary 200
+ammo25mmGrenadeTraining 500
+ammo25mmGrenadeFRAGS 500
+ammo25mmGrenadeHE 500
+
+IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture 5000
+IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture 5000
+ammoShotgunShellPremium 1500
+ammoShotgunShellPremiumBundle handled by ammoBundleMaster
+n/a ammoShotgunShellDragoBreath 1500 -->
+
+<set xpath="/items/item[@name='IZYadvancegunrepairkit']/property[@name='Stacknumber']/@value">250</set>
+
+<set xpath="/items/item[@name='ammo762mmExplosiveFragmentations']/property[@name='Stacknumber']/@value">1500</set>
+
+<set xpath="/items/item[@name='ammoleadball']/property[@name='Stacknumber']/@value">1000</set>
+
+<set xpath="/items/item[@name='ammoMuzzleloadershot']/property[@name='Stacknumber']/@value">500</set>
+
+<set xpath="/items/item[@name='ammoMuzzleloaderscattershot']/property[@name='Stacknumber']/@value">1500</set>
+
+<set xpath="/items/item[@name='ammoCrossbowLightBoltStone' or @name='ammoCrossbowLightBoltIron' or @name='ammoCrossbowLightBoltSteelAP']/property[@name='Stacknumber']/@value">3000</set>
+
+<set xpath="/items/item[@name='ammo45ACPBulletBall' or @name='ammo45ACPHighpower' or @name='ammo45ACPArmorpiecing' or @name='ammo45ACPEnhanced']/property[@name='Stacknumber']/@value">3000</set>
+
+<set xpath="/items/item[@name='ammoBundle45ACPBulletBall' or @name='ammoBundle45ACPHighpower' or @name='ammoBundle45ACPArmorpiecing' or @name='ammoBundle45ACPEnhanced']/property[@name='Stacknumber']/@value">100</set>
+
+<set xpath="/items/item[@name='ammo556mmBulletBall' or @name='ammo556mmHIpower' or @name='ammo556mmArmorPiercing']/property[@name='Stacknumber']/@value">2000</set>
+
+<!-- <set xpath="/items/item[@name='ammo556mmBulletBallBundle' or @name='ammo556mmHIpowerBundle' or @name='ammo556mmArmorPiercingBundle']/property[@name='Stacknumber']/@value">50</set> -->
+
+<set xpath="/items/item[@name='ammoRocketRPGTraning' or @name='ammoRocketRPGHE' or @name='ammoRocketRPGIncendiary']/property[@name='Stacknumber']/@value">200</set>
+
+<set xpath="/items/item[@name='ammo25mmGrenadeTraining' or @name='ammo25mmGrenadeFRAGS' or @name='ammo25mmGrenadeHE']/property[@name='Stacknumber']/@value">500</set>
+
+<set xpath="/items/item[@name='IZYAmmoHeavyWeaponFlamethrowerNapalmStandardMixture' or @name='IZYAmmoHeavyWeaponFlamethrowerNapalmLethalMixture']/property[@name='Stacknumber']/@value">5000</set>
+
+<set xpath="/items/item[@name='ammoShotgunShellPremium']/property[@name='Stacknumber']/@value">1500</set>
+
+</RamblingMan>

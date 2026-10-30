@@ -1,0 +1,11 @@
+﻿<Byteblazar>
+    <append xpath="/blocks">
+        <block name="CombatSandboxConfig">
+            <property name="Extends" value="terrDesertGround"/>
+
+            <property class="Overrides">
+                <property name="CombineStationRepairs" value="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.AllWeaponsRepairDegradationCategory.Enable_AllWeapons_Repair_CombineStation')"/>
+            </property>
+        </block>
+    </append>
+</Byteblazar>

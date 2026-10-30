@@ -1,0 +1,12 @@
+<RamblingMan>
+
+<!-- Vanilla edits -->
+
+<!-- gunShotgunT0PipeShotgun uses the same silencer sound as other shotguns -->
+
+<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+	<item_property_overrides name="gunShotgunT0PipeShotgun">
+		<property name="Sound_start" value="pump_shotgun_s_fire"/>
+	</item_property_overrides>
+</append>
+</RamblingMan>

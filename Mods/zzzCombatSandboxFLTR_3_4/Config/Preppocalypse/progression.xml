@@ -1,0 +1,7 @@
+<RamblingMan>
+
+<csv xpath="//crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@level='45,100']/@tags" delim="," op="remove">ammoRocketFire</csv>
+
+<csv xpath="//crafting_skill[@name='craftingExplosives']/effect_group/passive_effect[@level='45,100' and contains(@tags,'ammoRocketFrag')]/@tags" delim="," op="add">ammoRocketFire</csv>
+
+</RamblingMan>
