@@ -8,6 +8,11 @@ From release 3.2.0.2.0.0 this project adheres to [Semantic Versioning](https://s
 
 ## [Unreleased]
 
+## [3.4.0.3.0.1] - 2026-11-03
+
+### Changed
+
+- Cnanged default value for custom IZY Classic gloves.
 
 ## [3.3.0.3.0.0] - 2026-10-27
 
