@@ -321,13 +321,15 @@ IZYgunT3TechnicalNailmachinegun
 <!-- ***   2.1 Traders don't sell T4/T5 weapons.
 DISABLED, as it's implemented in Pacifis Traders  -->
 
-<conditional>
+
+<!-- CHANGED 20261026 -->
+<!-- <conditional>
 <if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'T4Settings.T4LootingCategory.Enable_T4_Trading') == 'No'">
 
 <remove xpath="/traders/trader_item_groups/trader_item_group/item[starts-with(@name, 'IZYgunT4') or starts-with(@name, 'IZYMeleeT4') or starts-with(@name, 'IZYgunT5')]"/>
 
 </if>
-</conditional>
+</conditional> -->
 
 <!-- *** 3. Challenge Runs: Pacifist Traders: Remove all weapons, ammo and crafting resources from trader inventory.  
 -->

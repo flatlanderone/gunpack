@@ -1,5 +1,3 @@
-using UnityEngine;
-
 namespace CombatSandboxOverrides;
 
 public static class Utils

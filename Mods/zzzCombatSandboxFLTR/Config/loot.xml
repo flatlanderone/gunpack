@@ -2,7 +2,7 @@
 
 <!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="game_version() >= version(1,3,0)">
+<if cond="game_version() >= version(1,3,3)">
 
 <!-- *** Includes -->
 
@@ -1260,7 +1260,7 @@ TODO: Check if append in parent works.
 <!-- *** Gears Options -->
 
 <conditional>
-	<if cond="mod_version('Gears') >= version(7,0,0)">
+	<if cond="mod_version('Gears') >= version(8,0,0)">
 		<include filename="Options/loot.xml"/>
 	</if>
 </conditional>

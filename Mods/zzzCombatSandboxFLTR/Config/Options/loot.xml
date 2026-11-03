@@ -569,15 +569,17 @@ groupQuestWeaponsRangedT1 -->
 </conditional>
 
 <!-- *** RestrictedRunNoCraftingQ6InLoot NOT IMPLEMENTED-->
-<conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingQ6InLoot') == 'Yes'">
+
+<!-- CHANGED 20261026 -->
+<!-- <conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'RestrictedRunSettings.RestrictedRunNoCrafting.RestrictedRunNoCraftingQ6InLoot') == 'Yes'"> -->
 <!-- <set xpath="/lootcontainers/lootcontainer[@loot_quality_template='qualBaseTemplate' or  @loot_quality_template='qualPlus1Template']/@loot_quality_template">q6Template</set>
 
 <set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate[@name='q6Template']/qualitytemplate/loot[@quality='1' or @quality='2' or @quality='3' or @quality='4' or @quality='5']/@prob">0.001</set>
 <set xpath="/lootcontainers/lootqualitytemplates/lootqualitytemplate[@name='q6Template']/qualitytemplate/loot[@quality='6']/@prob">1</set> -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 <!-- *** 6. Weapon Pack Options ### -->
 

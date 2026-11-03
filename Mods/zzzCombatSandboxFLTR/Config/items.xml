@@ -1,8 +1,8 @@
 <RamblingMan>
 
-<!-- Only for 7 Days To Die 3.0 -->
+<!-- Only for 7 Days To Die 3.3 -->
 <conditional>
-<if cond="game_version() >= version(1,3,0)">
+<if cond="game_version() >= version(1,3,3)">
 
 <!-- *** Includes -->
 
@@ -918,7 +918,7 @@ IZYgunT3MarksManRifle762HKPSG1 -->
 <!-- *** Gears Options -->
 
 <conditional>
-	<if cond="mod_version('Gears') >= version(7,0,0)">
+	<if cond="mod_version('Gears') >= version(8,0,0)">
 		<include filename="Options/items.xml"/>
 	</if>
 </conditional>

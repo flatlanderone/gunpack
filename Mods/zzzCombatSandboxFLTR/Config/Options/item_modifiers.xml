@@ -148,8 +148,10 @@
 <!-- *** 6.1 Tube Extender adds 3 rounds -->
 
 <!-- TODO: disable for 3.0 -->
-<conditional>
-<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_TubeExtender') == '+3'">
+
+<!-- changed 20261026 -->
+<!-- <conditional>
+<if cond="modsetting('Combat_Sandbox_FLTR', 'Global', 'MiscSettings.MiscSettingsCategoryModOptions.MiscSettings_TubeExtender') == '+3'"> -->
 
 <!-- REMOVE for 3.0.1.6 -->
 
@@ -171,8 +173,8 @@
 
 </insertBefore> -->
 
-</if>
-</conditional>
+<!-- </if>
+</conditional> -->
 
 
 <!-- *** 6.2 The Hunter Mod Options -->

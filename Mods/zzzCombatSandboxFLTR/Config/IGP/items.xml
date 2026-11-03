@@ -3,7 +3,7 @@
 <!-- *** IGP 2.6.5.1.3 edits for 3.0 EXP -->
 
 <conditional>
-<if cond="game_version() >= version(1,3,0)">
+<if cond="game_version() >= version(1,3,3)">
 <!-- 
 TO DO Find criterion/pattern for .5 vs 1 
 <property name="harvestingTools" value="1" param1="1"/>

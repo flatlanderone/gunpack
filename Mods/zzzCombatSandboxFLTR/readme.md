@@ -1,4 +1,4 @@
-# Flatlander's Combat Sandbox for IZY Classic - version 3.2.0.2.0.1 / 3.2.0.201
+# Flatlander's Combat Sandbox for IZY Classic - version 3.4.0.3.0.1 / 3.4.0.301
 
 ## Overview
 
@@ -26,7 +26,7 @@ Settings are organized thematically by tabs.
 
 In the **1. Weapon Packs** tab you can: 
  1. Disable the custom weapon models for the vanilla weapons.
- 2. (new) Disable the custom gloves.
+ 2. Disable the custom gloves.
  3. Disable each individual weapon pack.
 
 In the **2. Kick Attack** tab you can enable and disable the kick attack for each selected weapon and tool category.
@@ -47,29 +47,28 @@ In the **4. Looting** tab you can:
 In the **5. Challenges** tab you can:
  1. Choose to play with Pacifist Traders who will not sell you weapons and related items, who will not  buy from you these weapons and related items or who will not offer you weapons, ammo and related items in quest rewards.
  2. Disable the crafting of selected weapons and other offensive items.
- 3. (new) Disable the repair of T0-T3 weapons and tools using repair kits or resources.
- 4. (new) Disable the repair of all weapons and tools using the Combine Station.
+ 3. Disable the repair of T0-T3 weapons and tools using repair kits or resources.
+ 4. Disable the repair of all weapons and tools using the Combine Station.
  5. Increase the degradation rate of T0-T3 weapons.
 
 In the **6. Misc. Options** tab you can:
- 1. (new) Choose the sounds to use with vanilla weapons. (moved from 1. Weapon Packs)
- 2. (new) Use silenced weapons.
+ 1. Choose the sounds to use with vanilla weapons. (moved from 1. Weapon Packs)
+ 2. Use silenced weapons.
  3. Enable auto-reloading for single-shot weapons.
  4. Make the drum magazine mod compatible with all 5..56mm machine guns.
- 5. (new) Align the number of mods slots in vanilla weapons and tools on the item's quality level.
+ 5. Align the number of mods slots in vanilla weapons and tools on the item's quality level.
  6. Enable ammo reboxing recipes.
  7. Enable the unlocking of special ammo recipes using perk books.
  8. Make Enhanced .45 ACP ammo compatible with all .45 ACP weapons.
  9. Make Hellfire shells compatible with all vanilla and IZY Classic shotguns.
  10. Configure various options for the vanilla lever-action rifle and the Super Shorty.
- 11. (new) Configure options for dual weapons.
+ 11. Configure options for dual weapons.
 
 ## Requirements
 
- - [Gears 7.x.x](https://www.nexusmods.com/7daystodie/mods/4017),
- - [Quartz 8.x.x](https://www.nexusmods.com/7daystodie/mods/2409),
- - 7 Days to Die v3.2.0. The mod is not compatible with 7 Days to Die v2.
- - Not tested with 7 Days to Die v3.3.0.
+ - [Gears 8.x.x](https://www.nexusmods.com/7daystodie/mods/4017),
+ - [Quartz 10.x.x](https://www.nexusmods.com/7daystodie/mods/2409),
+ - 7 Days to Die v3.4.0.
 
 ## Manual installation
 
@@ -82,7 +81,7 @@ In the **6. Misc. Options** tab you can:
 
 ## Important notes
 
- 1. The 3.2.0.2.0.1 version of the mod is designed to work with the IZY Classic mod released on 2026-07-16. NO OTHER VERSION WILL BE SUPPORTED.
+ 1. This version of the mod is designed to work with the IZY Classic mod released on or after 2026-07-16. NO OTHER VERSION WILL BE SUPPORTED.
  2. Do not bother Izayo with questions regarding this mod. 
  3. Adding the mod to an existing save is probably safe, but you should always make a backup of your game save.
  4. Removing the mod is probably safe, but you should always make a backup of your game save.
@@ -97,7 +96,7 @@ In the **6. Misc. Options** tab you can:
 
  - **Author**: Flat Lander - [GitHub](https://github.com/flatlanderone/) / [Nexus Mods](https://www.nexusmods.com/profile/flatlanderone) / [7daystodiemods.com](https://7daystodiemods.com/profiles/flatlanderone)
   - **Initial release**: 3.0.1.0.0 (2026-07-16)
-  - **This release**: 3.2.0.2.0.1 (2026-10-04)
+  - **This release**: 3.4.0.3.0.1 (2026-11-03)
   
 ## Changelog
 

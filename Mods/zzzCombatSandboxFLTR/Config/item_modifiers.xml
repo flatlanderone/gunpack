@@ -1,7 +1,7 @@
 <RamblingMan>
 <!-- Only for 7 Days To Die 3.0 -->
 <conditional>
-<if cond="game_version() >= version(1,3,0)">
+<if cond="game_version() >= version(1,3,3)">
 
 <!-- *** Includes -->
 
@@ -55,7 +55,7 @@ Reason: White square in the place of the red dot https://github.com/flatlanderon
 <!-- *** Gears Options -->
 
 <conditional>
-	<if cond="mod_version('Gears') >= version(7,0,0)">
+	<if cond="mod_version('Gears') >= version(8,0,0)">
 		<include filename="Options/item_modifiers.xml"/>
 	</if>
 </conditional>
