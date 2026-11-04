@@ -17,7 +17,7 @@ To access and change the mod's settings:
  
 **Important**
   1. Remember to click **Apply** after changing the settings.
-  2. Change settings BEFORR loading your save.
+  2. Change settings BEFORE loading your save.
   3. Click 'Defaults', then 'Apply' to restore the settings to their default values.
 
 **Available Settings**  
